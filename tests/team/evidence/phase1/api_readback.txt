@@ -1,0 +1,7 @@
+
+id doctor_name  appointment_date appointment_time status   
+-- -----------  ---------------- ---------------- ------   
+ 1 Rajesh Verma 2026-11-22       09:00            cancelled
+
+
+

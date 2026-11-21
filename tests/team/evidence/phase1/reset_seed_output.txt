@@ -1,0 +1,7 @@
+initializing database...
+
+Γ£ô tables created
+Γ£ô Admin user created
+Γ£ô sample doctors created
+Γ£ô 7-day availability created (8 slots/day)
+Γ£ô sample patients created

@@ -1,0 +1,5 @@
+Appointments: 0
+Users: 5
+Doctors: 2
+Patients: 2
+Availability: 28
