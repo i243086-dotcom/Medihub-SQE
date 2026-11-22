@@ -73,3 +73,9 @@ backend/exports/
 
 # Node modules (if any)
 node_modules/
+
+# test outputs
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/

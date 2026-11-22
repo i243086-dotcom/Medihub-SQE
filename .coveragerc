@@ -1,0 +1,13 @@
+﻿[run]
+branch = True
+source = backend
+
+[report]
+show_missing = True
+omit =
+    backend/seed_db.py
+    backend/celery_tasks/email.py
+    backend/celery_tasks/imports.py
+    backend/celery_tasks/reminders.py
+    backend/celery_tasks/reports.py
+    backend/.venv/*
