@@ -1,4 +1,6 @@
-﻿import os
+﻿import contextlib
+import io
+import os
 import sys
 from pathlib import Path
 
@@ -22,7 +24,12 @@ from seed_db import (
 
 @pytest.fixture()
 def client():
-    app.config.update(TESTING=True, MAIL_SUPPRESS_SEND=True)
+    app.config.update(TESTING=True, MAIL_SUPPRESS_SEND=True, PROPAGATE_EXCEPTIONS=False)
+        # Flask-Mail reads MAIL_SUPPRESS_SEND only once, when Mail(app) is created
+    # at import time, so changing the config above is too late. Switch the
+    # already-created mail extension to suppress mode so no SMTP connection
+    # is ever opened during tests.
+    app.extensions["mail"].suppress = True
     with app.app_context():
         # Safety: refuse to run unless this is the in-memory test database.
         assert str(db.engine.url) == TEST_DB_URI, (
@@ -30,10 +37,14 @@ def client():
         )
         db.drop_all()
         db.create_all()
-        create_admin_user()
-        create_sample_doctors()
-        create_sample_availability()
-        create_sample_patients()
+        # seed_db.py prints a check-mark character; on Windows consoles using
+        # cp1252 that raises UnicodeEncodeError when pytest runs with -s.
+        # Silence the seed output (the app code is not modified).
+        with contextlib.redirect_stdout(io.StringIO()):
+            create_admin_user()
+            create_sample_doctors()
+            create_sample_availability()
+            create_sample_patients()
         yield app.test_client()
         db.session.remove()
         db.drop_all()

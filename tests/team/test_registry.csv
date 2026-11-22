@@ -1,1 +1,13 @@
-﻿test_id,level,technique,requirement,rule,risk,status
+﻿test_id,level,technique,requirement,rule,risk,status,pytest_node
+SETUP-01,Setup,fixture sanity,-,BR-04,-,executed-pass,test_smoke_login.py::test_arjun_login_returns_token
+SETUP-02,Setup,fixture sanity,-,BR-04,-,executed-pass,test_smoke_login.py::test_wrong_password_rejected
+SETUP-03,Setup,safety check (no SMTP),-,-,-,executed-pass,test_no_smtp.py::test_cancel_never_opens_smtp_connection
+API-03.01,API,readback / rebook after cancel,FR-03,BR-02,R01,executed-fail,test_smoke_high_risk.py::test_d1_book_cancel_rebook_same_slot
+API-07.01,API,EP / role check,FR-07,BR-03;BR-04,R03,executed-pass,test_smoke_high_risk.py::test_d2_cancel_other_patients_appointment
+API-05.01,API,repeated request,FR-05,BR-02,R02,executed-pass,test_smoke_high_risk.py::test_d3_duplicate_identical_post
+API-11.01,API,state transition,FR-11,BR-03;BR-04,R06,executed-fail,test_smoke_high_risk.py::test_d4a_doctor_reopens_cancelled_appointment
+API-12.01,API,state transition,FR-12,BR-03;BR-04,R06,executed-fail,test_smoke_high_risk.py::test_d4b_admin_sets_arbitrary_status
+API-04.01,API,EP (missing field),FR-04,BR-02,R08,executed-pass,test_smoke_high_risk.py::test_d5_malformed_booking_input[D5a empty JSON object-kwargs0]
+API-04.02,API,EP (invalid time text),FR-04,BR-01,R08,executed-fail,test_smoke_high_risk.py::test_d5_malformed_booking_input[D5b time 'abc'-kwargs1]
+API-04.03,API,EP (wrong type),FR-04,BR-01,R08,executed-fail,test_smoke_high_risk.py::test_d5_malformed_booking_input[D5c time as number 900-kwargs2]
+API-04.04,API,EP (null body),FR-04,BR-02,R08,executed-fail,test_smoke_high_risk.py::test_d5_malformed_booking_input[D5d JSON null body-kwargs3]
