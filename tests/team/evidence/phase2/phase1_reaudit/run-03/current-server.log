@@ -1,0 +1,610 @@
+Verified disposable engine: sqlite:///C%3A/Users/Silicon/AppData/Local/Temp/medihub-current-mbc2rzvq/backend/instance/medihub-database.db
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\jwt\api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 18 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+127.0.0.1 - - [23/Nov/2026 20:04:15] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:17] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:19] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:21] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "POST /api/auth/login HTTP/1.1" 200 -
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\jwt\api_jwt.py:370: InsecureKeyLengthWarning: The HMAC key is 18 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/doctors HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/doctors?department=Cardiology HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/doctors?department=Neurology HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/doctors HTTP/1.1" 403 -
+✓ Admin user created
+✓ sample doctors created
+✓ 7-day availability created (8 slots/day)
+✓ sample patients created
+P1-A01 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:23] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:23] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:24] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 403 -
+P1-A02 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-A03 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:24] "DELETE /api/patient/appointments/1 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:24] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+[2026-11-23 20:04:24,221] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1977, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1192, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: appointments.doctor_id, appointments.appointment_date, appointments.appointment_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 316, in book_appointment
+    db.session.commit()
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 611, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2177, in commit
+    trans.commit(_to_root=True)
+  File "<sqlalchemy generated _go() wrapper for sqlalchemy.orm.session.SessionTransaction.commit>", line 2, in commit
+    return target(fn, self, _to_root=_to_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1412, in commit
+    self._prepare_impl()
+  File "<sqlalchemy generated _go() wrapper for sqlalchemy.orm.session.SessionTransaction._prepare_impl>", line 2, in _prepare_impl
+    return target(fn, self)
+           ^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1386, in _prepare_impl
+    self.session.flush()
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4626, in flush
+    self._flush(objects)
+  File "<sqlalchemy generated warned() wrapper for sqlalchemy.orm.session.Session._flush>", line 2, in _flush
+    return target(fn, self, objects=objects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4769, in _flush
+    with util.safe_reraise():
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 166, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4730, in _flush
+    flush_context.execute()
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 467, in execute
+    rec.execute(self)
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 643, in execute
+    util.preloaded.orm_persistence._save_obj(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 92, in _save_obj
+    _emit_insert_statements(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1250, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1494, in execute
+    return meth(
+           ^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 534, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1714, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1868, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1996, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1977, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1192, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: appointments.doctor_id, appointments.appointment_date, appointments.appointment_time
+[SQL: INSERT INTO appointments (patient_id, doctor_id, appointment_date, appointment_time, status, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (2, 1, '2026-11-24', '10:00:00.000000', 'booked', '', '2026-11-23 15:04:24.219594', '2026-11-23 15:04:24.219594')]
+(Background on this error at: https://sqlalche.me/e/21/gkpj)
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-A04 fail AssertionError: (500, 'Internal server error', [(1, 1, 1, '2026-11-24', '10:00:00.000000', 'cancelled', '2026-11-23 02:30:00.000000')])
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-V01 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-V02 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-V03 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 404 -
+P1-V04 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 404 -
+P1-V05 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-V06 pass 
+[2026-11-23 20:04:24,622] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 236, in book_appointment
+    apt_date = datetime.strptime(data['appointment_date'], '%Y-%m-%d').date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not int
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-V07 fail AssertionError: (500, {'message': 'Internal server error', 'success': False})
+[2026-11-23 20:04:24,693] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 256, in book_appointment
+    apt_time = datetime.strptime(time_str, '%H:%M').time()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'abc' does not match format '%H:%M'
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-V08 fail AssertionError: (500, {'message': 'Internal server error', 'success': False})
+[2026-11-23 20:04:24,748] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 252, in book_appointment
+    if '-' in time_str:
+       ^^^^^^^^^^^^^^^
+TypeError: argument of type 'int' is not iterable
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-V09 fail AssertionError: (500, {'message': 'Internal server error', 'success': False})
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-V10 pass 
+[2026-11-23 20:04:24,863] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 256, in book_appointment
+    apt_time = datetime.strptime(time_str, '%H:%M').time()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '24:00' does not match format '%H:%M'
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-V11 fail AssertionError: (500, {'message': 'Internal server error', 'success': False})
+[2026-11-23 20:04:24,930] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 222, in book_appointment
+    if not data.get('doctor_id'):
+           ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-V12 fail AssertionError: (500, {'message': 'Internal server error', 'success': False})
+127.0.0.1 - - [23/Nov/2026 20:04:24] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-V13 pass 
+[2026-11-23 20:04:25,035] ERROR in app: Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-current-mbc2rzvq\backend\routes\patient.py", line 222, in book_appointment
+    if not data.get('doctor_id'):
+           ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 500 -
+P1-V14 fail AssertionError: (500, {'message': 'Internal server error', 'success': False})
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-A05 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-A06 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-A07 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/1 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "GET /api/doctor/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "GET /api/doctor/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "GET /api/doctor/appointments?time_filter=upcoming HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+P1-A08 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/1 HTTP/1.1" 200 -
+P1-A09 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/1 HTTP/1.1" 404 -
+P1-A10 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/700 HTTP/1.1" 404 -
+P1-A11 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/1 HTTP/1.1" 400 -
+P1-A12 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/1 HTTP/1.1" 400 -
+P1-A13 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:25] "DELETE /api/patient/appointments/1 HTTP/1.1" 400 -
+P1-A14 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:25] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "DELETE /api/patient/appointments/1 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "DELETE /api/patient/appointments/1 HTTP/1.1" 400 -
+P1-A15 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 403 -
+P1-ROLE-ajay-book pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "DELETE /api/patient/appointments/1 HTTP/1.1" 403 -
+P1-ROLE-ajay-cancel pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 403 -
+P1-ROLE-admin-book pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "DELETE /api/patient/appointments/1 HTTP/1.1" 403 -
+P1-ROLE-admin-cancel pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 401 -
+P1-ROLE-anonymous-book pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "DELETE /api/patient/appointments/1 HTTP/1.1" 401 -
+P1-ROLE-anonymous-cancel pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "PUT /api/admin/patients/1/blacklist HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 403 -
+P1-A16 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-A17 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-22 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-D01 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-23 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-D02 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-D03 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-28 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-D04 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-29 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-D05 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-30 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-D06 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:26] "GET /api/patient/available-slots?doctor_id=1&date=2026-12-20 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:26] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-D07 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-23 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-C-032959 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-23 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-C-033000 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-23 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-C-033001 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-23 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-C-040000 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+P1-C-midnight pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-B-08 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-09 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-10 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-12 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-B-13 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-B-14 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:27] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-15 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:27] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-16 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:28] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-18 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:28] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-B-19 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:28] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 400 -
+P1-B-20 pass 
+127.0.0.1 - - [23/Nov/2026 20:04:28] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-0930 fail AssertionError: [(1, 1, 1, '2026-11-24', '09:30:00.000000', 'booked', '2026-11-23 15:04:28.392180')]
+127.0.0.1 - - [23/Nov/2026 20:04:28] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+P1-B-1259 fail AssertionError: [(1, 1, 1, '2026-11-24', '12:59:00.000000', 'booked', '2026-11-23 15:04:28.546491')]
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-booked-booked pass 
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:28] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-booked-cancelled pass 
+127.0.0.1 - - [23/Nov/2026 20:04:28] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-booked-completed pass 
+127.0.0.1 - - [23/Nov/2026 20:04:29] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 400 -
+P1-doctor-booked-invalid pass 
+127.0.0.1 - - [23/Nov/2026 20:04:29] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-cancelled-booked policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:29] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-cancelled-cancelled policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:29] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-cancelled-completed policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:29] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 400 -
+P1-doctor-cancelled-invalid pass 
+127.0.0.1 - - [23/Nov/2026 20:04:29] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:29] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-completed-booked policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-completed-cancelled policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/doctor/appointments/1/status HTTP/1.1" 200 -
+P1-doctor-completed-completed policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/doctor/appointments/1/status HTTP/1.1" 400 -
+P1-doctor-completed-invalid pass 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-booked-booked policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-booked-cancelled policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-booked-completed policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-booked-invalid fail AssertionError: [(1, 1, 1, '2026-11-24', '10:00:00.000000', 'banana', '2026-11-23 15:04:30.729351')]
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:30] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-cancelled-booked policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:30] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:31] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-cancelled-cancelled policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:31] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:31] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-cancelled-completed policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:31] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:31] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-cancelled-invalid fail AssertionError: [(1, 1, 1, '2026-11-24', '10:00:00.000000', 'banana', '2026-11-23 15:04:31.319025')]
+127.0.0.1 - - [23/Nov/2026 20:04:31] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:31] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-completed-booked policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:31] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:31] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-completed-cancelled policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:31] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:31] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-completed-completed policy pending 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/admin/appointments/1 HTTP/1.1" 200 -
+P1-admin-completed-invalid fail AssertionError: [(1, 1, 1, '2026-11-24', '10:00:00.000000', 'banana', '2026-11-23 15:04:32.064774')]
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/doctor/appointments/1/status HTTP/1.1" 404 -
+P1-doctor-denial-rajesh pass 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/doctor/appointments/1/status HTTP/1.1" 403 -
+P1-doctor-denial-arjun pass 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/doctor/appointments/1/status HTTP/1.1" 403 -
+P1-doctor-denial-admin pass 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/doctor/appointments/1/status HTTP/1.1" 401 -
+P1-doctor-denial-anonymous pass 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/admin/appointments/1 HTTP/1.1" 403 -
+P1-admin-denial-ajay pass 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:32] "PUT /api/admin/appointments/1 HTTP/1.1" 403 -
+P1-admin-denial-arjun pass 
+127.0.0.1 - - [23/Nov/2026 20:04:32] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:33] "PUT /api/admin/appointments/1 HTTP/1.1" 401 -
+P1-admin-denial-anonymous pass 
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/custom.css?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/js/api.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/js/admin.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/js/doctor.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/js/patient.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:35] "GET /static/js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:36] "GET /api/auth/me HTTP/1.1" 401 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "GET /api/patient/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "GET /api/patient/history HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "GET /api/prescription/prescriptions HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:39] "GET /api/medical/records HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/patient/available-slots?doctor_id=1&date=2026-11-24 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "POST /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/patient/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/patient/history HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/prescription/prescriptions HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:40] "GET /api/medical/records HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "DELETE /api/patient/appointments/1 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "GET /api/patient/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "GET /api/patient/history HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "GET /api/prescription/prescriptions HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "GET /api/medical/records HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:42] "POST /api/auth/logout HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/custom.css?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/js/api.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/js/admin.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/js/doctor.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/js/patient.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /static/js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:43] "GET /api/auth/me HTTP/1.1" 401 -
+127.0.0.1 - - [23/Nov/2026 20:04:45] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:45] "GET /api/doctor/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:45] "GET /api/doctor/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:45] "GET /api/doctor/patients HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:04:45] "GET /api/doctor/availability HTTP/1.1" 200 -
+P1-UI01 pass 
