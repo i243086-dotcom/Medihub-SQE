@@ -1,14 +1,19 @@
 """White-box coverage of roles, availability, treatment and persistence dependencies."""
 
-from datetime import date, time, timedelta
+from datetime import date, datetime, time, timedelta
+import sys
 
 import pytest
+from sqlalchemy import text
 from sqlalchemy.exc import IntegrityError
 
-from app import mail
+from app import app, mail
 from database import db
-from models import Doctor, DoctorAvailability, Patient, Treatment, User
-from phase2_support import PASSWORD, TOMORROW, appointment, availability, snapshots
+from decorators import get_current_user_role, login_required
+from flask_jwt_extended import create_access_token
+from flask_sqlalchemy.query import Query
+from models import Appointment, Doctor, DoctorAvailability, Patient, Treatment, User
+from phase2_support import BookingClock, PASSWORD, TODAY, TOMORROW, appointment, availability, booking_payload, snapshots
 
 
 @pytest.mark.parametrize(("actor", "path", "verb"), [
@@ -154,3 +159,175 @@ def test_legacy_slot_read(phase2):
     response = client.get("/api/doctor/available-slots", headers=headers["ajay"])
     assert response.json["data"]["slots"][0]["time"] == "18:00"
     assert snapshots()[0][5] == "available"
+
+
+def test_started_slots_are_omitted(phase2, monkeypatch):
+    client, headers = phase2
+    monkeypatch.setattr(BookingClock, "instant", datetime.combine(TODAY, time(4)))
+    result = client.get("/api/patient/available-slots", headers=headers["arjun"],
+                        query_string={"doctor_id": 1, "date": TODAY.isoformat()})
+    assert result.status_code == 200
+    slots = [row["appointment_time"] for row in result.json["data"]["slots"]]
+    assert slots == ["10:00", "11:00", "12:00", "15:00", "16:00", "17:00", "18:00"]
+    assert snapshots() == []
+
+
+@pytest.mark.parametrize("doctor_id", ["1", "0001", 2**63, -2**63-1])
+def test_booking_id_storage_range(phase2, doctor_id):
+    client, headers = phase2
+    result = client.post("/api/patient/appointments", headers=headers["arjun"],
+                         json=booking_payload(doctor=doctor_id))
+    if isinstance(doctor_id, str):
+        assert result.status_code == 200 and snapshots()[0][2] == 1
+    else:
+        assert result.status_code == 400 and snapshots() == []
+
+
+def test_booking_decimal_conversion_limit(phase2):
+    client, headers = phase2
+    limit = sys.get_int_max_str_digits()
+    if limit == 0 or limit > 20000:
+        pytest.skip("No practical configured CPython decimal conversion limit")
+    result = client.post("/api/patient/appointments", headers=headers["arjun"],
+                         json=booking_payload(doctor="1" * (limit + 1)))
+    assert result.status_code == 400 and snapshots() == []
+
+
+@pytest.mark.parametrize(("actor", "name"), [
+    ("arjun", "Arjun Patel"), ("ajay", "Ajay Kumar"), ("admin", "Administrator"),
+    ("orphan", "arjun"), ("missing", None),
+])
+def test_auth_current_user_profile_mapping(phase2, actor, name):
+    client, headers = phase2
+    if actor == "orphan":
+        db.session.delete(db.session.get(Patient, 1))
+        db.session.commit()
+        auth = headers["arjun"]
+    elif actor == "missing":
+        auth = {"Authorization": "Bearer " + create_access_token("999", additional_claims={"role": "patient"})}
+    else:
+        auth = headers[actor]
+    response = client.get("/api/auth/me", headers=auth)
+    if name is None:
+        assert response.status_code == 404
+    else:
+        assert response.status_code == 200
+        assert response.json["data"]["user"]["name"] == name
+
+
+def test_generic_role_helpers(phase2):
+    _, headers = phase2
+
+    @login_required
+    def inspect_role():
+        return get_current_user_role()
+
+    with app.test_request_context(headers=headers["arjun"]):
+        assert inspect_role() == "patient"
+
+
+@pytest.mark.parametrize(("actor", "route"), [
+    ("arjun", "/api/patient/doctors"), ("ajay", "/api/doctor/available-slots"),
+])
+def test_query_failure_is_reported(phase2, monkeypatch, actor, route):
+    client, headers = phase2
+
+    def fail(*args, **kwargs):
+        raise RuntimeError("Synthetic unavailable database read")
+
+    with monkeypatch.context() as patch:
+        patch.setattr(Query, "all", fail)
+        response = client.get(route, headers=headers[actor])
+    assert response.status_code == 500 and response.json["success"] is False
+    assert snapshots() == []
+
+
+def test_update_availability_failed_commit_rolls_back(phase2, monkeypatch):
+    client, headers = phase2
+    before = DoctorAvailability.query.count()
+
+    def fail():
+        raise RuntimeError("Synthetic failed commit")
+
+    with monkeypatch.context() as patch:
+        patch.setattr(db.session, "commit", fail)
+        response = client.post("/api/doctor/set-slots", headers=headers["ajay"], json={"slots": [
+            {"date": (TOMORROW + timedelta(days=10)).isoformat(), "slot_type": "morning"},
+        ]})
+    assert response.status_code == 500 and response.json["success"] is False
+    assert DoctorAvailability.query.count() == before
+
+
+def test_doctor_history_without_treatment(phase2):
+    client, headers = phase2
+    row = appointment()
+    db.session.commit()
+    response = client.get("/api/doctor/patient-history/1", headers=headers["ajay"])
+    result = response.json["appointments"][0]
+    assert result["id"] == row.id and result["treatment"] is None
+
+
+@pytest.mark.parametrize("missing_mail", ["patient", "doctor"])
+def test_patient_cancel_with_missing_mail_recipient(phase2, missing_mail):
+    client, headers = phase2
+    appointment()
+    db.session.get(User, 4 if missing_mail == "patient" else 2).email = ""
+    db.session.commit()
+    response = client.delete("/api/patient/appointments/1", headers=headers["arjun"])
+    assert response.status_code == 200
+    assert snapshots()[0][5] == "cancelled"
+
+
+def test_doctor_cancel_skips_missing_patient_mail(phase2):
+    client, headers = phase2
+    appointment()
+    db.session.get(User, 4).email = ""
+    db.session.commit()
+    result = client.put("/api/doctor/appointments/1/status", headers=headers["ajay"],
+                        json={"status": "cancelled"})
+    assert result.status_code == 200
+    assert snapshots()[0][5] == "cancelled"
+
+
+def test_model_serialization_of_unassigned_slot(phase2):
+    row = appointment(patient=None, status="available")
+    db.session.commit()
+    assert "patient" not in row.to_dict()
+    assert row.to_dict()["doctor"]["id"] == 1
+    assert repr(row).startswith("<Appointment ")
+    assert repr(db.session.get(Patient, 1)) == "<Patient Arjun Patel>"
+    assert repr(db.session.get(Doctor, 1)) == "<Doctor Ajay Kumar>"
+    assert repr(DoctorAvailability.query.first()).startswith("<Availability ")
+    transient = Appointment(status="available")
+    assert "doctor" not in transient.to_dict()
+
+
+def test_history_of_legacy_record_without_doctor(phase2):
+    client, headers = phase2
+    row = appointment()
+    db.session.add(Treatment(appointment_id=row.id, diagnosis="Synthetic historical result"))
+    db.session.flush()
+    db.session.execute(text("UPDATE appointments SET doctor_id = 999 WHERE id = :id"), {"id": row.id})
+    db.session.commit()
+    response = client.get("/api/patient/history", headers=headers["arjun"])
+    history = response.json["data"]["treatments"]
+    assert history[0]["appointment"]["id"] == row.id
+    assert history[0]["doctor"] is None
+
+
+def test_history_when_related_row_disappears_between_reads(phase2, monkeypatch):
+    client, headers = phase2
+    row = appointment()
+    db.session.add(Treatment(appointment_id=row.id, diagnosis="Synthetic historical result"))
+    db.session.commit()
+    original = Query.get
+
+    def find(query, key):
+        # Simulate a row disappearing after the treatment/appointment join completed.
+        if query.column_descriptions[0]["entity"] is Appointment:
+            return None
+        return original(query, key)
+
+    monkeypatch.setattr(Query, "get", find)
+    response = client.get("/api/patient/history", headers=headers["arjun"])
+    assert "appointment" not in response.json["data"]["treatments"][0]

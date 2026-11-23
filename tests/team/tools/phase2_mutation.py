@@ -18,8 +18,8 @@ ROOT = Path(__file__).resolve().parents[3]
 ROUTE = Path("backend/routes/patient.py")
 UNIT = "tests/team/unit/test_appointment_rules.py"
 FAST_SELECTION = (
-    "MCC-111111 or MCC-111011 or MCC-111101 or MCC-111110 or "
-    "test_br01_hour_windows or test_br03_cancel_transition"
+    "MCC-111111 or MCC-110111 or MCC-111011 or MCC-111101 or MCC-111110 or "
+    "test_br01 or test_br03 or test_br04_patient_writes"
 )
 
 

@@ -44,6 +44,7 @@ def test_br02_all_combinations(phase2, monkeypatch, bits):
 
     expected_status, phrase = oracle(bits)
     assert (status, phrase.lower() in body["message"].lower()) == (expected_status, True), body
+    assert body["success"] is (expected_status == 200)
     after = snapshots()
     if expected_status == 200:
         assert before == []
@@ -58,18 +59,27 @@ def test_br02_all_combinations(phase2, monkeypatch, bits):
     ("20:00", 400), ("09:30", 200), ("12:59", 200), ("10:00-11:00", 200),
 ], ids=lambda value: str(value))
 def test_br01_hour_windows(phase2, monkeypatch, hour, expected):
-    status, _ = call_booking(monkeypatch, booking_payload(hour=hour))
+    status, body = call_booking(monkeypatch, booking_payload(hour=hour))
     assert status == expected
+    assert body["success"] is (expected == 200)
     assert [row[4:6] for row in snapshots()] == ([(hour[:5], "booked")] if status == 200 else [])
 
 
-@pytest.mark.parametrize(("delta", "expected"), [(-1, 200), (0, 400), (1, 400)])
+@pytest.mark.parametrize(("delta", "expected"), [(-1, 200), (0, 400), (1, 400), (3600, 400)])
 def test_br01_exact_cutoff(phase2, monkeypatch, delta, expected):
     cutoff = datetime.combine(TODAY, time(3, 30))
     monkeypatch.setattr(BookingClock, "instant", cutoff + timedelta(seconds=delta))
-    status, _ = call_booking(monkeypatch, booking_payload(day=TODAY, hour="09:00"))
+    status, body = call_booking(monkeypatch, booking_payload(day=TODAY, hour="09:00"))
     assert status == expected
+    assert body["success"] is (expected == 200)
     assert len(snapshots()) == (expected == 200)
+
+
+def test_br01_future_date_has_no_today_cutoff(phase2, monkeypatch):
+    monkeypatch.setattr(BookingClock, "instant", datetime.combine(TODAY, time(8)))
+    status, body = call_booking(monkeypatch, booking_payload(day=TOMORROW, hour="09:00"))
+    assert status == 200 and body["success"] is True
+    assert snapshots()[0][3:6] == (TOMORROW.isoformat(), "09:00", "booked")
 
 
 @pytest.mark.parametrize(("owner", "source", "status"), [
@@ -86,7 +96,17 @@ def test_br03_cancel_transition(phase2, monkeypatch, owner, source, status):
     with app.test_request_context("/api/patient/appointments/1", method="DELETE"):
         result = app.make_response(unwrap(patient.cancel_appointment)(1))
     assert result.status_code == status
+    assert result.get_json()["success"] is (status == 200)
     assert snapshots() == ([(*before[0][:5], "cancelled", before[0][6])] if status == 200 else before)
+
+
+def test_br03_profile_absent(phase2, monkeypatch):
+    monkeypatch.setattr(patient, "get_current_user_id", lambda: 999)
+    with app.test_request_context("/api/patient/appointments/1", method="DELETE"):
+        result = app.make_response(unwrap(patient.cancel_appointment)(1))
+    assert result.status_code == 404
+    assert result.get_json()["success"] is False
+    assert snapshots() == []
 
 
 @pytest.mark.parametrize(("role", "status"), [("ajay", 403), ("admin", 403), (None, 401)])
