@@ -1,0 +1,26 @@
+﻿{
+    "task":  {
+                 "id":  "007dc04d-fea5-4c18-8c80-618e4718d6d1",
+                 "type":  "REPORT",
+                 "componentId":  "816012e4-8e7e-413c-9e66-360562ef2a30",
+                 "componentKey":  "medihub-team",
+                 "componentName":  "MediHub Team SQE",
+                 "componentQualifier":  "TRK",
+                 "analysisId":  "6e81b830-595a-4397-aa1a-25f9ac6ac1c2",
+                 "status":  "SUCCESS",
+                 "submittedAt":  "2026-11-23T16:58:18+0000",
+                 "submitterLogin":  "admin",
+                 "startedAt":  "2026-11-23T16:58:19+0000",
+                 "executedAt":  "2026-11-23T16:58:25+0000",
+                 "executionTimeMs":  5796,
+                 "hasScannerContext":  true,
+                 "warningCount":  2,
+                 "warnings":  [
+                                  "The token used for this analysis will expire on: November 24, 2026\nAfter this date, the token can no longer be used to execute the analysis. Please consider generating a new token and updating it in the locations where it is in use.",
+                                  "Your code is analyzed as compatible with Python versions 3.10 through 3.14 by default. You can get a more precise analysis by setting the Python version or version range in your configuration via the parameter \"sonar.python.version\""
+                              ],
+                 "infoMessages":  [
+
+                                  ]
+             }
+}

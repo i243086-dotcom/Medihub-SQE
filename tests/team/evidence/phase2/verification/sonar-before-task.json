@@ -1,0 +1,28 @@
+﻿{
+    "task":  {
+                 "id":  "483e72ec-687b-48f8-b14c-584fb41fa3f1",
+                 "type":  "REPORT",
+                 "componentId":  "816012e4-8e7e-413c-9e66-360562ef2a30",
+                 "componentKey":  "medihub-team",
+                 "componentName":  "MediHub Team SQE",
+                 "componentQualifier":  "TRK",
+                 "analysisId":  "c8b7f7e2-1810-4f8c-a8a2-5ecc5fb8cf21",
+                 "status":  "SUCCESS",
+                 "submittedAt":  "2026-11-23T16:25:25+0000",
+                 "submitterLogin":  "admin",
+                 "startedAt":  "2026-11-23T16:25:27+0000",
+                 "executedAt":  "2026-11-23T16:25:33+0000",
+                 "executionTimeMs":  6480,
+                 "hasScannerContext":  true,
+                 "warningCount":  4,
+                 "warnings":  [
+                                  "The token used for this analysis will expire on: November 24, 2026\nAfter this date, the token can no longer be used to execute the analysis. Please consider generating a new token and updating it in the locations where it is in use.",
+                                  "Your code is analyzed as compatible with Python versions 3.10 through 3.14 by default. You can get a more precise analysis by setting the Python version or version range in your configuration via the parameter \"sonar.python.version\"",
+                                  "No report was found for sonar.python.coverage.reportPaths using pattern coverage.xml",
+                                  "Missing blame information for 3 files. This may lead to some features not working correctly. Please check the analysis logs and refer to \u003ca href=\"https://docs.sonarsource.com/sonarqube-community-build/analyzing-source-code/scm-integration/\" rel=\"noopener noreferrer\" target=\"_blank\"\u003ethe documentation\u003c/a\u003e."
+                              ],
+                 "infoMessages":  [
+
+                                  ]
+             }
+}

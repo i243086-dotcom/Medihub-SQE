@@ -1,0 +1,57 @@
+{
+  "levels": {
+    "API": {
+      "executed-pass": 214,
+      "executed-fail": 4
+    },
+    "Browser": {
+      "executed-pass": 30
+    },
+    "Unit": {
+      "executed-pass": 312
+    }
+  },
+  "mutation": {
+    "before": {
+      "created": 386,
+      "test_outcomes": {
+        "None": 286,
+        "survived": 35,
+        "killed": 65
+      },
+      "worker_outcomes": {
+        "skipped": 286,
+        "normal": 100
+      },
+      "score_excluding_skipped": 0.65
+    },
+    "after": {
+      "created": 486,
+      "test_outcomes": {
+        "None": 368,
+        "killed": 104,
+        "survived": 14
+      },
+      "worker_outcomes": {
+        "skipped": 368,
+        "normal": 118
+      },
+      "score_excluding_skipped": 0.8813559322033898
+    },
+    "final": {
+      "created": 486,
+      "test_outcomes": {
+        "None": 368,
+        "killed": 116,
+        "survived": 2
+      },
+      "worker_outcomes": {
+        "skipped": 368,
+        "normal": 118
+      },
+      "score_excluding_skipped": 0.9830508474576272,
+      "evidence_directory": "mutation-final"
+    }
+  },
+  "scoped_nonblank_noncomment_lines": 1011
+}

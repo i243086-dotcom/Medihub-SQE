@@ -1,0 +1,190 @@
+SonarQube full scan	Generate coverage and scan the PR checkout	﻿2026-11-23T16:34:12.8414003Z ##[group]Run mkdir evidence
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8414368Z ^[[36;1mmkdir evidence^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8414958Z ^[[36;1mpython -m pytest tests/team/unit -q --tb=short --cov=backend --cov-branch --cov-report=xml:coverage.xml^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8415701Z ^[[36;1mexport SONAR_HOST_URL=http://127.0.0.1:9000^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8416278Z ^[[36;1m# This token exists only in this job's isolated, newly bootstrapped instance.^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8417255Z ^[[36;1mSONAR_TOKEN=$(curl -fsS -u admin:admin -X POST "${SONAR_HOST_URL}/api/user_tokens/generate" --data-urlencode name=ci-analysis | jq -er '.token')^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8418067Z ^[[36;1mecho "::add-mask::$SONAR_TOKEN"^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8418412Z ^[[36;1mexport SONAR_TOKEN^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8418883Z ^[[36;1m# Community Build processes a full checkout under a unique project key.^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8420194Z ^[[36;1menv -u GITHUB_ACTIONS -u GITHUB_EVENT_NAME -u GITHUB_EVENT_PATH -u GITHUB_REF -u GITHUB_BASE_REF -u GITHUB_HEAD_REF pysonar "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8421654Z ^[[36;1mpython tests/team/tools/sonar_gate.py "medihub-pr-$PR_NUMBER" evidence/sonar-measures.json^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8461446Z shell: /usr/bin/bash -e {0}
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8461780Z env:
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8462117Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8462686Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8463345Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8463823Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8464558Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8465046Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8465456Z   PR_NUMBER: 11
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:12.8465708Z ##[endgroup]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:16.4023512Z ........................................................................ [ 75%]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1845815Z .......................                                                  [100%]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1846319Z =============================== warnings summary ===============================
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1846640Z tests/team/unit/test_appointment_rules.py: 49 warnings
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1848180Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:231: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1849283Z     doctor = Doctor.query.get(data['doctor_id'])
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1849458Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1849640Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1850022Z ================================ tests coverage ================================
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1850376Z _______________ coverage: platform linux, python 3.11.18-final-0 _______________
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1850594Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1850700Z Coverage XML written to file coverage.xml
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.1850932Z 95 passed, 49 warnings in 2.63s
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.6374930Z INFO: Starting Pysonar 1.11.0.6012, the Sonar scanner CLI for Python
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:17.6375658Z INFO: Enhance your workflow: Pair pysonar with SonarQube Server per your license or SonarQube Cloud for deeper analysis, and try SonarQube-IDE in your favourite IDE.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.2464797Z INFO: Starting the analysis...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.4811087Z INFO: Starting SonarScanner Engine...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.4820194Z INFO: Java 21.0.13 Eclipse Adoptium (64-bit)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.8771284Z INFO: Load global settings
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.9698855Z INFO: Load global settings (done) | time=93ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.9718215Z INFO: Server id: 147B411E-AaIJQZn6Q6S1oYDJsZBN
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:19.9759380Z INFO: Found an active CI vendor: 'Github Actions'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.1993229Z INFO: Loading required plugins
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.1994123Z INFO: Load plugins index
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.2624769Z INFO: Load plugins index (done) | time=59ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.2629960Z INFO: Load/download plugins
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.4898893Z INFO: Load/download plugins (done) | time=228ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7447715Z INFO: Load project settings for component key: 'medihub-pr-11'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7564316Z INFO: Failed to load settings with NOT_FOUND error, which can happen if the project does not exist yet
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7690651Z INFO: Process project properties
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7805629Z INFO: Process project properties (done) | time=13ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7892846Z INFO: Project key: medihub-pr-11
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7895339Z INFO: Base dir: /home/runner/work/Medihub-SQE/Medihub-SQE
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.7896327Z INFO: Working dir: /home/runner/work/Medihub-SQE/Medihub-SQE/.scannerwork
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.8652036Z INFO: Load quality profiles
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.9424182Z INFO: Load quality profiles (done) | time=74ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:20.9579957Z INFO: Load active rules
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.2196886Z INFO: Load active rules (done) | time=261ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.2240453Z INFO: Load analysis cache
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.2474154Z INFO: Load analysis cache (404) | time=22ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3184354Z INFO: Preprocessing files...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3937663Z INFO: 4 languages detected in 37 preprocessed files (done) | time=76ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3938558Z INFO: 70 files ignored because of inclusion/exclusion patterns
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3939354Z INFO: 4 directories skipped because of exclusion patterns (content not counted)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3940442Z INFO: 1 file ignored because of scm ignore settings
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3955393Z INFO: Loading plugins for detected languages
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:21.3955969Z INFO: Load/download plugins
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.7104493Z INFO: Load/download plugins (done) | time=1315ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.8894749Z INFO: Load project repositories
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.8995850Z INFO: Load project repositories (done) | time=9ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9284092Z INFO: Indexing files...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9284911Z INFO: Project configuration:
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9293858Z INFO:   Excluded sources: **/.venv/**, **/instance/**, **/__pycache__/**, **/node_modules/**, **/test_*.py
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9294619Z INFO:   Included tests: **/test_*.py
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9377540Z INFO: 37 files indexed (done) | time=10ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9423909Z INFO: Quality profile for css: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9438114Z INFO: Quality profile for js: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9438905Z INFO: Quality profile for py: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9439454Z INFO: Quality profile for web: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9440014Z INFO: ------------- Run sensors on module MediHub Team SQE
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:22.9701802Z INFO: Load metrics repository
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.0237957Z INFO: Load metrics repository (done) | time=52ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.6066766Z INFO: Reflections took 57 ms to scan 1 urls, producing 30 keys and 313 values
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7007915Z INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7041819Z INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=3ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7053883Z INFO: Sensor IaC hadolint report Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7054840Z INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7055563Z INFO: Sensor Java Config Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7057281Z INFO: There are no files to be analyzed for the Java language
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7057990Z INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7058599Z INFO: Sensor IaC Docker Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7084794Z INFO: There are no files to be analyzed for the Docker language
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7085866Z INFO: Sensor IaC Docker Sensor [iac] (done) | time=3ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7086597Z INFO: Sensor Python Sensor [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.7114020Z WARNING: Your code is analyzed as compatible with Python versions 3.10 through 3.14 by default. You can get a more precise analysis by setting the Python version or version range in your configuration via the parameter "sonar.python.version"
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.9746615Z INFO: Starting global symbols computation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:23.9776521Z INFO: 27 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:24.8604454Z INFO: 27/27 source files have been analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:24.8613874Z INFO: Finished step global symbols computation in 884ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:24.8944778Z INFO: Starting rules execution
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:24.8950216Z INFO: 27 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2624881Z INFO: 27/27 source files have been analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2663856Z INFO: Finished step rules execution in 1368ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2670442Z INFO: The Python analyzer was able to leverage cached data from previous analyses for 0 out of 27 files. These files were not parsed.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2683935Z INFO: Sensor Python Sensor [python] (done) | time=2556ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2684743Z INFO: Sensor Cobertura Sensor for Python coverage [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2737453Z INFO: Python test coverage
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.2752814Z INFO: Parsing report '/home/runner/work/Medihub-SQE/Medihub-SQE/coverage.xml'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.3395306Z INFO: Sensor Cobertura Sensor for Python coverage [python] (done) | time=72ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.3396293Z INFO: Sensor PythonXUnitSensor [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.3428296Z INFO: Sensor PythonXUnitSensor [python] (done) | time=4ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.3455332Z INFO: Sensor Python Dependency Sensor [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.3475783Z INFO: Sensor Python Dependency Sensor [python] (done) | time=4ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.3476485Z INFO: Sensor HTML [web]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.5004498Z INFO: Sensor HTML [web] (done) | time=151ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.5005220Z INFO: Sensor TextAndSecretsSensor [text]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.5166984Z INFO: Available processors: 4
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.5170525Z INFO: Using 4 threads for analysis.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.8635002Z INFO: Start fetching files for the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.8696879Z INFO: Using Git CLI to retrieve dirty files
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.8964628Z INFO: Retrieving language associated files and files included via "sonar.text.inclusions" that are tracked by git
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.8970526Z INFO: Starting the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:26.8981190Z INFO: 36 source files to be analyzed for the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:27.0436607Z INFO: 36/36 source files have been analyzed for the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:27.0447869Z INFO: Sensor TextAndSecretsSensor [text] (done) | time=544ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:27.0480131Z INFO: ------------- Run sensors on project
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:27.1919200Z INFO: Sensor JavaScript/TypeScript/CSS analysis [javascript]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:27.4143271Z INFO: Detected os: Linux arch: amd64 alpine: false. Platform: LINUX_X64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:27.4146005Z INFO: Deploy location /home/runner/.sonar/js/node-runtime, tagetRuntime: /home/runner/.sonar/js/node-runtime/node,  version: /home/runner/.sonar/js/node-runtime/version.txt
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:29.6949030Z INFO: Using embedded Node.js runtime.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:29.6949600Z INFO: Using Node.js executable: '/home/runner/.sonar/js/node-runtime/node'.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:31.4018044Z INFO: Memory configuration: OS (15983 MB), Node.js (4288 MB).
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:31.4104184Z INFO: gRPC analyze-project server listening on 127.0.0.1:42589
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:31.6133937Z INFO: Plugin version: [14.3.0.46350]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:33.2573976Z INFO: Found 0 tsconfig.json file(s): []
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1740283Z INFO: 8 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1763613Z INFO: Analyzing 6 file(s) using default options [lib: lib.esnext.d.ts, lib.dom.d.ts]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1790404Z INFO: 8/8 source files have been analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1824234Z INFO: Hit the cache for 0 out of 7
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1833609Z INFO: Miss the cache for 7 out of 7: ANALYSIS_MODE_INELIGIBLE [7/7]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1843844Z INFO: Sensor JavaScript/TypeScript/CSS analysis [javascript] (done) | time=7990ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1844550Z INFO: Sensor IaC Project Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1845176Z INFO: Sensor IaC Project Sensor [iac] (done) | time=1ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1846524Z INFO: Sensor Zero Coverage Sensor
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1903602Z INFO: Sensor Zero Coverage Sensor (done) | time=5ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1933746Z INFO: ------------- Gather SCA dependencies on project
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1942799Z INFO: Dependency analysis skipped
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1971229Z INFO: SCM Publisher SCM provider for this project is: git
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.1983336Z INFO: SCM Publisher 35 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.8539189Z INFO: SCM Publisher 35/35 source files have been analyzed (done) | time=658ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.8746903Z INFO: CPD Executor 4 files had no CPD blocks
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.8790314Z INFO: CPD Executor Calculating CPD for 24 files
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:35.9152642Z INFO: CPD Executor CPD calculation finished (done) | time=40ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1172009Z ERROR: Error during SonarScanner Engine execution
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1195633Z ERROR: java.lang.NullPointerException: Cannot invoke "Object.equals(Object)" because "<parameter1>" is null
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1197818Z 	at java.base/java.util.ImmutableCollections$Set12.contains(Unknown Source)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1198747Z 	at org.sonar.scanner.ci.GithubActions.isPullRequestEvent(GithubActions.java:149)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1199631Z 	at org.sonar.scanner.ci.GithubActions.getScmRevision(GithubActions.java:70)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1200724Z 	at java.base/java.util.Optional.flatMap(Unknown Source)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1201453Z 	at org.sonar.scanner.ci.CiEnvironment.getScmRevision(CiEnvironment.java:75)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1202255Z 	at org.sonar.scanner.scm.ScmRevisionImpl.get(ScmRevisionImpl.java:55)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1203356Z 	at org.sonar.scanner.report.MetadataPublisher.addScmInformation(MetadataPublisher.java:134)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1204458Z 	at org.sonar.scanner.report.MetadataPublisher.publish(MetadataPublisher.java:97)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1205409Z 	at org.sonar.scanner.report.ReportPublisher.generateReportFile(ReportPublisher.java:184)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1206354Z 	at org.sonar.scanner.report.ReportPublisher.execute(ReportPublisher.java:161)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1207390Z 	at org.sonar.scanner.scan.SpringProjectScanContainer.doAfterStart(SpringProjectScanContainer.java:221)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1208577Z 	at org.sonar.scanner.spring.SpringComponentContainer.startComponents(SpringComponentContainer.java:205)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1209712Z 	at org.sonar.scanner.spring.SpringComponentContainer.execute(SpringComponentContainer.java:184)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1210829Z 	at org.sonar.scanner.bootstrap.SpringScannerContainer.doAfterStart(SpringScannerContainer.java:356)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1212266Z 	at org.sonar.scanner.spring.SpringComponentContainer.startComponents(SpringComponentContainer.java:205)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1213533Z 	at org.sonar.scanner.spring.SpringComponentContainer.execute(SpringComponentContainer.java:184)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1214660Z 	at org.sonar.scanner.bootstrap.SpringGlobalContainer.doAfterStart(SpringGlobalContainer.java:137)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1215807Z 	at org.sonar.scanner.spring.SpringComponentContainer.startComponents(SpringComponentContainer.java:205)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1216946Z 	at org.sonar.scanner.spring.SpringComponentContainer.execute(SpringComponentContainer.java:184)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1218130Z 	at org.sonar.scanner.bootstrap.ServerScannerEngineRunner.runSpringContainer(ServerScannerEngineRunner.java:71)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1219386Z 	at org.sonar.scanner.bootstrap.AbstractScannerEngineRunner.execute(AbstractScannerEngineRunner.java:102)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1220578Z 	at org.sonar.scanner.bootstrap.AbstractScannerEngineRunner.execute(AbstractScannerEngineRunner.java:73)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1221632Z 	at org.sonar.scanner.bootstrap.ScannerMain.runScannerEngine(ScannerMain.java:144)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1222687Z 	at org.sonar.scanner.bootstrap.ScannerMain.run(ScannerMain.java:65)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1223601Z 	at org.sonar.scanner.bootstrap.ScannerMain.main(ScannerMain.java:45)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.1224111Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2838954Z Traceback (most recent call last):
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2847950Z   File "/home/runner/work/Medihub-SQE/Medihub-SQE/tests/team/tools/sonar_gate.py", line 41, in <module>
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2849306Z     sys.exit(main())
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2849812Z              ^^^^^^
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2850635Z   File "/home/runner/work/Medihub-SQE/Medihub-SQE/tests/team/tools/sonar_gate.py", line 30, in main
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2851675Z     raise RuntimeError(f"Sonar measures returned HTTP {result.status_code}")
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.2852404Z RuntimeError: Sonar measures returned HTTP 404
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:34:36.3060259Z ##[error]Process completed with exit code 1.

@@ -164,7 +164,8 @@ def mutation():
         return [json.loads(line) for line in dump.read_text(encoding="utf-8").splitlines()]
     first = records("mutation-before")
     after = records("mutation-after")
-    final = records("mutation-final")
+    final_label = "mutation-final" if (EVIDENCE / "mutation-final/summary.json").is_file() else "mutation-ci-exact"
+    final = records(final_label)
     latest = {mutation_key(result): result["test_outcome"] for _, result in final if result["diff"]}
     with (EVIDENCE / "mutation-survivor-review.csv").open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -203,6 +204,21 @@ def mutation():
         totals[label] = {"created": len(rows), "test_outcomes": {str(k): v for k, v in tests.items()},
                          "worker_outcomes": dict(workers),
                          "score_excluding_skipped": tests["killed"] / (tests["killed"] + tests["survived"])}
+    totals["final"]["evidence_directory"] = final_label
+    with (EVIDENCE / "mutation-final-survivors.csv").open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["mutant", "operator", "changed_lines", "assessment"])
+        for job, result in final:
+            if result["test_outcome"] != "survived":
+                continue
+            change = " | ".join(mutation_key(result))
+            if "apt_date <= today:" in change and "apt_date == today:" in change:
+                assessment = "Equivalent within the earlier past-date guard."
+            elif "split('-', 2)[0]" in change:
+                assessment = "Equivalent: both split limits leave the first segment unchanged."
+            else:
+                assessment = "Survived and needs individual review."
+            writer.writerow([job["job_id"], job["mutations"][0]["operator_name"], change, assessment])
     return totals
 
 

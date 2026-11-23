@@ -1,0 +1,97 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________________ test_br02_all_combinations[MCC-111101] ____________________
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:1977: in _exec_single_context
+    self.dialect.do_execute(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/default.py:1192: in do_execute
+    cursor.execute(statement, parameters)
+E   sqlite3.IntegrityError: UNIQUE constraint failed: appointments.doctor_id, appointments.appointment_date, appointments.appointment_time
+
+The above exception was the direct cause of the following exception:
+tests/team/unit/test_appointment_rules.py:43: in test_br02_all_combinations
+    status, body = call_booking(monkeypatch, booking_payload(day=day))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/team/unit/test_appointment_rules.py:21: in call_booking
+    response = app.make_response(unwrap(patient.book_appointment)())
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/routes/patient.py:335: in book_appointment
+    db.session.commit()
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py:611: in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/session.py:2177: in commit
+    trans.commit(_to_root=True)
+<sqlalchemy generated _go() wrapper for sqlalchemy.orm.session.SessionTransaction.commit>:2: in commit
+    return target(fn, self, _to_root=_to_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/session.py:1412: in commit
+    self._prepare_impl()
+<sqlalchemy generated _go() wrapper for sqlalchemy.orm.session.SessionTransaction._prepare_impl>:2: in _prepare_impl
+    return target(fn, self)
+           ^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py:137: in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/session.py:1386: in _prepare_impl
+    self.session.flush()
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/session.py:4626: in flush
+    self._flush(objects)
+<sqlalchemy generated warned() wrapper for sqlalchemy.orm.session.Session._flush>:2: in _flush
+    return target(fn, self, objects=objects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/util/deprecations.py:281: in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/session.py:4769: in _flush
+    with util.safe_reraise():
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py:166: in __exit__
+    raise exc_value.with_traceback(exc_tb)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/session.py:4730: in _flush
+    flush_context.execute()
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py:467: in execute
+    rec.execute(self)
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py:643: in execute
+    util.preloaded.orm_persistence._save_obj(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py:92: in _save_obj
+    _emit_insert_statements(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py:1250: in _emit_insert_statements
+    result = connection.execute(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:1494: in execute
+    return meth(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/sql/elements.py:534: in _execute_on_connection
+    return connection._execute_clauseelement(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:1714: in _execute_clauseelement
+    ret = self._execute_context(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:1868: in _execute_context
+    return self._exec_single_context(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:1996: in _exec_single_context
+    self._handle_dbapi_exception(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:2351: in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/base.py:1977: in _exec_single_context
+    self.dialect.do_execute(
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/sqlalchemy/engine/default.py:1192: in do_execute
+    cursor.execute(statement, parameters)
+E   sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: appointments.doctor_id, appointments.appointment_date, appointments.appointment_time
+E   [SQL: INSERT INTO appointments (patient_id, doctor_id, appointment_date, appointment_time, status, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+E   [parameters: (1, 1, '2030-01-16', '10:00:00.000000', 'booked', '', '2026-11-23 16:53:23.878896', '2026-11-23 16:53:23.878897')]
+E   (Background on this error at: https://sqlalche.me/e/21/gkpj)
+---------------------------- Captured stdout setup -----------------------------
+Protected development DB SHA-256 before: absent
+--------------------------- Captured stdout teardown ---------------------------
+Protected development DB SHA-256 after: absent
+=============================== warnings summary ===============================
+tests/team/unit/test_appointment_rules.py::test_br02_all_combinations[MCC-111101]
+  /tmp/medihub-mutation-orujby7_/backend/routes/patient.py:244: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/team/unit/test_appointment_rules.py::test_br02_all_combinations[MCC-111101] - sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: appointments.doctor_id, appointments.appointment_date, appointments.appointment_time
+[SQL: INSERT INTO appointments (patient_id, doctor_id, appointment_date, appointment_time, status, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1, 1, '2030-01-16', '10:00:00.000000', 'booked', '', '2026-11-23 16:53:23.878896', '2026-11-23 16:53:23.878897')]
+(Background on this error at: https://sqlalche.me/e/21/gkpj)
+1 failed, 101 deselected, 1 warning in 0.43s

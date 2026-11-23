@@ -1,0 +1,40 @@
+{
+  "production_sha256": "1b3287c6e10ee3dbfbede2d759041c66acbcf4ccc70d0d4778391762101d3ef6",
+  "custom": [
+    {
+      "id": "CM-01",
+      "target": "book_appointment",
+      "line": 310,
+      "assertions": "MCC-111101",
+      "exit": 1,
+      "status": "killed"
+    },
+    {
+      "id": "CM-02",
+      "target": "cancel_appointment",
+      "line": 357,
+      "assertions": "test_br03_cancel_transition",
+      "exit": 1,
+      "status": "killed"
+    }
+  ],
+  "cosmic": {
+    "selected_ranges": [
+      "260-291",
+      "303-337",
+      "342-365"
+    ],
+    "outcomes": {
+      "null": 368,
+      "killed": 116,
+      "survived": 2
+    },
+    "workers": {
+      "skipped": 368,
+      "normal": 118
+    },
+    "score": 0.9830508474576272,
+    "killed": 116,
+    "survived": 2
+  }
+}

@@ -1,0 +1,17 @@
+
+=================================== ERRORS ====================================
+_______ ERROR collecting tests/team/api/test_generated_appointments.py ________
+tests\team\api\test_generated_appointments.py:16: in <module>
+    DATA = json.loads(PATH.read_text(encoding="utf-8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Silicon\\AppData\\Local\\Temp\\medihub-generator-check-30fzm_v6\\absent.json'
+=========================== short test summary info ===========================
+ERROR tests/team/api/test_generated_appointments.py - FileNotFoundError: [Err...
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+no tests collected, 1 error in 1.52s

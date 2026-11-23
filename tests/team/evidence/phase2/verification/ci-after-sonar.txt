@@ -1,0 +1,767 @@
+SonarQube full scan	Set up job	﻿2026-11-23T16:38:28.5764471Z Current runner version: '2.338.2'
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5793345Z ##[group]Runner Image Provisioner
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5794222Z Hosted Compute Agent
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5794886Z Version: 20261111.635
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5795549Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5796292Z Build Date: 2026-11-11T01:49:01Z
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5796959Z Worker ID: {764f9bf4-0527-4d2a-97a4-8fea7954fcf3}
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5798047Z Region: eastus2
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5798718Z Cloud: Azure
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5799274Z ##[endgroup]
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5800667Z ##[group]Operating System
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5801285Z Ubuntu
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5801798Z 26.04.1
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5802310Z LTS
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5802846Z ##[endgroup]
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5803367Z ##[group]Runner Image
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5804025Z Image: ubuntu-26.04
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5804577Z Version: 20261116.202.1
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5805606Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5807331Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5808593Z ##[endgroup]
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5809650Z ##[group]GITHUB_TOKEN Permissions
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5812172Z Contents: read
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5812751Z Metadata: read
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5813321Z ##[endgroup]
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5815266Z Secret source: Actions
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5816220Z Cache mode: write
+SonarQube full scan	Set up job	2026-11-23T16:38:28.5816876Z Prepare workflow directory
+SonarQube full scan	Set up job	2026-11-23T16:38:28.6144072Z Prepare all required actions
+SonarQube full scan	Set up job	2026-11-23T16:38:28.6193703Z Getting action download info
+SonarQube full scan	Set up job	2026-11-23T16:38:28.8486533Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+SonarQube full scan	Set up job	2026-11-23T16:38:28.9617095Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+SonarQube full scan	Set up job	2026-11-23T16:38:29.0203919Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+SonarQube full scan	Set up job	2026-11-23T16:38:29.2553070Z Complete job name: SonarQube full scan
+SonarQube full scan	Run actions/checkout@v4	﻿2026-11-23T16:38:29.3365910Z ##[group]Run actions/checkout@v4
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3366843Z with:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3367350Z   fetch-depth: 0
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3368146Z   repository: i243086-dotcom/Medihub-SQE
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3371996Z   token: ***
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3372529Z   ssh-strict: true
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3373037Z   ssh-user: git
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3373538Z   persist-credentials: true
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3374158Z   clean: true
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3374752Z   sparse-checkout-cone-mode: true
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3375361Z   fetch-tags: false
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3375888Z   show-progress: true
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3376410Z   lfs: false
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3376973Z   submodules: false
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3377493Z   set-safe-directory: true
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3378201Z   allow-unsafe-pr-checkout: false
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.3379019Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6275452Z Syncing repository: i243086-dotcom/Medihub-SQE
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6279341Z ##[group]Getting Git version info
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6280755Z Working directory is '/home/runner/work/Medihub-SQE/Medihub-SQE'
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6283095Z [command]/usr/bin/git version
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6358420Z git version 2.56.1
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6373181Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6391688Z Temporarily overriding HOME='/home/runner/work/_temp/4fe4ddbc-09f9-4bba-9d9e-6b989caaad4b' before making global git config changes
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6394402Z Adding repository directory to the temporary git global config as a safe directory
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6398457Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6481547Z Deleting the contents of '/home/runner/work/Medihub-SQE/Medihub-SQE'
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6488490Z ##[group]Initializing the repository
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6490293Z [command]/usr/bin/git init /home/runner/work/Medihub-SQE/Medihub-SQE
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6583085Z hint: Using 'master' as the name for the initial branch. This default branch name
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6586281Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6588368Z hint: to use in all of your new repositories, which will suppress this warning,
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6589930Z hint: call:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6591192Z hint:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6592435Z hint: 	git config --global init.defaultBranch <name>
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6593862Z hint:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6595203Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6597181Z hint: 'development'. The just-created branch can be renamed via this command:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6599019Z hint:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6600089Z hint: 	git branch -m <name>
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6601260Z hint:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6602635Z hint: Disable this message with "git config set advice.defaultBranchName false"
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6605176Z Initialized empty Git repository in /home/runner/work/Medihub-SQE/Medihub-SQE/.git/
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6609568Z [command]/usr/bin/git remote add origin https://github.com/i243086-dotcom/Medihub-SQE
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6660870Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6661897Z ##[group]Disabling automatic garbage collection
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6665472Z [command]/usr/bin/git config --local gc.auto 0
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6702873Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6703892Z ##[group]Setting up auth
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6712376Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.6753422Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7237286Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7272113Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7491574Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7522203Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7747455Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7790230Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7791580Z ##[group]Fetching the repository
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:29.7800142Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935:refs/remotes/pull/11/merge
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2883677Z From https://github.com/i243086-dotcom/Medihub-SQE
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2886157Z  * [new branch]      main                                     -> origin/main
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2888753Z  * [new branch]      phase2-setup                             -> origin/phase2-setup
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2891501Z  * [new branch]      phase2-smoke                             -> origin/phase2-smoke
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2894022Z  * [new branch]      phase2-testdb                            -> origin/phase2-testdb
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2896502Z  * [new branch]      phase2-tools                             -> origin/phase2-tools
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2899036Z  * [new branch]      phase2-verification                      -> origin/phase2-verification
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2901465Z  * [new tag]         baseline-v0                              -> baseline-v0
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2903621Z  * [new ref]         bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935 -> pull/11/merge
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2908092Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2909933Z ##[group]Determining the checkout info
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2911900Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2919832Z [command]/usr/bin/git sparse-checkout disable
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2955434Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2985603Z ##[group]Checking out the ref
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.2988238Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/11/merge
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3235977Z Note: switching to 'refs/remotes/pull/11/merge'.
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3237496Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3239468Z You are in 'detached HEAD' state. You can look around, make experimental
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3242833Z changes and commit them, and you can discard any commits you make in this
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3245519Z state without impacting any branches by switching back to a branch.
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3247296Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3248696Z If you want to create a new branch to retain commits you create, you may
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3251497Z do so (now or later) by using -c with the switch command. Example:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3253000Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3253696Z   git switch -c <new-branch-name>
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3254808Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3255445Z Or undo this operation with:
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3256413Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3257123Z   git switch -
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3258457Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3259721Z Turn off this advice by setting config variable advice.detachedHead to false
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3261351Z 
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3263300Z HEAD is now at bd0e1ee Merge 815b11f9c6ad9bfffca37362a866db6352bb1689 into adf2871f9fe5c57e61218eecd5f90fc955e00ee4
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3269991Z ##[endgroup]
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3293913Z [command]/usr/bin/git log -1 --format=%H
+SonarQube full scan	Run actions/checkout@v4	2026-11-23T16:38:30.3316776Z bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935
+SonarQube full scan	Run actions/setup-python@v5	﻿2026-11-23T16:38:30.3705468Z ##[group]Run actions/setup-python@v5
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3706868Z with:
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3708003Z   python-version: 3.11
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3709176Z   check-latest: false
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3719536Z   token: ***
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3720617Z   update-environment: true
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3721865Z   allow-prereleases: false
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3723070Z   freethreaded: false
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.3724206Z ##[endgroup]
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.5077032Z ##[group]Installed versions
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.5220617Z (node:2403) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.5224335Z (Use `node --trace-deprecation ...` to show where the warning was created)
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.5227179Z Successfully set up CPython (3.11.18)
+SonarQube full scan	Run actions/setup-python@v5	2026-11-23T16:38:30.5230525Z ##[endgroup]
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	﻿2026-11-23T16:38:30.5430551Z ##[group]Run python -m pip install -r backend/requirements.txt -r requirements-test.txt
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5433341Z ^[[36;1mpython -m pip install -r backend/requirements.txt -r requirements-test.txt^[[0m
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5499103Z shell: /usr/bin/bash -e {0}
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5501117Z env:
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5502905Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5505540Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5508406Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5511133Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5513661Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5517297Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:30.5520831Z ##[endgroup]
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.2814580Z Collecting Flask==2.3.3 (from -r backend/requirements.txt (line 2))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.3199891Z   Downloading flask-2.3.3-py3-none-any.whl.metadata (3.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.3371484Z Collecting Flask-SQLAlchemy==3.0.5 (from -r backend/requirements.txt (line 3))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.3450570Z   Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl.metadata (3.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.3650318Z Collecting Flask-CORS==4.0.0 (from -r backend/requirements.txt (line 4))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.3742097Z   Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata (5.4 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.3933978Z Collecting Flask-JWT-Extended==4.5.3 (from -r backend/requirements.txt (line 5))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.4026798Z   Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl.metadata (3.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.4175350Z Collecting Flask-Mail==0.9.1 (from -r backend/requirements.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.4246791Z   Downloading Flask-Mail-0.9.1.tar.gz (45 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:31.4506880Z   Installing build dependencies: started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.0849395Z   Installing build dependencies: finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.0854782Z   Getting requirements to build wheel: started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.4356495Z   Getting requirements to build wheel: finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.4368352Z   Preparing metadata (pyproject.toml): started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.5925149Z   Preparing metadata (pyproject.toml): finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.6151176Z Collecting Werkzeug==2.3.7 (from -r backend/requirements.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.6285126Z   Downloading werkzeug-2.3.7-py3-none-any.whl.metadata (4.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.8681222Z Collecting celery==5.3.4 (from -r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:32.8867927Z   Downloading celery-5.3.4-py3-none-any.whl.metadata (21 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.1644946Z Collecting redis==5.0.1 (from -r backend/requirements.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.1742244Z   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.4325740Z Collecting python-dotenv==1.0.0 (from -r backend/requirements.txt (line 14))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.4397888Z   Downloading python_dotenv-1.0.0-py3-none-any.whl.metadata (21 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.8114130Z Collecting Pillow==10.1.0 (from -r backend/requirements.txt (line 15))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.8231076Z   Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.8490732Z Collecting pytest==9.2.0 (from -r requirements-test.txt (line 1))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.8569972Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.8756136Z Collecting pytest-cov==7.1.0 (from -r requirements-test.txt (line 2))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:33.8934349Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.2725853Z Collecting coverage==7.17.4 (from -r requirements-test.txt (line 3))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.2824847Z   Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.4740882Z Collecting requests==2.34.2 (from -r requirements-test.txt (line 4))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.4810870Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.5311863Z Collecting PyYAML==6.0.4 (from -r requirements-test.txt (line 5))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.5384201Z   Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.5553076Z Collecting openapi-spec-validator==0.9.0 (from -r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.5623444Z   Downloading openapi_spec_validator-0.9.0-py3-none-any.whl.metadata (6.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.5941431Z Collecting pytest-playwright==0.10.0 (from -r requirements-test.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6010484Z   Downloading pytest_playwright-0.10.0-py3-none-any.whl.metadata (14 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6194846Z Collecting pytest-html==4.2.0 (from -r requirements-test.txt (line 8))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6263347Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6428834Z Collecting freezegun==1.5.5 (from -r requirements-test.txt (line 9))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6498916Z   Downloading freezegun-1.5.5-py3-none-any.whl.metadata (13 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6681325Z Collecting pysonar==1.11.0.6012 (from -r requirements-test.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6787355Z   Downloading pysonar-1.11.0.6012-py3-none-any.whl.metadata (8.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.6961864Z Collecting cosmic-ray==8.9.0 (from -r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7038429Z   Downloading cosmic_ray-8.9.0-py3-none-any.whl.metadata (4.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7214546Z Collecting Jinja2>=3.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7283220Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7425100Z Collecting itsdangerous>=2.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7501404Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7690097Z Collecting click>=8.1.3 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7759676Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7901727Z Collecting blinker>=1.6.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:34.7971481Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.0870239Z Collecting sqlalchemy>=1.4.18 (from Flask-SQLAlchemy==3.0.5->-r backend/requirements.txt (line 3))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.0961714Z   Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1344615Z Collecting PyJWT<3.0,>=2.0 (from Flask-JWT-Extended==4.5.3->-r backend/requirements.txt (line 5))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1416336Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1907288Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.3.7->-r backend/requirements.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1982059Z   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.2176082Z Collecting billiard<5.0,>=4.1.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.2303921Z   Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.2541663Z Collecting kombu<6.0,>=5.3.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.2611876Z   Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.2784033Z Collecting vine<6.0,>=5.0.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.2861130Z   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3006499Z Collecting click-didyoumean>=0.3.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3076268Z   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3229651Z Collecting click-repl>=0.2.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3302491Z   Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3446974Z Collecting click-plugins>=1.1.1 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3514917Z   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3850634Z Collecting tzdata>=2022.7 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.3923309Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4086485Z Collecting python-dateutil>=2.8.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4164402Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4338914Z Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4410651Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4580163Z Collecting packaging>=24 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4647951Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4796594Z Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.4867258Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.5060162Z Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.5129140Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.6464840Z Collecting charset_normalizer<4,>=2 (from requests==2.34.2->-r requirements-test.txt (line 4))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.6539246Z   Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (43 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.6745659Z Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements-test.txt (line 4))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.6817958Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7057505Z Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements-test.txt (line 4))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7128395Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7345946Z Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements-test.txt (line 4))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7420492Z   Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7678058Z Collecting jsonschema<5.0.0,>=4.26.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7751819Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.7934256Z Collecting jsonschema-path<0.6.0,>=0.5.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.8003325Z   Downloading jsonschema_path-0.5.0-py3-none-any.whl.metadata (8.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.8357352Z Collecting lazy-object-proxy<2.0,>=1.7.1 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.8498416Z   Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.8850783Z Collecting openapi-schema-validator<0.10.0,>=0.9.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.8965769Z   Downloading openapi_schema_validator-0.9.0-py3-none-any.whl.metadata (10 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.9825179Z Collecting pydantic<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.9901634Z   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0177256Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0246644Z   Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0606272Z Collecting playwright>=1.18 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0678771Z   Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0854742Z Collecting python-slugify<10.0.0,>=6.0.0 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0935374Z   Downloading python_slugify-9.2.0-py3-none-any.whl.metadata (13 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1108455Z Collecting pytest-metadata>=2 (from pytest-html==4.2.0->-r requirements-test.txt (line 8))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1180094Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1524643Z Collecting jproperties<3,>=2.1 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1609853Z   Downloading jproperties-2.1.2-py2.py3-none-any.whl.metadata (8.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1889226Z Collecting tomli<3,>=2.0 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1980266Z   Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.6139077Z Collecting aiohttp (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.6223565Z   Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.6531109Z Collecting anybadge (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.6617487Z   Downloading anybadge-1.18.0-py3-none-any.whl.metadata (41 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.6804019Z Collecting attrs (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.6875773Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7041835Z Collecting decorator (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7128818Z   Downloading decorator-5.3.2-py3-none-any.whl.metadata (4.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7257721Z Collecting exit-codes (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7364998Z   Downloading exit_codes-1.3.0-py2.py3-none-any.whl.metadata (1.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7589992Z Collecting gitpython (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7663456Z   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7831515Z Collecting parso (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.7904346Z   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.8546570Z Collecting rich (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.8701674Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9137481Z Collecting stevedore (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9217483Z   Downloading stevedore-5.10.0-py3-none-any.whl.metadata (2.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9363717Z Collecting toml (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9436231Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9595817Z Collecting yattag (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9668801Z   Downloading yattag-1.16.1.tar.gz (29 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.9753503Z   Installing build dependencies: started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.4172913Z   Installing build dependencies: finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.4179163Z   Getting requirements to build wheel: started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.6992510Z   Getting requirements to build wheel: finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.7001686Z   Preparing metadata (pyproject.toml): started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.8445234Z   Preparing metadata (pyproject.toml): finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.8630477Z Collecting six~=1.13 (from jproperties<3,>=2.1->pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.8742806Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.8912011Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.8983544Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.9377939Z Collecting referencing>=0.28.4 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:37.9449427Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.1434576Z Collecting rpds-py>=0.25.0 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.1506512Z   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.1888081Z Collecting pathable<0.7.0,>=0.6.0 (from jsonschema-path<0.6.0,>=0.5.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.1958528Z   Downloading pathable-0.6.0-py3-none-any.whl.metadata (7.2 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2156428Z Collecting amqp>=5.4.2 (from kombu<6.0,>=5.3.2->celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2226152Z   Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2418608Z Collecting rfc3339-validator (from openapi-schema-validator<0.10.0,>=0.9.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2489671Z   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2663148Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2734310Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.8739782Z Collecting pydantic-core==2.50.5 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.8827922Z   Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9020811Z Collecting typing-extensions>=4.16.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9090863Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9230304Z Collecting typing-inspection>=0.4.4 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9299693Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9575347Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9644534Z   Downloading pydantic_settings-2.16.2-py3-none-any.whl.metadata (4.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9680937Z INFO: pip is looking at multiple versions of pydantic-settings to determine which version is compatible with other requirements. This could take a while.
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9756192Z   Downloading pydantic_settings-2.16.1-py3-none-any.whl.metadata (4.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9875219Z   Downloading pydantic_settings-2.16.0-py3-none-any.whl.metadata (4.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.9979073Z   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.0142188Z Collecting text-unidecode>=1.3 (from python-slugify<10.0.0,>=6.0.0->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.0208649Z   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.0549484Z Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.0620108Z   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.1796656Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright>=1.18->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.1869051Z   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.2318499Z Collecting wcwidth>=0.1.4 (from prompt_toolkit>=3.0.36->click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.2388303Z   Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (26 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.2645687Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.2714622Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.2861745Z Collecting aiosignal>=1.4.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.2933462Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.3934751Z Collecting frozenlist>=1.1.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.4008068Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.6105880Z Collecting multidict<8.0,>=4.5 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.6177252Z   Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.6772743Z Collecting propcache>=0.2.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.6852372Z   Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.9389134Z Collecting yarl<2.0,>=1.25.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.9464006Z   Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.9804012Z Collecting gitdb<5,>=4.0.1 (from gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.9873547Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0014929Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0082820Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0272515Z Collecting markdown-it-py>=2.2.0 (from rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0361670Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0523003Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0591554Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0724613Z Downloading flask-2.3.3-py3-none-any.whl (96 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0822722Z Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl (24 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.0923708Z Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.1022188Z Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl (22 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.1127447Z Downloading werkzeug-2.3.7-py3-none-any.whl (242 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.1320229Z Downloading celery-5.3.4-py3-none-any.whl (421 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.1438892Z Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.1542535Z Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.1653838Z Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.6 MB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2082224Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 89.7 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2159045Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2405062Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2500858Z Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2624136Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2731915Z Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (828 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2825851Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 828.0/828.0 kB 78.2 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2895741Z Downloading openapi_spec_validator-0.9.0-py3-none-any.whl (50 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.2986904Z Downloading pytest_playwright-0.10.0-py3-none-any.whl (22 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3082667Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3177221Z Downloading freezegun-1.5.5-py3-none-any.whl (19 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3276779Z Downloading pysonar-1.11.0.6012-py3-none-any.whl (51 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3419656Z Downloading cosmic_ray-8.9.0-py3-none-any.whl (62 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3514958Z Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3626300Z Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3737238Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3832320Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.3924680Z Downloading jproperties-2.1.2-py2.py3-none-any.whl (17 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4018192Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4110728Z Downloading jsonschema_path-0.5.0-py3-none-any.whl (24 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4201934Z Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4301815Z Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4393815Z Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (68 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4488393Z Downloading openapi_schema_validator-0.9.0-py3-none-any.whl (19 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4581226Z Downloading pathable-0.6.0-py3-none-any.whl (18 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4686434Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.4972280Z Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5121690Z Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5319034Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 116.9 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5390673Z Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5485514Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5575576Z Downloading python_slugify-9.2.0-py3-none-any.whl (17 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5705056Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5806446Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.5903234Z Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (276 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6011590Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6104985Z Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6200386Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6295850Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6386183Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6476154Z Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6573667Z Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6665049Z Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6762426Z Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6849799Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.6941837Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.7037243Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.7130788Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.7231032Z Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.7526918Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:40.7648625Z Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl (53.5 MB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2155540Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 MB 118.8 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2232529Z Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2306196Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 68.7 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2384395Z Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2503984Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2634963Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 93.7 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2705064Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2809330Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2901880Z Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3022040Z Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3398691Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 126.5 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3476395Z Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3576102Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3670528Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3763818Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3874873Z Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.3986362Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 62.7 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4062039Z Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4226985Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 114.5 MB/s  0:00:00
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4296238Z Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (510 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4425401Z Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4651710Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4742983Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4834080Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.4933756Z Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5042990Z Downloading anybadge-1.18.0-py3-none-any.whl (56 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5135654Z Downloading decorator-5.3.2-py3-none-any.whl (11 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5224805Z Downloading exit_codes-1.3.0-py2.py3-none-any.whl (4.7 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5329080Z Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5443154Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5534266Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5627004Z Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5732861Z Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5840859Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.5947444Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.6044219Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.6131388Z Downloading stevedore-5.10.0-py3-none-any.whl (56 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.6220544Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8463173Z Building wheels for collected packages: Flask-Mail, yattag
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8469933Z   Building wheel for Flask-Mail (pyproject.toml): started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.0278917Z   Building wheel for Flask-Mail (pyproject.toml): finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.0284203Z   Created wheel for Flask-Mail: filename=flask_mail-0.9.1-py3-none-any.whl size=7667 sha256=06456cc93f1bcb8e55b10c8f8834e5ed1bac3a210f162927cc72aec1272fa5b8
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.0285712Z   Stored in directory: /home/runner/.cache/pip/wheels/f6/38/ab/b955b60e85ca451344be85d42bd267ef32311bd61cb21e5a1c
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.0304845Z   Building wheel for yattag (pyproject.toml): started
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.2076755Z   Building wheel for yattag (pyproject.toml): finished with status 'done'
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.2082390Z   Created wheel for yattag: filename=yattag-1.16.1-py3-none-any.whl size=15931 sha256=b6cd8396aedcca442d1e433e864b17cdf166bff35b00323fba83f7ac2ace2061
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.2083867Z   Stored in directory: /home/runner/.cache/pip/wheels/7d/cd/81/74d0b2cf3c26cb69e13e8c01becb277c0777ed3b88cc4cc901
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.2099675Z Successfully built Flask-Mail yattag
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.3266172Z Installing collected packages: yattag, text-unidecode, exit-codes, wcwidth, vine, urllib3, tzdata, typing-extensions, tomli, toml, stevedore, smmap, six, rpds-py, redis, PyYAML, python-slugify, python-dotenv, PyJWT, pygments, propcache, pluggy, Pillow, pathable, parso, packaging, multidict, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, iniconfig, idna, greenlet, frozenlist, decorator, coverage, click, charset_normalizer, certifi, blinker, billiard, attrs, annotated-types, aiohappyeyeballs, yarl, Werkzeug, typing-inspection, sqlalchemy, rfc3339-validator, requests, referencing, python-dateutil, pytest, pydantic-core, prompt_toolkit, playwright, markdown-it-py, jproperties, Jinja2, gitdb, click-plugins, click-didyoumean, anybadge, amqp, aiosignal, rich, pytest-playwright, pytest-metadata, pytest-cov, pysonar, pydantic, kombu, jsonschema-specifications, jsonschema-path, gitpython, freezegun, Flask, click-repl, aiohttp, pytest-html, pydantic-settings, jsonschema, Flask-SQLAlchemy, Flask-Mail, Flask-JWT-Extended, Flask-CORS, cosmic-ray, celery, openapi-schema-validator, openapi-spec-validator
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6610373Z 
+SonarQube full scan	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6644765Z Successfully installed Flask-2.3.3 Flask-CORS-4.0.0 Flask-JWT-Extended-4.5.3 Flask-Mail-0.9.1 Flask-SQLAlchemy-3.0.5 Jinja2-3.1.6 MarkupSafe-3.0.4 Pillow-10.1.0 PyJWT-2.15.1 PyYAML-6.0.4 Werkzeug-2.3.7 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 amqp-5.4.2 annotated-types-0.8.0 anybadge-1.18.0 attrs-26.1.0 billiard-4.3.2 blinker-1.9.0 celery-5.3.4 certifi-2026.11.20 charset_normalizer-3.5.3 click-8.5.1 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 cosmic-ray-8.9.0 coverage-7.17.4 decorator-5.3.2 exit-codes-1.3.0 freezegun-1.5.5 frozenlist-1.8.0 gitdb-4.0.12 gitpython-3.2.1 greenlet-3.5.6 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jproperties-2.1.2 jsonschema-4.26.0 jsonschema-path-0.5.0 jsonschema-specifications-2025.9.1 kombu-5.7.0 lazy-object-proxy-1.13.0 markdown-it-py-4.3.0 mdurl-0.1.2 multidict-7.2.1 openapi-schema-validator-0.9.0 openapi-spec-validator-0.9.0 packaging-26.3 parso-0.8.7 pathable-0.6.0 playwright-1.65.2 pluggy-1.7.0 prompt_toolkit-3.0.53 propcache-0.5.4 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.15.0 pygments-2.21.0 pysonar-1.11.0.6012 pytest-9.2.0 pytest-cov-7.1.0 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-playwright-0.10.0 python-dateutil-4.0.0 python-dotenv-1.0.0 python-slugify-9.2.0 redis-5.0.1 referencing-0.37.0 requests-2.34.2 rfc3339-validator-0.1.4 rich-15.0.0 rpds-py-2026.9.1 six-1.17.0 smmap-5.0.3 sqlalchemy-2.1.9 stevedore-5.10.0 text-unidecode-1.3 toml-0.10.2 tomli-2.5.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 vine-5.1.0 wcwidth-0.9.5 yarl-1.25.1 yattag-1.16.1
+SonarQube full scan	Start a loopback-only analysis service	﻿2026-11-23T16:38:48.9091220Z ##[group]Run docker run -d --name medihub-ci-sonar -p 127.0.0.1:9000:9000 \
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9091963Z ^[[36;1mdocker run -d --name medihub-ci-sonar -p 127.0.0.1:9000:9000 \^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9092468Z ^[[36;1m  -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true \^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9093080Z ^[[36;1m  sonarqube@sha256:7b2296713a92b8ea0dd7a083a25faadc59376c9a1e6daf2744a89711c54ea1ba^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9093685Z ^[[36;1mfor step in $(seq 1 60); do^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9094480Z ^[[36;1m  if curl -fsS http://127.0.0.1:9000/api/system/status | jq -e '.status == "UP"' >/dev/null; then^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9095048Z ^[[36;1m    exit 0^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9095400Z ^[[36;1m  fi^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9095732Z ^[[36;1m  sleep 3^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9096034Z ^[[36;1mdone^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9096367Z ^[[36;1mdocker logs --tail 80 medihub-ci-sonar^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9096755Z ^[[36;1mexit 1^[[0m
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9123074Z shell: /usr/bin/bash -e {0}
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9123499Z env:
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9124101Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9124662Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9125190Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9125708Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9126151Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9126662Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:48.9127099Z ##[endgroup]
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.0708441Z Unable to find image 'sonarqube@sha256:7b2296713a92b8ea0dd7a083a25faadc59376c9a1e6daf2744a89711c54ea1ba' locally
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.4121359Z docker.io/library/sonarqube@sha256:7b2296713a92b8ea0dd7a083a25faadc59376c9a1e6daf2744a89711c54ea1ba: Pulling from library/sonarqube
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5798685Z d4fb953c26d2: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5799425Z 4f4fb700ef54: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5799772Z 8e8df94085bf: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5800136Z dc7d15801c3b: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5800555Z 0efc318c609d: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5800889Z dd997aadd0c0: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5801233Z 885025ea8eb3: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.5801610Z 4f4fb700ef54: Pulling fs layer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.6759596Z d4fb953c26d2: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.6766819Z 4f4fb700ef54: Already exists
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.6777828Z 885025ea8eb3: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.7761157Z 5066ed5bc3c5: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:49.7776619Z 8ca08ff81b96: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:50.1769059Z dc7d15801c3b: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:50.1769870Z 8e8df94085bf: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:50.9822753Z 8e8df94085bf: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:51.6802604Z dc7d15801c3b: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:53.0750385Z 0efc318c609d: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:55.1510620Z 0efc318c609d: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:57.4773936Z 885025ea8eb3: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:38:58.5752712Z dd997aadd0c0: Download complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:02.6763855Z d4fb953c26d2: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:02.6779284Z 4f4fb700ef54: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:02.6788234Z dd997aadd0c0: Pull complete
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:02.7815355Z Digest: sha256:7b2296713a92b8ea0dd7a083a25faadc59376c9a1e6daf2744a89711c54ea1ba
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:02.7817127Z Status: Downloaded newer image for sonarqube@sha256:7b2296713a92b8ea0dd7a083a25faadc59376c9a1e6daf2744a89711c54ea1ba
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:11.8500750Z d14053a37c8a87b0396e5688baea217f6af8aad5cd7d8e1c4dff90f9ecff9fb2
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:12.0501430Z curl: (56) Recv failure: Connection reset by peer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:15.0671962Z curl: (56) Recv failure: Connection reset by peer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:18.0820054Z curl: (56) Recv failure: Connection reset by peer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:21.1004158Z curl: (56) Recv failure: Connection reset by peer
+SonarQube full scan	Start a loopback-only analysis service	2026-11-23T16:39:24.1179389Z curl: (52) Empty reply from server
+SonarQube full scan	Generate coverage and scan the PR checkout	﻿2026-11-23T16:40:00.7524072Z ##[group]Run mkdir evidence
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7524693Z ^[[36;1mmkdir evidence^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7525621Z ^[[36;1mpython -m pytest tests/team/unit -q --tb=short --cov=backend --cov-branch --cov-report=xml:coverage.xml^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7526692Z ^[[36;1mexport SONAR_HOST_URL=http://127.0.0.1:9000^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7547841Z ^[[36;1m# This token exists only in this job's isolated, newly bootstrapped instance.^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7549547Z ^[[36;1mSONAR_TOKEN=$(curl -fsS -u admin:admin -X POST "${SONAR_HOST_URL}/api/user_tokens/generate" --data-urlencode name=ci-analysis | jq -er '.token')^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7550635Z ^[[36;1mecho "::add-mask::$SONAR_TOKEN"^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7551362Z ^[[36;1mexport SONAR_TOKEN^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7552014Z ^[[36;1m# Use a non-PR scanner context for the Community Build full analysis.^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7552888Z ^[[36;1m# The GitHub workflow still runs on the actual PR merge commit.^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7554613Z ^[[36;1menv -u GITHUB_WORKFLOW -u GITHUB_ACTIONS GITHUB_EVENT_NAME=workflow_dispatch pysonar "-Dsonar.scm.revision=$(git rev-parse HEAD)" "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7556664Z ^[[36;1mpython tests/team/tools/sonar_gate.py "medihub-pr-$PR_NUMBER" evidence/sonar-measures.json^[[0m
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7592595Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7593270Z env:
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7593797Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7594651Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7595652Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7596342Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7597104Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7628594Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7629548Z   PR_NUMBER: 11
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:00.7630045Z ##[endgroup]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:04.8281741Z ........................................................................ [ 60%]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1133694Z ...............................................                          [100%]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1134808Z =============================== warnings summary ===============================
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1136295Z tests/team/unit/test_appointment_dependencies.py::test_inactive_doctor_is_absent[/api/patient/doctor/availability/1]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1139920Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:457: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1143144Z     doctor = Doctor.query.get(doctor_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1143609Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1144231Z tests/team/unit/test_appointment_dependencies.py::test_admin_blacklist_toggle_round_trip
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1145559Z tests/team/unit/test_appointment_dependencies.py::test_admin_blacklist_toggle_round_trip
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1146973Z tests/team/unit/test_appointment_dependencies.py::test_admin_blacklist_toggle_round_trip
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1150432Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/admin.py:304: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1153397Z     patient = Patient.query.get(patient_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1153889Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1154488Z tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1155836Z tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1157956Z tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1160448Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/admin.py:112: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1162304Z     doctor = Doctor.query.get(doctor_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1162612Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1163069Z tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1163970Z tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1165985Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/admin.py:146: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1168038Z     doctor = Doctor.query.get(doctor_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1168320Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1168919Z tests/team/unit/test_appointment_dependencies.py::test_assigned_doctor_treatment_and_patient_history
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1170921Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:429: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1172967Z     appointment = Appointment.query.get(treatment.appointment_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1173473Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1173991Z tests/team/unit/test_appointment_dependencies.py::test_assigned_doctor_treatment_and_patient_history
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1175012Z tests/team/unit/test_appointment_dependencies.py::test_assigned_doctor_treatment_and_patient_history
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1177001Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/doctor.py:46: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1178914Z     patient = Patient.query.get(patient_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1179289Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1179486Z tests/team/unit/test_appointment_rules.py: 49 warnings
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1181359Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:244: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1183215Z     doctor = Doctor.query.get(doctor_id)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1183491Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1183942Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1184690Z ================================ tests coverage ================================
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1185335Z _______________ coverage: platform linux, python 3.11.18-final-0 _______________
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1185836Z 
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1186049Z Coverage XML written to file coverage.xml
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.1186621Z 119 passed, 61 warnings in 3.21s
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.5259007Z INFO: Starting Pysonar 1.11.0.6012, the Sonar scanner CLI for Python
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:06.5259958Z INFO: Enhance your workflow: Pair pysonar with SonarQube Server per your license or SonarQube Cloud for deeper analysis, and try SonarQube-IDE in your favourite IDE.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:08.2620591Z INFO: Starting the analysis...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:08.5182710Z INFO: Starting SonarScanner Engine...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:08.5196696Z INFO: Java 21.0.13 Eclipse Adoptium (64-bit)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:08.9908196Z INFO: Load global settings
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.1048282Z INFO: Load global settings (done) | time=114ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.1070456Z INFO: Server id: 147B411E-AaIJRtvYVVWwwDUDLK0y
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.1112016Z INFO: Found an active CI vendor: 'Github Actions'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.3687362Z INFO: Loading required plugins
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.3708794Z INFO: Load plugins index
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.4379142Z INFO: Load plugins index (done) | time=67ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.4408613Z INFO: Load/download plugins
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.6699469Z INFO: Load/download plugins (done) | time=233ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.9600582Z INFO: Load project settings for component key: 'medihub-pr-11'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.9779371Z INFO: Failed to load settings with NOT_FOUND error, which can happen if the project does not exist yet
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:09.9899482Z INFO: Process project properties
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.0109581Z INFO: Process project properties (done) | time=23ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.0219245Z INFO: Project key: medihub-pr-11
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.0258767Z INFO: Base dir: /home/runner/work/Medihub-SQE/Medihub-SQE
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.0259817Z INFO: Working dir: /home/runner/work/Medihub-SQE/Medihub-SQE/.scannerwork
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.1009218Z INFO: Load quality profiles
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.1819923Z INFO: Load quality profiles (done) | time=81ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.2222154Z INFO: Load active rules
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.5340392Z INFO: Load active rules (done) | time=313ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.5408824Z INFO: Load analysis cache
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.5492582Z INFO: Load analysis cache (404) | time=8ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.6281010Z INFO: Preprocessing files...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.7216868Z INFO: 4 languages detected in 38 preprocessed files (done) | time=93ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.7220709Z INFO: 71 files ignored because of inclusion/exclusion patterns
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.7223370Z INFO: 4 directories skipped because of exclusion patterns (content not counted)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.7224467Z INFO: 1 file ignored because of scm ignore settings
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.7242188Z INFO: Loading plugins for detected languages
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:10.7244211Z INFO: Load/download plugins
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.0652926Z INFO: Load/download plugins (done) | time=1340ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.2611011Z INFO: Load project repositories
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.2702156Z INFO: Load project repositories (done) | time=9ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3009035Z INFO: Indexing files...
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3010081Z INFO: Project configuration:
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3013950Z INFO:   Excluded sources: **/.venv/**, **/instance/**, **/__pycache__/**, **/node_modules/**, **/test_*.py
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3040791Z INFO:   Included tests: **/test_*.py
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3131922Z INFO: 38 files indexed (done) | time=12ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3145275Z INFO: Quality profile for css: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3179183Z INFO: Quality profile for js: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3180210Z INFO: Quality profile for py: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3201835Z INFO: Quality profile for web: Sonar way core
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3202763Z INFO: ------------- Run sensors on module MediHub Team SQE
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3485309Z INFO: Load metrics repository
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:12.3879160Z INFO: Load metrics repository (done) | time=38ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.0938001Z INFO: Reflections took 79 ms to scan 1 urls, producing 30 keys and 313 values
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.1997711Z INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2041331Z INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=3ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2042595Z INFO: Sensor IaC hadolint report Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2043716Z INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2054949Z INFO: Sensor Java Config Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2056088Z INFO: There are no files to be analyzed for the Java language
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2057052Z INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2058541Z INFO: Sensor IaC Docker Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2081333Z INFO: There are no files to be analyzed for the Docker language
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2082551Z INFO: Sensor IaC Docker Sensor [iac] (done) | time=3ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2083698Z INFO: Sensor Python Sensor [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.2118044Z WARNING: Your code is analyzed as compatible with Python versions 3.10 through 3.14 by default. You can get a more precise analysis by setting the Python version or version range in your configuration via the parameter "sonar.python.version"
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.5490178Z INFO: Starting global symbols computation
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:13.5500801Z INFO: 28 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:14.5638363Z INFO: 28/28 source files have been analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:14.5659625Z INFO: Finished step global symbols computation in 1015ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:14.6001353Z INFO: Starting rules execution
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:14.6002258Z INFO: 28 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2719142Z INFO: 28/28 source files have been analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2720624Z INFO: Finished step rules execution in 1670ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2729327Z INFO: The Python analyzer was able to leverage cached data from previous analyses for 0 out of 28 files. These files were not parsed.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2730850Z INFO: Sensor Python Sensor [python] (done) | time=3063ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2731880Z INFO: Sensor Cobertura Sensor for Python coverage [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2778757Z INFO: Python test coverage
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.2807500Z INFO: Parsing report '/home/runner/work/Medihub-SQE/Medihub-SQE/coverage.xml'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.3478899Z INFO: Sensor Cobertura Sensor for Python coverage [python] (done) | time=73ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.3481502Z INFO: Sensor PythonXUnitSensor [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.3496256Z INFO: Sensor PythonXUnitSensor [python] (done) | time=3ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.3497464Z INFO: Sensor Python Dependency Sensor [python]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.3539613Z INFO: Sensor Python Dependency Sensor [python] (done) | time=4ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.3540950Z INFO: Sensor HTML [web]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.5031161Z INFO: Sensor HTML [web] (done) | time=148ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.5033515Z INFO: Sensor TextAndSecretsSensor [text]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.5198301Z INFO: Available processors: 4
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.5201043Z INFO: Using 4 threads for analysis.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.8819350Z INFO: Start fetching files for the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.8905776Z INFO: Using Git CLI to retrieve dirty files
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.9138270Z INFO: Retrieving language associated files and files included via "sonar.text.inclusions" that are tracked by git
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.9179213Z INFO: Starting the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:16.9180252Z INFO: 37 source files to be analyzed for the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:17.1150445Z INFO: 37/37 source files have been analyzed for the text and secrets analysis
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:17.1169239Z INFO: Sensor TextAndSecretsSensor [text] (done) | time=612ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:17.1201049Z INFO: ------------- Run sensors on project
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:17.3559292Z INFO: Sensor JavaScript/TypeScript/CSS analysis [javascript]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:17.6129391Z INFO: Detected os: Linux arch: amd64 alpine: false. Platform: LINUX_X64
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:17.6130833Z INFO: Deploy location /home/runner/.sonar/js/node-runtime, tagetRuntime: /home/runner/.sonar/js/node-runtime/node,  version: /home/runner/.sonar/js/node-runtime/version.txt
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:20.5703806Z INFO: Using embedded Node.js runtime.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:20.5709911Z INFO: Using Node.js executable: '/home/runner/.sonar/js/node-runtime/node'.
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:22.6256315Z INFO: Memory configuration: OS (15982 MB), Node.js (4288 MB).
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:22.6345789Z INFO: gRPC analyze-project server listening on 127.0.0.1:36531
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:22.8070112Z INFO: Plugin version: [14.3.0.46350]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:24.9745258Z INFO: Found 0 tsconfig.json file(s): []
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.2914613Z INFO: 8 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.2915892Z INFO: Analyzing 6 file(s) using default options [lib: lib.esnext.d.ts, lib.dom.d.ts]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.2916988Z INFO: 8/8 source files have been analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3023375Z INFO: Hit the cache for 0 out of 7
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3027320Z INFO: Miss the cache for 7 out of 7: ANALYSIS_MODE_INELIGIBLE [7/7]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3028773Z INFO: Sensor JavaScript/TypeScript/CSS analysis [javascript] (done) | time=9948ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3029777Z INFO: Sensor IaC Project Sensor [iac]
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3048427Z INFO: Sensor IaC Project Sensor [iac] (done) | time=1ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3078851Z INFO: Sensor Zero Coverage Sensor
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3138550Z INFO: Sensor Zero Coverage Sensor (done) | time=6ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3148160Z INFO: ------------- Gather SCA dependencies on project
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3178288Z INFO: Dependency analysis skipped
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3208228Z INFO: SCM Publisher SCM provider for this project is: git
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:27.3218683Z INFO: SCM Publisher 36 source files to be analyzed
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.0359326Z INFO: SCM Publisher 36/36 source files have been analyzed (done) | time=714ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.0509381Z INFO: CPD Executor 4 files had no CPD blocks
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.0529072Z INFO: CPD Executor Calculating CPD for 24 files
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.0781706Z INFO: CPD Executor CPD calculation finished (done) | time=27ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.0856096Z INFO: SCM revision ID 'bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935'
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.2319366Z INFO: Analysis report generated in 149ms, dir size=1.0 MB
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.3096959Z INFO: Analysis report compressed in 76ms, zip size=421.5 kB
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.6981987Z INFO: Analysis report uploaded in 389ms
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.7011245Z INFO: ------------- Check Quality Gate status
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:28.7012264Z INFO: Waiting for the analysis report to be processed (max 300s)
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:38.8140535Z INFO: QUALITY GATE STATUS: PASSED - View details on http://127.0.0.1:9000/dashboard?id=medihub-pr-11
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:39.0456065Z INFO: Analysis total time: 30.483 s
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:39.0786920Z INFO: SonarScanner Engine completed successfully
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:39.2725526Z Overall Sonar gate: {'security_rating': False, 'reliability_rating': False, 'duplicated_lines_density': True}
+SonarQube full scan	Generate coverage and scan the PR checkout	2026-11-23T16:40:39.2933835Z ##[error]Process completed with exit code 1.
+SonarQube full scan	Run actions/upload-artifact@v4	﻿2026-11-23T16:40:39.3031059Z ##[group]Run actions/upload-artifact@v4
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3031467Z with:
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3031778Z   name: sonarqube
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3032153Z   path: evidence/
+SonarQube full scan	Run actions/upload-artifact@v4	coverage.xml
+SonarQube full scan	Run actions/upload-artifact@v4	
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3032628Z   if-no-files-found: warn
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3032977Z   compression-level: 6
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3033302Z   overwrite: false
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3033642Z   include-hidden-files: false
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3034009Z env:
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3034391Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3034943Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3035466Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3035953Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3036450Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3036946Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.3037392Z ##[endgroup]
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4715938Z (node:3439) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4716925Z (Use `node --trace-deprecation ...` to show where the warning was created)
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4804387Z Multiple search paths detected. Calculating the least common ancestor of all paths
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4806894Z The least common ancestor is /home/runner/work/Medihub-SQE/Medihub-SQE. This will be the root directory of the artifact
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4808184Z With the provided path, there will be 3 files uploaded
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4809225Z Artifact name is valid!
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.4809718Z Root directory input is valid!
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.7356239Z Beginning upload of artifact content to blob storage
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.7703110Z (node:3439) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.8101450Z Uploaded bytes 7627
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.8247813Z Finished uploading artifact content to blob storage!
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.8249390Z SHA256 digest of uploaded artifact zip is c63dc980f10deb9dc65ab5991938041779023a974bf97c3ebf634e20e752766c
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:39.8250930Z Finalizing artifact upload
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:40.1515542Z Artifact sonarqube.zip successfully finalized. Artifact ID 14839402675
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:40.1516949Z Artifact sonarqube has been successfully uploaded! Final size is 7627 bytes. Artifact ID is 14839402675
+SonarQube full scan	Run actions/upload-artifact@v4	2026-11-23T16:40:40.1522146Z Artifact download URL: https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/artifacts/14839402675
+SonarQube full scan	Post Run actions/checkout@v4	﻿2026-11-23T16:40:40.1728308Z Post job cleanup.
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2584584Z [command]/usr/bin/git version
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2626211Z git version 2.56.1
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2661908Z Temporarily overriding HOME='/home/runner/work/_temp/6270f8ce-a42b-4d46-9818-237db75a6fd5' before making global git config changes
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2663474Z Adding repository directory to the temporary git global config as a safe directory
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2666620Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2707900Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.2742710Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.3007424Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.3031898Z http.https://github.com/.extraheader
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.3042421Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.3082897Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.3354308Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+SonarQube full scan	Post Run actions/checkout@v4	2026-11-23T16:40:40.3390052Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+SonarQube full scan	Complete job	﻿2026-11-23T16:40:40.3787412Z Cleaning up orphan processes
+SonarQube full scan	Complete job	2026-11-23T16:40:40.4170824Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

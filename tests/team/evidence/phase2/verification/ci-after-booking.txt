@@ -1,0 +1,556 @@
+Booking input regression	Set up job	﻿2026-11-23T16:38:29.4865677Z Current runner version: '2.338.2'
+Booking input regression	Set up job	2026-11-23T16:38:29.4884100Z ##[group]Runner Image Provisioner
+Booking input regression	Set up job	2026-11-23T16:38:29.4884804Z Hosted Compute Agent
+Booking input regression	Set up job	2026-11-23T16:38:29.4885248Z Version: 20261111.635
+Booking input regression	Set up job	2026-11-23T16:38:29.4885711Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Booking input regression	Set up job	2026-11-23T16:38:29.4886231Z Build Date: 2026-11-11T01:49:01Z
+Booking input regression	Set up job	2026-11-23T16:38:29.4886736Z Worker ID: {f7f6e2de-b382-452d-a974-bff7fce48ece}
+Booking input regression	Set up job	2026-11-23T16:38:29.4887277Z Region: us-west-2
+Booking input regression	Set up job	2026-11-23T16:38:29.4887828Z Cloud: AWS
+Booking input regression	Set up job	2026-11-23T16:38:29.4888469Z ##[endgroup]
+Booking input regression	Set up job	2026-11-23T16:38:29.4889477Z ##[group]Operating System
+Booking input regression	Set up job	2026-11-23T16:38:29.4889949Z Ubuntu
+Booking input regression	Set up job	2026-11-23T16:38:29.4890335Z 26.04.1
+Booking input regression	Set up job	2026-11-23T16:38:29.4890686Z LTS
+Booking input regression	Set up job	2026-11-23T16:38:29.4891070Z ##[endgroup]
+Booking input regression	Set up job	2026-11-23T16:38:29.4891450Z ##[group]Runner Image
+Booking input regression	Set up job	2026-11-23T16:38:29.4891880Z Image: ubuntu-26.04
+Booking input regression	Set up job	2026-11-23T16:38:29.4892337Z Version: 20261116.88.1
+Booking input regression	Set up job	2026-11-23T16:38:29.4893071Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+Booking input regression	Set up job	2026-11-23T16:38:29.4894364Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+Booking input regression	Set up job	2026-11-23T16:38:29.4895148Z ##[endgroup]
+Booking input regression	Set up job	2026-11-23T16:38:29.4895914Z ##[group]GITHUB_TOKEN Permissions
+Booking input regression	Set up job	2026-11-23T16:38:29.4897461Z Contents: read
+Booking input regression	Set up job	2026-11-23T16:38:29.4897873Z Metadata: read
+Booking input regression	Set up job	2026-11-23T16:38:29.4898458Z ##[endgroup]
+Booking input regression	Set up job	2026-11-23T16:38:29.4900004Z Secret source: Actions
+Booking input regression	Set up job	2026-11-23T16:38:29.4900638Z Cache mode: write
+Booking input regression	Set up job	2026-11-23T16:38:29.4901166Z Prepare workflow directory
+Booking input regression	Set up job	2026-11-23T16:38:29.5128367Z Prepare all required actions
+Booking input regression	Set up job	2026-11-23T16:38:29.5164329Z Getting action download info
+Booking input regression	Set up job	2026-11-23T16:38:29.8746073Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Booking input regression	Set up job	2026-11-23T16:38:31.5680188Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Booking input regression	Set up job	2026-11-23T16:38:31.7076978Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Booking input regression	Set up job	2026-11-23T16:38:32.0344107Z Complete job name: Booking input regression
+Booking input regression	Run actions/checkout@v4	﻿2026-11-23T16:38:32.0921623Z ##[group]Run actions/checkout@v4
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0922136Z with:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0922473Z   repository: i243086-dotcom/Medihub-SQE
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0924525Z   token: ***
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0924798Z   ssh-strict: true
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0925103Z   ssh-user: git
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0925365Z   persist-credentials: true
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0925690Z   clean: true
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0925966Z   sparse-checkout-cone-mode: true
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0926271Z   fetch-depth: 1
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0926546Z   fetch-tags: false
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0926818Z   show-progress: true
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0927246Z   lfs: false
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0927526Z   submodules: false
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0927803Z   set-safe-directory: true
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0928345Z   allow-unsafe-pr-checkout: false
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:32.0928837Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3019876Z Syncing repository: i243086-dotcom/Medihub-SQE
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3022055Z ##[group]Getting Git version info
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3022671Z Working directory is '/home/runner/work/Medihub-SQE/Medihub-SQE'
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3023786Z [command]/usr/bin/git version
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3024198Z git version 2.56.1
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3037752Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3044141Z Temporarily overriding HOME='/home/runner/work/_temp/7c36f2cd-0e2c-425a-ba82-98c07151c8ad' before making global git config changes
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3045411Z Adding repository directory to the temporary git global config as a safe directory
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3046555Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3563180Z Deleting the contents of '/home/runner/work/Medihub-SQE/Medihub-SQE'
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3571991Z ##[group]Initializing the repository
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.3574872Z [command]/usr/bin/git init /home/runner/work/Medihub-SQE/Medihub-SQE
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4584569Z hint: Using 'master' as the name for the initial branch. This default branch name
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4585680Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4586278Z hint: to use in all of your new repositories, which will suppress this warning,
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4586742Z hint: call:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4586990Z hint:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4587379Z hint: 	git config --global init.defaultBranch <name>
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4587712Z hint:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4588263Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4588791Z hint: 'development'. The just-created branch can be renamed via this command:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4589167Z hint:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4589453Z hint: 	git branch -m <name>
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4589758Z hint:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4590104Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4608608Z Initialized empty Git repository in /home/runner/work/Medihub-SQE/Medihub-SQE/.git/
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4618018Z [command]/usr/bin/git remote add origin https://github.com/i243086-dotcom/Medihub-SQE
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4674634Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4675345Z ##[group]Disabling automatic garbage collection
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4677973Z [command]/usr/bin/git config --local gc.auto 0
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4699664Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4700333Z ##[group]Setting up auth
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4705562Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.4727129Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:36.9993713Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0017459Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0202105Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0224851Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0400598Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0425574Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0426121Z ##[group]Fetching the repository
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.0431505Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935:refs/remotes/pull/11/merge
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7118877Z From https://github.com/i243086-dotcom/Medihub-SQE
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7119630Z  * [new ref]         bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935 -> pull/11/merge
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7128440Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7129314Z ##[group]Determining the checkout info
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7129814Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7137426Z [command]/usr/bin/git sparse-checkout disable
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7188960Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7205244Z ##[group]Checking out the ref
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7209449Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/11/merge
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7421343Z Note: switching to 'refs/remotes/pull/11/merge'.
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7421981Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7422846Z You are in 'detached HEAD' state. You can look around, make experimental
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7423549Z changes and commit them, and you can discard any commits you make in this
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7424161Z state without impacting any branches by switching back to a branch.
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7424381Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7424574Z If you want to create a new branch to retain commits you create, you may
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7425136Z do so (now or later) by using -c with the switch command. Example:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7425400Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7425517Z   git switch -c <new-branch-name>
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7425698Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7425798Z Or undo this operation with:
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7426024Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7426201Z   git switch -
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7426359Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7426623Z Turn off this advice by setting config variable advice.detachedHead to false
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7426926Z 
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7427291Z HEAD is now at bd0e1ee Merge 815b11f9c6ad9bfffca37362a866db6352bb1689 into adf2871f9fe5c57e61218eecd5f90fc955e00ee4
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7435005Z ##[endgroup]
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7477838Z [command]/usr/bin/git log -1 --format=%H
+Booking input regression	Run actions/checkout@v4	2026-11-23T16:38:37.7495402Z bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935
+Booking input regression	Run actions/setup-python@v5	﻿2026-11-23T16:38:37.7708934Z ##[group]Run actions/setup-python@v5
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7709244Z with:
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7709461Z   python-version: 3.11
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7709701Z   check-latest: false
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7711755Z   token: ***
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7712013Z   update-environment: true
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7712282Z   allow-prereleases: false
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7712513Z   freethreaded: false
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.7712738Z ##[endgroup]
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:37.8723762Z ##[group]Installed versions
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:38.2690703Z (node:2345) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:38.2691353Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:38.2708506Z Successfully set up CPython (3.11.18)
+Booking input regression	Run actions/setup-python@v5	2026-11-23T16:38:38.2709265Z ##[endgroup]
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	﻿2026-11-23T16:38:38.2805582Z ##[group]Run python -m pip install -r backend/requirements.txt -r requirements-test.txt
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.2806195Z ^[[36;1mpython -m pip install -r backend/requirements.txt -r requirements-test.txt^[[0m
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3881490Z shell: /usr/bin/bash -e {0}
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3881836Z env:
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3882213Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3882643Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3883012Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3883380Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3883741Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3884086Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:38.3884393Z ##[endgroup]
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6553906Z Collecting Flask==2.3.3 (from -r backend/requirements.txt (line 2))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6865527Z   Downloading flask-2.3.3-py3-none-any.whl.metadata (3.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7040771Z Collecting Flask-SQLAlchemy==3.0.5 (from -r backend/requirements.txt (line 3))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7133852Z   Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl.metadata (3.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7295012Z Collecting Flask-CORS==4.0.0 (from -r backend/requirements.txt (line 4))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7382217Z   Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata (5.4 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7555690Z Collecting Flask-JWT-Extended==4.5.3 (from -r backend/requirements.txt (line 5))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7641040Z   Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl.metadata (3.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7780360Z Collecting Flask-Mail==0.9.1 (from -r backend/requirements.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7867179Z   Downloading Flask-Mail-0.9.1.tar.gz (45 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7999386Z   Installing build dependencies: started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2141619Z   Installing build dependencies: finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2146016Z   Getting requirements to build wheel: started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.6116784Z   Getting requirements to build wheel: finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.6126407Z   Preparing metadata (pyproject.toml): started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.7729977Z   Preparing metadata (pyproject.toml): finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.7903799Z Collecting Werkzeug==2.3.7 (from -r backend/requirements.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8005999Z   Downloading werkzeug-2.3.7-py3-none-any.whl.metadata (4.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8337075Z Collecting celery==5.3.4 (from -r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8423120Z   Downloading celery-5.3.4-py3-none-any.whl.metadata (21 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8689415Z Collecting redis==5.0.1 (from -r backend/requirements.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8778625Z   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8933104Z Collecting python-dotenv==1.0.0 (from -r backend/requirements.txt (line 14))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9012402Z   Downloading python_dotenv-1.0.0-py3-none-any.whl.metadata (21 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0199771Z Collecting Pillow==10.1.0 (from -r backend/requirements.txt (line 15))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0289558Z   Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0491720Z Collecting pytest==9.2.0 (from -r requirements-test.txt (line 1))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0568930Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0708818Z Collecting pytest-cov==7.1.0 (from -r requirements-test.txt (line 2))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0798944Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.3361573Z Collecting coverage==7.17.4 (from -r requirements-test.txt (line 3))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.3466087Z   Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.3646886Z Collecting requests==2.34.2 (from -r requirements-test.txt (line 4))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.3724376Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.3997867Z Collecting PyYAML==6.0.4 (from -r requirements-test.txt (line 5))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4078347Z   Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4240441Z Collecting openapi-spec-validator==0.9.0 (from -r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4324344Z   Downloading openapi_spec_validator-0.9.0-py3-none-any.whl.metadata (6.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4463145Z Collecting pytest-playwright==0.10.0 (from -r requirements-test.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4540337Z   Downloading pytest_playwright-0.10.0-py3-none-any.whl.metadata (14 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4697920Z Collecting pytest-html==4.2.0 (from -r requirements-test.txt (line 8))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4781570Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4918675Z Collecting freezegun==1.5.5 (from -r requirements-test.txt (line 9))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.4995687Z   Downloading freezegun-1.5.5-py3-none-any.whl.metadata (13 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5151767Z Collecting pysonar==1.11.0.6012 (from -r requirements-test.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5261194Z   Downloading pysonar-1.11.0.6012-py3-none-any.whl.metadata (8.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5422939Z Collecting cosmic-ray==8.9.0 (from -r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5524322Z   Downloading cosmic_ray-8.9.0-py3-none-any.whl.metadata (4.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5675606Z Collecting Jinja2>=3.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5752821Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5896296Z Collecting itsdangerous>=2.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.5977407Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6127323Z Collecting click>=8.1.3 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6206518Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6376979Z Collecting blinker>=1.6.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6457999Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8410534Z Collecting sqlalchemy>=1.4.18 (from Flask-SQLAlchemy==3.0.5->-r backend/requirements.txt (line 3))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8493773Z   Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8735527Z Collecting PyJWT<3.0,>=2.0 (from Flask-JWT-Extended==4.5.3->-r backend/requirements.txt (line 5))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8812636Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9199222Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.3.7->-r backend/requirements.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9276067Z   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9463850Z Collecting billiard<5.0,>=4.1.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9543421Z   Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9736269Z Collecting kombu<6.0,>=5.3.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9814783Z   Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9960250Z Collecting vine<6.0,>=5.0.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0037701Z   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0170664Z Collecting click-didyoumean>=0.3.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0247194Z   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0369667Z Collecting click-repl>=0.2.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0448584Z   Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0585060Z Collecting click-plugins>=1.1.1 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0665013Z   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0812658Z Collecting tzdata>=2022.7 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0885499Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1011339Z Collecting python-dateutil>=2.8.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1087250Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1229853Z Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1306879Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1456045Z Collecting packaging>=24 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1532311Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1666306Z Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1742848Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1908453Z Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1983124Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.2985929Z Collecting charset_normalizer<4,>=2 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3066377Z   Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (43 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3237485Z Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3318712Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3491787Z Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3571562Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3759651Z Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3835435Z   Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4009151Z Collecting jsonschema<5.0.0,>=4.26.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4084749Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4216741Z Collecting jsonschema-path<0.6.0,>=0.5.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4296679Z   Downloading jsonschema_path-0.5.0-py3-none-any.whl.metadata (8.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4609236Z Collecting lazy-object-proxy<2.0,>=1.7.1 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4729324Z   Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4886026Z Collecting openapi-schema-validator<0.10.0,>=0.9.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4967638Z   Downloading openapi_schema_validator-0.9.0-py3-none-any.whl.metadata (10 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.5609604Z Collecting pydantic<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.5689341Z   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.5940603Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6018801Z   Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6302650Z Collecting playwright>=1.18 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6382541Z   Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6538802Z Collecting python-slugify<10.0.0,>=6.0.0 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6618289Z   Downloading python_slugify-9.2.0-py3-none-any.whl.metadata (13 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6757785Z Collecting pytest-metadata>=2 (from pytest-html==4.2.0->-r requirements-test.txt (line 8))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6832671Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6990448Z Collecting jproperties<3,>=2.1 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7069858Z   Downloading jproperties-2.1.2-py2.py3-none-any.whl.metadata (8.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7288022Z Collecting tomli<3,>=2.0 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7365928Z   Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0559068Z Collecting aiohttp (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0630174Z   Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0829470Z Collecting anybadge (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0925919Z   Downloading anybadge-1.18.0-py3-none-any.whl.metadata (41 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1082944Z Collecting attrs (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1161893Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1309889Z Collecting decorator (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1386461Z   Downloading decorator-5.3.2-py3-none-any.whl.metadata (4.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1524868Z Collecting exit-codes (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1612959Z   Downloading exit_codes-1.3.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1799590Z Collecting gitpython (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1880074Z   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2031617Z Collecting parso (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2112637Z   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2675287Z Collecting rich (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2755509Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2985044Z Collecting stevedore (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3064380Z   Downloading stevedore-5.10.0-py3-none-any.whl.metadata (2.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3186967Z Collecting toml (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3265215Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3427535Z Collecting yattag (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3526335Z   Downloading yattag-1.16.1.tar.gz (29 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3586026Z   Installing build dependencies: started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1964913Z   Installing build dependencies: finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1971152Z   Getting requirements to build wheel: started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4104560Z   Getting requirements to build wheel: finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4112146Z   Preparing metadata (pyproject.toml): started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5234040Z   Preparing metadata (pyproject.toml): finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5391663Z Collecting six~=1.13 (from jproperties<3,>=2.1->pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5467579Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5606740Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5685769Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5888581Z Collecting referencing>=0.28.4 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5973550Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7526009Z Collecting rpds-py>=0.25.0 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7609045Z   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7766093Z Collecting pathable<0.7.0,>=0.6.0 (from jsonschema-path<0.6.0,>=0.5.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7838436Z   Downloading pathable-0.6.0-py3-none-any.whl.metadata (7.2 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8013271Z Collecting amqp>=5.4.2 (from kombu<6.0,>=5.3.2->celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8094322Z   Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8266624Z Collecting rfc3339-validator (from openapi-schema-validator<0.10.0,>=0.9.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8350640Z   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8485417Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8563615Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3115400Z Collecting pydantic-core==2.50.5 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3223566Z   Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3380362Z Collecting typing-extensions>=4.16.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3461756Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3586222Z Collecting typing-inspection>=0.4.4 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3671567Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3727261Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3804114Z   Downloading pydantic_settings-2.16.2-py3-none-any.whl.metadata (4.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3827343Z INFO: pip is looking at multiple versions of pydantic-settings to determine which version is compatible with other requirements. This could take a while.
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3920421Z   Downloading pydantic_settings-2.16.1-py3-none-any.whl.metadata (4.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4023885Z   Downloading pydantic_settings-2.16.0-py3-none-any.whl.metadata (4.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4130239Z   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4277994Z Collecting text-unidecode>=1.3 (from python-slugify<10.0.0,>=6.0.0->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4359637Z   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4623550Z Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4700180Z   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.5589081Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright>=1.18->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.5673398Z   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.5878313Z Collecting wcwidth>=0.1.4 (from prompt_toolkit>=3.0.36->click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.5954198Z   Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (26 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.6158557Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.6234319Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.6355236Z Collecting aiosignal>=1.4.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.6432303Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.7295245Z Collecting frozenlist>=1.1.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.7376519Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.8943891Z Collecting multidict<8.0,>=4.5 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9027221Z   Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9473569Z Collecting propcache>=0.2.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9555831Z   Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.1492029Z Collecting yarl<2.0,>=1.25.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.1583587Z   Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.1849795Z Collecting gitdb<5,>=4.0.1 (from gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.1928763Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2065378Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2150088Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2319502Z Collecting markdown-it-py>=2.2.0 (from rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2403363Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2550442Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2628424Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2776884Z Downloading flask-2.3.3-py3-none-any.whl (96 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2873174Z Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl (24 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.2971624Z Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.3070623Z Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl (22 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.3176862Z Downloading werkzeug-2.3.7-py3-none-any.whl (242 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.3287642Z Downloading celery-5.3.4-py3-none-any.whl (421 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.3410430Z Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.3503391Z Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.3671450Z Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.6 MB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4007461Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 112.5 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4085593Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4195579Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4290908Z Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4386515Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4485003Z Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (828 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4521717Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 828.0/828.0 kB 249.5 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4603422Z Downloading openapi_spec_validator-0.9.0-py3-none-any.whl (50 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4693957Z Downloading pytest_playwright-0.10.0-py3-none-any.whl (22 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4782529Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4868777Z Downloading freezegun-1.5.5-py3-none-any.whl (19 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.4977601Z Downloading pysonar-1.11.0.6012-py3-none-any.whl (51 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5074745Z Downloading cosmic_ray-8.9.0-py3-none-any.whl (62 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5167045Z Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5267041Z Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5368724Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5479474Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5575764Z Downloading jproperties-2.1.2-py2.py3-none-any.whl (17 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5686140Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5780806Z Downloading jsonschema_path-0.5.0-py3-none-any.whl (24 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5875433Z Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.5967833Z Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6064177Z Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (68 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6153634Z Downloading openapi_schema_validator-0.9.0-py3-none-any.whl (19 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6244243Z Downloading pathable-0.6.0-py3-none-any.whl (18 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6331579Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6427481Z Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6531890Z Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6625376Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 259.4 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6703597Z Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6795747Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6894773Z Downloading python_slugify-9.2.0-py3-none-any.whl (17 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.6984904Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7083558Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7176308Z Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (276 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7273056Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7367451Z Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7462330Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7552964Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7646340Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7735847Z Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7839236Z Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.7928510Z Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8015490Z Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8101863Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8193287Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8280922Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8380336Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8467866Z Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8561508Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.8653240Z Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl (53.5 MB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0215214Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 MB 345.5 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0296923Z Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0335765Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 167.3 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0417991Z Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0516613Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0563043Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 316.6 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0641721Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0734819Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0828929Z Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.0928475Z Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1056262Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 392.4 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1136305Z Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1228622Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1323323Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1413053Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1519079Z Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1554389Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 247.7 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1632244Z Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1691280Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 361.0 MB/s  0:00:00
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1768505Z Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (510 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1866447Z Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.1966725Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2053365Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2143459Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2233466Z Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2325828Z Downloading anybadge-1.18.0-py3-none-any.whl (56 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2420256Z Downloading decorator-5.3.2-py3-none-any.whl (11 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2508687Z Downloading exit_codes-1.3.0-py2.py3-none-any.whl (4.7 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2600158Z Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2693097Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2784149Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2875684Z Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.2969104Z Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.3060830Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.3155153Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.3244963Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.3335111Z Downloading stevedore-5.10.0-py3-none-any.whl (56 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.3425387Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.5136820Z Building wheels for collected packages: Flask-Mail, yattag
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.5142546Z   Building wheel for Flask-Mail (pyproject.toml): started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.6564302Z   Building wheel for Flask-Mail (pyproject.toml): finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.6568938Z   Created wheel for Flask-Mail: filename=flask_mail-0.9.1-py3-none-any.whl size=7667 sha256=21d3ccda8acd2b1acb05842309faebefcfc4b7fe17428ac72d92b3e1ac2c8b6b
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.6570157Z   Stored in directory: /home/runner/.cache/pip/wheels/f6/38/ab/b955b60e85ca451344be85d42bd267ef32311bd61cb21e5a1c
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.6584786Z   Building wheel for yattag (pyproject.toml): started
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.7903859Z   Building wheel for yattag (pyproject.toml): finished with status 'done'
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.7907317Z   Created wheel for yattag: filename=yattag-1.16.1-py3-none-any.whl size=15931 sha256=e66bf1345adfd184cbbd41814b24663d92220ed50cc227a8c0b50d5a19822dce
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.7908558Z   Stored in directory: /home/runner/.cache/pip/wheels/7d/cd/81/74d0b2cf3c26cb69e13e8c01becb277c0777ed3b88cc4cc901
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.7921098Z Successfully built Flask-Mail yattag
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:52.8805422Z Installing collected packages: yattag, text-unidecode, exit-codes, wcwidth, vine, urllib3, tzdata, typing-extensions, tomli, toml, stevedore, smmap, six, rpds-py, redis, PyYAML, python-slugify, python-dotenv, PyJWT, pygments, propcache, pluggy, Pillow, pathable, parso, packaging, multidict, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, iniconfig, idna, greenlet, frozenlist, decorator, coverage, click, charset_normalizer, certifi, blinker, billiard, attrs, annotated-types, aiohappyeyeballs, yarl, Werkzeug, typing-inspection, sqlalchemy, rfc3339-validator, requests, referencing, python-dateutil, pytest, pydantic-core, prompt_toolkit, playwright, markdown-it-py, jproperties, Jinja2, gitdb, click-plugins, click-didyoumean, anybadge, amqp, aiosignal, rich, pytest-playwright, pytest-metadata, pytest-cov, pysonar, pydantic, kombu, jsonschema-specifications, jsonschema-path, gitpython, freezegun, Flask, click-repl, aiohttp, pytest-html, pydantic-settings, jsonschema, Flask-SQLAlchemy, Flask-Mail, Flask-JWT-Extended, Flask-CORS, cosmic-ray, celery, openapi-schema-validator, openapi-spec-validator
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:57.5047125Z 
+Booking input regression	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:57.5073976Z Successfully installed Flask-2.3.3 Flask-CORS-4.0.0 Flask-JWT-Extended-4.5.3 Flask-Mail-0.9.1 Flask-SQLAlchemy-3.0.5 Jinja2-3.1.6 MarkupSafe-3.0.4 Pillow-10.1.0 PyJWT-2.15.1 PyYAML-6.0.4 Werkzeug-2.3.7 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 amqp-5.4.2 annotated-types-0.8.0 anybadge-1.18.0 attrs-26.1.0 billiard-4.3.2 blinker-1.9.0 celery-5.3.4 certifi-2026.11.20 charset_normalizer-3.5.3 click-8.5.1 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 cosmic-ray-8.9.0 coverage-7.17.4 decorator-5.3.2 exit-codes-1.3.0 freezegun-1.5.5 frozenlist-1.8.0 gitdb-4.0.12 gitpython-3.2.1 greenlet-3.5.6 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jproperties-2.1.2 jsonschema-4.26.0 jsonschema-path-0.5.0 jsonschema-specifications-2025.9.1 kombu-5.7.0 lazy-object-proxy-1.13.0 markdown-it-py-4.3.0 mdurl-0.1.2 multidict-7.2.1 openapi-schema-validator-0.9.0 openapi-spec-validator-0.9.0 packaging-26.3 parso-0.8.7 pathable-0.6.0 playwright-1.65.2 pluggy-1.7.0 prompt_toolkit-3.0.53 propcache-0.5.4 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.15.0 pygments-2.21.0 pysonar-1.11.0.6012 pytest-9.2.0 pytest-cov-7.1.0 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-playwright-0.10.0 python-dateutil-4.0.0 python-dotenv-1.0.0 python-slugify-9.2.0 redis-5.0.1 referencing-0.37.0 requests-2.34.2 rfc3339-validator-0.1.4 rich-15.0.0 rpds-py-2026.9.1 six-1.17.0 smmap-5.0.3 sqlalchemy-2.1.9 stevedore-5.10.0 text-unidecode-1.3 toml-0.10.2 tomli-2.5.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 vine-5.1.0 wcwidth-0.9.5 yarl-1.25.1 yattag-1.16.1
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	﻿2026-11-23T16:38:57.7101597Z ##[group]Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7102378Z ^[[36;1mpython -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml^[[0m
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7121188Z shell: /usr/bin/bash -e {0}
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7121486Z env:
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7121784Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7122164Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7122555Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7122928Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7123260Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7123886Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:57.7124187Z ##[endgroup]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:59.9726607Z Protected development DB SHA-256 before: absent
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:59.9727221Z 
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:59.9727655Z [D5a empty JSON object] HTTP 400 | body={'message': 'Doctor ID is required', 'success': False}
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:38:59.9728828Z [D5a empty JSON object] appointments table = []
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:00.4671104Z .
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:00.4671760Z [D5b time 'abc'] HTTP 400 | body={'message': 'Invalid appointment time format', 'success': False}
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:00.4672446Z [D5b time 'abc'] appointments table = []
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:00.9555629Z .
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:00.9556469Z [D5c time as number 900] HTTP 400 | body={'message': 'Invalid appointment time format', 'success': False}
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:00.9557179Z [D5c time as number 900] appointments table = []
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4453339Z .
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4453909Z [D5d JSON null body] HTTP 400 | body={'message': 'Booking requires a JSON object', 'success': False}
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4454580Z [D5d JSON null body] appointments table = []
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4919419Z .Protected development DB SHA-256 after: absent
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4920048Z 
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4920516Z =============================== warnings summary ===============================
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4921684Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5a empty JSON object-kwargs0]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4922807Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5b time 'abc'-kwargs1]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4924339Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5c time as number 900-kwargs2]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4925474Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5d JSON null body-kwargs3]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4927561Z   /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 18 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4929804Z     return self._jws.encode(
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4930094Z 
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4930686Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5a empty JSON object-kwargs0]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4931913Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5b time 'abc'-kwargs1]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4933037Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5c time as number 900-kwargs2]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4934224Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5d JSON null body-kwargs3]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4936217Z   /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/jwt/api_jwt.py:370: InsecureKeyLengthWarning: The HMAC key is 18 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4937875Z     decoded = self.decode_complete(
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4938478Z 
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4938949Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5b time 'abc'-kwargs1]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4940345Z tests/team/api/test_smoke_high_risk.py::test_d5_malformed_booking_input[D5c time as number 900-kwargs2]
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4942737Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:244: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4944358Z     doctor = Doctor.query.get(doctor_id)
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4944591Z 
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4944858Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+Booking input regression	Run python -m pytest -q --tb=short tests/team/api/test_smoke_high_risk.py -k test_d5 -s --junitxml=booking-input.xml	2026-11-23T16:39:01.4945483Z 4 passed, 5 deselected, 10 warnings in 2.09s
+Booking input regression	Run actions/upload-artifact@v4	﻿2026-11-23T16:39:01.6034922Z ##[group]Run actions/upload-artifact@v4
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6035254Z with:
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6035482Z   name: booking-input-regression
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6035746Z   path: booking-input.xml
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6036020Z   if-no-files-found: warn
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6036270Z   compression-level: 6
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6036518Z   overwrite: false
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6036743Z   include-hidden-files: false
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6036965Z env:
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6037255Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6037629Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6038504Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6038867Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6039225Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6039608Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.6039905Z ##[endgroup]
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.7282195Z (node:2457) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.7283108Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.7314718Z With the provided path, there will be 1 file uploaded
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.7317576Z Artifact name is valid!
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:01.7334395Z Root directory input is valid!
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:02.2319099Z Beginning upload of artifact content to blob storage
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:02.3175744Z (node:2457) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:02.6459799Z Uploaded bytes 468
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:02.7360972Z Finished uploading artifact content to blob storage!
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:02.7361786Z SHA256 digest of uploaded artifact zip is bdbb7d5ced4c4ee781bc03b510cf45d0c4bf50507d279f196d732df5522da823
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:02.7362562Z Finalizing artifact upload
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:03.7818830Z Artifact booking-input-regression.zip successfully finalized. Artifact ID 14839093551
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:03.7819872Z Artifact booking-input-regression has been successfully uploaded! Final size is 468 bytes. Artifact ID is 14839093551
+Booking input regression	Run actions/upload-artifact@v4	2026-11-23T16:39:03.7824434Z Artifact download URL: https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/artifacts/14839093551
+Booking input regression	Post Run actions/setup-python@v5	﻿2026-11-23T16:39:03.7956121Z Post job cleanup.
+Booking input regression	Post Run actions/setup-python@v5	2026-11-23T16:39:03.8837768Z (node:2469) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Booking input regression	Post Run actions/setup-python@v5	2026-11-23T16:39:03.8838672Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Booking input regression	Post Run actions/checkout@v4	﻿2026-11-23T16:39:03.8971466Z Post job cleanup.
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9659916Z [command]/usr/bin/git version
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9689174Z git version 2.56.1
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9713519Z Temporarily overriding HOME='/home/runner/work/_temp/d25736ea-ac05-4ac1-8e78-5711551c5224' before making global git config changes
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9714599Z Adding repository directory to the temporary git global config as a safe directory
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9717174Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9745083Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9767762Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9978033Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:03.9999179Z http.https://github.com/.extraheader
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:04.0001187Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:04.0023495Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:04.0209059Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Booking input regression	Post Run actions/checkout@v4	2026-11-23T16:39:04.0226058Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Booking input regression	Complete job	﻿2026-11-23T16:39:04.0505380Z Cleaning up orphan processes
+Booking input regression	Complete job	2026-11-23T16:39:04.0799142Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

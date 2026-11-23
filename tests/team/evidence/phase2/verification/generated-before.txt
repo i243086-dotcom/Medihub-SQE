@@ -1,0 +1,689 @@
+Protected development DB SHA-256 before: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+........F....FFF......................F...............F..................F.........F....FF...........F....FFF...................FF.......................FFF................FFF...F...FF....FFFF..Protected development DB SHA-256 after: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+
+================================== FAILURES ===================================
+_____________ test_generated_contract[GEN-login-body-username-42] _____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 401. DB [] -> []
+_____________ test_generated_contract[GEN-login-body-password-42] _____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/auth/login [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\auth.py", line 22, in login
+    if check_password_hash(user.password_hash, password):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\werkzeug\security.py", line 139, in check_password_hash
+    return hmac.compare_digest(_hash_internal(method, salt, password)[0], hashval)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\werkzeug\security.py", line 37, in _hash_internal
+    password = password.encode("utf-8")
+               ^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'encode'
+________________ test_generated_contract[GEN-login-json-null] _________________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/auth/login [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\auth.py", line 13, in login
+    username = data.get('username')
+               ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+________________ test_generated_contract[GEN-login-json-array] ________________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/auth/login [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\auth.py", line 13, in login
+    username = data.get('username')
+               ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+___________ test_generated_contract[GEN-slots-query-doctor_id-abc] ____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [] -> []
+_____ test_generated_contract[GEN-doctorAvailability-path-doctor_id-abc] ______
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 404, got 200. DB [] -> []
+____________ test_generated_contract[GEN-book-body-doctor_id-abc] _____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 404. DB [] -> []
+_________ test_generated_contract[GEN-book-body-appointment_date-42] __________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\patient.py", line 236, in book_appointment
+    apt_date = datetime.strptime(data['appointment_date'], '%Y-%m-%d').date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not int
+________ test_generated_contract[GEN-book-body-appointment_time-24-00] ________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\patient.py", line 256, in book_appointment
+    apt_time = datetime.strptime(time_str, '%H:%M').time()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '24:00' does not match format '%H:%M'
+_________ test_generated_contract[GEN-book-body-appointment_time-abc] _________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\patient.py", line 256, in book_appointment
+    apt_time = datetime.strptime(time_str, '%H:%M').time()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'abc' does not match format '%H:%M'
+_________ test_generated_contract[GEN-book-body-appointment_time-42] __________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\patient.py", line 252, in book_appointment
+    if '-' in time_str:
+       ^^^^^^^^^^^^^^^
+TypeError: argument of type 'int' is not iterable
+_______________ test_generated_contract[GEN-book-body-notes-42] _______________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', '42')]
+_________________ test_generated_contract[GEN-book-json-null] _________________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\patient.py", line 222, in book_appointment
+    if not data.get('doctor_id'):
+           ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+________________ test_generated_contract[GEN-book-json-array] _________________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [] -> []
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments [POST]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\patient.py", line 222, in book_appointment
+    if not data.get('doctor_id'):
+           ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+________ test_generated_contract[GEN-doctorList-query-date-2030-02-30] ________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/doctor/appointments [GET]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 32, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\doctor.py", line 133, in get_appointments
+    filter_date = datetime.strptime(date_filter, '%Y-%m-%d').date()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 533, in _strptime
+    julian = datetime_date(year, month, day).toordinal() - \
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: day is out of range for month
+___________ test_generated_contract[GEN-doctorList-query-date-abc] ____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/doctor/appointments [GET]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 32, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\doctor.py", line 133, in get_appointments
+    filter_date = datetime.strptime(date_filter, '%Y-%m-%d').date()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 567, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'abc' does not match format '%Y-%m-%d'
+___________ test_generated_contract[GEN-doctorStatus-body-notes-42] ___________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'completed', '42')]
+_____________ test_generated_contract[GEN-doctorStatus-json-null] _____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/doctor/appointments/1/status [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 32, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\doctor.py", line 186, in update_appointment_status
+    status = data.get('status')
+             ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+____________ test_generated_contract[GEN-doctorStatus-json-array] _____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/doctor/appointments/1/status [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 32, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\doctor.py", line 186, in update_appointment_status
+    status = data.get('status')
+             ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+_________ test_generated_contract[GEN-adminStatus-body-status-banana] _________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-17', '11:00', 'banana', 'Synthetic notes')]
+__________ test_generated_contract[GEN-adminStatus-body-status-None] __________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-17', '11:00', None, 'Synthetic notes')]
+___________ test_generated_contract[GEN-adminStatus-body-status-42] ___________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-17', '11:00', '42', 'Synthetic notes')]
+___________ test_generated_contract[GEN-adminStatus-body-notes-42] ____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-17', '11:00', 'completed', '42')]
+_____ test_generated_contract[GEN-adminStatus-body-appointment_date-None] _____
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/admin/appointments/1 [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 21, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\admin.py", line 200, in update_appointment
+    new_date = datetime.strptime(data['appointment_date'], '%Y-%m-%d').date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not None
+______ test_generated_contract[GEN-adminStatus-body-appointment_date-42] ______
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/admin/appointments/1 [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 21, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\admin.py", line 200, in update_appointment
+    new_date = datetime.strptime(data['appointment_date'], '%Y-%m-%d').date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not int
+_____ test_generated_contract[GEN-adminStatus-body-appointment_time-None] _____
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/admin/appointments/1 [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 21, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\admin.py", line 203, in update_appointment
+    if len(time_str.split(':')) == 2:
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
+______ test_generated_contract[GEN-adminStatus-body-appointment_time-42] ______
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/admin/appointments/1 [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 21, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\admin.py", line 203, in update_appointment
+    if len(time_str.split(':')) == 2:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'split'
+_____________ test_generated_contract[GEN-adminStatus-json-null] ______________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 500. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/admin/appointments/1 [PUT]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\decorators.py", line 21, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\backend\routes\admin.py", line 192, in update_appointment
+    if 'status' in data:
+       ^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+_____________ test_generated_contract[GEN-adminStatus-json-array] _____________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)]
+============================== warnings summary ===============================
+tests/team/api/test_generated_appointments.py: 194 warnings
+  D:\SQE_Project\Medihub\.venv\Lib\site-packages\jwt\api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 18 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+tests/team/api/test_generated_appointments.py: 161 warnings
+  D:\SQE_Project\Medihub\.venv\Lib\site-packages\jwt\api_jwt.py:370: InsecureKeyLengthWarning: The HMAC key is 18 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    decoded = self.decode_complete(
+
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-valid]
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-0]
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-2]
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-3]
+  D:\SQE_Project\Medihub\backend\routes\patient.py:438: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/api/test_generated_appointments.py: 34 warnings
+  D:\SQE_Project\Medihub\backend\routes\patient.py:231: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(data['doctor_id'])
+
+tests/team/api/test_generated_appointments.py: 28 warnings
+  D:\SQE_Project\Medihub\backend\routes\admin.py:185: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    appointment = Appointment.query.get(appointment_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-login-body-username-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-login-body-password-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-login-json-null]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-login-json-array]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-slots-query-doctor_id-abc]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-abc]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-doctor_id-abc]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_date-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_time-24-00]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_time-abc]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_time-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-notes-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-json-null]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-json-array]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorList-query-date-2030-02-30]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorList-query-date-abc]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorStatus-body-notes-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorStatus-json-null]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorStatus-json-array]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-status-banana]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-status-None]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-status-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-notes-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-appointment_date-None]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-appointment_date-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-appointment_time-None]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-body-appointment_time-42]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-json-null]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-adminStatus-json-array]
+29 failed, 165 passed, 421 warnings in 12.66s

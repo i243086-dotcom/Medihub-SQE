@@ -4,3 +4,6 @@ frontend/index.html linguist-language=Vue
 
 # Backend files
 backend/**/*.py linguist-language=Python
+
+# Keep Phase 2 evidence bytes identical to the captured tool output.
+tests/team/evidence/phase2/verification/** -text

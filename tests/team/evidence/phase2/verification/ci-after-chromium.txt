@@ -1,0 +1,758 @@
+Chromium use cases	Set up job	﻿2026-11-23T16:38:28.4226241Z Current runner version: '2.338.2'
+Chromium use cases	Set up job	2026-11-23T16:38:28.4242985Z ##[group]Runner Image Provisioner
+Chromium use cases	Set up job	2026-11-23T16:38:28.4243678Z Hosted Compute Agent
+Chromium use cases	Set up job	2026-11-23T16:38:28.4244150Z Version: 20261111.635
+Chromium use cases	Set up job	2026-11-23T16:38:28.4244605Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Chromium use cases	Set up job	2026-11-23T16:38:28.4245566Z Build Date: 2026-11-11T01:49:01Z
+Chromium use cases	Set up job	2026-11-23T16:38:28.4246066Z Worker ID: {71ccca18-9495-40f7-8c3a-adfdf4851e63}
+Chromium use cases	Set up job	2026-11-23T16:38:28.4246579Z Region: us-east-1
+Chromium use cases	Set up job	2026-11-23T16:38:28.4247002Z Cloud: AWS
+Chromium use cases	Set up job	2026-11-23T16:38:28.4247382Z ##[endgroup]
+Chromium use cases	Set up job	2026-11-23T16:38:28.4248383Z ##[group]Operating System
+Chromium use cases	Set up job	2026-11-23T16:38:28.4248832Z Ubuntu
+Chromium use cases	Set up job	2026-11-23T16:38:28.4249226Z 26.04.1
+Chromium use cases	Set up job	2026-11-23T16:38:28.4249604Z LTS
+Chromium use cases	Set up job	2026-11-23T16:38:28.4249971Z ##[endgroup]
+Chromium use cases	Set up job	2026-11-23T16:38:28.4250390Z ##[group]Runner Image
+Chromium use cases	Set up job	2026-11-23T16:38:28.4250827Z Image: ubuntu-26.04
+Chromium use cases	Set up job	2026-11-23T16:38:28.4251245Z Version: 20261116.88.1
+Chromium use cases	Set up job	2026-11-23T16:38:28.4252003Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+Chromium use cases	Set up job	2026-11-23T16:38:28.4253251Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+Chromium use cases	Set up job	2026-11-23T16:38:28.4253941Z ##[endgroup]
+Chromium use cases	Set up job	2026-11-23T16:38:28.4254894Z ##[group]GITHUB_TOKEN Permissions
+Chromium use cases	Set up job	2026-11-23T16:38:28.4256550Z Contents: read
+Chromium use cases	Set up job	2026-11-23T16:38:28.4256964Z Metadata: read
+Chromium use cases	Set up job	2026-11-23T16:38:28.4257391Z ##[endgroup]
+Chromium use cases	Set up job	2026-11-23T16:38:28.4258848Z Secret source: Actions
+Chromium use cases	Set up job	2026-11-23T16:38:28.4259529Z Cache mode: write
+Chromium use cases	Set up job	2026-11-23T16:38:28.4260015Z Prepare workflow directory
+Chromium use cases	Set up job	2026-11-23T16:38:28.4496237Z Prepare all required actions
+Chromium use cases	Set up job	2026-11-23T16:38:28.4532219Z Getting action download info
+Chromium use cases	Set up job	2026-11-23T16:38:28.6405325Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Chromium use cases	Set up job	2026-11-23T16:38:30.4946886Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Chromium use cases	Set up job	2026-11-23T16:38:30.6459542Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Chromium use cases	Set up job	2026-11-23T16:38:30.8845904Z Complete job name: Chromium use cases
+Chromium use cases	Run actions/checkout@v4	﻿2026-11-23T16:38:30.9499715Z ##[group]Run actions/checkout@v4
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9500677Z with:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9501315Z   repository: i243086-dotcom/Medihub-SQE
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9505333Z   token: ***
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9506005Z   ssh-strict: true
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9506696Z   ssh-user: git
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9507325Z   persist-credentials: true
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9507978Z   clean: true
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9508592Z   sparse-checkout-cone-mode: true
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9509276Z   fetch-depth: 1
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9509863Z   fetch-tags: false
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9510485Z   show-progress: true
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9511157Z   lfs: false
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9511740Z   submodules: false
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9512372Z   set-safe-directory: true
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9513029Z   allow-unsafe-pr-checkout: false
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:30.9513898Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7577564Z Syncing repository: i243086-dotcom/Medihub-SQE
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7579643Z ##[group]Getting Git version info
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7580237Z Working directory is '/home/runner/work/Medihub-SQE/Medihub-SQE'
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7581119Z [command]/usr/bin/git version
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7581469Z git version 2.56.1
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7582673Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7590579Z Temporarily overriding HOME='/home/runner/work/_temp/a467ac40-22f7-4384-80d5-605607291903' before making global git config changes
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7591693Z Adding repository directory to the temporary git global config as a safe directory
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7594055Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7982115Z Deleting the contents of '/home/runner/work/Medihub-SQE/Medihub-SQE'
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7988017Z ##[group]Initializing the repository
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.7990474Z [command]/usr/bin/git init /home/runner/work/Medihub-SQE/Medihub-SQE
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8487206Z hint: Using 'master' as the name for the initial branch. This default branch name
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8488577Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8489159Z hint: to use in all of your new repositories, which will suppress this warning,
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8489613Z hint: call:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8489861Z hint:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8490214Z hint: 	git config --global init.defaultBranch <name>
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8490582Z hint:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8490933Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8491422Z hint: 'development'. The just-created branch can be renamed via this command:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8491809Z hint:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8492102Z hint: 	git branch -m <name>
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8492440Z hint:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8492794Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8509318Z Initialized empty Git repository in /home/runner/work/Medihub-SQE/Medihub-SQE/.git/
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8518234Z [command]/usr/bin/git remote add origin https://github.com/i243086-dotcom/Medihub-SQE
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8581961Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8582872Z ##[group]Disabling automatic garbage collection
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8585185Z [command]/usr/bin/git config --local gc.auto 0
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8606676Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8607222Z ##[group]Setting up auth
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8611979Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:34.8633384Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1198073Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1224024Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1399095Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1420399Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1590770Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1616312Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1616910Z ##[group]Fetching the repository
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.1621892Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935:refs/remotes/pull/11/merge
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5341467Z From https://github.com/i243086-dotcom/Medihub-SQE
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5342058Z  * [new ref]         bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935 -> pull/11/merge
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5345873Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5346647Z ##[group]Determining the checkout info
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5348417Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5353067Z [command]/usr/bin/git sparse-checkout disable
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5435741Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5437004Z ##[group]Checking out the ref
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5437441Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/11/merge
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5637574Z Note: switching to 'refs/remotes/pull/11/merge'.
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5638079Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5638317Z You are in 'detached HEAD' state. You can look around, make experimental
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5638753Z changes and commit them, and you can discard any commits you make in this
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5639167Z state without impacting any branches by switching back to a branch.
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5639438Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5639620Z If you want to create a new branch to retain commits you create, you may
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5640199Z do so (now or later) by using -c with the switch command. Example:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5640412Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5640565Z   git switch -c <new-branch-name>
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5640714Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5640846Z Or undo this operation with:
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5640999Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5641093Z   git switch -
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5641301Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5641488Z Turn off this advice by setting config variable advice.detachedHead to false
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5641748Z 
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5642010Z HEAD is now at bd0e1ee Merge 815b11f9c6ad9bfffca37362a866db6352bb1689 into adf2871f9fe5c57e61218eecd5f90fc955e00ee4
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5649220Z ##[endgroup]
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5687199Z [command]/usr/bin/git log -1 --format=%H
+Chromium use cases	Run actions/checkout@v4	2026-11-23T16:38:35.5703947Z bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935
+Chromium use cases	Run actions/setup-python@v5	﻿2026-11-23T16:38:35.5914156Z ##[group]Run actions/setup-python@v5
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5914494Z with:
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5914941Z   python-version: 3.11
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5915196Z   check-latest: false
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5917349Z   token: ***
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5917576Z   update-environment: true
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5917862Z   allow-prereleases: false
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5918103Z   freethreaded: false
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.5918318Z ##[endgroup]
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:35.6914365Z ##[group]Installed versions
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:36.0838855Z (node:2380) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:36.0839562Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:36.0839980Z Successfully set up CPython (3.11.18)
+Chromium use cases	Run actions/setup-python@v5	2026-11-23T16:38:36.0840599Z ##[endgroup]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	﻿2026-11-23T16:38:36.0970043Z ##[group]Run python -m pip install -r backend/requirements.txt -r requirements-test.txt
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0970905Z ^[[36;1mpython -m pip install -r backend/requirements.txt -r requirements-test.txt^[[0m
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.0971583Z ^[[36;1mpython -m playwright install --with-deps chromium^[[0m
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1569410Z shell: /usr/bin/bash -e {0}
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1569745Z env:
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1570027Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1570488Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1570858Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1571209Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1571550Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1571887Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:36.1572212Z ##[endgroup]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.0215495Z Collecting Flask==2.3.3 (from -r backend/requirements.txt (line 2))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.0597247Z   Downloading flask-2.3.3-py3-none-any.whl.metadata (3.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.0761424Z Collecting Flask-SQLAlchemy==3.0.5 (from -r backend/requirements.txt (line 3))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.0868659Z   Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl.metadata (3.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1058135Z Collecting Flask-CORS==4.0.0 (from -r backend/requirements.txt (line 4))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1157004Z   Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata (5.4 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1338821Z Collecting Flask-JWT-Extended==4.5.3 (from -r backend/requirements.txt (line 5))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1441909Z   Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl.metadata (3.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1715243Z Collecting Flask-Mail==0.9.1 (from -r backend/requirements.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1815866Z   Downloading Flask-Mail-0.9.1.tar.gz (45 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.1973839Z   Installing build dependencies: started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7191131Z   Installing build dependencies: finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7195387Z   Getting requirements to build wheel: started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1264218Z   Getting requirements to build wheel: finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1273352Z   Preparing metadata (pyproject.toml): started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2408189Z   Preparing metadata (pyproject.toml): finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2615707Z Collecting Werkzeug==2.3.7 (from -r backend/requirements.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2720061Z   Downloading werkzeug-2.3.7-py3-none-any.whl.metadata (4.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3076638Z Collecting celery==5.3.4 (from -r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3182793Z   Downloading celery-5.3.4-py3-none-any.whl.metadata (21 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3462019Z Collecting redis==5.0.1 (from -r backend/requirements.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3560376Z   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3727246Z Collecting python-dotenv==1.0.0 (from -r backend/requirements.txt (line 14))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3829752Z   Downloading python_dotenv-1.0.0-py3-none-any.whl.metadata (21 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.4969737Z Collecting Pillow==10.1.0 (from -r backend/requirements.txt (line 15))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5083977Z   Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5312744Z Collecting pytest==9.2.0 (from -r requirements-test.txt (line 1))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5413068Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5590291Z Collecting pytest-cov==7.1.0 (from -r requirements-test.txt (line 2))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5690246Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8244532Z Collecting coverage==7.17.4 (from -r requirements-test.txt (line 3))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8356924Z   Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8550223Z Collecting requests==2.34.2 (from -r requirements-test.txt (line 4))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8654289Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8949346Z Collecting PyYAML==6.0.4 (from -r requirements-test.txt (line 5))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9046802Z   Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9212391Z Collecting openapi-spec-validator==0.9.0 (from -r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9308728Z   Downloading openapi_spec_validator-0.9.0-py3-none-any.whl.metadata (6.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9466804Z Collecting pytest-playwright==0.10.0 (from -r requirements-test.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9568153Z   Downloading pytest_playwright-0.10.0-py3-none-any.whl.metadata (14 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9744101Z Collecting pytest-html==4.2.0 (from -r requirements-test.txt (line 8))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9846683Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0046286Z Collecting freezegun==1.5.5 (from -r requirements-test.txt (line 9))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0148291Z   Downloading freezegun-1.5.5-py3-none-any.whl.metadata (13 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0305921Z Collecting pysonar==1.11.0.6012 (from -r requirements-test.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0425603Z   Downloading pysonar-1.11.0.6012-py3-none-any.whl.metadata (8.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0606140Z Collecting cosmic-ray==8.9.0 (from -r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0719660Z   Downloading cosmic_ray-8.9.0-py3-none-any.whl.metadata (4.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0893175Z Collecting Jinja2>=3.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0992035Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.1141224Z Collecting itsdangerous>=2.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.1237873Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.1410650Z Collecting click>=8.1.3 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.1515828Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.1662774Z Collecting blinker>=1.6.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.1761679Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3706094Z Collecting sqlalchemy>=1.4.18 (from Flask-SQLAlchemy==3.0.5->-r backend/requirements.txt (line 3))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3805622Z   Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4013277Z Collecting PyJWT<3.0,>=2.0 (from Flask-JWT-Extended==4.5.3->-r backend/requirements.txt (line 5))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4116136Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4508642Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.3.7->-r backend/requirements.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4611986Z   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4787553Z Collecting billiard<5.0,>=4.1.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7052637Z   Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7265532Z Collecting kombu<6.0,>=5.3.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7370915Z   Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7540276Z Collecting vine<6.0,>=5.0.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7640546Z   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7784226Z Collecting click-didyoumean>=0.3.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.7885836Z   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8036715Z Collecting click-repl>=0.2.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8135950Z   Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8277795Z Collecting click-plugins>=1.1.1 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8395620Z   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8552784Z Collecting tzdata>=2022.7 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8655703Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8806170Z Collecting python-dateutil>=2.8.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.8903059Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9068727Z Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9164910Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9324251Z Collecting packaging>=24 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9425678Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9572486Z Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9675140Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9850076Z Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.9951997Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.0969233Z Collecting charset_normalizer<4,>=2 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.1069404Z   Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (43 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.1257013Z Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.1360944Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.1635177Z Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.1733049Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.1908773Z Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2011554Z   Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2202619Z Collecting jsonschema<5.0.0,>=4.26.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2308866Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2461184Z Collecting jsonschema-path<0.6.0,>=0.5.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2562302Z   Downloading jsonschema_path-0.5.0-py3-none-any.whl.metadata (8.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2837271Z Collecting lazy-object-proxy<2.0,>=1.7.1 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.2936649Z   Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.3101150Z Collecting openapi-schema-validator<0.10.0,>=0.9.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.3199138Z   Downloading openapi_schema_validator-0.9.0-py3-none-any.whl.metadata (10 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.3848455Z Collecting pydantic<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.3948446Z   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.4233233Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.4335985Z   Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.4654319Z Collecting playwright>=1.18 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.4755804Z   Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.4922930Z Collecting python-slugify<10.0.0,>=6.0.0 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5023161Z   Downloading python_slugify-9.2.0-py3-none-any.whl.metadata (13 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5185579Z Collecting pytest-metadata>=2 (from pytest-html==4.2.0->-r requirements-test.txt (line 8))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5285403Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5450982Z Collecting jproperties<3,>=2.1 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5555732Z   Downloading jproperties-2.1.2-py2.py3-none-any.whl.metadata (8.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5793103Z Collecting tomli<3,>=2.0 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5897363Z   Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8931518Z Collecting aiohttp (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9037999Z   Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9220886Z Collecting anybadge (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9323266Z   Downloading anybadge-1.18.0-py3-none-any.whl.metadata (41 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9503252Z Collecting attrs (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9605107Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9764280Z Collecting decorator (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9866627Z   Downloading decorator-5.3.2-py3-none-any.whl.metadata (4.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0013709Z Collecting exit-codes (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0122210Z   Downloading exit_codes-1.3.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0329839Z Collecting gitpython (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0433667Z   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0601572Z Collecting parso (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0780329Z   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1318401Z Collecting rich (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1419261Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1618694Z Collecting stevedore (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1722319Z   Downloading stevedore-5.10.0-py3-none-any.whl.metadata (2.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1864163Z Collecting toml (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1964173Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.2129126Z Collecting yattag (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.2234609Z   Downloading yattag-1.16.1.tar.gz (29 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.2296142Z   Installing build dependencies: started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0541898Z   Installing build dependencies: finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0547505Z   Getting requirements to build wheel: started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.2613488Z   Getting requirements to build wheel: finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.2621033Z   Preparing metadata (pyproject.toml): started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3682092Z   Preparing metadata (pyproject.toml): finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3856162Z Collecting six~=1.13 (from jproperties<3,>=2.1->pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3952433Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4112504Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4211721Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4417697Z Collecting referencing>=0.28.4 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.4517875Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.5981921Z Collecting rpds-py>=0.25.0 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6083623Z   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6249841Z Collecting pathable<0.7.0,>=0.6.0 (from jsonschema-path<0.6.0,>=0.5.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6343999Z   Downloading pathable-0.6.0-py3-none-any.whl.metadata (7.2 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6531771Z Collecting amqp>=5.4.2 (from kombu<6.0,>=5.3.2->celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6627231Z   Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6804371Z Collecting rfc3339-validator (from openapi-schema-validator<0.10.0,>=0.9.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6906180Z   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7058206Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7154544Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1483172Z Collecting pydantic-core==2.50.5 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1589280Z   Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1753344Z Collecting typing-extensions>=4.16.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1853088Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1994615Z Collecting typing-inspection>=0.4.4 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2098561Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2150695Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2254050Z   Downloading pydantic_settings-2.16.2-py3-none-any.whl.metadata (4.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2276805Z INFO: pip is looking at multiple versions of pydantic-settings to determine which version is compatible with other requirements. This could take a while.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2381154Z   Downloading pydantic_settings-2.16.1-py3-none-any.whl.metadata (4.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2507696Z   Downloading pydantic_settings-2.16.0-py3-none-any.whl.metadata (4.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2634558Z   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2799662Z Collecting text-unidecode>=1.3 (from python-slugify<10.0.0,>=6.0.0->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2896975Z   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3176158Z Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3275455Z   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4152066Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright>=1.18->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4250714Z   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4490970Z Collecting wcwidth>=0.1.4 (from prompt_toolkit>=3.0.36->click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4596619Z   Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (26 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4818052Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4919969Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5056343Z Collecting aiosignal>=1.4.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5156572Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5973609Z Collecting frozenlist>=1.1.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6077573Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7620428Z Collecting multidict<8.0,>=4.5 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7722225Z   Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8191073Z Collecting propcache>=0.2.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8294368Z   Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.0121657Z Collecting yarl<2.0,>=1.25.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.0225355Z   Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.0498887Z Collecting gitdb<5,>=4.0.1 (from gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.0600703Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.0766072Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.0864842Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1044392Z Collecting markdown-it-py>=2.2.0 (from rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1145358Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1311506Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1409309Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1550255Z Downloading flask-2.3.3-py3-none-any.whl (96 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1666035Z Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl (24 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1781996Z Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1901931Z Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl (22 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2025550Z Downloading werkzeug-2.3.7-py3-none-any.whl (242 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2179864Z Downloading celery-5.3.4-py3-none-any.whl (421 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2388235Z Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2508230Z Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2645739Z Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.6 MB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2996461Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 106.7 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3095597Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3215491Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3331193Z Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3464255Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3581911Z Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (828 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3624099Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 828.0/828.0 kB 205.0 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3727479Z Downloading openapi_spec_validator-0.9.0-py3-none-any.whl (50 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3840510Z Downloading pytest_playwright-0.10.0-py3-none-any.whl (22 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.3955956Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4081351Z Downloading freezegun-1.5.5-py3-none-any.whl (19 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4203935Z Downloading pysonar-1.11.0.6012-py3-none-any.whl (51 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4327703Z Downloading cosmic_ray-8.9.0-py3-none-any.whl (62 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4443048Z Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4556301Z Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4669644Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4779345Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4887052Z Downloading jproperties-2.1.2-py2.py3-none-any.whl (17 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4999060Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5112197Z Downloading jsonschema_path-0.5.0-py3-none-any.whl (24 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5223179Z Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5373855Z Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5481219Z Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (68 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5594872Z Downloading openapi_schema_validator-0.9.0-py3-none-any.whl (19 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5705438Z Downloading pathable-0.6.0-py3-none-any.whl (18 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5815681Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5923893Z Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6046099Z Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6140678Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 262.7 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6241034Z Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6352222Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6461910Z Downloading python_slugify-9.2.0-py3-none-any.whl (17 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6569065Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6681032Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6793413Z Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (276 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.6908371Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7024154Z Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7137170Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7253143Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7365542Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7476454Z Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7588828Z Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7699579Z Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7812152Z Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.7923223Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8045509Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8155872Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8269355Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8382233Z Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8493379Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.8609927Z Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl (53.5 MB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.0678804Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 MB 259.4 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.0782057Z Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.0819772Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 161.7 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.0917690Z Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1041858Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1098320Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 235.8 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1200884Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1311186Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1428369Z Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1548718Z Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1740147Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 246.9 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1837864Z Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.1951410Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2065657Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2180138Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2316022Z Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2360064Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 186.7 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2460519Z Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2543001Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 245.4 MB/s  0:00:00
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2643193Z Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (510 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2764078Z Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2878259Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.2994340Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3119658Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3236933Z Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3359102Z Downloading anybadge-1.18.0-py3-none-any.whl (56 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3484914Z Downloading decorator-5.3.2-py3-none-any.whl (11 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3606105Z Downloading exit_codes-1.3.0-py2.py3-none-any.whl (4.7 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3717738Z Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3831120Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.3948759Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4057411Z Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4169904Z Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4278987Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4397796Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4514391Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4625522Z Downloading stevedore-5.10.0-py3-none-any.whl (56 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.4736420Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.6456212Z Building wheels for collected packages: Flask-Mail, yattag
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.6462342Z   Building wheel for Flask-Mail (pyproject.toml): started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.7818412Z   Building wheel for Flask-Mail (pyproject.toml): finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.7822033Z   Created wheel for Flask-Mail: filename=flask_mail-0.9.1-py3-none-any.whl size=7667 sha256=5bbd37090b7059863f8383d0528cf0a0283e27183f29aefeca49c25ea42ebeb5
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.7822889Z   Stored in directory: /home/runner/.cache/pip/wheels/f6/38/ab/b955b60e85ca451344be85d42bd267ef32311bd61cb21e5a1c
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.7836877Z   Building wheel for yattag (pyproject.toml): started
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9129243Z   Building wheel for yattag (pyproject.toml): finished with status 'done'
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9132990Z   Created wheel for yattag: filename=yattag-1.16.1-py3-none-any.whl size=15931 sha256=8f4e61ccde79ed58ca0810088241eabde56ec65b85a92de56c6d277279e0f63c
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9133917Z   Stored in directory: /home/runner/.cache/pip/wheels/7d/cd/81/74d0b2cf3c26cb69e13e8c01becb277c0777ed3b88cc4cc901
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:50.9144561Z Successfully built Flask-Mail yattag
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:51.0098330Z Installing collected packages: yattag, text-unidecode, exit-codes, wcwidth, vine, urllib3, tzdata, typing-extensions, tomli, toml, stevedore, smmap, six, rpds-py, redis, PyYAML, python-slugify, python-dotenv, PyJWT, pygments, propcache, pluggy, Pillow, pathable, parso, packaging, multidict, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, iniconfig, idna, greenlet, frozenlist, decorator, coverage, click, charset_normalizer, certifi, blinker, billiard, attrs, annotated-types, aiohappyeyeballs, yarl, Werkzeug, typing-inspection, sqlalchemy, rfc3339-validator, requests, referencing, python-dateutil, pytest, pydantic-core, prompt_toolkit, playwright, markdown-it-py, jproperties, Jinja2, gitdb, click-plugins, click-didyoumean, anybadge, amqp, aiosignal, rich, pytest-playwright, pytest-metadata, pytest-cov, pysonar, pydantic, kombu, jsonschema-specifications, jsonschema-path, gitpython, freezegun, Flask, click-repl, aiohttp, pytest-html, pydantic-settings, jsonschema, Flask-SQLAlchemy, Flask-Mail, Flask-JWT-Extended, Flask-CORS, cosmic-ray, celery, openapi-schema-validator, openapi-spec-validator
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:55.6331134Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:55.6358108Z Successfully installed Flask-2.3.3 Flask-CORS-4.0.0 Flask-JWT-Extended-4.5.3 Flask-Mail-0.9.1 Flask-SQLAlchemy-3.0.5 Jinja2-3.1.6 MarkupSafe-3.0.4 Pillow-10.1.0 PyJWT-2.15.1 PyYAML-6.0.4 Werkzeug-2.3.7 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 amqp-5.4.2 annotated-types-0.8.0 anybadge-1.18.0 attrs-26.1.0 billiard-4.3.2 blinker-1.9.0 celery-5.3.4 certifi-2026.11.20 charset_normalizer-3.5.3 click-8.5.1 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 cosmic-ray-8.9.0 coverage-7.17.4 decorator-5.3.2 exit-codes-1.3.0 freezegun-1.5.5 frozenlist-1.8.0 gitdb-4.0.12 gitpython-3.2.1 greenlet-3.5.6 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jproperties-2.1.2 jsonschema-4.26.0 jsonschema-path-0.5.0 jsonschema-specifications-2025.9.1 kombu-5.7.0 lazy-object-proxy-1.13.0 markdown-it-py-4.3.0 mdurl-0.1.2 multidict-7.2.1 openapi-schema-validator-0.9.0 openapi-spec-validator-0.9.0 packaging-26.3 parso-0.8.7 pathable-0.6.0 playwright-1.65.2 pluggy-1.7.0 prompt_toolkit-3.0.53 propcache-0.5.4 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.15.0 pygments-2.21.0 pysonar-1.11.0.6012 pytest-9.2.0 pytest-cov-7.1.0 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-playwright-0.10.0 python-dateutil-4.0.0 python-dotenv-1.0.0 python-slugify-9.2.0 redis-5.0.1 referencing-0.37.0 requests-2.34.2 rfc3339-validator-0.1.4 rich-15.0.0 rpds-py-2026.9.1 six-1.17.0 smmap-5.0.3 sqlalchemy-2.1.9 stevedore-5.10.0 text-unidecode-1.3 toml-0.10.2 tomli-2.5.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 vine-5.1.0 wcwidth-0.9.5 yarl-1.25.1 yattag-1.16.1
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.0448787Z Installing dependencies...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.0519915Z Switching to root user to install dependencies...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.1149091Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.1391534Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.1591380Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute InRelease
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.1651838Z Get:7 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [178 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.1777112Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:56.1830807Z Get:8 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [163 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:59.8926071Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:00.0056025Z Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:00.0383025Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [902 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:00.8539208Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [200 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:00.9255985Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [393 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.0155825Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [124 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.0473457Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64v3 Packages [629 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.1368698Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [130 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.7847066Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [721 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.8991622Z Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [158 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.9301656Z Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [222 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:01.9616730Z Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [72.7 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:08.4616717Z Fetched 4308 kB in 6s (735 kB/s)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.0106694Z Reading package lists...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.0306970Z Reading package lists...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1345806Z Building dependency tree...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1350215Z Reading state information...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1630180Z libasound2t64 is already the newest version (1.2.15.3-1ubuntu1.1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1630929Z libasound2t64 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1631338Z libatk-bridge2.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1631813Z libatk-bridge2.0-0t64 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1632233Z libatk1.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1632734Z libatk1.0-0t64 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1633172Z libatspi2.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1633625Z libatspi2.0-0t64 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1634001Z libcairo2 is already the newest version (1.18.4-3).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1634431Z libcairo2 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1635018Z libcups2t64 is already the newest version (2.4.16-1ubuntu1.3).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1635394Z libcups2t64 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1635708Z libdbus-1-3 is already the newest version (1.16.2-2ubuntu4).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1636004Z libdbus-1-3 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1636327Z libdrm2 is already the newest version (2.4.131-1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1636644Z libdrm2 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1636945Z libgbm1 is already the newest version (26.0.8-1ubuntu0.3).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1637245Z libgbm1 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1637839Z libglib2.0-0t64 is already the newest version (2.88.0-1ubuntu0.1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1638608Z libglib2.0-0t64 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1638929Z libnspr4 is already the newest version (2:4.38.2-1ubuntu1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1639282Z libnspr4 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1639594Z libnss3 is already the newest version (2:3.120-1ubuntu2.2).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1639910Z libnss3 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1640247Z libpango-1.0-0 is already the newest version (1.57.0-1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1640558Z libpango-1.0-0 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1640866Z libx11-6 is already the newest version (2:1.8.13-1ubuntu0.1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1641183Z libx11-6 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1641471Z libxcb1 is already the newest version (1.17.0-2ubuntu1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1641788Z libxcb1 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1642088Z libxcomposite1 is already the newest version (1:0.4.6-1build1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1642452Z libxcomposite1 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1642757Z libxdamage1 is already the newest version (1:1.1.7-1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1643055Z libxdamage1 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1643385Z libxext6 is already the newest version (2:1.3.4-1build3).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1643682Z libxext6 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1643962Z libxfixes3 is already the newest version (1:6.0.0-2build2).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1644285Z libxfixes3 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1644577Z libxkbcommon0 is already the newest version (1.13.1-1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1645083Z libxkbcommon0 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1645431Z libxrandr2 is already the newest version (2:1.5.4-1build1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1645725Z libxrandr2 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1646059Z xvfb is already the newest version (2:21.1.22-1ubuntu1.3).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1646449Z fonts-noto-color-emoji is already the newest version (2.051-1build1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1646856Z libfontconfig1 is already the newest version (2.17.1-3ubuntu1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1647184Z libfontconfig1 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1647508Z libfreetype6 is already the newest version (2.14.2+dfsg-1ubuntu0.2).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1647852Z libfreetype6 set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1648349Z fonts-liberation is already the newest version (1:2.1.5-3build1).
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.1648688Z fonts-liberation set to manually installed.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.2016451Z Solving dependencies...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.2836585Z The following additional packages will be installed:
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.2837083Z   xfonts-encodings xfonts-utils
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.2841152Z Recommended packages:
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.2841463Z   fonts-ipafont-mincho fonts-tlwg-loma
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4223113Z The following NEW packages will be installed:
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4224369Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4233159Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4233887Z   xfonts-utils
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4401631Z 0 upgraded, 9 newly installed, 0 to remove and 52 not upgraded.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4402104Z Need to get 21.9 MB of archives.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4402598Z After this operation, 80.2 MB of additional disk space will be used.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4403020Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.4957008Z Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-ipafont-gothic all 00303-23ubuntu1 [3703 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:09.6998284Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 fonts-freefont-ttf all 20211204+svn4273-4build1 [5656 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:16.9308090Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-tlwg-loma-otf all 1:0.7.3-1build1 [106 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:18.9883575Z Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-unifont all 1:16.0.04-1build1 [3169 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:19.1185166Z Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-wqy-zenhei all 0.9.45-8build1 [7863 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:19.2807747Z Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 xfonts-encodings all 1:1.0.5-0ubuntu3 [576 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:19.4291543Z Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/main amd64v3 xfonts-utils amd64 1:7.7+7build1 [97.3 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:19.4687579Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 xfonts-cyrillic all 1:1.0.5+nmu1build1 [384 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:21.6727551Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu resolute/universe amd64v3 xfonts-scalable all 1:1.0.3-1.3build1 [304 kB]
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.5285374Z Fetched 21.9 MB in 18s (1198 kB/s)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.5502187Z Selecting previously unselected package fonts-ipafont-gothic.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7020467Z (Reading database ... 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7021015Z (Reading database ... 5%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7021287Z (Reading database ... 10%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7021680Z (Reading database ... 15%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7022017Z (Reading database ... 20%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7022316Z (Reading database ... 25%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7022589Z (Reading database ... 30%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7022865Z (Reading database ... 35%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7023174Z (Reading database ... 40%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7023587Z (Reading database ... 45%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.7023943Z (Reading database ... 50%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:28.9466756Z (Reading database ... 55%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:29.0365375Z (Reading database ... 60%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:29.2383902Z (Reading database ... 65%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:29.3367896Z (Reading database ... 70%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:29.4944007Z (Reading database ... 75%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:30.3699699Z (Reading database ... 80%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:32.3948981Z (Reading database ... 85%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:33.8208870Z (Reading database ... 90%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.0294451Z (Reading database ... 95%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.0295416Z (Reading database ... 100%
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.0295779Z (Reading database ... 213995 files and directories currently installed.)
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.0336926Z Preparing to unpack .../0-fonts-ipafont-gothic_00303-23ubuntu1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.0412894Z Unpacking fonts-ipafont-gothic (00303-23ubuntu1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.0994370Z Selecting previously unselected package fonts-freefont-ttf.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.1096060Z Preparing to unpack .../1-fonts-freefont-ttf_20211204+svn4273-4build1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.1099354Z Unpacking fonts-freefont-ttf (20211204+svn4273-4build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.1788491Z Selecting previously unselected package fonts-tlwg-loma-otf.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.1889004Z Preparing to unpack .../2-fonts-tlwg-loma-otf_1%3a0.7.3-1build1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.1892460Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.2037491Z Selecting previously unselected package fonts-unifont.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.2138291Z Preparing to unpack .../3-fonts-unifont_1%3a16.0.04-1build1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.2141944Z Unpacking fonts-unifont (1:16.0.04-1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.3099881Z Selecting previously unselected package fonts-wqy-zenhei.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.3200489Z Preparing to unpack .../4-fonts-wqy-zenhei_0.9.45-8build1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.3305442Z Unpacking fonts-wqy-zenhei (0.9.45-8build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.4035084Z Selecting previously unselected package xfonts-encodings.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.4136016Z Preparing to unpack .../5-xfonts-encodings_1%3a1.0.5-0ubuntu3_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.4139749Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu3) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.4307017Z Selecting previously unselected package xfonts-utils.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.4407541Z Preparing to unpack .../6-xfonts-utils_1%3a7.7+7build1_amd64v3.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.4410723Z Unpacking xfonts-utils (1:7.7+7build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.5719398Z Selecting previously unselected package xfonts-cyrillic.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.5821359Z Preparing to unpack .../7-xfonts-cyrillic_1%3a1.0.5+nmu1build1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.5824448Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6024593Z Selecting previously unselected package xfonts-scalable.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6126377Z Preparing to unpack .../8-xfonts-scalable_1%3a1.0.3-1.3build1_all.deb ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6130936Z Unpacking xfonts-scalable (1:1.0.3-1.3build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6401836Z Setting up fonts-wqy-zenhei (0.9.45-8build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6523492Z Setting up fonts-freefont-ttf (20211204+svn4273-4build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6531449Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6540987Z Setting up xfonts-encodings (1:1.0.5-0ubuntu3) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6550764Z Setting up fonts-ipafont-gothic (00303-23ubuntu1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6588713Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6597053Z Setting up fonts-unifont (1:16.0.04-1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6605979Z Setting up xfonts-utils (1:7.7+7build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.6640827Z Setting up xfonts-cyrillic (1:1.0.5+nmu1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.8355227Z Setting up xfonts-scalable (1:1.0.3-1.3build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.8636277Z Processing triggers for man-db (2.13.1-1build1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.8656297Z Not building database; man-db/auto-update is not 'true'.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:35.8667208Z Processing triggers for fontconfig (2.17.1-3ubuntu1) ...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6590581Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6591623Z Running kernel seems to be up-to-date.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6591962Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6592119Z Restarting services...
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6666480Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6666968Z Service restarts being deferred:
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6670533Z  systemctl restart hosted-compute-agent.service
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6670854Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6671593Z No containers need to be restarted.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6671860Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6671991Z No user sessions are running outdated binaries.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6672196Z 
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:36.6675297Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:37.3911177Z Downloading Chrome for Testing 159.0.8154.6 (playwright chromium v1255) from https://cdn.playwright.dev/builds/cft/159.0.8154.6/linux64/chrome-linux64.zip
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:37.6757595Z |                                                                                |   0% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:37.7775829Z |■■■■■■■■                                                                        |  10% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:37.8523125Z |■■■■■■■■■■■■■■■■                                                                |  20% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:37.9339011Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.0060231Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.0772701Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.1636997Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.2207988Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.3016247Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.3730733Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:38.4570788Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 199.3 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:40.9284496Z Chrome for Testing 159.0.8154.6 (playwright chromium v1255) downloaded to /home/runner/.cache/ms-playwright/chromium-1255
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:40.9286982Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-linux.zip
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1867099Z |                                                                                |   0% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1907867Z |■■■■■■■■                                                                        |  10% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1916143Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1928782Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1939401Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1950598Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1961576Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1968001Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1978452Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1990045Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.1994280Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.2 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.2358508Z FFmpeg (playwright ffmpeg v1013) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1013
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.2360773Z Downloading Chrome Headless Shell 159.0.8154.6 (playwright chromium-headless-shell v1255) from https://cdn.playwright.dev/builds/cft/159.0.8154.6/linux64/chrome-headless-shell-linux64.zip
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.5042501Z |                                                                                |   0% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.6468981Z |■■■■■■■■                                                                        |  10% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.7055023Z |■■■■■■■■■■■■■■■■                                                                |  20% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.7440697Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.7896615Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.8354395Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.9024840Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:41.9568112Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:42.0029940Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:42.0410970Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:42.0917467Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 125.7 MiB
+Chromium use cases	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:39:43.9282382Z Chrome Headless Shell 159.0.8154.6 (playwright chromium-headless-shell v1255) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1255
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	﻿2026-11-23T16:39:43.9480719Z ##[group]Run assets="$RUNNER_TEMP/medihub-assets"
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9481122Z ^[[36;1massets="$RUNNER_TEMP/medihub-assets"^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9481408Z ^[[36;1mmkdir -p "$assets" evidence^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9481827Z ^[[36;1mcurl -fsSL https://unpkg.com/vue@3.5.46/dist/vue.global.js -o "$assets/vue.global.js"^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9482421Z ^[[36;1mcurl -fsSL https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js -o "$assets/bootstrap.bundle.min.js"^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9483090Z ^[[36;1mcurl -fsSL https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css -o "$assets/bootstrap.min.css"^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9483575Z ^[[36;1mexport MEDIHUB_BROWSER_ASSETS="$assets"^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9484284Z ^[[36;1mpython -m pytest tests/team/e2e --browser chromium -q --tb=short --junitxml=evidence/browser.xml --html=evidence/browser.html --self-contained-html --screenshot only-on-failure --output evidence/screenshots^[[0m
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9504029Z shell: /usr/bin/bash -e {0}
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9504506Z env:
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9504933Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9505370Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9505752Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9506100Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9506499Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9506839Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:39:43.9507164Z ##[endgroup]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9666996Z ..............................                                           [100%]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9667525Z =============================== warnings summary ===============================
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9668408Z tests/team/e2e/test_appointment_flows.py::test_uc01_discover_doctor[chromium-UC01-N]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9669147Z   /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/_pytest/fixtures.py:1392: PytestRemovedIn10Warning: Session-scoped fixtures defined as instance methods are deprecated.
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9669864Z   Instance attributes set in the 'base_url' fixture will NOT be visible to test methods,
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9670425Z   as each test gets a new instance while the fixture runs only once per class.
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9670866Z   Use a @classmethod decorator below @pytest.fixture and set attributes on cls instead.
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9672137Z   See https://docs.pytest.org/en/stable/deprecations.html#class-scoped-fixture-as-instance-method
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9672616Z     fixturefunc = resolve_fixture_function(fixturedef, request)
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9672871Z 
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9673064Z tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-N]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9673546Z tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-A1]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9674020Z tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-A2]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9674531Z tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-E2]
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9675777Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:244: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9676761Z     doctor = Doctor.query.get(doctor_id)
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9676985Z 
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9677155Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9677676Z - Generated html report: file:///home/runner/work/Medihub-SQE/Medihub-SQE/evidence/browser.html -
+Chromium use cases	Run assets="$RUNNER_TEMP/medihub-assets"	2026-11-23T16:40:46.9678429Z 30 passed, 5 warnings in 61.11s (0:01:01)
+Chromium use cases	Run actions/upload-artifact@v4	﻿2026-11-23T16:40:47.1117303Z ##[group]Run actions/upload-artifact@v4
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1117606Z with:
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1117825Z   name: chromium-use-cases
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1118074Z   path: evidence/
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1118309Z   if-no-files-found: warn
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1118538Z   compression-level: 6
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1118813Z   overwrite: false
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1119037Z   include-hidden-files: false
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1119281Z env:
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1119602Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1119968Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1120363Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1120708Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1121049Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1121449Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.1121727Z ##[endgroup]
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.2379530Z (node:3514) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.2380275Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.2417793Z With the provided path, there will be 2 files uploaded
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.2421626Z Artifact name is valid!
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.2422505Z Root directory input is valid!
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.5474371Z Beginning upload of artifact content to blob storage
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.8000240Z (node:3514) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.8496184Z Uploaded bytes 12573
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.8691050Z Finished uploading artifact content to blob storage!
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.8691860Z SHA256 digest of uploaded artifact zip is 762aacb4d0ef3ebdbda6fcd627813155c729b81a80371b26fe06723d48b3b6d1
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:47.8692560Z Finalizing artifact upload
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:48.2295885Z Artifact chromium-use-cases.zip successfully finalized. Artifact ID 14840186537
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:48.2296803Z Artifact chromium-use-cases has been successfully uploaded! Final size is 12573 bytes. Artifact ID is 14840186537
+Chromium use cases	Run actions/upload-artifact@v4	2026-11-23T16:40:48.2302642Z Artifact download URL: https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/artifacts/14840186537
+Chromium use cases	Post Run actions/setup-python@v5	﻿2026-11-23T16:40:48.2453115Z Post job cleanup.
+Chromium use cases	Post Run actions/setup-python@v5	2026-11-23T16:40:48.3354199Z (node:3526) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Chromium use cases	Post Run actions/setup-python@v5	2026-11-23T16:40:48.3355041Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Chromium use cases	Post Run actions/checkout@v4	﻿2026-11-23T16:40:48.3512277Z Post job cleanup.
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4204492Z [command]/usr/bin/git version
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4243935Z git version 2.56.1
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4275299Z Temporarily overriding HOME='/home/runner/work/_temp/25d16747-0405-4f00-b98a-b7030eb4012b' before making global git config changes
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4276265Z Adding repository directory to the temporary git global config as a safe directory
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4280021Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4312976Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4340010Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4576405Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4610127Z http.https://github.com/.extraheader
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4623262Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4637211Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4892839Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Chromium use cases	Post Run actions/checkout@v4	2026-11-23T16:40:48.4926702Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Chromium use cases	Complete job	﻿2026-11-23T16:40:48.5246057Z Cleaning up orphan processes
+Chromium use cases	Complete job	2026-11-23T16:40:48.5510121Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
