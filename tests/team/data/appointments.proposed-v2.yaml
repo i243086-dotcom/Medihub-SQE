@@ -1,0 +1,8 @@
+version: 2.0.0-proposed
+changes:
+  - path: [components, requestBodies, Booking, content, application/json, schema, properties, appointment_time, pattern]
+    value: '^(09|10|11|12|15|16|17|18):00$'
+    rationale: Demonstration of a proposed exact-hour API input rule. It would also exclude range-form inputs.
+  - path: [components, requestBodies, DoctorStatus, content, application/json, schema, properties, status, enum]
+    value: [completed, cancelled]
+    rationale: Demonstration of narrowing the doctor destination enum. Permanent doctor transition policy remains pending.

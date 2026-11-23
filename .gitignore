@@ -79,3 +79,4 @@ node_modules/
 coverage.xml
 htmlcov/
 .pytest_cache/
+.scannerwork/
