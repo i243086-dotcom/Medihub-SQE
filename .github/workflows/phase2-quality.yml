@@ -130,6 +130,7 @@ jobs:
           docker logs --tail 80 medihub-ci-sonar
           exit 1
       - name: Generate coverage and scan the PR checkout
+        shell: bash
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
@@ -140,8 +141,9 @@ jobs:
           SONAR_TOKEN=$(curl -fsS -u admin:admin -X POST "${SONAR_HOST_URL}/api/user_tokens/generate" --data-urlencode name=ci-analysis | jq -er '.token')
           echo "::add-mask::$SONAR_TOKEN"
           export SONAR_TOKEN
-          # Community Build processes a full checkout under a unique project key.
-          env -u GITHUB_ACTIONS -u GITHUB_EVENT_NAME -u GITHUB_EVENT_PATH -u GITHUB_REF -u GITHUB_BASE_REF -u GITHUB_HEAD_REF pysonar "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt
+          # Use a non-PR scanner context for the Community Build full analysis.
+          # The GitHub workflow still runs on the actual PR merge commit.
+          env -u GITHUB_WORKFLOW -u GITHUB_ACTIONS GITHUB_EVENT_NAME=workflow_dispatch pysonar "-Dsonar.scm.revision=$(git rev-parse HEAD)" "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt
           python tests/team/tools/sonar_gate.py "medihub-pr-$PR_NUMBER" evidence/sonar-measures.json
       - uses: actions/upload-artifact@v4
         if: always()

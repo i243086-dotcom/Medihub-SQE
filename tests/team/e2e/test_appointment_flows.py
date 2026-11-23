@@ -256,6 +256,7 @@ def test_uc06_doctor_readback(browser_app, page, flow):
         page.get_by_role("button", name="Yes, Cancel Appointment").click()
         expect(page.get_by_text("Appointment cancelled successfully", exact=True)).to_be_visible()
         page.get_by_role("button", name="Logout").click()
+        expect(page.get_by_role("button", name="Sign In", exact=True).first).to_be_visible()
     else:
         appointment(status=state)
         db.session.commit()

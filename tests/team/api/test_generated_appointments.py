@@ -46,11 +46,15 @@ def test_generated_contract(phase2, case, record_property):
     if response.status_code != case["expected_status"]:
         pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
     if case["response_schema"]:
-        assert isinstance(body, dict)
-        if case["operation"] == "login":
+        if response.status_code == 405:
+            assert response.mimetype == "text/html"
+        else:
+            assert isinstance(body, dict)
+        if case["operation"] == "login" and response.status_code == 200:
             assert body["data"]["token"]
             body = {**body, "data": {"user": body["data"]["user"]}}
-        OAS30Validator(case["response_schema"]).validate(body)
+        if response.status_code != 405:
+            OAS30Validator(case["response_schema"]).validate(body)
 
     operation = case["operation"]
     if response.status_code != 200 or case["method"] == "GET" or operation == "login":

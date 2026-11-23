@@ -132,7 +132,8 @@ def cosmic_ray(sandbox, evidence, source, base_command):
         log = evidence / ("cosmic-dump.jsonl" if name == "dump" else f"cosmic-{name}.txt")
         if run(args, sandbox, log=log).returncode:
             raise RuntimeError(f"Cosmic Ray {name} failed, see {log}")
-    records = [json.loads(line) for line in (evidence / "cosmic-dump.jsonl").read_text().splitlines()]
+    records = [json.loads(line)[1] for line in
+               (evidence / "cosmic-dump.jsonl").read_text(encoding="utf-8").splitlines()]
     outcomes = Counter(item.get("test_outcome") for item in records)
     workers = Counter(item.get("worker_outcome") for item in records)
     killed, survived = outcomes["killed"], outcomes["survived"]

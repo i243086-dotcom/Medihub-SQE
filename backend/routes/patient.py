@@ -85,6 +85,8 @@ def get_available_slots():
     
     if not doctor_id:
         return jsonify({'success': False, 'message': 'Doctor ID is required'}), 400
+    if not doctor_id.isascii() or not doctor_id.isdecimal():
+        return jsonify({'success': False, 'message': 'Doctor ID must be an integer'}), 400
     
     if not date_str:
         return jsonify({'success': False, 'message': 'Date is required'}), 400
@@ -217,7 +219,9 @@ def book_appointment():
     if patient.is_blacklisted:
         return jsonify({'success': False, 'message': 'Your account has been blacklisted. Please contact admin.'}), 403
     
-    data = request.get_json()
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return jsonify({'success': False, 'message': 'Booking requires a JSON object'}), 400
     
     if not data.get('doctor_id'):
         return jsonify({'success': False, 'message': 'Doctor ID is required'}), 400
@@ -228,13 +232,22 @@ def book_appointment():
     if not data.get('appointment_time'):
         return jsonify({'success': False, 'message': 'Appointment time is required'}), 400
     
-    doctor = Doctor.query.get(data['doctor_id'])
+    doctor_id = data['doctor_id']
+    if isinstance(doctor_id, str) and doctor_id.isascii() and doctor_id.isdecimal():
+        try:
+            doctor_id = int(doctor_id)
+        except ValueError:
+            return jsonify({'success': False, 'message': 'Doctor ID must be an integer'}), 400
+    if type(doctor_id) is not int or not -(2 ** 63) <= doctor_id < 2 ** 63:
+        return jsonify({'success': False, 'message': 'Doctor ID must be an integer'}), 400
+
+    doctor = Doctor.query.get(doctor_id)
     if doctor is None or not doctor.is_active:
         return jsonify({'success': False, 'message': 'Doctor not found or inactive'}), 404
     
     try:
         apt_date = datetime.strptime(data['appointment_date'], '%Y-%m-%d').date()
-    except ValueError:
+    except (TypeError, ValueError):
         return jsonify({'success': False, 'message': 'Invalid date format'}), 400
     
     # validate date is not in the past
@@ -249,11 +262,17 @@ def book_appointment():
     
     # parse time to determine slot type
     time_str = data['appointment_time']
-    if '-' in time_str:
-        start = time_str.split('-')[0].strip()
+    if not isinstance(time_str, str):
+        return jsonify({'success': False, 'message': 'Invalid appointment time format'}), 400
+    try:
+        start = time_str.split('-', 1)[0].strip() if '-' in time_str else time_str
         apt_time = datetime.strptime(start, '%H:%M').time()
-    else:
-        apt_time = datetime.strptime(time_str, '%H:%M').time()
+    except ValueError:
+        return jsonify({'success': False, 'message': 'Invalid appointment time format'}), 400
+
+    notes = data.get('notes', '')
+    if notes is not None and not isinstance(notes, str):
+        return jsonify({'success': False, 'message': 'Notes must be text'}), 400
     
     # determine slot type and validate hour
     hour = apt_time.hour
@@ -271,7 +290,7 @@ def book_appointment():
     
     # check if doctor has set this slot as available
     availability = DoctorAvailability.query.filter_by(
-        doctor_id=data['doctor_id'],
+        doctor_id=doctor_id,
         availability_date=apt_date,
         slot_type=slot_type,
         is_available=True
@@ -282,7 +301,7 @@ def book_appointment():
     
     # check if slot already booked
     existing_booking = Appointment.query.filter_by(
-        doctor_id=data['doctor_id'],
+        doctor_id=doctor_id,
         appointment_date=apt_date,
         appointment_time=apt_time,
         status='booked'
@@ -304,12 +323,12 @@ def book_appointment():
     
     # create new appointment
     appointment = Appointment(
-        doctor_id=data['doctor_id'],
+        doctor_id=doctor_id,
         patient_id=patient.id,
         appointment_date=apt_date,
         appointment_time=apt_time,
         status='booked',
-        notes=data.get('notes', '')
+        notes=notes
     )
     
     db.session.add(appointment)

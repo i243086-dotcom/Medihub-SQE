@@ -186,7 +186,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-username",
       "probe": "missing"
     },
@@ -207,7 +231,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-username",
       "probe": "partition"
     },
@@ -228,7 +276,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-username",
       "probe": "partition"
     },
@@ -249,7 +321,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-username",
       "probe": "partition"
     },
@@ -270,7 +366,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-username",
       "probe": "partition"
     },
@@ -290,7 +410,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-password",
       "probe": "missing"
     },
@@ -311,7 +455,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-password",
       "probe": "partition"
     },
@@ -332,7 +500,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-password",
       "probe": "partition"
     },
@@ -353,7 +545,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-password",
       "probe": "partition"
     },
@@ -374,7 +590,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-password",
       "probe": "partition"
     },
@@ -395,7 +635,31 @@
       },
       "raw_body": "null",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -416,7 +680,31 @@
       },
       "raw_body": "[]",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -437,7 +725,31 @@
       },
       "raw_body": "{",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -537,7 +849,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -555,7 +891,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -655,7 +1015,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -675,7 +1059,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -695,7 +1103,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -971,7 +1403,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -992,7 +1448,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -1105,7 +1585,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-doctor_id",
       "probe": "missing"
     },
@@ -1405,7 +1909,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-doctor_id",
       "probe": "partition"
     },
@@ -1425,7 +1953,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-date",
       "probe": "missing"
     },
@@ -1446,7 +1998,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-date",
       "probe": "partition"
     },
@@ -1467,7 +2043,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-date",
       "probe": "partition"
     },
@@ -1993,7 +2593,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2013,7 +2637,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2033,7 +2681,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2053,7 +2725,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-doctor_id",
       "probe": "partition"
     },
@@ -2114,7 +2810,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-doctor_id",
       "probe": "partition"
     },
@@ -2134,7 +2854,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-doctor_id",
       "probe": "partition"
     },
@@ -2247,7 +2991,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2267,7 +3035,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2287,7 +3079,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2866,7 +3682,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2889,7 +3729,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2912,7 +3776,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -2934,7 +3822,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-doctor_id",
       "probe": "missing"
     },
@@ -2957,7 +3869,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-doctor_id",
       "probe": "partition"
     },
@@ -3073,7 +4009,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-doctor_id",
       "probe": "partition"
     },
@@ -3096,7 +4056,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-doctor_id",
       "probe": "partition"
     },
@@ -3119,7 +4103,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-doctor_id",
       "probe": "partition"
     },
@@ -3141,7 +4149,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "missing"
     },
@@ -3164,7 +4196,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -3187,7 +4243,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -3210,7 +4290,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "boundary"
     },
@@ -3512,7 +4616,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "boundary"
     },
@@ -3535,7 +4663,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -3558,7 +4710,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -3580,7 +4756,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "missing"
     },
@@ -3603,7 +4803,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -3626,7 +4850,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -3649,7 +4897,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -3672,7 +4944,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -3695,7 +4991,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -3718,7 +5038,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "boundary"
     },
@@ -3927,7 +5271,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "boundary"
     },
@@ -3950,7 +5318,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "boundary"
     },
@@ -4252,7 +5644,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "boundary"
     },
@@ -4275,7 +5691,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "boundary"
     },
@@ -4298,7 +5738,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -4321,7 +5785,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -4715,7 +6203,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-notes",
       "probe": "partition"
     },
@@ -4738,7 +6250,31 @@
       },
       "raw_body": "null",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -4761,7 +6297,31 @@
       },
       "raw_body": "[]",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -4784,7 +6344,31 @@
       },
       "raw_body": "{",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -4939,7 +6523,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -4959,7 +6567,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -4979,7 +6611,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -4999,7 +6655,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -5019,7 +6699,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -5039,7 +6743,31 @@
       },
       "raw_body": null,
       "expected_status": 405,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -5156,7 +6884,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -5178,7 +6930,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -5200,7 +6976,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -5790,7 +7590,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-date",
       "probe": "partition"
     },
@@ -5812,7 +7636,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "query-date",
       "probe": "partition"
     },
@@ -6592,7 +8440,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -6615,7 +8487,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -6638,7 +8534,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -6661,7 +8581,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -6684,7 +8628,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -6707,7 +8675,31 @@
       },
       "raw_body": null,
       "expected_status": 405,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -6729,7 +8721,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "missing"
     },
@@ -6845,7 +8861,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -6868,7 +8908,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -6891,7 +8955,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -6914,7 +9002,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -7215,7 +9327,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-notes",
       "probe": "partition"
     },
@@ -7238,7 +9374,31 @@
       },
       "raw_body": "null",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -7261,7 +9421,31 @@
       },
       "raw_body": "[]",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -7284,7 +9468,31 @@
       },
       "raw_body": "{",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -7487,7 +9695,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -7505,7 +9737,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -7523,7 +9779,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -7643,7 +9923,31 @@
       },
       "raw_body": null,
       "expected_status": 401,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -7668,7 +9972,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -7693,7 +10021,31 @@
       },
       "raw_body": null,
       "expected_status": 403,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "role"
     },
@@ -7718,7 +10070,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -7743,7 +10119,31 @@
       },
       "raw_body": null,
       "expected_status": 404,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -7768,7 +10168,31 @@
       },
       "raw_body": null,
       "expected_status": 405,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "path-appointment_id",
       "probe": "partition"
     },
@@ -8057,6 +10481,196 @@
       "probe": "partition"
     },
     {
+      "id": "GEN-adminStatus-body-status-canceled",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "canceled",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-status",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-adminStatus-body-status-available",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "available",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-status",
+      "probe": "partition"
+    },
+    {
       "id": "GEN-adminStatus-body-status-banana",
       "operation": "adminStatus",
       "method": "PUT",
@@ -8077,7 +10691,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -8102,7 +10740,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -8127,7 +10789,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-status",
       "probe": "partition"
     },
@@ -8436,7 +11122,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-notes",
       "probe": "partition"
     },
@@ -8555,7 +11265,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -8580,7 +11314,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -8605,7 +11363,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -8630,7 +11412,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_date",
       "probe": "partition"
     },
@@ -8844,7 +11650,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -8869,7 +11699,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -8894,7 +11748,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -8919,7 +11797,31 @@
       },
       "raw_body": null,
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": "body-appointment_time",
       "probe": "partition"
     },
@@ -8944,7 +11846,31 @@
       },
       "raw_body": "null",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -8969,7 +11895,31 @@
       },
       "raw_body": "[]",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },
@@ -8994,7 +11944,31 @@
       },
       "raw_body": "{",
       "expected_status": 400,
-      "response_schema": null,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
       "field": null,
       "probe": "invalid-document"
     },

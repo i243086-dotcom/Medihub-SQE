@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request, jsonify
+from flask import Flask, abort, send_from_directory, request, jsonify
 from flask_cors import CORS
 from flask_mail import Mail
 from flask_jwt_extended import JWTManager
@@ -109,6 +109,8 @@ def home():
 # catch-all route for frontend routing (must be last)
 @app.route('/<path:path>')
 def serve_frontend(path):
+    if path.startswith('api/'):
+        abort(404)
     # serve static files if they exist
     frontend_path = os.path.join('../frontend', path)
     if os.path.exists(frontend_path) and os.path.isfile(frontend_path):

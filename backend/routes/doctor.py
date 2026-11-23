@@ -130,7 +130,10 @@ def get_appointments():
         query = query.filter(Appointment.appointment_date >= thirty_days_ago)
     
     if date_filter:
-        filter_date = datetime.strptime(date_filter, '%Y-%m-%d').date()
+        try:
+            filter_date = datetime.strptime(date_filter, '%Y-%m-%d').date()
+        except ValueError:
+            return jsonify({'success': False, 'message': 'Invalid date format. Use YYYY-MM-DD'}), 400
         query = query.filter_by(appointment_date=filter_date)
     
     if status_filter:
@@ -182,18 +185,23 @@ def update_appointment_status(appointment_id):
     if appointment is None:
         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404
     
-    data = request.get_json()
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return jsonify({'success': False, 'message': 'Status update requires a JSON object'}), 400
     status = data.get('status')
     
     valid = ['completed', 'cancelled', 'booked']
     if status not in valid:
         return jsonify({'success': False, 'message': 'Invalid status', 'errors': ['Status must be completed, cancelled, or booked']}), 400
+    notes = data.get('notes')
+    if notes is not None and not isinstance(notes, str):
+        return jsonify({'success': False, 'message': 'Notes must be text'}), 400
     
     appointment.status = status
     appointment.updated_at = datetime.utcnow()
 
     if 'notes' in data:
-        appointment.notes = data['notes']
+        appointment.notes = notes
 
     db.session.commit()
 
