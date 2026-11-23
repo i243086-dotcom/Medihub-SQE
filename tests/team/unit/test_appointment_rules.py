@@ -82,6 +82,22 @@ def test_br01_future_date_has_no_today_cutoff(phase2, monkeypatch):
     assert snapshots()[0][3:6] == (TOMORROW.isoformat(), "09:00", "booked")
 
 
+@pytest.mark.parametrize(("field", "value", "code", "message"), [
+    ("appointment_time", "abc", 400, "Invalid appointment time format"),
+    ("appointment_time", 900, 400, "Invalid appointment time format"),
+    ("notes", 42, 400, "Notes must be text"),
+    ("notes", None, 200, "Appointment booked successfully"),
+])
+def test_br01_booking_field_syntax(phase2, monkeypatch, field, value, code, message):
+    status, body = call_booking(monkeypatch, {**booking_payload(), field: value})
+    assert status == code and body["success"] is (code == 200)
+    assert body["message"] == message
+    if code == 200:
+        assert snapshots()[0][5:] == ("booked", None)
+    else:
+        assert snapshots() == []
+
+
 @pytest.mark.parametrize(("owner", "source", "status"), [
     ("arjun", "booked", 200), ("arjun", "cancelled", 400),
     ("arjun", "completed", 400), ("arjun", "available", 400),

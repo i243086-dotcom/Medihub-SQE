@@ -289,6 +289,21 @@ def test_doctor_cancel_skips_missing_patient_mail(phase2):
     assert snapshots()[0][5] == "cancelled"
 
 
+def test_doctor_cancellation_mail_failure_preserves_commit(phase2, monkeypatch):
+    client, headers = phase2
+    appointment()
+    db.session.commit()
+
+    def fake_failure(_message):
+        raise RuntimeError("Synthetic mail error")
+
+    monkeypatch.setattr(mail, "send", fake_failure)
+    result = client.put("/api/doctor/appointments/1/status", headers=headers["ajay"],
+                        json={"status": "cancelled"})
+    assert result.status_code == 200
+    assert result.json["success"] is True and snapshots()[0][5] == "cancelled"
+
+
 def test_model_serialization_of_unassigned_slot(phase2):
     row = appointment(patient=None, status="available")
     db.session.commit()
