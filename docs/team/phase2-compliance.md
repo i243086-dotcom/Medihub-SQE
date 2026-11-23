@@ -30,6 +30,8 @@ The initial phase report's 11-point compact tables were inconsistent with the st
 | Fully green corrected PR and teammate approval | BLOCKED | PR #11 still has unmet API and overall Sonar criteria. Real teammate review remains pending for both PRs. Workflow activation on the default branch awaits authorized merge. |
 | Defects, RCA, Pareto, weekly GQM and completion report | PASS | Six confirmed issues, two major evidence-based RCAs, one triaged policy issue, weekly record and residual risk for each risk. Release remains **HOLD**. [Defect, risk and completion review](phase2-defect-and-risk-report.md) |
 
+The public Actions summary captures show the booking job [failing before the fix](../../tests/team/evidence/phase2/verification/ci-before-booking.png), [passing after the fix](../../tests/team/evidence/phase2/verification/ci-after-booking.png), and [all six check outcomes at the tested commit](../../tests/team/evidence/phase2/verification/ci-verified-quality.png). The linked job logs contain the individual test outcomes.
+
 ## Tool demonstration and reproduction
 
 Run the following from the existing repository root using the existing Python virtual environment. Use a fresh output folder name per run. The SHA-256 guard checks the development database surrounding every pytest session. Browser assets were downloaded before tests and are checked at run time.
