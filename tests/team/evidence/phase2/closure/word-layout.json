@@ -1,0 +1,10 @@
+{
+  "pages": 24,
+  "renderer": "Microsoft Word 16.0",
+  "document_sha256": "b89368b516de933a196b2095cada01687a641a834bc61468cd522b5b184d947b",
+  "cached_pages": 24,
+  "tables": 26,
+  "body_font": "Times New Roman 12 pt, black, justified, 1.5 lines",
+  "heading_fonts": "Times New Roman 16 pt and 14 pt, black, bold",
+  "visual_review": "Cover, schedule, gate results, API results, mutation and defects, and completion section previews inspected using Aspose.Words 26.11 and PDFium. The native Word count was obtained on identical document content before updating the cached Pages property. The Aspose evaluation marks are only in temporary previews."
+}

@@ -1,0 +1,15 @@
+{
+  "tool": "Radon",
+  "version": "6.0.1",
+  "source_sha256": "9d27745862e7f89f815d9407613a1e46277d1a179ae3dbb3cbe2e5ddc97c6e17",
+  "function": "book_appointment",
+  "first_line": 213,
+  "last_line": 339,
+  "manual_base": 24,
+  "additional_short_circuit_decisions": 5,
+  "conditional_expression_lines": [
+    269
+  ],
+  "normalised_manual": 30,
+  "tool_value": 30
+}

@@ -1,0 +1,11 @@
+--- backend/routes/patient.py
++++ backend/routes/patient.py
+@@ -356,7 +356,7 @@
+     if appointment is None:
+         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404
+     
+-    if appointment.status != 'booked':
++    if False:
+         return jsonify({'success': False, 'message': 'Cannot cancel this appointment', 'errors': ['Invalid status']}), 400
+     
+     appointment.status = 'cancelled'

@@ -1,0 +1,17 @@
+{
+  "candidate": "a7c2d00fc79247b3e3c3067b59e93fc9d7f91975",
+  "total": 718,
+  "unit": 364,
+  "api": 324,
+  "chromium": 30,
+  "failed": 0,
+  "skipped": 0,
+  "generated_api": 215,
+  "actual_json_schema_checks": 212,
+  "html_media_type_checks": 3,
+  "assembly": {
+    "backend": "verified/backend/junit.xml (local unit and API run)",
+    "browser": "verified/browser/browser.xml (Actions 45457438993 for this candidate)",
+    "assembled_junit": "verified/suite/junit.xml"
+  }
+}

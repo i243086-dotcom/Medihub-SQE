@@ -10,3 +10,4 @@ tests/team/evidence/phase2/verification/** -text
 tests/team/evidence/phase2/final-candidate/** -text
 tests/team/evidence/phase2/integrity-before/** -text
 tests/team/evidence/phase2/integrity-verify/** -text
+tests/team/evidence/phase2/closure/** -text

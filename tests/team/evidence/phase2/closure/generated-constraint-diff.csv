@@ -1,0 +1,5 @@
+generated_id,base_expected,proposed_expected,base_run,proposed_run
+GEN-book-body-appointment_time-09-30,200,400,PASS,FAIL
+GEN-book-body-appointment_time-10-00-11-00,200,400,PASS,FAIL
+GEN-book-body-appointment_time-12-59,200,400,PASS,FAIL
+GEN-doctorStatus-body-status-booked,200,400,PASS,FAIL

@@ -1,11 +1,11 @@
 # Phase 2 defect, risk and completion review
 
-## Confirmed defects
+## Historical defect discovery and original RCA
 
 | GitHub issue | Severity / priority | Phase 2 observations and disposition |
 |---|---|---|
-| [#5](https://github.com/i243086-dotcom/Medihub-SQE/issues/5) Rebook cancelled slot | High/high | Stage D and the current suite reproduce HTTP 500 and one unchanged cancelled row. Open, remediation pending. |
-| [#6](https://github.com/i243086-dotcom/Medihub-SQE/issues/6) Doctor reopening | Medium/medium, triaged | Observed and preserved. The immutable-cancellation assertion remains a failing provisional oracle. A doctor transition policy is required before that assertion can become an agreed requirement. |
+| [#5](https://github.com/i243086-dotcom/Medihub-SQE/issues/5) Rebook cancelled slot | High/high | Stage D and the 23 November checkpoint reproduced HTTP 500 and one unchanged cancelled row. Open, remediation pending. |
+| [#6](https://github.com/i243086-dotcom/Medihub-SQE/issues/6) Doctor reopening | Medium/medium, triaged | Observed and preserved. The immutable-cancellation assertion failed as a provisional oracle in the earlier checkpoint. A doctor transition policy is required before that assertion can become an agreed requirement. |
 | [#7](https://github.com/i243086-dotcom/Medihub-SQE/issues/7) Arbitrary admin status | Medium/medium | Fix candidate rejects unknown labels before assigning or flushing updates. Tests cover rejection from booked, cancelled and completed. Existing recognized historical labels still work. |
 | [#8](https://github.com/i243086-dotcom/Medihub-SQE/issues/8), [#9](https://github.com/i243086-dotcom/Medihub-SQE/issues/9), [#10](https://github.com/i243086-dotcom/Medihub-SQE/issues/10) malformed time and JSON | Medium/medium | Fix candidate produces controlled HTTP 400 and leaves rows unchanged. The focused GitHub check changed from 3 FAIL / 1 PASS to 4 PASS. |
 | [#12](https://github.com/i243086-dotcom/Medihub-SQE/issues/12) concurrent booking | High/high | Same patient and different doctors produced two booked rows from two 200 responses. Same doctor and different patients produced one row, one 200 and one 500. Open, remediation pending. |
@@ -30,7 +30,7 @@ Fix candidates are in the unmerged [PR #11](https://github.com/i243086-dotcom/Me
 | Environment | SQLite applies the constraint during commit. Disposable SQLite confirmed the same boundary. |
 | Test basis | A-01 says the slot becomes bookable. The existing schema enforces a different rule. |
 
-Corrective action is to align uniqueness and allocation with the agreed active-state policy and preserve historical rows. Validate migration against a disposable copy with old and conflicting data before touching any developer or shared database. Prevent recurrence by requiring the book→cancel→rebook regression with source/readback assertions. Current regression `test_d1_book_cancel_rebook_same_slot` remains red. Fix and post-migration retest are pending.
+Corrective action is to align uniqueness and allocation with the agreed active-state policy and preserve historical rows. Validate migration against a disposable copy with old and conflicting data before touching any developer or shared database. Prevent recurrence by requiring the book→cancel→rebook regression with source/readback assertions. The original `test_d1_book_cancel_rebook_same_slot` regression was red. The final remediation checkpoint below records the passing candidate and remaining rollout approval.
 
 ### RCA 2 · Concurrent booking conflicts (#12)
 
@@ -50,7 +50,7 @@ Corrective action is to align uniqueness and allocation with the agreed active-s
 | Environment | Separate requests use independent transactions on a shared disposable SQLite file. |
 | Test basis | FR-05 concerns committed state across all requests. Both response and row count need assertions. |
 
-Corrective action is to enforce both invariants atomically across concurrent writers, handle conflicts as a controlled HTTP rejection, and plan existing-row reconciliation before migration. Prevent recurrence by keeping the two concurrency cases in the required API check. Both current cases remain red. The JUnit records contain actual HTTP outcomes and persisted rows. No fix or safe migration approval was recorded in this run.
+Corrective action is to enforce both invariants atomically across concurrent writers, handle conflicts as a controlled HTTP rejection, and plan existing-row reconciliation before migration. Prevent recurrence by keeping the two concurrency cases in the required API check. Both cases were red at that checkpoint. The JUnit records contain actual HTTP outcomes and persisted rows. That discovery run preceded the fix and disposable migration proof.
 
 ## Pareto and monitoring
 
@@ -114,3 +114,9 @@ On 24 November 2026, the exact candidate `ff80556` passed both integrity correct
 | Weekly GQM | 10/10 original workflows met scoped functional acceptance. Confirmed defect density 6/1.039 = 5.77 issues per scoped KLOC. Reopen rate N/A. 1.5 human person-hours logged. |
 
 Formal release criteria are in the [final exit review](../../tests/team/evidence/phase2/final-candidate/exit-review.md). Overall decision remains **HOLD**.
+
+## Phase 2 closure regression
+
+The follow-up signed-ID case reproduced an unhandled SQLite overflow on the availability endpoint. The upper-bound guard restored the documented 404 response, and the full active API suite verified it. This is an additional verified and fixed input defect on the Phase 2 candidate, recorded separately from the six original confirmed issues in the historical Pareto and 5.77/KLOC measure. [Original 500 evidence](../../tests/team/evidence/phase2/closure/doctor-id-before.xml) · [Passing API evidence](../../tests/team/evidence/phase2/closure/final-ci/api/api.xml)
+
+EC-01 to EC-04 met the tested contract. Migration tests verified early refusal, rollback, repeat safety and CLI checks against disposable databases. Existing data has not been migrated. EC-05 remains unmet because the overall Sonar security gate is red and independent review is pending. Code review and authenticated transport tests support an S4502 false-positive disposition for the checked build. The alert remains open pending approval. The scoped behavior of minute starts, historical slot listing and assigned-doctor reopening remains as recorded. [Security review](../../tests/team/evidence/phase2/closure/s4502-review.md) · [Migration tests](../../tests/team/evidence/phase2/closure/migration/junit.xml)

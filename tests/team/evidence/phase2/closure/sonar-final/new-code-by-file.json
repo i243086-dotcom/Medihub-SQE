@@ -1,0 +1,1267 @@
+﻿{
+    "paging":  {
+                   "pageIndex":  1,
+                   "pageSize":  100,
+                   "total":  30
+               },
+    "baseComponent":  {
+                          "key":  "medihub-phase2-candidate",
+                          "name":  "MediHub Phase 2 Candidate",
+                          "qualifier":  "TRK",
+                          "measures":  [
+
+                                       ]
+                      },
+    "components":  [
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/__init__.py",
+                           "name":  "__init__.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/routes/__init__.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/models/__init__.py",
+                           "name":  "__init__.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/models/__init__.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/admin.js",
+                           "name":  "admin.js",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/js/admin.js",
+                           "language":  "js",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0.0",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "6"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "6",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/admin.py",
+                           "name":  "admin.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/routes/admin.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "4"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "90.0",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "6"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "1",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/api.js",
+                           "name":  "api.js",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/js/api.js",
+                           "language":  "js",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/app.js",
+                           "name":  "app.js",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/js/app.js",
+                           "language":  "js",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/app.py",
+                           "name":  "app.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/app.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "2"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "88.9",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "7"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "1",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/models/appointment.py",
+                           "name":  "appointment.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/models/appointment.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/appointment_slots.py",
+                           "name":  "appointment_slots.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/appointment_slots.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "2"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "100.0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "14"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/auth.py",
+                           "name":  "auth.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/routes/auth.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/custom.css",
+                           "name":  "custom.css",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/custom.css",
+                           "language":  "css",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/database.py",
+                           "name":  "database.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/database.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/decorators.py",
+                           "name":  "decorators.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/decorators.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/doctor.js",
+                           "name":  "doctor.js",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/js/doctor.js",
+                           "language":  "js",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0.0",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "2"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "2",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/doctor.py",
+                           "name":  "doctor.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/routes/doctor.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "2"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "100.0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "3"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/models/doctor.py",
+                           "name":  "doctor.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/models/doctor.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/celery_tasks/email.py",
+                           "name":  "email.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/celery_tasks/email.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/celery_tasks/email_template.py",
+                           "name":  "email_template.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/celery_tasks/email_template.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/celery_tasks/imports.py",
+                           "name":  "imports.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/celery_tasks/imports.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/index.html",
+                           "name":  "index.html",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/index.html",
+                           "language":  "web",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/migrate_appointment_slots.py",
+                           "name":  "migrate_appointment_slots.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/migrate_appointment_slots.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "16"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "96.8",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "47"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "1",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "1",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/patient.js",
+                           "name":  "patient.js",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/js/patient.js",
+                           "language":  "js",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0.0",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "3"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "3",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/patient.py",
+                           "name":  "patient.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/routes/patient.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "2"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "100.0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "4"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/models/patient.py",
+                           "name":  "patient.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/models/patient.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/celery_tasks/reminders.py",
+                           "name":  "reminders.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/celery_tasks/reminders.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/celery_tasks/reports.py",
+                           "name":  "reports.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/celery_tasks/reports.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/seed_db.py",
+                           "name":  "seed_db.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/seed_db.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_coverage",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0.0",
+                                                               "bestValue":  false
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "9"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "9",
+                                                               "bestValue":  false
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/models/treatment.py",
+                           "name":  "treatment.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/models/treatment.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/models/user.py",
+                           "name":  "user.py",
+                           "qualifier":  "FIL",
+                           "path":  "backend/models/user.py",
+                           "language":  "py",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/utils.js",
+                           "name":  "utils.js",
+                           "qualifier":  "FIL",
+                           "path":  "frontend/js/utils.js",
+                           "language":  "js",
+                           "measures":  [
+                                            {
+                                                "metric":  "new_conditions_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_lines_to_cover",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0"
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_conditions",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            },
+                                            {
+                                                "metric":  "new_uncovered_lines",
+                                                "period":  {
+                                                               "index":  1,
+                                                               "value":  "0",
+                                                               "bestValue":  true
+                                                           }
+                                            }
+                                        ]
+                       }
+                   ]
+}

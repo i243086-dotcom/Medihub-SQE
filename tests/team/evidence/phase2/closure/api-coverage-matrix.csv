@@ -1,0 +1,13 @@
+operation,cases,pass,http_codes_observed,roles_attempted,ep_partitions,bva_points,fields_varied,json_schema_validations,html_media_type_checks
+adminList,4,4,200;401;403,admin;anonymous;doctor;patient,0,0,,4,0
+adminStatus,43,43,200;400;401;403;404;405,admin;anonymous;doctor;patient,22,9,body-appointment_date;body-appointment_time;body-notes;body-status;path-appointment_id,42,1
+book,53,53,200;400;401;403;404,admin;anonymous;doctor;patient,20,21,body-appointment_date;body-appointment_time;body-doctor_id;body-notes,53,0
+cancel,7,7,200;401;403;404;405,admin;anonymous;doctor;patient,3,0,path-appointment_id,6,1
+departments,4,4,200;401;403,admin;anonymous;doctor;patient,0,0,,4,0
+doctorAvailability,12,12,200;401;403;404,admin;anonymous;doctor;patient,3,5,path-doctor_id,12,0
+doctorList,19,19,200;400;401;403,admin;anonymous;doctor;patient,10,2,query-date;query-status;query-time_filter,19,0
+doctorStatus,21,21,200;400;401;403;404;405,admin;anonymous;doctor;patient,11,0,body-notes;body-status;path-appointment_id,20,1
+doctors,8,8,200;401;403,admin;anonymous;doctor;patient,3,0,query-department,8,0
+login,18,18,200;400;401,admin;anonymous;doctor;patient,8,0,body-password;body-username,18,0
+patientList,9,9,200;401;403,admin;anonymous;doctor;patient,4,0,query-status,9,0
+slots,17,17,200;400;401;403,admin;anonymous;doctor;patient,6,5,query-date;query-doctor_id,17,0
