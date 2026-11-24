@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from database import db
+from appointment_slots import SLOT_CONFLICT, commit_appointment
 from models import User, Patient, Doctor, Appointment, Treatment, DoctorAvailability
 from datetime import datetime, date, time, timedelta
 from decorators import patient_required, patient_or_admin_required, get_current_user_id
@@ -332,7 +333,8 @@ def book_appointment():
     )
     
     db.session.add(appointment)
-    db.session.commit()
+    if not commit_appointment():
+        return jsonify({'success': False, 'message': SLOT_CONFLICT}), 400
     
     return jsonify({'success': True, 'message': 'Appointment booked successfully', 'data': {'appointment': appointment.to_dict()}})
 

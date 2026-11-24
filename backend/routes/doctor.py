@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from database import db
+from appointment_slots import SLOT_CONFLICT, commit_appointment
 from models import User, Doctor, Patient, Appointment, Treatment, DoctorAvailability
 from datetime import datetime, date, time, timedelta
 from decorators import doctor_required, get_current_user_id
@@ -203,7 +204,8 @@ def update_appointment_status(appointment_id):
     if 'notes' in data:
         appointment.notes = notes
 
-    db.session.commit()
+    if not commit_appointment():
+        return jsonify({'success': False, 'message': SLOT_CONFLICT}), 400
 
     # Send cancellation emails when doctor cancels
     if status == 'cancelled':

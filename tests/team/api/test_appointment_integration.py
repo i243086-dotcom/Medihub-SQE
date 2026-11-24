@@ -1,6 +1,7 @@
 """Cross-workflow and coordinated booking requests on disposable SQLite."""
 
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date, timedelta
 from pathlib import Path
 from threading import Barrier, Thread
 from uuid import uuid4
@@ -14,7 +15,8 @@ from werkzeug.serving import make_server
 
 from app import internal_error
 from database import db
-from phase2_support import appointment, booking_payload, seed, snapshots
+from phase2_support import TODAY, appointment, booking_payload, seed, snapshots
+from routes import doctor
 from routes.patient import patient_bp
 
 
@@ -22,7 +24,7 @@ from routes.patient import patient_bp
     ("ajay", "/api/doctor/appointments/1/status"),
     ("admin", "/api/admin/appointments/1"),
 ])
-@pytest.mark.parametrize("source", ["booked", "cancelled", "completed"])
+@pytest.mark.parametrize("source", ["booked", "cancelled", "canceled", "completed", "available"])
 def test_unknown_status_is_rejected(phase2, role, endpoint, source, record_property):
     client, headers = phase2
     appointment(status=source)
@@ -33,6 +35,67 @@ def test_unknown_status_is_rejected(phase2, role, endpoint, source, record_prope
     record_property("actual_status", response.status_code)
     record_property("db", f"{before} -> {after}")
     assert (response.status_code, after) == (400, before)
+
+
+STAFF_TRANSITIONS = [
+    ("ajay", "/api/doctor/appointments/1/status", ("booked", "cancelled", "completed")),
+    ("admin", "/api/admin/appointments/1", ("booked", "cancelled", "canceled", "completed", "available")),
+]
+
+
+@pytest.mark.parametrize(("actor", "endpoint", "destination"), [
+    (actor, endpoint, destination)
+    for actor, endpoint, destinations in STAFF_TRANSITIONS
+    for destination in destinations
+])
+@pytest.mark.parametrize("source", ["booked", "cancelled", "canceled", "completed", "available"])
+def test_recognized_staff_transitions(phase2, actor, endpoint, source, destination, record_property):
+    client, headers = phase2
+    appointment(status=source)
+    db.session.commit()
+    before = snapshots()
+    result = client.put(endpoint, json={"status": destination}, headers=headers[actor])
+    after = snapshots()
+    record_property("transition", f"{actor}: {source} -> {destination}")
+    record_property("result", f"{result.status_code}: {before} -> {after}")
+    assert result.status_code == 200
+    assert result.json["data"]["appointment"]["status"] == destination
+    assert after == [(*before[0][:5], destination, before[0][6])]
+
+
+@pytest.mark.parametrize(("params", "expected_offsets"), [
+    ({"time_filter": "today"}, [0]),
+    ({"time_filter": "upcoming"}, [0, 1]),
+    ({"time_filter": "completed"}, [-1, 2]),
+    ({}, [-30, -29, -1, 0, 1, 2]),
+    ({"time_filter": "unknown", "status": "booked"}, [-30, -29, 0, 1]),
+    ({"time_filter": "upcoming", "status": "completed"}, []),
+    ({"date": (TODAY - timedelta(days=1)).isoformat()}, [-1]),
+    ({"date": TODAY.isoformat()}, [0]),
+    ({"date": (TODAY + timedelta(days=1)).isoformat()}, [1]),
+])
+def test_doctor_date_and_filter_readback(phase2, monkeypatch, params, expected_offsets, record_property):
+    class FrozenDate(date):
+        @classmethod
+        def today(cls):
+            return TODAY
+
+    monkeypatch.setattr(doctor, "date", FrozenDate)
+    client, headers = phase2
+    ids = {
+        offset: appointment(day=TODAY + timedelta(days=offset), status=status).id
+        for offset, status in ((-31, "booked"), (-30, "booked"), (-29, "booked"),
+                               (-1, "completed"), (0, "booked"), (1, "booked"), (2, "completed"))
+    }
+    appointment(day=TODAY, doctor=2, patient=2)
+    db.session.commit()
+    before = snapshots()
+    result = client.get("/api/doctor/appointments", query_string=params, headers=headers["ajay"])
+    assert result.status_code == 200
+    actual = [row["id"] for row in result.json["data"]["appointments"]]
+    record_property("filter_readback", f"{params}: {actual}")
+    assert actual == [ids[offset] for offset in expected_offsets]
+    assert snapshots() == before
 
 
 def test_doctor_status_other_owner(phase2):
@@ -65,7 +128,8 @@ def test_admin_reschedule_conflict_preserves_status_and_notes(phase2):
 
 
 @pytest.mark.parametrize("collision", ["same-doctor", "same-patient"])
-def test_concurrent_booking_integrity(phase2, tmp_path, collision, record_property):
+@pytest.mark.parametrize("attempt", range(1, 6))
+def test_concurrent_booking_integrity(phase2, tmp_path, collision, attempt, record_property):
     path = (tmp_path / "concurrent.sqlite").resolve()
     if path.exists() or path.parent != tmp_path.resolve():
         raise RuntimeError("Expected a fresh pytest SQLite file")
@@ -103,12 +167,12 @@ def test_concurrent_booking_integrity(phase2, tmp_path, collision, record_proper
             result = client.post(f"http://127.0.0.1:{http.server_port}/api/patient/appointments",
                                  headers={"Authorization": "Bearer " + token},
                                  json=booking_payload(doctor=doctor), timeout=18)
-            return result.status_code
+            return result.status_code, result.json()["message"]
 
     try:
         doctors = (1, 1 if collision == "same-doctor" else 2)
         with ThreadPoolExecutor(max_workers=2) as workers:
-            statuses = sorted(workers.map(send, zip(tokens, doctors)))
+            responses = sorted(workers.map(send, zip(tokens, doctors)))
         with server_app.app_context():
             persisted = snapshots()
             db.engine.dispose()
@@ -116,7 +180,9 @@ def test_concurrent_booking_integrity(phase2, tmp_path, collision, record_proper
         http.shutdown()
         thread.join()
         http.server_close()
-    record_property("http_statuses", str(statuses))
+    record_property("attempt", attempt)
+    record_property("http_responses", str(responses))
     record_property("db_rows", str(persisted))
     assert len(persisted) == 1, persisted
-    assert statuses in ([200, 400], [200, 409]), statuses
+    assert responses == [(200, "Appointment booked successfully"),
+                         (400, "That appointment time conflicts with an existing booking")]

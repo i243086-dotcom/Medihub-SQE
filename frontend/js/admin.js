@@ -907,7 +907,10 @@ const AdminComponent = {
 
         openAdminPatientHistory(patient) {
             this.selectedPatient = patient
-            this.loadPatientHistory(patient.id)
+            this.loadPatientHistory(patient.id).catch(() => {
+                this.patientHistory = []
+                this.error = 'Failed to load patient history'
+            })
             const modal = new bootstrap.Modal(document.getElementById('patientHistoryModal'));
             modal.show();
         },
@@ -923,7 +926,10 @@ const AdminComponent = {
 
         openDoctorHistory(doctor) {
             this.selectedDoctor = doctor
-            this.loadDoctorHistory(doctor.id)
+            this.loadDoctorHistory(doctor.id).catch(() => {
+                this.doctorHistory = []
+                this.error = 'Failed to load doctor history'
+            })
             const modal = new bootstrap.Modal(document.getElementById('doctorHistoryModal'));
             modal.show();
         },

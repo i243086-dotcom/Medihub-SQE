@@ -1,5 +1,7 @@
 from flask import Blueprint, request, jsonify, current_app
+from secrets import token_urlsafe
 from database import db
+from appointment_slots import SLOT_CONFLICT, commit_appointment
 from models import User, Patient, Doctor, Appointment, Treatment
 from werkzeug.security import generate_password_hash
 from datetime import datetime, date
@@ -79,7 +81,7 @@ def add_doctor():
         username = f"{base}{counter}"
         counter += 1
     
-    password = f"{username}123"
+    password = token_urlsafe(24)
     
     user = User(
         username=username,
@@ -217,9 +219,12 @@ def update_appointment(appointment_id):
                 doctor_id=appointment.doctor_id,
                 appointment_date=new_date,
                 appointment_time=new_time
+            ).filter(
+                Appointment.id != appointment.id,
+                Appointment.status.notin_(('cancelled', 'canceled')),
             ).first()
             
-            if existing and existing.id != appointment.id and existing.status != 'cancelled':
+            if existing:
                  return jsonify({'success': False, 'message': 'Slot already booked', 'errors': ['Slot unavailable']}), 400
                  
             appointment.appointment_date = new_date
@@ -234,7 +239,8 @@ def update_appointment(appointment_id):
         appointment.notes = notes
     appointment.updated_at = datetime.utcnow()
     
-    db.session.commit()
+    if not commit_appointment():
+        return jsonify({'success': False, 'message': SLOT_CONFLICT}), 400
     
     return jsonify({'success': True, 'message': 'Appointment updated successfully', 'data': {'appointment': appointment.to_dict()}})
 

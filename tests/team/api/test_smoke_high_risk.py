@@ -84,8 +84,9 @@ def test_d1_book_cancel_rebook_same_slot(client):
     # Expected contract: a cancelled slot is free again (slots endpoint and
     # the booking check only treat status='booked' as taken).
     assert r3.status_code == 200
-    booked_rows = [t for t in table() if t[5] == "booked"]
-    assert len(booked_rows) == 1
+    new_id = r3.get_json()["data"]["appointment"]["id"]
+    assert new_id != apt_id
+    assert [(row[0], row[5]) for row in table()] == [(apt_id, "cancelled"), (new_id, "booked")]
 
 
 def test_d2_cancel_other_patients_appointment(client):
@@ -121,14 +122,15 @@ def _make_cancelled_via_doctor(client):
     return apt_id, ajay
 
 
-def test_d4a_doctor_reopens_cancelled_appointment(client):
+def test_d4a_assigned_doctor_reopens_free_cancelled_slot(client):
     apt_id, ajay = _make_cancelled_via_doctor(client)
     r = client.put("/api/doctor/appointments/%d/status" % apt_id,
                    json={"status": "booked"}, headers=ajay)
     report("D4a doctor cancelled->booked", r)
-    # Expected per BR-03 (to confirm with team): cancelled is terminal.
-    assert r.status_code == 400
-    assert table()[0][5] == "cancelled"
+    # The original doctor route explicitly permits 'booked' for an assigned row.
+    # Patient cancellation restrictions are a separate rule.
+    assert r.status_code == 200
+    assert [(row[0], row[5]) for row in table()] == [(apt_id, "booked")]
 
 
 def test_d4b_admin_sets_arbitrary_status(client):

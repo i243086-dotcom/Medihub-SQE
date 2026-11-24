@@ -82,6 +82,25 @@ def test_br01_future_date_has_no_today_cutoff(phase2, monkeypatch):
     assert snapshots()[0][3:6] == (TOMORROW.isoformat(), "09:00", "booked")
 
 
+@pytest.mark.parametrize(("hour", "open_period"), [
+    ("08:00", False), ("09:00", True), ("13:00", False),
+    ("15:00", True), ("19:00", False),
+])
+@pytest.mark.parametrize("day_kind", ["past", "today-before", "today-at", "future"])
+def test_br01_date_and_period_decisions(phase2, monkeypatch, hour, open_period, day_kind, record_property):
+    day = {"past": TODAY - timedelta(days=1), "future": TOMORROW}.get(day_kind, TODAY)
+    ist_start = datetime.combine(TODAY, time.fromisoformat(hour))
+    cutoff = ist_start - timedelta(hours=5, minutes=30)
+    monkeypatch.setattr(BookingClock, "instant", cutoff if day_kind == "today-at"
+                        else cutoff - timedelta(seconds=1))
+    expected = 200 if open_period and day_kind in ("today-before", "future") else 400
+    http, body = call_booking(monkeypatch, booking_payload(day=day, hour=hour))
+    after = snapshots()
+    record_property("decision", f"{day_kind}, {hour}, {open_period}: {http}, {body['message']}")
+    assert http == expected
+    assert [row[3:6] for row in after] == ([(day.isoformat(), hour, "booked")] if expected == 200 else [])
+
+
 @pytest.mark.parametrize(("field", "value", "code", "message"), [
     ("appointment_time", "abc", 400, "Invalid appointment time format"),
     ("appointment_time", 900, 400, "Invalid appointment time format"),
@@ -99,9 +118,9 @@ def test_br01_booking_field_syntax(phase2, monkeypatch, field, value, code, mess
 
 
 @pytest.mark.parametrize(("owner", "source", "status"), [
-    ("arjun", "booked", 200), ("arjun", "cancelled", 400),
-    ("arjun", "completed", 400), ("arjun", "available", 400),
-    ("vikram", "booked", 404), ("vikram", "cancelled", 404), ("arjun", None, 404),
+    (owner, source, 404 if owner == "vikram" or source is None else (200 if source == "booked" else 400))
+    for owner in ("arjun", "vikram")
+    for source in ("booked", "cancelled", "canceled", "completed", "available", None)
 ])
 def test_br03_cancel_transition(phase2, monkeypatch, owner, source, status):
     if source is not None:
@@ -140,11 +159,14 @@ def test_br04_patient_writes(phase2, role, status, verb):
     assert snapshots() == before
 
 
-def test_database_doctor_slot_uniqueness_across_statuses(phase2):
-    appointment(status="cancelled")
+@pytest.mark.parametrize(("doctor", "patient"), [(1, 2), (2, 1)])
+def test_database_active_slot_uniqueness_preserves_cancelled_history(phase2, doctor, patient):
+    cancelled = appointment(status="cancelled")
+    booked = appointment()
     db.session.commit()
+    assert cancelled.id != booked.id
     before = snapshots()
     with pytest.raises(IntegrityError):
-        appointment(patient=2)
+        appointment(doctor=doctor, patient=patient)
     db.session.rollback()
     assert snapshots() == before

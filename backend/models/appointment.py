@@ -15,7 +15,10 @@ class Appointment(db.Model):
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
     __table_args__ = (
-        db.UniqueConstraint('doctor_id', 'appointment_date', 'appointment_time', name='unique_doctor_slot'),
+        db.Index('unique_booked_doctor_slot', 'doctor_id', 'appointment_date', 'appointment_time',
+                 unique=True, sqlite_where=db.text("status = 'booked'")),
+        db.Index('unique_booked_patient_time', 'patient_id', 'appointment_date', 'appointment_time',
+                 unique=True, sqlite_where=db.text("status = 'booked'")),
     )
     
     # relationships

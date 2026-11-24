@@ -20,7 +20,8 @@ def run_suite(out, tests, browser=False):
            "--cov-report=html:" + str(out / "htmlcov")]
     if browser:
         cmd += ["--browser", "chromium", "--html=" + str(out / "pytest.html"),
-                "--self-contained-html", "--screenshot", "only-on-failure", "--output", str(out / "screenshots")]
+                "--self-contained-html", "--screenshot", "on", "--tracing", "retain-on-failure",
+                "--output", str(out / "screenshots")]
     env = dict(os.environ, COVERAGE_FILE=str(out / ".coverage"))
     with (out / "pytest.txt").open("xb") as stream:
         result = subprocess.run(cmd, stdout=stream, stderr=subprocess.STDOUT, env=env)

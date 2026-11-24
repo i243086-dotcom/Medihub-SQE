@@ -16,10 +16,12 @@ from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[3]
 ROUTE = Path("backend/routes/patient.py")
-UNIT = "tests/team/unit/test_appointment_rules.py"
+UNIT = ("tests/team/unit/test_appointment_rules.py",
+        "tests/team/unit/test_appointment_slot_transactions.py")
 FAST_SELECTION = (
     "MCC-111111 or MCC-110111 or MCC-111011 or MCC-111101 or MCC-111110 or "
-    "test_br01 or test_br03 or test_br04_patient_writes"
+    "test_br01 or test_br03 or test_br04_patient_writes or "
+    "(test_late_booking_conflict_rolls_back and arjun)"
 )
 
 
@@ -46,7 +48,7 @@ def copy_sandbox(dest):
         target = dest / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(path, target)
-    for relative in ("tests/team/conftest.py", "tests/team/phase2_support.py", "tests/team/mcc.py", UNIT):
+    for relative in ("tests/team/conftest.py", "tests/team/phase2_support.py", "tests/team/mcc.py", *UNIT):
         target = dest / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / relative, target)
@@ -156,7 +158,7 @@ def main():
         copy_sandbox(sandbox)
         original = (sandbox / ROUTE).read_text(encoding="utf-8")
         base = [Path(sys.executable).as_posix(), "-B", "-X", "utf8", "-m", "pytest",
-                "-p", "no:cacheprovider", "-q", "--tb=short", UNIT]
+                "-p", "no:cacheprovider", "-q", "--tb=short", *UNIT]
         if run(base, sandbox, timeout=90, log=evidence / "original-unit.txt").returncode:
             raise RuntimeError("Unmodified sandbox must pass before applying mutants")
         results = {"production_sha256": sha256((ROOT / ROUTE).read_bytes()).hexdigest(),

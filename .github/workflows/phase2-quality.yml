@@ -80,7 +80,7 @@ jobs:
           curl -fsSL https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js -o "$assets/bootstrap.bundle.min.js"
           curl -fsSL https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css -o "$assets/bootstrap.min.css"
           export MEDIHUB_BROWSER_ASSETS="$assets"
-          python -m pytest tests/team/e2e --browser chromium -q --tb=short --junitxml=evidence/browser.xml --html=evidence/browser.html --self-contained-html --screenshot only-on-failure --output evidence/screenshots
+          python -m pytest tests/team/e2e --browser chromium -q --tb=short --junitxml=evidence/browser.xml --html=evidence/browser.html --self-contained-html --screenshot on --tracing retain-on-failure --output evidence/screenshots
       - uses: actions/upload-artifact@v4
         if: always()
         with:

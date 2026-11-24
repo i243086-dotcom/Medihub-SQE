@@ -28,6 +28,7 @@ SCOPE = {
         "update_doctor", "delete_doctor",
     ),
     "backend/routes/auth.py": ("login", "get_current_user", "logout"),
+    "backend/appointment_slots.py": None,
     "backend/decorators.py": None,
     "backend/models/appointment.py": None,
     "backend/models/doctor.py": None,

@@ -18,7 +18,7 @@ from phase2_support import BookingClock, PASSWORD, TODAY, TOMORROW, appointment,
 
 
 ASSETS = {
-    "https://unpkg.com/vue@3/dist/vue.global.js": ("vue.global.js", "application/javascript",
+    "https://unpkg.com/vue@3.5.46/dist/vue.global.js": ("vue.global.js", "application/javascript",
         "0f9a092ad87f4e7a2b37c3fb5aa425b34dcd6ceef24070baf0d05e54353e980c"),
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js": (
         "bootstrap.bundle.min.js", "application/javascript",
@@ -54,7 +54,7 @@ def browser_app(phase2, page, assets):
             route.continue_()
         elif url_requested in ASSETS:
             name, kind, _ = ASSETS[url_requested]
-            route.fulfill(path=assets / name, content_type=kind)
+            route.fulfill(path=assets / name, content_type=kind, headers={"Access-Control-Allow-Origin": "*"})
         else:
             route.abort()
 

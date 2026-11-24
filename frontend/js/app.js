@@ -59,7 +59,6 @@ const App = {
       doctorAppointments: [],
       doctorPatients: [],
       doctorAvailableSlots: [],
-      appointmentFilter: 'all',
       selectedPatientHistory: null,
       treatmentForm: {
         appointment_id: '',
@@ -506,35 +505,6 @@ const App = {
     },
 
     // Admin methods
-    async addDoctor() {
-      this.loading = true
-      this.error = null
-
-      try {
-        const response = await window.ApiService.createDoctor(this.newDoctor)
-        if (response.success) {
-          this.success = 'Doctor added successfully'
-          this.newDoctor = {
-            username: '',
-            email: '',
-            password: '',
-            name: '',
-            department_id: '',
-            experience: '',
-            phone: '',
-            qualification: ''
-          }
-          await this.loadAdminData()
-        } else {
-          this.error = response.message || 'Failed to add doctor'
-        }
-      } catch (error) {
-        this.error = error.message || 'Failed to add doctor'
-      } finally {
-        this.loading = false
-      }
-    },
-
     async deleteDoctor(doctorId) {
       if (confirm('Are you sure you want to delete this doctor?')) {
         try {
@@ -714,50 +684,7 @@ const App = {
       }
     },
 
-    async loadAvailableSlots() {
-      if (this.bookingForm.doctor_id && this.bookingForm.appointment_date) {
-        try {
-          const response = await window.ApiService.getAvailableSlots(
-            this.bookingForm.doctor_id, 
-            this.bookingForm.appointment_date
-          )
-          if (response.success) {
-            this.availableSlots = response.data.slots
-          }
-        } catch (error) {
-          this.error = 'Failed to load available slots'
-        }
-      }
-    },
-
     // Admin methods
-    async addDoctor() {
-      this.loading = true
-      this.error = null
-
-      try {
-        const response = await window.ApiService.addDoctor(this.newDoctor)
-        if (response.success) {
-          this.success = 'Doctor account created successfully!'
-          this.newDoctor = {
-            name: '',
-            email: '',
-            department_id: '',
-            experience: '',
-            phone: '',
-            qualification: ''
-          }
-          await this.loadDashboardData()
-        } else {
-          this.error = response.message || 'Failed to create doctor account'
-        }
-      } catch (error) {
-        this.error = error.message || 'Failed to create doctor account'
-      } finally {
-        this.loading = false
-      }
-    },
-
     async generateMonthlyReport() {
       try {
         const response = await window.ApiService.generateMonthlyReport()

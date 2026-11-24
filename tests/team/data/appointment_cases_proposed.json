@@ -11343,6 +11343,245 @@
       "probe": "partition"
     },
     {
+      "id": "GEN-adminStatus-body-appointment_date-2032-02-28",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2032-02-28",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_date",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_date-2032-02-29",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2032-02-29",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_date",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_date-2032-02-30",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2032-02-30",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_date",
+      "probe": "boundary"
+    },
+    {
       "id": "GEN-adminStatus-body-appointment_date-None",
       "operation": "adminStatus",
       "method": "PUT",
@@ -11726,6 +11965,484 @@
       },
       "field": "body-appointment_time",
       "probe": "partition"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_time-negative-00-00-01",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "-00:00:01"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_time-00-00-00",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "00:00:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_time-00-00-01",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "00:00:01"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_time-23-59-58",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "23:59:58"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_time-23-59-59",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "23:59:59"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-body-appointment_time-24-00-00",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "24:00:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
     },
     {
       "id": "GEN-adminStatus-body-appointment_time-None",

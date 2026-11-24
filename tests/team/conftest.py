@@ -12,6 +12,8 @@ sys.path.insert(0, str(ROOT / "backend"))
 # Must be set BEFORE importing app, so the in-memory test database is used.
 TEST_DB_URI = "sqlite://"
 os.environ["MEDIHUB_DATABASE_URI"] = TEST_DB_URI
+STAGE_D_CREDENTIALS = {"admin": "admin", "ajay": "ajay.kumar123", "rajesh": "rajesh",
+                       "arjun": "arjun", "vikram": "vikram"}
 
 import pytest
 from app import app
@@ -66,10 +68,10 @@ def client():
         # cp1252 that raises UnicodeEncodeError when pytest runs with -s.
         # Silence the seed output (the app code is not modified).
         with contextlib.redirect_stdout(io.StringIO()):
-            create_admin_user()
-            create_sample_doctors()
+            create_admin_user(STAGE_D_CREDENTIALS)
+            create_sample_doctors(STAGE_D_CREDENTIALS)
             create_sample_availability()
-            create_sample_patients()
+            create_sample_patients(STAGE_D_CREDENTIALS)
         yield app.test_client()
         db.session.remove()
         db.drop_all()

@@ -29,8 +29,8 @@ def dereference(spec, node):
     return {key: dereference(spec, value) for key, value in node.items()}
 
 
-def variants(schema):
-    values = [*schema.get("enum", []), *schema.get("x-values", [])]
+def boundary_values(schema):
+    values = list(schema.get("x-boundary-values", []))
     values += [(TEST_DATE + timedelta(days=delta)).isoformat() for delta in schema.get("x-days", [])]
     values += [f"{hour:02}:00" for limit in schema.get("x-hour-boundaries", [])
                for hour in (limit - 1, limit, limit + 1)]
@@ -38,7 +38,7 @@ def variants(schema):
         for field in ("minimum", "maximum"):
             if field in schema:
                 values += [schema[field] + delta for delta in (-1, 0, 1)]
-    return list(dict.fromkeys(values))
+    return values
 
 
 def accepted(schema, value):
@@ -106,11 +106,12 @@ def generate(spec):
                     del inputs[location][name]
                     add(identifier + "-missing", 400 if required else 200, inputs=inputs,
                         field=identifier, probe="missing")
-                values = variants(rules)
+                boundaries = boundary_values(rules)
+                values = [*rules.get("enum", []), *rules.get("x-values", []), *boundaries]
                 if location == "body":
                     values += [None, WRONG_TYPES[rules["type"]]]
                 for value in dict.fromkeys(values):
-                    if value == rules["example"] and value not in rules.get("x-hour-boundaries", []):
+                    if value == rules["example"]:
                         continue
                     inputs = copy.deepcopy(default)
                     inputs[location][name] = value
@@ -118,10 +119,10 @@ def generate(spec):
                     default_code = 200 if accepted(rules, value) else invalid
                     code = metadata.get("x-status", {}).get(str(value), default_code)
                     label = re.sub(r"[^A-Za-z0-9]+", "-", str(value)).strip("-") or "empty"
+                    if str(value).startswith("-"):
+                        label = "negative-" + label
                     add(identifier + "-" + label, code, inputs=inputs, field=identifier,
-                        probe="boundary" if ("x-hour-boundaries" in rules or "x-days" in rules) and
-                        value not in rules.get("x-values", []) and value is not None and isinstance(value, str)
-                        else "partition")
+                        probe="boundary" if value in boundaries else "partition")
             if "requestBody" in op:
                 for label, value in (("null", "null"), ("array", "[]"), ("malformed", "{")):
                     add("json-" + label, 400, raw_body=value, probe="invalid-document")
