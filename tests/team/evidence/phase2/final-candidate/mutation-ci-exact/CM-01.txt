@@ -1,0 +1,39 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________________ test_br02_all_combinations[MCC-111101] ____________________
+tests/team/unit/test_appointment_rules.py:46: in test_br02_all_combinations
+    assert (status, phrase.lower() in body["message"].lower()) == (expected_status, True), body
+E   AssertionError: {'message': 'That appointment time conflicts with an existing booking', 'success': False}
+E   assert (400, False) == (400, True)
+E     
+E     At index 1 diff: False != True
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E           400,
+E     -     True,
+E     +     False,
+E       )
+---------------------------- Captured stdout setup -----------------------------
+Protected development DB SHA-256 before: absent
+--------------------------- Captured stdout teardown ---------------------------
+Protected development DB SHA-256 after: absent
+=============================== warnings summary ===============================
+tests/team/unit/test_appointment_rules.py::test_br02_all_combinations[MCC-111101]
+  /tmp/medihub-mutation-8l4l69xu/backend/routes/patient.py:245: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/team/unit/test_appointment_rules.py::test_br02_all_combinations[MCC-111101] - AssertionError: {'message': 'That appointment time conflicts with an existing booking', 'success': False}
+assert (400, False) == (400, True)
+  
+  At index 1 diff: False != True
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    (
+        400,
+  -     True,
+  +     False,
+    )
+1 failed, 135 deselected, 1 warning in 0.12s

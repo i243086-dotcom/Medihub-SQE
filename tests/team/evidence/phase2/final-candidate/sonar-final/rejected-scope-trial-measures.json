@@ -1,0 +1,84 @@
+{
+  "raw": {
+    "component": {
+      "key": "medihub-phase2-candidate",
+      "name": "MediHub Phase 2 Candidate",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "0.0",
+          "bestValue": false
+        },
+        {
+          "metric": "complexity",
+          "value": "553"
+        },
+        {
+          "metric": "reliability_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "9",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "1.5",
+          "bestValue": false
+        },
+        {
+          "metric": "security_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "sqale_index",
+          "value": "18",
+          "bestValue": false
+        },
+        {
+          "metric": "sqale_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "cognitive_complexity",
+          "value": "352",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "5310"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "line_coverage",
+          "value": "0.0",
+          "bestValue": false
+        }
+      ]
+    }
+  },
+  "limits": {
+    "security_rating": 1.0,
+    "reliability_rating": 2.0,
+    "duplicated_lines_density": 3.0
+  },
+  "passed": {
+    "security_rating": true,
+    "reliability_rating": true,
+    "duplicated_lines_density": true
+  }
+}

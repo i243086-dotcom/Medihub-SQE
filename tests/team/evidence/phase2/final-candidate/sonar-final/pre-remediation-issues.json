@@ -1,0 +1,2861 @@
+﻿{
+    "total":  50,
+    "p":  1,
+    "ps":  100,
+    "paging":  {
+                   "pageIndex":  1,
+                   "pageSize":  100,
+                   "total":  50
+               },
+    "effortTotal":  600,
+    "issues":  [
+                   {
+                       "key":  "526e4e20-0d1a-4f9b-a9ae-08a730dbe5ea",
+                       "rule":  "python:S2068",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:backend/routes/admin.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  83,
+                       "hash":  "d83c7472598ef12ec4b0d829ad1272b5",
+                       "textRange":  {
+                                         "startLine":  83,
+                                         "endLine":  83,
+                                         "startOffset":  4,
+                                         "endOffset":  31
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "\"password\" detected here, review this potentially hard-coded credential.",
+                       "effort":  "30min",
+                       "debt":  "30min",
+                       "author":  "",
+                       "tags":  [
+                                    "cwe",
+                                    "secret",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "b074f745-09cf-4bdf-ba36-3a92f666370b",
+                       "rule":  "python:S6903",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/routes/admin.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  239,
+                       "hash":  "34065349c8f7a9133dd09dc5573b98e2",
+                       "textRange":  {
+                                         "startLine":  239,
+                                         "endLine":  239,
+                                         "startOffset":  29,
+                                         "endOffset":  44
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t use `datetime.datetime.utcnow` to create this datetime object.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "datetime",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "HIGH"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "1b105db4-018e-4e52-96ea-6e4f28772378",
+                       "rule":  "python:S6903",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/routes/doctor.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  202,
+                       "hash":  "34065349c8f7a9133dd09dc5573b98e2",
+                       "textRange":  {
+                                         "startLine":  202,
+                                         "endLine":  202,
+                                         "startOffset":  29,
+                                         "endOffset":  44
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t use `datetime.datetime.utcnow` to create this datetime object.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "datetime",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "HIGH"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "a29cbb23-6f41-4c6c-85eb-e81406e9442c",
+                       "rule":  "python:S6903",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/routes/doctor.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  276,
+                       "hash":  "34065349c8f7a9133dd09dc5573b98e2",
+                       "textRange":  {
+                                         "startLine":  276,
+                                         "endLine":  276,
+                                         "startOffset":  29,
+                                         "endOffset":  44
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t use `datetime.datetime.utcnow` to create this datetime object.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "datetime",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "HIGH"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "61453cf9-6df3-4f8c-a4cd-88b0fc6f2160",
+                       "rule":  "python:S6903",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/routes/patient.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  102,
+                       "hash":  "3c13a0757ad6de99bd41eba8db2483ff",
+                       "textRange":  {
+                                         "startLine":  102,
+                                         "endLine":  102,
+                                         "startOffset":  10,
+                                         "endOffset":  25
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t use `datetime.datetime.utcnow` to create this datetime object.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "datetime",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "HIGH"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "8f289ce6-393b-4e80-af84-aeaf8d9caea3",
+                       "rule":  "python:S6903",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/routes/patient.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  256,
+                       "hash":  "3c13a0757ad6de99bd41eba8db2483ff",
+                       "textRange":  {
+                                         "startLine":  256,
+                                         "endLine":  256,
+                                         "startOffset":  10,
+                                         "endOffset":  25
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t use `datetime.datetime.utcnow` to create this datetime object.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "datetime",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "HIGH"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "b5cb5e6a-5d0e-4f44-95e7-9d233c51d292",
+                       "rule":  "python:S6903",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/routes/patient.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  363,
+                       "hash":  "34065349c8f7a9133dd09dc5573b98e2",
+                       "textRange":  {
+                                         "startLine":  363,
+                                         "endLine":  363,
+                                         "startOffset":  29,
+                                         "endOffset":  44
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t use `datetime.datetime.utcnow` to create this datetime object.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "datetime",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2026-11-24T16:48:35+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "HIGH"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "c866ea83-32d3-43a5-a288-4a5d84bacf45",
+                       "rule":  "Web:S6853",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  475,
+                       "hash":  "d67fbb24ebd131f32ca440bef3bb5256",
+                       "textRange":  {
+                                         "startLine":  475,
+                                         "endLine":  475,
+                                         "startOffset":  36,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "A form label must be associated with a control and have accessible text.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "972a5997-0803-45ac-b729-4ce428d8030e",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  476,
+                       "hash":  "7e5464193103a7dcce743a3ab99082ba",
+                       "textRange":  {
+                                         "startLine":  476,
+                                         "endLine":  476,
+                                         "startOffset":  36,
+                                         "endOffset":  153
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "69eac758-a3d7-40eb-92b3-25373e379273",
+                       "rule":  "Web:S6853",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  479,
+                       "hash":  "a0751703c4267208b273c775d539e68b",
+                       "textRange":  {
+                                         "startLine":  479,
+                                         "endLine":  479,
+                                         "startOffset":  36,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "A form label must be associated with a control and have accessible text.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "2b8ad1c4-8153-4f8d-8c57-01723ce7e698",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  480,
+                       "hash":  "bcd6f89df7f073d1953e5b3ad6899c46",
+                       "textRange":  {
+                                         "startLine":  480,
+                                         "endLine":  480,
+                                         "startOffset":  36,
+                                         "endOffset":  146
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "badeb5cc-6ffe-48f4-a88b-5b34a4bdad39",
+                       "rule":  "Web:S6853",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  508,
+                       "hash":  "8f539dc1999df816d720830b455ce637",
+                       "textRange":  {
+                                         "startLine":  508,
+                                         "endLine":  508,
+                                         "startOffset":  36,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "A form label must be associated with a control and have accessible text.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "4c0686c2-d711-4245-b24b-2790609e172b",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  509,
+                       "hash":  "9942605d789883b7de8274bde19ecc42",
+                       "textRange":  {
+                                         "startLine":  509,
+                                         "endLine":  509,
+                                         "startOffset":  36,
+                                         "endOffset":  141
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "39dcd1a8-b26d-4845-b9ae-1fe1f4a94051",
+                       "rule":  "Web:S6853",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  512,
+                       "hash":  "0a46a5e595490337ba944b49274339a3",
+                       "textRange":  {
+                                         "startLine":  512,
+                                         "endLine":  512,
+                                         "startOffset":  36,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "A form label must be associated with a control and have accessible text.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "986a972f-0c07-405a-9f26-8a4f8d5a88fd",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  513,
+                       "hash":  "0fa607cb0e0290c68c85278ca0c45c7e",
+                       "textRange":  {
+                                         "startLine":  513,
+                                         "endLine":  513,
+                                         "startOffset":  36,
+                                         "endOffset":  151
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "55224645-f1c0-46fb-85cb-d3c7d3da8da0",
+                       "rule":  "Web:S6853",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  516,
+                       "hash":  "d67fbb24ebd131f32ca440bef3bb5256",
+                       "textRange":  {
+                                         "startLine":  516,
+                                         "endLine":  516,
+                                         "startOffset":  36,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "A form label must be associated with a control and have accessible text.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "29efb546-2b57-4282-9777-311374af17c7",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  517,
+                       "hash":  "3fb60d6c2291b86d4fb28176e82c7c90",
+                       "textRange":  {
+                                         "startLine":  517,
+                                         "endLine":  517,
+                                         "startOffset":  36,
+                                         "endOffset":  147
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "c1f7b311-06ea-4c1c-9aa8-1b5edd9f2f36",
+                       "rule":  "Web:S6853",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  520,
+                       "hash":  "a0751703c4267208b273c775d539e68b",
+                       "textRange":  {
+                                         "startLine":  520,
+                                         "endLine":  520,
+                                         "startOffset":  36,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "A form label must be associated with a control and have accessible text.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "4ae2496e-a05a-437b-83de-6098e787f9bb",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  521,
+                       "hash":  "41ab5d10dd48a704bbbef3abcb9b63be",
+                       "textRange":  {
+                                         "startLine":  521,
+                                         "endLine":  521,
+                                         "startOffset":  36,
+                                         "endOffset":  149
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "aloktripathe@gmail.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2026-04-21T04:52:00+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "305854f9-b52f-4862-89ad-c665e5e381ce",
+                       "rule":  "python:S2068",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  18,
+                       "hash":  "7e12dd9892025093fd5ae9f86df0e3dc",
+                       "textRange":  {
+                                         "startLine":  18,
+                                         "endLine":  18,
+                                         "startOffset":  11,
+                                         "endOffset":  23
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "\"SECRET_KEY\" detected here, review this potentially hard-coded credential.",
+                       "effort":  "30min",
+                       "debt":  "30min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "secret",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-12-14T17:29:57+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "46180c5c-29be-4ee8-863b-01a0a5747c24",
+                       "rule":  "python:S6779",
+                       "severity":  "BLOCKER",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  18,
+                       "hash":  "7e12dd9892025093fd5ae9f86df0e3dc",
+                       "textRange":  {
+                                         "startLine":  18,
+                                         "endLine":  18,
+                                         "startOffset":  27,
+                                         "endOffset":  52
+                                     },
+                       "flows":  [
+                                     {
+                                         "locations":  [
+                                                           {
+                                                               "component":  "medihub-phase2-candidate:backend/app.py",
+                                                               "textRange":  {
+                                                                                 "startLine":  18,
+                                                                                 "endLine":  18,
+                                                                                 "startOffset":  0,
+                                                                                 "endOffset":  24
+                                                                             },
+                                                               "msg":  "Assignment to sensitive property.",
+                                                               "msgFormattings":  [
+
+                                                                                  ]
+                                                           }
+                                                       ]
+                                     }
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Don\u0027t disclose \"Flask\" secret keys.",
+                       "effort":  "30min",
+                       "debt":  "30min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "flask"
+                                ],
+                       "creationDate":  "2025-12-14T17:29:57+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "BLOCKER"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "72000398-10f4-433c-8fd5-a99fcdae16b6",
+                       "rule":  "python:S2068",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:backend/seed_db.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  29,
+                       "hash":  "5cb3914cf692f1d05d0fd0ef67554918",
+                       "textRange":  {
+                                         "startLine":  29,
+                                         "endLine":  29,
+                                         "startOffset":  16,
+                                         "endOffset":  43
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "\"password\" detected here, review this potentially hard-coded credential.",
+                       "effort":  "30min",
+                       "debt":  "30min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "secret",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "e4669fde-3a8a-4766-aea4-1505397792d2",
+                       "rule":  "python:S2068",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:backend/seed_db.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  40,
+                       "hash":  "e75dfe14f9b12cf179d47aff1e46e5aa",
+                       "textRange":  {
+                                         "startLine":  40,
+                                         "endLine":  40,
+                                         "startOffset":  16,
+                                         "endOffset":  36
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "\"password\" detected here, review this potentially hard-coded credential.",
+                       "effort":  "30min",
+                       "debt":  "30min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "secret",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "2d96f6f1-f84e-4635-bf6c-baafa7b7e653",
+                       "rule":  "python:S2068",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:backend/seed_db.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  128,
+                       "hash":  "59409bab0e99930b4fd2cbcf47613bc8",
+                       "textRange":  {
+                                         "startLine":  128,
+                                         "endLine":  128,
+                                         "startOffset":  16,
+                                         "endOffset":  36
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "\"password\" detected here, review this potentially hard-coded credential.",
+                       "effort":  "30min",
+                       "debt":  "30min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "secret",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "b484633d-f8eb-4f85-b256-c3c193429720",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  733,
+                       "hash":  "b2f1d061773bd9643765c42d7af5a25f",
+                       "textRange":  {
+                                         "startLine":  733,
+                                         "endLine":  733,
+                                         "startOffset":  37,
+                                         "endOffset":  45
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "751ce954-6b73-4639-be0f-bcf75385dabb",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  734,
+                       "hash":  "eace881d911c9e4310f160ca54354426",
+                       "textRange":  {
+                                         "startLine":  734,
+                                         "endLine":  734,
+                                         "startOffset":  37,
+                                         "endOffset":  45
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "1efb89fd-92dd-4dad-adb4-f5686d0c3c59",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  873,
+                       "hash":  "fe935aa7d77e4f39525556d1a81c5b83",
+                       "textRange":  {
+                                         "startLine":  873,
+                                         "endLine":  873,
+                                         "startOffset":  37,
+                                         "endOffset":  45
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "a6b82c35-b927-45f9-8adf-056c7fa236a3",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  874,
+                       "hash":  "8f267e011c9353ed7f9c50e24dabf366",
+                       "textRange":  {
+                                         "startLine":  874,
+                                         "endLine":  874,
+                                         "startOffset":  37,
+                                         "endOffset":  45
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "971bb191-dad6-4205-9d27-b3b54e27a5a1",
+                       "rule":  "javascript:S9383",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  926,
+                       "hash":  "995ddace3aa5e83b84b277349f5fd217",
+                       "textRange":  {
+                                         "startLine":  926,
+                                         "endLine":  926,
+                                         "startOffset":  12,
+                                         "endOffset":  45
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "async",
+                                    "es2017",
+                                    "type-dependent",
+                                    "promise"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "2f0699f1-278d-4f6b-bcdb-bd0cba0969fb",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  1023,
+                       "hash":  "e29e41740760b321e82b86bf452e6d70",
+                       "textRange":  {
+                                         "startLine":  1023,
+                                         "endLine":  1023,
+                                         "startOffset":  20,
+                                         "endOffset":  28
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "cbe84f78-41df-4845-a8ab-a048a3d76983",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/app.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  485,
+                       "hash":  "e29e41740760b321e82b86bf452e6d70",
+                       "textRange":  {
+                                         "startLine":  485,
+                                         "endLine":  485,
+                                         "startOffset":  16,
+                                         "endOffset":  24
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "a83c5336-8e30-4629-86db-9d669d1e8863",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/doctor.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  778,
+                       "hash":  "e29e41740760b321e82b86bf452e6d70",
+                       "textRange":  {
+                                         "startLine":  778,
+                                         "endLine":  778,
+                                         "startOffset":  20,
+                                         "endOffset":  28
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "90098a24-f0c0-49d7-a4e3-5ec5e7bf4653",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/patient.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  822,
+                       "hash":  "e29e41740760b321e82b86bf452e6d70",
+                       "textRange":  {
+                                         "startLine":  822,
+                                         "endLine":  822,
+                                         "startOffset":  20,
+                                         "endOffset":  28
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-11-29T12:29:25+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "b4c41ec4-7a29-42ab-a584-2a2c477156e4",
+                       "rule":  "Web:InputWithoutLabelCheck",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  313,
+                       "hash":  "6713a1f56f337bc358b150572477973e",
+                       "textRange":  {
+                                         "startLine":  313,
+                                         "endLine":  313,
+                                         "startOffset":  36,
+                                         "endOffset":  107
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add an \"id\" attribute to this input field and associate it with a label.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "accessibility",
+                                    "wcag2-a"
+                                ],
+                       "creationDate":  "2025-11-28T01:21:19+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "22c7d236-2b10-42bb-a379-e67adb8035d6",
+                       "rule":  "javascript:S9383",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/admin.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  910,
+                       "hash":  "f5e1d4dd4b1577942074a0fc06948423",
+                       "textRange":  {
+                                         "startLine":  910,
+                                         "endLine":  910,
+                                         "startOffset":  12,
+                                         "endOffset":  47
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "async",
+                                    "es2017",
+                                    "type-dependent",
+                                    "promise"
+                                ],
+                       "creationDate":  "2025-11-28T01:21:19+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "1edbde13-018d-42cc-ac81-4b90b103af2b",
+                       "rule":  "javascript:S9383",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/doctor.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  754,
+                       "hash":  "ce3e8a32d5908481bce66fdf4023eed8",
+                       "textRange":  {
+                                         "startLine":  754,
+                                         "endLine":  754,
+                                         "startOffset":  12,
+                                         "endOffset":  35
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "async",
+                                    "es2017",
+                                    "type-dependent",
+                                    "promise"
+                                ],
+                       "creationDate":  "2025-11-28T01:21:19+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "9b432423-374f-4ae5-9349-26670202a49b",
+                       "rule":  "javascript:S9383",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/patient.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  631,
+                       "hash":  "ffe6786db19e8056601d3f39ea5ca044",
+                       "textRange":  {
+                                         "startLine":  631,
+                                         "endLine":  631,
+                                         "startOffset":  16,
+                                         "endOffset":  41
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "async",
+                                    "es2017",
+                                    "type-dependent",
+                                    "promise"
+                                ],
+                       "creationDate":  "2025-11-28T01:21:19+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "LOGICAL",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
+                       "rule":  "python:S4502",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  15,
+                       "hash":  "fded8a50fabf9ea4bae0fadb55cbff78",
+                       "textRange":  {
+                                         "startLine":  15,
+                                         "endLine":  15,
+                                         "startOffset":  6,
+                                         "endOffset":  77
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Make sure disabling CSRF protection is safe here.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "django",
+                                    "flask",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-27T12:34:58+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "HIGH"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "6c238d60-e6aa-4d5f-a31d-d737074c610b",
+                       "rule":  "Web:S5725",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  650,
+                       "hash":  "4ce05f5c68e65811756e849d3bce97b3",
+                       "textRange":  {
+                                         "startLine":  650,
+                                         "endLine":  650,
+                                         "startOffset":  4,
+                                         "endOffset":  61
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add integrity and crossorigin=\"anonymous\" attributes to this element to enforce integrity checks.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-05T01:59:32+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "COMPLETE",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "293203f7-0e0b-4003-89bd-98afbfab2d66",
+                       "rule":  "Web:S5725",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  652,
+                       "hash":  "238d8cb946af69f2d255a44fa5402fa9",
+                       "textRange":  {
+                                         "startLine":  652,
+                                         "endLine":  652,
+                                         "startOffset":  4,
+                                         "endOffset":  95
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add integrity and crossorigin=\"anonymous\" attributes to this element to enforce integrity checks.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-05T01:59:32+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "COMPLETE",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "2c0f6e41-1ed1-4bef-b0ae-97b308b6e7d3",
+                       "rule":  "python:S4507",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  45,
+                       "hash":  "db62cdacf774ccfcd2aa8603b1b0dd6d",
+                       "textRange":  {
+                                         "startLine":  45,
+                                         "endLine":  45,
+                                         "startOffset":  0,
+                                         "endOffset":  26
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Make sure this debug feature is deactivated before delivering the code in production.",
+                       "effort":  "1min",
+                       "debt":  "1min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "error-handling",
+                                    "debug",
+                                    "user-experience",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-10-29T16:07:58+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "b623daee-a59a-4f16-bf0a-02533b1ebdfa",
+                       "rule":  "javascript:S7773",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/app.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  471,
+                       "hash":  "73a635c0b85455bd23733338512a4e03",
+                       "textRange":  {
+                                         "startLine":  471,
+                                         "endLine":  471,
+                                         "startOffset":  22,
+                                         "endOffset":  30
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Prefer `Number.parseInt` over `parseInt`.",
+                       "effort":  "2min",
+                       "debt":  "2min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "convention",
+                                    "es2015",
+                                    "editable-source"
+                                ],
+                       "creationDate":  "2025-10-11T07:24:21+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "CODE_SMELL",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       },
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "55473f5b-ea4d-433c-9fc3-8fcd05413cb9",
+                       "rule":  "javascript:S1534",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/app.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  62,
+                       "hash":  "acd4d43d0a3f1d1abc212846667125d2",
+                       "textRange":  {
+                                         "startLine":  62,
+                                         "endLine":  62,
+                                         "startOffset":  6,
+                                         "endOffset":  23
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Duplicate name \u0027appointmentFilter\u0027.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "vue",
+                                    "react",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2025-10-08T05:19:52+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CLEAR",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "97679e48-b8fb-4947-af3d-934796f5acdf",
+                       "rule":  "python:S5122",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  49,
+                       "hash":  "806573cd79c1328252558ea321ccf38c",
+                       "textRange":  {
+                                         "startLine":  49,
+                                         "endLine":  49,
+                                         "startOffset":  0,
+                                         "endOffset":  9
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Make sure this permissive CORS policy is safe here.",
+                       "effort":  "4h",
+                       "debt":  "4h",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "django",
+                                    "flask",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-10-04T05:40:19+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "COMPLETE",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "fa4d184b-beef-4ef4-b918-0295117797ff",
+                       "rule":  "python:S4507",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  142,
+                       "hash":  "c1dd8cfd81940ee15e460f29e9d3a205",
+                       "textRange":  {
+                                         "startLine":  142,
+                                         "endLine":  142,
+                                         "startOffset":  12,
+                                         "endOffset":  22
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Make sure this debug feature is deactivated before delivering the code in production.",
+                       "effort":  "1min",
+                       "debt":  "1min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "error-handling",
+                                    "debug",
+                                    "user-experience",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-10-04T05:40:19+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "57e453a4-891d-4a01-adac-291deff2a148",
+                       "rule":  "Web:S5725",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  8,
+                       "hash":  "4c038a166dfa201a6654af2ac7dc4306",
+                       "textRange":  {
+                                         "startLine":  8,
+                                         "endLine":  8,
+                                         "startOffset":  4,
+                                         "endOffset":  111
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add integrity and crossorigin=\"anonymous\" attributes to this element to enforce integrity checks.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-10-01T05:31:03+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "COMPLETE",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "c492b8a4-b669-4aef-8aea-30c7b7efcc57",
+                       "rule":  "javascript:S1534",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/app.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  983,
+                       "hash":  "5275516da0f2304c7bc75ee3880adac8",
+                       "textRange":  {
+                                         "startLine":  983,
+                                         "endLine":  983,
+                                         "startOffset":  10,
+                                         "endOffset":  28
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Duplicate name \u0027loadAvailableSlots\u0027.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "vue",
+                                    "react",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2025-09-29T05:30:41+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CLEAR",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "9cd23eff-352d-4c71-9772-7717f7f250e2",
+                       "rule":  "javascript:S1534",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/app.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  852,
+                       "hash":  "21c0b9196e7de96f1d3ae1e5708eaf03",
+                       "textRange":  {
+                                         "startLine":  852,
+                                         "endLine":  852,
+                                         "startOffset":  10,
+                                         "endOffset":  19
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Duplicate name \u0027addDoctor\u0027.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "vue",
+                                    "react",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2025-09-29T05:00:51+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CLEAR",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "86f05192-4c89-4046-938d-33cf10381bf6",
+                       "rule":  "javascript:S1534",
+                       "severity":  "MAJOR",
+                       "component":  "medihub-phase2-candidate:frontend/js/app.js",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  734,
+                       "hash":  "21c0b9196e7de96f1d3ae1e5708eaf03",
+                       "textRange":  {
+                                         "startLine":  734,
+                                         "endLine":  734,
+                                         "startOffset":  10,
+                                         "endOffset":  19
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Duplicate name \u0027addDoctor\u0027.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "vue",
+                                    "react",
+                                    "pitfall"
+                                ],
+                       "creationDate":  "2025-09-28T05:08:45+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "BUG",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  true,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CLEAR",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "RELIABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   },
+                   {
+                       "key":  "d3c95a59-21b0-4f46-9250-33254d3dd1e2",
+                       "rule":  "Web:S5725",
+                       "severity":  "MINOR",
+                       "component":  "medihub-phase2-candidate:frontend/index.html",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  7,
+                       "hash":  "8673da2c89bf8cf917d2404a5b6fb8e5",
+                       "textRange":  {
+                                         "startLine":  7,
+                                         "endLine":  7,
+                                         "startOffset":  4,
+                                         "endOffset":  106
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Add integrity and crossorigin=\"anonymous\" attributes to this element to enforce integrity checks.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-09-23T17:45:56+0000",
+                       "updateDate":  "2026-11-24T16:48:35+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "COMPLETE",
+                       "cleanCodeAttributeCategory":  "INTENTIONAL",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   }
+               ],
+    "components":  [
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/patient.py",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "patient.py",
+                           "longName":  "backend/routes/patient.py",
+                           "path":  "backend/routes/patient.py"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/seed_db.py",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "seed_db.py",
+                           "longName":  "backend/seed_db.py",
+                           "path":  "backend/seed_db.py"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/doctor.js",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "doctor.js",
+                           "longName":  "frontend/js/doctor.js",
+                           "path":  "frontend/js/doctor.js"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/app.py",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "app.py",
+                           "longName":  "backend/app.py",
+                           "path":  "backend/app.py"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/patient.js",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "patient.js",
+                           "longName":  "frontend/js/patient.js",
+                           "path":  "frontend/js/patient.js"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate",
+                           "enabled":  true,
+                           "qualifier":  "TRK",
+                           "name":  "MediHub Phase 2 Candidate",
+                           "longName":  "MediHub Phase 2 Candidate"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/admin.js",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "admin.js",
+                           "longName":  "frontend/js/admin.js",
+                           "path":  "frontend/js/admin.js"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/index.html",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "index.html",
+                           "longName":  "frontend/index.html",
+                           "path":  "frontend/index.html"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/admin.py",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "admin.py",
+                           "longName":  "backend/routes/admin.py",
+                           "path":  "backend/routes/admin.py"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:frontend/js/app.js",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "app.js",
+                           "longName":  "frontend/js/app.js",
+                           "path":  "frontend/js/app.js"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate:backend/routes/doctor.py",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "doctor.py",
+                           "longName":  "backend/routes/doctor.py",
+                           "path":  "backend/routes/doctor.py"
+                       }
+                   ],
+    "facets":  [
+
+               ]
+}

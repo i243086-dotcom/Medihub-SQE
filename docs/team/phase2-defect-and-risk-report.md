@@ -98,3 +98,19 @@ Likelihood and impact below are proposed team-review scores for planning. They u
 | EC-05 PR quality | **Unmet.** Required checks remain red and teammate approvals are pending. |
 
 **Release decision: HOLD.** The user must decide unresolved policy and have genuine teammate review. Integrity remediation needs an agreed migration path and post-fix retest. Maintain the Phase 2 gate on every PR.
+
+## Final remediation checkpoint
+
+On 24 November 2026, the exact candidate `ff80556` passed both integrity corrective actions on disposable SQLite. The development database was preserved. The old issue records, 5 Whys, fishbones and Pareto above document discovery and prior status. The final disposition is recorded separately below.
+
+| Item | Final assessed state |
+|---|---|
+| #5 cancelled capacity | Verified on candidate. The booked-only doctor index allows a distinct active row and preserves cancelled history. |
+| #12 concurrency | Verified on candidate. Ten coordinated races passed with one 200, one controlled 400 and one persisted booking per pair. |
+| #7–#10 validation | Verified on candidate. All Issues remain open for genuine review. |
+| #6 transition | Characterized. The assigned doctor can reopen with free capacity. Slot or patient conflicts roll the write back. |
+| Residual R01 and R02 | Proposed 2 × 5 each. Require migration review, confirmed existing-row compatibility and regression evidence on an offline copy before rollout. |
+| Residual R10 | Current Sonar security gate is red on S4502. Existing installed credentials need rotation before deployment. |
+| Weekly GQM | 10/10 original workflows met scoped functional acceptance. Confirmed defect density 6/1.039 = 5.77 issues per scoped KLOC. Reopen rate N/A. 1.5 human person-hours logged. |
+
+Formal release criteria are in the [final exit review](../../tests/team/evidence/phase2/final-candidate/exit-review.md). Overall decision remains **HOLD**.

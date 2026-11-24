@@ -25,7 +25,7 @@ High risks 13–25 receive guard/transition combinations, boundary checks, datab
 | BR-02 eligibility | A to F are not blacklisted, doctor active, date not past, period available, doctor slot free and patient time free. A false yields 403 first, then B false 404, then first false C/D/E/F 400, then all true 200. Other syntax and slot guards are tested separately. | [All 64 executed combinations](../../tests/team/evidence/phase2/verification/br02-mcc.csv), [six independent pairs](../../tests/team/evidence/phase2/verification/br02-mcdc.csv). The fixture uses independent doctor and patient conflict rows. |
 | BR-03 patient state | A role-admitted patient needs an existing owned row and `booked` source state. Booked→cancelled writes once. Wrong owner or no row yields 404. Owned cancelled, completed and available yield 400 and unchanged data. The patient can cancel after the start under A-02. | `test_br03_cancel_transition`, `test_br03_profile_absent`, UC05, Phase 1 P1-A09/P1-A15. |
 | BR-04 route and ownership | Unauthorized anonymous writes return 401. Wrong authenticated roles return 403 before data changes. Patient booking/cancellation use only patient permissions. Doctor updates also need the assigned doctor. Admin updates use admin permission and reject unknown state labels. | Generated role cases across twelve operations, `test_br04_patient_writes`, `test_doctor_status_other_owner`, browser UC04/UC06. |
-| Doctor/admin transition policy | The test basis defines the permitted actor and recognized status labels. Allowed transitions *between* recognized states from a previously cancelled or completed record still need team confirmation. The historical observed transition matrix and #6 describe behavior. Unknown destinations are rejected from booked, cancelled and completed in the updated build. | Phase 1 P1-doctor-*/P1-admin-* and `test_unknown_status_is_rejected`. |
+| Doctor/admin transitions | The assigned doctor can write booked, cancelled and completed to an existing assigned row. An admin can also write the recognized historical labels canceled and available. Neither route limits the destination by source status. Entering booked requires free doctor capacity and no simultaneous patient booking. | Executed source/destination matrix and #6 characterization below. |
 
 Ordered date points are yesterday, today, tomorrow, days 5/6/7 on the seeded horizon and a farther explicitly configured availability day. A seeded horizon describes fixture availability. EP cases include required/missing/wrong-type documents and fields, existing/nonexistent resources, active and inactive fixtures, ownership and role. Declared time formatting allows the original minute/range inputs in the current version. The versioned overlay intentionally changes the time pattern and doctor status enum to demonstrate the impact of an unapproved policy. Its failures remain distinct from active acceptance.
 
@@ -45,3 +45,29 @@ Owners are proposed pending confirmation. Each row maps five unique JUnit IDs to
 | UC06 Assigned doctor readback, Momin | Patient/doctor accounts and appointment available | N Patient cancels, signs out, and the assigned doctor reads Cancelled. | A1 Assigned doctor reads Booked. A2 Assigned doctor reads Completed. | E1 Unassigned doctor sees an empty list. E2 Doctor has no patient booking tab. | Correct display and unchanged underlying row after readback, FR-08/09. |
 
 The repository [Chromium suite](../../tests/team/e2e/test_appointment_flows.py) asserts these outcomes against the served Vue application. Vue and Bootstrap are fingerprinted. Nonessential third-party browser requests are blocked during tests. The historical Phase 1 flow and the 30 new use-case flows are counted separately.
+
+## Remediation verification on 24 November 2026
+
+Phase 1 already recorded minute offsets, legacy time strings and historical slot listing. The source accepts minutes and parses the start of a range. A historical slot is listed when matching availability exists. Booking past dates remains forbidden. These observations define the acceptance checks. The stricter exact-hour and doctor destination changes remain a separate proposed contract. If the team wants interval overlap checks between different starts, it must first define a duration. The MIS stores a date and start time.
+
+| BR-01 clock group | Before morning, 08:00 | Morning, 09:00 | Midday, 13:00 | Evening, 15:00 | After evening, 19:00 |
+|---|---|---|---|---|---|
+| Past day with available doctor | 400 | 400 | 400 | 400 | 400 |
+| Today, clock before start hour | 400 | 200 | 400 | 200 | 400 |
+| Today, clock at start hour | 400 | 400 | 400 | 400 | 400 |
+| Future day with available doctor | 400 | 200 | 400 | 200 | 400 |
+
+The matrix isolates booking date, period and cutoff. The booked response adds exactly one row and every rejection preserves state. The companion hour and exact cutoff checks cover adjacent hours, date rollover and the seconds just before and after the cutoff. The 64 MCC cases test eligibility, and the six independent pairs compare each flipped predicate with the all-true case. [Executed rule cases](../../tests/team/evidence/phase2/final-candidate/decision-executions.csv)
+
+| BR-03 source | Owner cancels | Other patient cancels | Assigned doctor destinations | Admin destinations |
+|---|---|---|---|---|
+| Booked | 200 → cancelled | 404 | Booked, cancelled, completed | Booked, cancelled, canceled, completed, available |
+| Cancelled | 400 | 404 | Booked, cancelled, completed | Booked, cancelled, canceled, completed, available |
+| Canceled | 400 | 404 | Booked, cancelled, completed | Booked, cancelled, canceled, completed, available |
+| Completed | 400 | 404 | Booked, cancelled, completed | Booked, cancelled, canceled, completed, available |
+| Available | 400 | 404 | Booked, cancelled, completed | Booked, cancelled, canceled, completed, available |
+| Missing record | 404 | 404 | 404 | 404 |
+
+Each staff destination in the table was asserted with a free slot and readback. An unknown destination is rejected from each source for both staff roles. A booked destination with a conflicting slot returns 400 and preserves the old status and notes. An unassigned doctor gets 404. For protected operations under BR-04, anonymous requests get 401 and an authenticated role outside the route’s allowed set gets 403. The generated role matrix exercises each combination for all twelve operations. The app remains the first-party client and sends its token in the authorization header.
+
+Admin rescheduling changes the stored date and time when both are present. Incomplete pairs preserve the timestamp. Generated calendar cases cover leap day and adjacent dates. Generated clock cases straddle 00:00:00 and 23:59:59. The doctor listing readbacks cover yesterday, today, tomorrow, the inclusive 30-day lookback, the intersection of date and status filters, and exclusion of the other doctor’s row. [API coverage matrix](../../tests/team/evidence/phase2/final-candidate/api-coverage-matrix.csv)

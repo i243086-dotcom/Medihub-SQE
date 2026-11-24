@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "backend/routes/patient.py"
+test-command = "/opt/hostedtoolcache/Python/3.11.18/x64/bin/python -B -X utf8 -m pytest -p no:cacheprovider -q --tb=short tests/team/unit/test_appointment_rules.py tests/team/unit/test_appointment_slot_transactions.py -k \"MCC-111111 or MCC-110111 or MCC-111011 or MCC-111101 or MCC-111110 or test_br01 or test_br03 or test_br04_patient_writes or (test_late_booking_conflict_rolls_back and arjun)\""
+timeout = 45
+[cosmic-ray.distributor]
+name = 'local'
+[cosmic-ray.filters.line-filter.lines]
+"backend/routes/patient.py" = ["261-292", "304-339", "344-367"]

@@ -1,0 +1,26 @@
+﻿{
+    "task":  {
+                 "id":  "e9dd2b06-a39f-4000-8a8c-79d89025d129",
+                 "type":  "REPORT",
+                 "componentId":  "edf069c6-feab-4e57-91bb-22df18381bd1",
+                 "componentKey":  "medihub-phase2-candidate",
+                 "componentName":  "MediHub Phase 2 Candidate",
+                 "componentQualifier":  "TRK",
+                 "analysisId":  "be5b316c-49a0-4040-b524-359687be4956",
+                 "status":  "SUCCESS",
+                 "submittedAt":  "2026-11-24T17:14:19+0000",
+                 "submitterLogin":  "admin",
+                 "startedAt":  "2026-11-24T17:14:20+0000",
+                 "executedAt":  "2026-11-24T17:14:24+0000",
+                 "executionTimeMs":  3812,
+                 "hasScannerContext":  true,
+                 "warningCount":  2,
+                 "warnings":  [
+                                  "Your code is analyzed as compatible with Python versions 3.10 through 3.14 by default. You can get a more precise analysis by setting the Python version or version range in your configuration via the parameter \"sonar.python.version\"",
+                                  "Missing blame information for 1 file. This may lead to some features not working correctly. Please check the analysis logs and refer to \u003ca href=\"https://docs.sonarsource.com/sonarqube-community-build/analyzing-source-code/scm-integration/\" rel=\"noopener noreferrer\" target=\"_blank\"\u003ethe documentation\u003c/a\u003e."
+                              ],
+                 "infoMessages":  [
+
+                                  ]
+             }
+}
