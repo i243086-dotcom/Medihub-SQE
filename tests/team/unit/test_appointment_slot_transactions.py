@@ -9,7 +9,7 @@ from sqlalchemy.exc import IntegrityError
 
 from appointment_slots import commit_appointment
 from database import db
-from migrate_appointment_slots import migrate
+from migrate_appointment_slots import main, migrate
 from phase2_support import appointment, booking_payload, snapshots
 
 
@@ -133,3 +133,45 @@ def test_migration_rolls_back_existing_patient_conflicts(tmp_path):
             (1, "booked"), (2, "booked"),
         ]
         assert legacy.execute("SELECT name FROM sqlite_schema WHERE name = 'appointments_rebuilt'").fetchone() is None
+
+
+@pytest.mark.parametrize(("schema", "message"), [
+    ("CREATE TABLE archive (id INTEGER PRIMARY KEY);", "no appointments table"),
+    ("CREATE TABLE appointments (id INTEGER PRIMARY KEY);", "Unsupported appointments schema"),
+    (LEGACY.replace("CREATE TABLE appointments (", "CREATE TABLE [appointments] ("),
+     "Unsupported appointments schema"),
+])
+def test_migration_refuses_unrecognized_databases_without_rebuilding(tmp_path, schema, message):
+    path = tmp_path / "not_supported.sqlite"
+    with closing(sqlite3.connect(path)) as connection:
+        connection.executescript(schema)
+    before = path.read_bytes()
+    with pytest.raises(ValueError, match=message):
+        migrate(path)
+    assert path.read_bytes() == before
+
+
+def test_migration_rolls_back_when_foreign_key_validation_detects_orphan(tmp_path):
+    path = tmp_path / "legacy_orphan.sqlite"
+    with closing(sqlite3.connect(path)) as connection, connection:
+        connection.executescript(LEGACY)
+        # Recreate a legacy orphan from installations that disabled FK enforcement.
+        connection.execute("INSERT INTO treatments VALUES (1, 999)")
+    with pytest.raises(ValueError, match="Foreign key validation failed"):
+        migrate(path)
+    with closing(sqlite3.connect(path)) as connection:
+        assert connection.execute("SELECT appointment_id FROM treatments").fetchall() == [(999,)]
+        indexes = {row[1] for row in connection.execute("PRAGMA index_list(appointments)")}
+        assert "unique_booked_doctor_slot" not in indexes
+        assert "history_patient" in indexes
+
+
+def test_migration_cli_reports_first_upgrade_and_safe_repeat(tmp_path, monkeypatch, capsys):
+    path = tmp_path / "legacy_cli.sqlite"
+    with closing(sqlite3.connect(path)) as connection:
+        connection.executescript(LEGACY)
+    monkeypatch.setattr("sys.argv", ["migrate_appointment_slots.py", str(path)])
+    main()
+    assert capsys.readouterr().out.strip() == "Migrated appointment slots"
+    main()
+    assert capsys.readouterr().out.strip() == "Appointment slot indexes already installed"
