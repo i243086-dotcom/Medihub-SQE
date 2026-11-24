@@ -58,11 +58,12 @@ def appointment(doctor=1, patient=1, day=TOMORROW, hour=BASE_TIME, status="booke
     return row
 
 
-def snapshots():
+def snapshots(*, include_seconds=False):
+    time_format = "%H:%M:%S" if include_seconds else "%H:%M"
     db.session.expire_all()
     return [
         (r.id, r.patient_id, r.doctor_id, r.appointment_date.isoformat(),
-         r.appointment_time.strftime("%H:%M"), r.status, r.notes)
+         r.appointment_time.strftime(time_format), r.status, r.notes)
         for r in db.session.query(Appointment).order_by(Appointment.id)
     ]
 

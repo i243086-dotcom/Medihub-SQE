@@ -135,7 +135,7 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           mkdir evidence
-          python -m pytest tests/team/unit -q --tb=short --cov=backend --cov-branch --cov-report=xml:coverage.xml
+          python -m pytest tests/team/unit tests/team/api -q --tb=short --cov=backend --cov-branch --cov-report=xml:coverage.xml
           export SONAR_HOST_URL=http://127.0.0.1:9000
           # This token exists only in this job's isolated, newly bootstrapped instance.
           SONAR_TOKEN=$(curl -fsS -u admin:admin -X POST "${SONAR_HOST_URL}/api/user_tokens/generate" --data-urlencode name=ci-analysis | jq -er '.token')
@@ -143,8 +143,20 @@ jobs:
           export SONAR_TOKEN
           # Use a non-PR scanner context for the Community Build full analysis.
           # The GitHub workflow still runs on the actual PR merge commit.
-          env -u GITHUB_WORKFLOW -u GITHUB_ACTIONS GITHUB_EVENT_NAME=workflow_dispatch pysonar "-Dsonar.scm.revision=$(git rev-parse HEAD)" "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt
-          python tests/team/tools/sonar_gate.py "medihub-pr-$PR_NUMBER" evidence/sonar-measures.json
+          scanner=0
+          if env -u GITHUB_WORKFLOW -u GITHUB_ACTIONS GITHUB_EVENT_NAME=workflow_dispatch pysonar "-Dsonar.scm.revision=$(git rev-parse HEAD)" "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt; then
+            echo "Scanner and native gate passed"
+          else
+            scanner=$?
+          fi
+          # Export the project-wide checks even when the native gate failed.
+          overall=0
+          if python tests/team/tools/sonar_gate.py "medihub-pr-$PR_NUMBER" evidence/sonar-measures.json; then
+            echo "Overall gate passed"
+          else
+            overall=$?
+          fi
+          test "$scanner" -eq 0 && test "$overall" -eq 0
       - uses: actions/upload-artifact@v4
         if: always()
         with:

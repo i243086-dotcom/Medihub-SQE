@@ -2,6 +2,7 @@
 
 import json
 import os
+from datetime import time
 from pathlib import Path
 
 import pytest
@@ -25,7 +26,7 @@ def test_generated_contract(phase2, case, record_property):
     if case["fixture"] == "appointment":
         appointment()
         db.session.commit()
-    before = snapshots()
+    before = snapshots(include_seconds=True)
     inputs = case["input"]
     path = case["path"].format(**inputs["path"])
     options = {"headers": headers.get(ACTORS[case["actor"]]), "query_string": inputs["query"]}
@@ -35,7 +36,7 @@ def test_generated_contract(phase2, case, record_property):
         options["json"] = inputs["body"]
 
     response = client.open(path, method=case["method"], **options)
-    after = snapshots()
+    after = snapshots(include_seconds=True)
     body = response.get_json(silent=True)
     record_property("operation", case["operation"])
     record_property("expected_status", case["expected_status"])
@@ -48,6 +49,7 @@ def test_generated_contract(phase2, case, record_property):
     if case["response_schema"]:
         if response.status_code == 405:
             assert response.mimetype == "text/html"
+            record_property("response_check", "html-media-type")
         else:
             assert isinstance(body, dict)
         if case["operation"] == "login" and response.status_code == 200:
@@ -55,14 +57,16 @@ def test_generated_contract(phase2, case, record_property):
             body = {**body, "data": {"user": body["data"]["user"]}}
         if response.status_code != 405:
             OAS30Validator(case["response_schema"]).validate(body)
+            record_property("response_check", "json-schema")
 
     operation = case["operation"]
     if response.status_code != 200 or case["method"] == "GET" or operation == "login":
         assert after == before
     elif operation == "book":
         saved = body["data"]["appointment"]
+        start = inputs["body"]["appointment_time"].split("-", 1)[0].strip()
         assert after == before + [(saved["id"], 1, int(inputs["body"]["doctor_id"]),
-                                   inputs["body"]["appointment_date"], inputs["body"]["appointment_time"][:5],
+                                   inputs["body"]["appointment_date"], time.fromisoformat(start).isoformat(),
                                    "booked", inputs["body"].get("notes", ""))]
     elif operation == "cancel":
         assert len(after) == 1 and after[0] == (*before[0][:5], "cancelled", before[0][6])
@@ -70,7 +74,7 @@ def test_generated_contract(phase2, case, record_property):
         request = inputs["body"]
         expected = list(before[0])
         if operation == "adminStatus" and "appointment_date" in request and "appointment_time" in request:
-            expected[3:5] = request["appointment_date"], request["appointment_time"][:5]
+            expected[3:5] = request["appointment_date"], time.fromisoformat(request["appointment_time"]).isoformat()
         for key, index in (("status", 5), ("notes", 6)):
             if key in request:
                 expected[index] = request[key]

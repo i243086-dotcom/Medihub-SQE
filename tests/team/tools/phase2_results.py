@@ -147,9 +147,10 @@ def generated(evidence, suite):
         if match:
             properties[match[1]] = {p.get("name"): p.get("value") for p in case.iter("property")}
     with (evidence / "api-coverage-matrix.csv").open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(["operation", "cases", "pass", "http_codes_observed", "roles_attempted",
-                         "ep_partitions", "bva_points", "fields_varied", "response_schemas_checked"])
+                         "ep_partitions", "bva_points", "fields_varied", "json_schema_validations",
+                         "html_media_type_checks"])
         for op in sorted(REFS):
             cases = [x for x in old.values() if x["operation"] == op]
             count = sum(current_results.get(x["id"]) == "PASS" for x in cases)
@@ -159,7 +160,10 @@ def generated(evidence, suite):
                              sum(c["probe"] == "partition" for c in cases),
                              sum(c["probe"] == "boundary" for c in cases),
                              ";".join(sorted({c["field"] for c in cases if c["field"]})),
-                             sum(bool(c["response_schema"]) and current_results.get(c["id"]) == "PASS" for c in cases)])
+                             sum(properties[c["id"]].get("response_check") == "json-schema" and
+                                 current_results.get(c["id"]) == "PASS" for c in cases),
+                             sum(properties[c["id"]].get("response_check") == "html-media-type" and
+                                 current_results.get(c["id"]) == "PASS" for c in cases)])
 
 
 def mutation_key(result):

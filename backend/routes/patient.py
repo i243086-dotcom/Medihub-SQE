@@ -456,7 +456,8 @@ def get_history():
 @patient_bp.route('/doctor/availability/<int:doctor_id>', methods=['GET'])
 @patient_required
 def get_doctor_availability(doctor_id):
-    doctor = Doctor.query.get(doctor_id)
+    # Werkzeug accepts larger path integers than SQLite can bind.
+    doctor = db.session.get(Doctor, doctor_id) if doctor_id < 2 ** 63 else None
     
     if doctor is None or not doctor.is_active:
         return jsonify({'success': False, 'message': 'Doctor not found or inactive', 'errors': ['Invalid doctor']}), 404

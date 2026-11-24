@@ -20,7 +20,7 @@ def main():
     args = parser.parse_args()
     metrics = [*LIMITS, "complexity", "cognitive_complexity", "code_smells", "bugs",
                "vulnerabilities", "coverage", "line_coverage", "branch_coverage",
-               "sqale_index", "sqale_rating", "ncloc"]
+               "sqale_index", "sqale_rating", "ncloc", "new_coverage"]
     host = os.environ["SONAR_HOST_URL"]
     token = os.environ["SONAR_TOKEN"]
     with requests.Session() as client:
@@ -36,6 +36,14 @@ def main():
                           timeout=25)
         tree.raise_for_status()
         source_paths = {item["path"] for item in tree.json()["components"]}
+        native = client.get(host + "/api/qualitygates/project_status",
+                            params={"projectKey": args.project}, timeout=25)
+        native.raise_for_status()
+        native_gate = native.json()["projectStatus"]
+        history = client.get(host + "/api/project_analyses/search",
+                             params={"project": args.project, "ps": 1}, timeout=25)
+        history.raise_for_status()
+        analyses = history.json()
     measured = {item["metric"]: item.get("value") for item in report["component"]["measures"]}
     assertions = {key: key in measured and float(measured[key]) <= limit for key, limit in LIMITS.items()}
     checks = {
@@ -44,10 +52,12 @@ def main():
         "coverage_imported": float(measured.get("coverage", 0)) > 0 and "branch_coverage" in measured,
     }
     args.output.write_text(json.dumps({"raw": report, "limits": LIMITS, "passed": assertions,
-                                      "scope_checks": checks, "source_paths": sorted(source_paths)},
+                                      "scope_checks": checks, "source_paths": sorted(source_paths),
+                                      "native_gate": native_gate, "analysis_history": analyses},
                                       indent=2) + "\n", encoding="utf-8")
     print("Overall Sonar gate:", assertions)
     print("Sonar source and coverage checks:", checks)
+    print("Native gate and evaluated conditions:", native_gate["status"], native_gate["conditions"])
     return int(not (all(assertions.values()) and all(checks.values())))
 
 
