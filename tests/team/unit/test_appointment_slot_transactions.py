@@ -37,6 +37,7 @@ def test_late_booking_conflict_rolls_back(phase2, monkeypatch, actor, route):
     else:
         result = client.put(route, json={"status": "booked", "notes": "must roll back"}, headers=headers[actor])
     assert result.status_code == 400
+    assert result.get_json()["success"] is False
     assert result.get_json()["message"] == "That appointment time conflicts with an existing booking"
     assert snapshots() == before
 
