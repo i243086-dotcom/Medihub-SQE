@@ -144,6 +144,29 @@ def test_br03_profile_absent(phase2, monkeypatch):
     assert snapshots() == []
 
 
+@pytest.mark.parametrize(('verb', 'route', 'account'), [
+    ('delete', '/api/patient/appointments/{id}', 'arjun'),
+    ('put', '/api/doctor/appointments/{id}/status', 'ajay'),
+    ('put', '/api/admin/appointments/{id}', 'admin'),
+])
+@pytest.mark.parametrize('overflow', [False, True], ids=['maximum', 'overflow'])
+def test_br03_appointment_id_sqlite_limit(phase2, verb, route, account, overflow):
+    client, headers = phase2
+    maximum = 2 ** 63 - 1
+    appointment().id = maximum
+    db.session.commit()
+    before = snapshots()
+    response = getattr(client, verb)(route.format(id=maximum + overflow), headers=headers[account],
+                                    json={'status': 'completed'})
+    assert response.status_code == (404 if overflow else 200)
+    if overflow:
+        assert response.get_json()['message'] == 'Appointment not found'
+        assert snapshots() == before
+    else:
+        destination = 'cancelled' if verb == 'delete' else 'completed'
+        assert snapshots() == [(*before[0][:5], destination, before[0][6])]
+
+
 @pytest.mark.parametrize(("role", "status"), [("ajay", 403), ("admin", 403), (None, 401)])
 @pytest.mark.parametrize("verb", ["post", "delete"])
 def test_br04_patient_writes(phase2, role, status, verb):

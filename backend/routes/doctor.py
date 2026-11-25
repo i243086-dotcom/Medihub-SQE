@@ -181,7 +181,10 @@ def update_appointment_status(appointment_id):
     if doctor is None:
         return jsonify({'success': False, 'message': 'Doctor profile not found', 'errors': ['Profile not found']}), 404
     
-    appointment = Appointment.query.filter_by(id=appointment_id, doctor_id=doctor.id).first()
+    appointment = (
+        Appointment.query.filter_by(id=appointment_id, doctor_id=doctor.id).first()
+        if appointment_id < 2 ** 63 else None
+    )
     
     if appointment is None:
         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404

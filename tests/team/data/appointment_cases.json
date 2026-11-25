@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "clock_date": "2030-01-15",
   "cases": [
     {
@@ -7236,50 +7236,6 @@
       "probe": "role"
     },
     {
-      "id": "GEN-cancel-path-appointment_id-0",
-      "operation": "cancel",
-      "method": "DELETE",
-      "path": "/api/patient/appointments/{appointment_id}",
-      "actor": "patient",
-      "fixture": "appointment",
-      "input": {
-        "query": {},
-        "path": {
-          "appointment_id": 0
-        },
-        "body": {}
-      },
-      "raw_body": null,
-      "expected_status": 404,
-      "response_schema": {
-        "type": "object",
-        "anyOf": [
-          {
-            "required": [
-              "message"
-            ],
-            "properties": {
-              "message": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "required": [
-              "msg"
-            ],
-            "properties": {
-              "msg": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-      "field": "path-appointment_id",
-      "probe": "partition"
-    },
-    {
       "id": "GEN-cancel-path-appointment_id-2",
       "operation": "cancel",
       "method": "DELETE",
@@ -7366,6 +7322,226 @@
       },
       "field": "path-appointment_id",
       "probe": "partition"
+    },
+    {
+      "id": "GEN-cancel-path-appointment_id-negative-1",
+      "operation": "cancel",
+      "method": "DELETE",
+      "path": "/api/patient/appointments/{appointment_id}",
+      "actor": "patient",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": -1
+        },
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 405,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-cancel-path-appointment_id-0",
+      "operation": "cancel",
+      "method": "DELETE",
+      "path": "/api/patient/appointments/{appointment_id}",
+      "actor": "patient",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 0
+        },
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-cancel-path-appointment_id-9223372036854775806",
+      "operation": "cancel",
+      "method": "DELETE",
+      "path": "/api/patient/appointments/{appointment_id}",
+      "actor": "patient",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775806
+        },
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-cancel-path-appointment_id-9223372036854775807",
+      "operation": "cancel",
+      "method": "DELETE",
+      "path": "/api/patient/appointments/{appointment_id}",
+      "actor": "patient",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775807
+        },
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-cancel-path-appointment_id-9223372036854775808",
+      "operation": "cancel",
+      "method": "DELETE",
+      "path": "/api/patient/appointments/{appointment_id}",
+      "actor": "patient",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775808
+        },
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
     },
     {
       "id": "GEN-doctorList-valid",
@@ -9159,53 +9335,6 @@
       "probe": "role"
     },
     {
-      "id": "GEN-doctorStatus-path-appointment_id-0",
-      "operation": "doctorStatus",
-      "method": "PUT",
-      "path": "/api/doctor/appointments/{appointment_id}/status",
-      "actor": "doctor",
-      "fixture": "appointment",
-      "input": {
-        "query": {},
-        "path": {
-          "appointment_id": 0
-        },
-        "body": {
-          "status": "completed",
-          "notes": "Synthetic notes"
-        }
-      },
-      "raw_body": null,
-      "expected_status": 404,
-      "response_schema": {
-        "type": "object",
-        "anyOf": [
-          {
-            "required": [
-              "message"
-            ],
-            "properties": {
-              "message": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "required": [
-              "msg"
-            ],
-            "properties": {
-              "msg": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-      "field": "path-appointment_id",
-      "probe": "partition"
-    },
-    {
       "id": "GEN-doctorStatus-path-appointment_id-2",
       "operation": "doctorStatus",
       "method": "PUT",
@@ -9298,6 +9427,241 @@
       },
       "field": "path-appointment_id",
       "probe": "partition"
+    },
+    {
+      "id": "GEN-doctorStatus-path-appointment_id-negative-1",
+      "operation": "doctorStatus",
+      "method": "PUT",
+      "path": "/api/doctor/appointments/{appointment_id}/status",
+      "actor": "doctor",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": -1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 405,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-doctorStatus-path-appointment_id-0",
+      "operation": "doctorStatus",
+      "method": "PUT",
+      "path": "/api/doctor/appointments/{appointment_id}/status",
+      "actor": "doctor",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 0
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-doctorStatus-path-appointment_id-9223372036854775806",
+      "operation": "doctorStatus",
+      "method": "PUT",
+      "path": "/api/doctor/appointments/{appointment_id}/status",
+      "actor": "doctor",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775806
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-doctorStatus-path-appointment_id-9223372036854775807",
+      "operation": "doctorStatus",
+      "method": "PUT",
+      "path": "/api/doctor/appointments/{appointment_id}/status",
+      "actor": "doctor",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775807
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-doctorStatus-path-appointment_id-9223372036854775808",
+      "operation": "doctorStatus",
+      "method": "PUT",
+      "path": "/api/doctor/appointments/{appointment_id}/status",
+      "actor": "doctor",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775808
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
     },
     {
       "id": "GEN-doctorStatus-body-status-missing",
@@ -10692,55 +11056,6 @@
       "probe": "role"
     },
     {
-      "id": "GEN-adminStatus-path-appointment_id-0",
-      "operation": "adminStatus",
-      "method": "PUT",
-      "path": "/api/admin/appointments/{appointment_id}",
-      "actor": "admin",
-      "fixture": "appointment",
-      "input": {
-        "query": {},
-        "path": {
-          "appointment_id": 0
-        },
-        "body": {
-          "status": "completed",
-          "notes": "Synthetic notes",
-          "appointment_date": "2030-01-17",
-          "appointment_time": "11:00"
-        }
-      },
-      "raw_body": null,
-      "expected_status": 404,
-      "response_schema": {
-        "type": "object",
-        "anyOf": [
-          {
-            "required": [
-              "message"
-            ],
-            "properties": {
-              "message": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "required": [
-              "msg"
-            ],
-            "properties": {
-              "msg": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-      "field": "path-appointment_id",
-      "probe": "partition"
-    },
-    {
       "id": "GEN-adminStatus-path-appointment_id-2",
       "operation": "adminStatus",
       "method": "PUT",
@@ -10837,6 +11152,251 @@
       },
       "field": "path-appointment_id",
       "probe": "partition"
+    },
+    {
+      "id": "GEN-adminStatus-path-appointment_id-negative-1",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": -1
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 405,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-path-appointment_id-0",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 0
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-path-appointment_id-9223372036854775806",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775806
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-path-appointment_id-9223372036854775807",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775807
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-adminStatus-path-appointment_id-9223372036854775808",
+      "operation": "adminStatus",
+      "method": "PUT",
+      "path": "/api/admin/appointments/{appointment_id}",
+      "actor": "admin",
+      "fixture": "appointment",
+      "input": {
+        "query": {},
+        "path": {
+          "appointment_id": 9223372036854775808
+        },
+        "body": {
+          "status": "completed",
+          "notes": "Synthetic notes",
+          "appointment_date": "2030-01-17",
+          "appointment_time": "11:00"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 404,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "path-appointment_id",
+      "probe": "boundary"
     },
     {
       "id": "GEN-adminStatus-body-status-missing",

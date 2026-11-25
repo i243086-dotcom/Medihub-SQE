@@ -1,0 +1,120 @@
+﻿[
+    {
+        "number":  12,
+        "state":  "OPEN",
+        "title":  "Concurrent appointment submissions can leave conflicting bookings",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/12",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-high",
+                                     "priority-high",
+                                     "status-confirmed",
+                                     "cat-state-integrity",
+                                     "status-fix-verified"
+                                 ],
+                       "Count":  6
+                   }
+    },
+    {
+        "number":  10,
+        "state":  "OPEN",
+        "title":  "Booking with a null JSON body returns HTTP 500",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/10",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-medium",
+                                     "priority-medium",
+                                     "status-confirmed",
+                                     "cat-validation",
+                                     "status-fix-verified"
+                                 ],
+                       "Count":  6
+                   }
+    },
+    {
+        "number":  9,
+        "state":  "OPEN",
+        "title":  "Booking with numeric appointment_time returns HTTP 500",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/9",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-medium",
+                                     "priority-medium",
+                                     "status-confirmed",
+                                     "cat-validation",
+                                     "status-fix-verified"
+                                 ],
+                       "Count":  6
+                   }
+    },
+    {
+        "number":  8,
+        "state":  "OPEN",
+        "title":  "Booking with non-time appointment_time (abc) returns HTTP 500",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/8",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-medium",
+                                     "priority-medium",
+                                     "status-confirmed",
+                                     "cat-validation",
+                                     "status-fix-verified"
+                                 ],
+                       "Count":  6
+                   }
+    },
+    {
+        "number":  7,
+        "state":  "OPEN",
+        "title":  "Admin endpoint stores any status string (for example banana)",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/7",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-medium",
+                                     "priority-medium",
+                                     "status-confirmed",
+                                     "cat-validation",
+                                     "status-fix-verified"
+                                 ],
+                       "Count":  6
+                   }
+    },
+    {
+        "number":  6,
+        "state":  "OPEN",
+        "title":  "Doctor can set a cancelled appointment back to booked",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/6",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-medium",
+                                     "priority-medium",
+                                     "status-triaged",
+                                     "cat-state-integrity"
+                                 ],
+                       "Count":  5
+                   }
+    },
+    {
+        "number":  5,
+        "state":  "OPEN",
+        "title":  "Rebooking a cancelled slot returns HTTP 500",
+        "url":  "https://github.com/i243086-dotcom/Medihub-SQE/issues/5",
+        "labels":  {
+                       "value":  [
+                                     "bug",
+                                     "severity-high",
+                                     "priority-high",
+                                     "status-confirmed",
+                                     "cat-state-integrity",
+                                     "status-fix-verified"
+                                 ],
+                       "Count":  6
+                   }
+    }
+]

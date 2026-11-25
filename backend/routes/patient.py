@@ -351,7 +351,7 @@ def cancel_appointment(appointment_id):
     appointment = Appointment.query.filter_by(
         id=appointment_id,
         patient_id=patient.id
-    ).first()
+    ).first() if appointment_id < 2 ** 63 else None
     
     if appointment is None:
         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404

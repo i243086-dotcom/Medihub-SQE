@@ -184,7 +184,7 @@ def get_appointments():
 @admin_bp.route('/appointments/<int:appointment_id>', methods=['PUT'])
 @admin_required
 def update_appointment(appointment_id):
-    appointment = Appointment.query.get(appointment_id)
+    appointment = db.session.get(Appointment, appointment_id) if appointment_id < 2 ** 63 else None
     
     if appointment is None:
         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404

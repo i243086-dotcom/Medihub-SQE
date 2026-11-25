@@ -53,6 +53,11 @@ def reference(name, parameter):
         return "Proposed FR-11;Proposed FR-12", "BR-03;BR-04", "R06"
     if "doctor_date_and_filter" in name:
         return "FR-08", "BR-04", "R03;R04"
+    if "appointment_id_sqlite_limit" in name:
+        requirement = "FR-06;FR-07" if "delete" in parameter else (
+            "Proposed FR-11" if "ajay" in parameter else "Proposed FR-12"
+        )
+        return requirement, "BR-03;BR-04", "R06;R08"
     if "br01" in name or "slot" in name or "availability" in name:
         return "FR-02;FR-04", "BR-01", "R04;R05"
     if "br03" in name or "cancel" in name:

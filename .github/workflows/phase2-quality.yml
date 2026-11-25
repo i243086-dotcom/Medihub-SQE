@@ -133,6 +133,7 @@ jobs:
         shell: bash
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           mkdir evidence
           python -m pytest tests/team/unit tests/team/api -q --tb=short --cov=backend --cov-branch --cov-report=xml:coverage.xml
@@ -141,17 +142,35 @@ jobs:
           SONAR_TOKEN=$(curl -fsS -u admin:admin -X POST "${SONAR_HOST_URL}/api/user_tokens/generate" --data-urlencode name=ci-analysis | jq -er '.token')
           echo "::add-mask::$SONAR_TOKEN"
           export SONAR_TOKEN
-          # Use a non-PR scanner context for the Community Build full analysis.
-          # The GitHub workflow still runs on the actual PR merge commit.
+          # Community Build scans the checked-out merge revision as a full project.
+          # Seed its temporary history from the actual target branch revision.
+          project="medihub-pr-$PR_NUMBER"
+          baseline_dir="$RUNNER_TEMP/medihub-sonar-base"
+          git clone --quiet --shared --no-checkout "$GITHUB_WORKSPACE" "$baseline_dir"
+          git -C "$baseline_dir" checkout --quiet --detach "$BASE_SHA"
+          cp sonar-project.properties "$baseline_dir/sonar-project.properties"
+          scan() {
+            env -u GITHUB_WORKFLOW -u GITHUB_ACTIONS GITHUB_EVENT_NAME=workflow_dispatch \
+              pysonar "-Dsonar.projectKey=$project" -Dsonar.qualitygate.wait=true "$@"
+          }
+          baseline_date=$(git show -s --format=%cs "$BASE_SHA")
+          (
+            cd "$baseline_dir"
+            scan "-Dsonar.projectVersion=base-$BASE_SHA" "-Dsonar.projectDate=$baseline_date" \
+              "-Dsonar.scm.revision=$BASE_SHA"
+          ) 2>&1 | tee evidence/sonar-baseline.txt
+
+          revision=$(git rev-parse HEAD)
           scanner=0
-          if env -u GITHUB_WORKFLOW -u GITHUB_ACTIONS GITHUB_EVENT_NAME=workflow_dispatch pysonar "-Dsonar.scm.revision=$(git rev-parse HEAD)" "-Dsonar.projectKey=medihub-pr-$PR_NUMBER" -Dsonar.qualitygate.wait=true 2>&1 | tee evidence/sonar.txt; then
+          if scan "-Dsonar.projectVersion=candidate-$revision" "-Dsonar.scm.revision=$revision" 2>&1 | tee evidence/sonar.txt; then
             echo "Scanner and native gate passed"
           else
             scanner=$?
           fi
           # Export the project-wide checks even when the native gate failed.
           overall=0
-          if python tests/team/tools/sonar_gate.py "medihub-pr-$PR_NUMBER" evidence/sonar-measures.json; then
+          if python tests/team/tools/sonar_gate.py "$project" evidence/sonar-measures.json \
+            --baseline "$BASE_SHA" --revision "$revision"; then
             echo "Overall gate passed"
           else
             overall=$?
