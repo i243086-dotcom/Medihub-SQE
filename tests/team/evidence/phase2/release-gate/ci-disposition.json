@@ -1,0 +1,149 @@
+{
+  "result": "applied",
+  "reviewed_revision": "fde115c32e10703ad48219ae0882f172afc45a17",
+  "candidate_revision": "8699eb0ee8e1dc53039b56528374cd9ab9013b50",
+  "local_issue_key": "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
+  "reviews": [
+    {
+      "author": "mominkhawaja-codes",
+      "approval_id": 6060172704,
+      "comment_id": 7166317600,
+      "body_sha256": "6bf91a9ac362e44d38e8d771f1851cf22352096c64aa7aafa0a07c942e035578"
+    },
+    {
+      "author": "m-shaheer-shoaib",
+      "approval_id": 6060195702,
+      "comment_id": 7165956390,
+      "body_sha256": "cfc0523cce6f9ee3d3b6b720b6710a2a2248ae75683268e42d5b8326f6d18113"
+    }
+  ],
+  "before": {
+    "key": "d7482615-fca7-4c77-b8fc-9f49c81fd74f",
+    "rule": "python:S4502",
+    "severity": "CRITICAL",
+    "component": "medihub-pr-11:backend/app.py",
+    "project": "medihub-pr-11",
+    "line": 15,
+    "hash": "fded8a50fabf9ea4bae0fadb55cbff78",
+    "textRange": {
+      "startLine": 15,
+      "endLine": 15,
+      "startOffset": 6,
+      "endOffset": 77
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure disabling CSRF protection is safe here.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "142301030+aloktripathi1@users.noreply.github.com",
+    "tags": [
+      "cwe",
+      "django",
+      "flask",
+      "former-hotspot"
+    ],
+    "creationDate": "2025-11-27T12:34:58+0000",
+    "updateDate": "2026-11-22T00:00:00+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "SECURITY",
+        "severity": "HIGH"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  "after": {
+    "key": "d7482615-fca7-4c77-b8fc-9f49c81fd74f",
+    "rule": "python:S4502",
+    "severity": "CRITICAL",
+    "component": "medihub-pr-11:backend/app.py",
+    "project": "medihub-pr-11",
+    "line": 15,
+    "hash": "fded8a50fabf9ea4bae0fadb55cbff78",
+    "textRange": {
+      "startLine": 15,
+      "endLine": 15,
+      "startOffset": 6,
+      "endOffset": 77
+    },
+    "flows": [],
+    "resolution": "FALSE-POSITIVE",
+    "status": "RESOLVED",
+    "message": "Make sure disabling CSRF protection is safe here.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "142301030+aloktripathi1@users.noreply.github.com",
+    "tags": [
+      "cwe",
+      "django",
+      "flask",
+      "former-hotspot"
+    ],
+    "comments": [
+      {
+        "key": "707604cb-43b9-4b87-b6a7-69be6d5dd9bd",
+        "login": "admin",
+        "htmlText": "Phase 2 reviewed false positive for header-only JWT. All 14 protected write routes rejected cookie-only authentication. The public auth routes set no authenticated cookie, and five CORS preflights granted neither origins nor credentials. Local issue 3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2. Independent reviewer evidence: <a href=\"https://github.com/i243086-dotcom/Medihub-SQE/pull/11.\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/i243086-dotcom/Medihub-SQE/pull/11.</a>",
+        "markdown": "Phase 2 reviewed false positive for header-only JWT. All 14 protected write routes rejected cookie-only authentication. The public auth routes set no authenticated cookie, and five CORS preflights granted neither origins nor credentials. Local issue 3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2. Independent reviewer evidence: https://github.com/i243086-dotcom/Medihub-SQE/pull/11.",
+        "updatable": true,
+        "createdAt": "2026-11-25T17:24:57+0000"
+      }
+    ],
+    "creationDate": "2025-11-27T12:34:58+0000",
+    "updateDate": "2026-11-25T17:24:57+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "SECURITY",
+        "severity": "HIGH"
+      }
+    ],
+    "issueStatus": "FALSE_POSITIVE",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  "history": [
+    {
+      "user": "admin",
+      "userName": "Administrator",
+      "creationDate": "2026-11-25T17:24:57+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "newValue": "FALSE-POSITIVE"
+        },
+        {
+          "key": "status",
+          "newValue": "RESOLVED",
+          "oldValue": "OPEN"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "FALSE_POSITIVE",
+          "oldValue": "OPEN"
+        }
+      ],
+      "isUserActive": true
+    }
+  ]
+}

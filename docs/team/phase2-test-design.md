@@ -8,7 +8,7 @@ The Section 2 scope is patient appointment discovery, booking, cancellation and 
 |---|---|---|
 | Static analysis, white box and CI | Syed Ayaan Haider | Phase 2 execution approved on 23 November 2026. Sonar submitted and Actions triggered on that date. |
 | API specification, generator and integration | Shaheer Shoaib | Local API/design execution on 23 November 2026. Ownership and review pending. |
-| Browser and use cases | Two proposed use cases per person below | Local Chromium execution on 23 November 2026. Ownership sign-off pending. |
+| Browser and use cases | Agreed two-per-member allocation below | Local Chromium execution on 23 November 2026. Ownership is agreed. Individual authorship or execution awaits confirmation. |
 | Defect and delivery management | All three members | GitHub triage and evidence review on 23 November 2026. Individual effort and review pending. |
 
 The continuous report records the PERT forecasts of **129.8 person-hours** for Phase 2 and **156.5** including later work. The time log contains 1.5 recorded person-hours for setup. It cannot support a total actual-versus-estimate comparison. The listed ownership and milestone dates are planning assignments or actual test dates. No agreed deadline or additional teammate hours were observed.
@@ -18,6 +18,8 @@ To close the team records, supply the original planned start and finish dates in
 Entry requires the baselined test scope, versioned inputs, disposable SQLite and a verified database safety guard. Suspend deployment if a release gate fails, a test writes to the development database, or a critical policy or environment assertion cannot be verified. Independent diagnostics may continue on isolated data. Resume the affected run after validating the corrected fixture, tool or approved policy and repeating the original oracle.
 
 High risks 13–25 receive guard/transition combinations, boundary checks, database readback, mutation and release-gate checks as applicable. Medium risks 6–12 receive EP, real BVA and negative readback. Low risks 1–5 receive the agreed happy path and impact-appropriate regression.
+
+The owner confirmed 22?25 November 2026 as the activity period and the two-use-case allocation below. The editable schedule reconstructs proposed task dates and hours for that period. See the linked evidence for formal reviews, the sole verified 1.5-hour setup entry, and the outstanding individual confirmations. [Editable schedule](../../tests/team/evidence/phase2/release-gate/effort-plan.csv) ? [Ownership and confirmed activities](../../tests/team/evidence/phase2/release-gate/ownership-and-effort.md)
 
 ## Decision, transition and boundary design
 
@@ -37,7 +39,7 @@ The coverage denominator inventories the deployed functions in `phase2_metrics.p
 
 Owners are proposed pending confirmation. Each row maps five unique JUnit IDs to the executable flow. Setup uses seeded synthetic logins, no live email and a disposable SQLite engine on loopback. Every flow checks the visible result and relevant database postcondition.
 
-| Use case and proposed owner | Preconditions and trigger | Normal flow | Alternatives | Exceptions | Postconditions and FR |
+| Use case and agreed owner | Preconditions and trigger | Normal flow | Alternatives | Exceptions | Postconditions and FR |
 |---|---|---|---|---|---|
 | UC01 Discover a doctor, Syed | Signed-in patient opens Book Appointment | N Cardiology and Ajay select the date control | A1 Neurology and Rajesh. A2 Doctor Profile then Book Appointment. | E1 An inactive doctor's specialty is absent. E2 Confirm is disabled before selection. | Selection is presented without creating a row, FR-01. |
 | UC02 Choose a day, Syed | A doctor is selected and user fills the date control | N Tomorrow shows morning/evening slots. | A1 Today before the cutoff. A2 Last configured seed date. | E1 Beyond configured date shows no slots. E2 Yesterday is below the form minimum. | Visible controls reflect the date and no appointment is written, FR-02/04. |

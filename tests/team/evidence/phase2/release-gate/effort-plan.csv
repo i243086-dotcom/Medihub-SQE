@@ -1,0 +1,10 @@
+task,planned_start_pkt,planned_finish_pkt,plan_status,syed_planned_h,shaheer_planned_h,momin_planned_h,aggregate_planned_h,verified_actuals,evidence
+Setup and Stage D,2026-11-22,2026-11-22,PROVISIONAL,2,1,1,4,Syed 1.5 h setup on 22 Nov. Others awaiting confirmation.,Time log and 256efcb
+SonarQube and CFG,2026-11-23,2026-11-24,PROVISIONAL,5,0,3,8,Individual time and contributions awaiting confirmation.,7ad4793 and 422569f
+Test design and white-box,2026-11-23,2026-11-24,PROVISIONAL,8,6,3,17,Individual time and contributions awaiting confirmation.,34653b0 and 9126fef
+OpenAPI generator and API integration,2026-11-23,2026-11-25,PROVISIONAL,2,12,2,16,Individual time and contributions awaiting confirmation.,34653b0 and 7a124bc
+Six use cases and Chromium,2026-11-23,2026-11-25,PROVISIONAL,5,5,5,15,Ownership agreed. Individual authorship and execution awaiting confirmation.,30-flow Chromium JUnit and user-confirmed allocation
+Mutation and custom operators,2026-11-23,2026-11-25,PROVISIONAL,4,0,7,11,Individual time and contributions awaiting confirmation.,9126fef and 6aee701
+Quality CI and deployment gate,2026-11-24,2026-11-25,PROVISIONAL,4,2,5,11,Individual time and contributions awaiting confirmation.,422569f and 1ba21e8
+Defects security reviews and reporting,2026-11-22,2026-11-25,PROVISIONAL,2,6,6,14,Shaheer and Momin reviewed on 25 Nov. Durations and other work awaiting confirmation.,PR 11 comments and approvals; 8699eb0
+Phase 2 capacity plan,2026-11-22,2026-11-25,PROVISIONAL,32,32,32,96,1.5 h setup confirmed. Comparable remaining actuals await confirmation.,Seven area PERT forecast 129.8 h

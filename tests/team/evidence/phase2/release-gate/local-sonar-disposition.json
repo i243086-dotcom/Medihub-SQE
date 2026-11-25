@@ -8,8 +8,17 @@
     "issueStatus": "FALSE_POSITIVE",
     "resolution": "FALSE-POSITIVE",
     "status": "RESOLVED",
-    "updateDate": "2026-11-25T17:00:15+0000",
-    "comments": []
+    "updateDate": "2026-11-25T17:27:23+0000",
+    "comments": [
+      {
+        "key": "db88914e-ff42-476f-9f6c-205e7da119d1",
+        "login": "admin",
+        "htmlText": "Phase 2 SQE verification note. S4502 is a false positive for the reviewed header-only JWT configuration. Each of the 14 protected write routes rejected a valid cookie-only JWT with 401 and a wrong-role Authorization bearer plus cookie with 403, without changing stored records. Login returns the token in JSON, registration starts no authenticated session, and logout sets no authenticated cookie. Five preflights returned neither an allowed origin nor credential-sharing headers. Shaheer and Momin recorded independent technical reviews on PR #11 at fde115c. Reassess if a proxy or application change adds ambient authentication or changes CORS. Evidence: <a href=\"https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7165956390\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7165956390</a> and <a href=\"https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7166317600\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7166317600</a>",
+        "markdown": "Phase 2 SQE verification note. S4502 is a false positive for the reviewed header-only JWT configuration. Each of the 14 protected write routes rejected a valid cookie-only JWT with 401 and a wrong-role Authorization bearer plus cookie with 403, without changing stored records. Login returns the token in JSON, registration starts no authenticated session, and logout sets no authenticated cookie. Five preflights returned neither an allowed origin nor credential-sharing headers. Shaheer and Momin recorded independent technical reviews on PR #11 at fde115c. Reassess if a proxy or application change adds ambient authentication or changes CORS. Evidence: https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7165956390 and https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7166317600",
+        "updatable": true,
+        "createdAt": "2026-11-25T17:27:23+0000"
+      }
+    ]
   },
   "history": [
     {
@@ -151,5 +160,6 @@
     },
     "caycStatus": "compliant"
   },
-  "capture": "Authenticated SonarQube JSON viewed in existing local Chrome session"
+  "capture": "Authenticated SonarQube JSON viewed in existing local Chrome session",
+  "goal_note": "The owner performed the status transition. The evidence note was attached later through the local issue Activity UI."
 }
