@@ -1,0 +1,73 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_______________ test_br03_appointment_id_beyond_first_overflow ________________
+tests\team\unit\test_appointment_rules.py:176: in test_br03_appointment_id_beyond_first_overflow
+    assert result.status_code == 404
+E   assert 500 == 404
+E    +  where 500 = <WrapperTestResponse streamed [500 INTERNAL SERVER ERROR]>.status_code
+---------------------------- Captured stdout setup ----------------------------
+Protected development DB SHA-256 before: absent
+------------------------------ Captured log call ------------------------------
+ERROR    app:app.py:1414 Exception on /api/patient/appointments/9223372036854775809 [DELETE]
+Traceback (most recent call last):
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-boundary-mutant-uesxb7jz\backend\decorators.py", line 43, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Silicon\AppData\Local\Temp\medihub-boundary-mutant-uesxb7jz\backend\routes\patient.py", line 354, in cancel_appointment
+    ).first() if appointment_id != 2 ** 63 else None
+      ^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2823, in first
+    return self.limit(1)._iter().first()  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2921, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2555, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2445, in _execute_internal
+    compile_state_cls.orm_execute_statement(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 357, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1494, in execute
+    return meth(
+           ^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 534, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1714, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1868, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1996, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2354, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1977, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\SQE_Project\Medihub\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1192, in do_execute
+    cursor.execute(statement, parameters)
+OverflowError: Python int too large to convert to SQLite INTEGER
+-------------------------- Captured stdout teardown ---------------------------
+Protected development DB SHA-256 after: absent
+=========================== short test summary info ===========================
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_appointment_id_beyond_first_overflow
+1 failed, 134 deselected in 0.56s

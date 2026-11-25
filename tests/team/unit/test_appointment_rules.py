@@ -167,6 +167,17 @@ def test_br03_appointment_id_sqlite_limit(phase2, verb, route, account, overflow
         assert snapshots() == [(*before[0][:5], destination, before[0][6])]
 
 
+def test_br03_appointment_id_beyond_first_overflow(phase2):
+    client, headers = phase2
+    appointment()
+    db.session.commit()
+    before = snapshots()
+    result = client.delete(f'/api/patient/appointments/{2 ** 63 + 1}', headers=headers['arjun'])
+    assert result.status_code == 404
+    assert result.get_json()['message'] == 'Appointment not found'
+    assert snapshots() == before
+
+
 @pytest.mark.parametrize(("role", "status"), [("ajay", 403), ("admin", 403), (None, 401)])
 @pytest.mark.parametrize("verb", ["post", "delete"])
 def test_br04_patient_writes(phase2, role, status, verb):
