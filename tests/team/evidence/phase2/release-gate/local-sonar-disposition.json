@@ -1,0 +1,155 @@
+{
+  "issue": {
+    "key": "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
+    "rule": "python:S4502",
+    "hash": "fded8a50fabf9ea4bae0fadb55cbff78",
+    "line": 15,
+    "component": "medihub-phase2-candidate:backend/app.py",
+    "issueStatus": "FALSE_POSITIVE",
+    "resolution": "FALSE-POSITIVE",
+    "status": "RESOLVED",
+    "updateDate": "2026-11-25T17:00:15+0000",
+    "comments": []
+  },
+  "history": [
+    {
+      "creationDate": "2026-11-24T16:54:50+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "newValue": "FIXED"
+        },
+        {
+          "key": "line",
+          "oldValue": "15"
+        },
+        {
+          "key": "status",
+          "newValue": "CLOSED",
+          "oldValue": "OPEN"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "FIXED",
+          "oldValue": "OPEN"
+        }
+      ]
+    },
+    {
+      "creationDate": "2026-11-24T17:04:31+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "oldValue": "FIXED"
+        },
+        {
+          "key": "status",
+          "newValue": "OPEN",
+          "oldValue": "CLOSED"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "OPEN",
+          "oldValue": "FIXED"
+        }
+      ]
+    },
+    {
+      "user": "admin",
+      "userName": "Administrator",
+      "creationDate": "2026-11-25T17:00:15+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "newValue": "FALSE-POSITIVE"
+        },
+        {
+          "key": "status",
+          "newValue": "RESOLVED",
+          "oldValue": "OPEN"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "FALSE_POSITIVE",
+          "oldValue": "OPEN"
+        }
+      ],
+      "isUserActive": true
+    }
+  ],
+  "measures": {
+    "key": "medihub-phase2-candidate",
+    "name": "MediHub Phase 2 Candidate",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "coverage",
+        "value": "44.6",
+        "bestValue": false
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "security_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "7308"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "sqale_rating",
+        "value": "1.0",
+        "bestValue": true
+      }
+    ]
+  },
+  "native": {
+    "status": "OK",
+    "conditions": [
+      {
+        "status": "OK",
+        "metricKey": "new_coverage",
+        "comparator": "LT",
+        "errorThreshold": "80",
+        "actualValue": "81.4"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_duplicated_lines_density",
+        "comparator": "GT",
+        "errorThreshold": "3",
+        "actualValue": "0.0"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_security_hotspots_reviewed",
+        "comparator": "LT",
+        "errorThreshold": "100"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_violations",
+        "comparator": "GT",
+        "errorThreshold": "0",
+        "actualValue": "0"
+      }
+    ],
+    "ignoredConditions": false,
+    "period": {
+      "mode": "PREVIOUS_VERSION",
+      "date": "2026-11-24T16:48:35+0000"
+    },
+    "caycStatus": "compliant"
+  },
+  "capture": "Authenticated SonarQube JSON viewed in existing local Chrome session"
+}

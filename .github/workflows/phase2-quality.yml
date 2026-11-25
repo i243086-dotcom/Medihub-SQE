@@ -108,6 +108,9 @@ jobs:
     name: SonarQube full scan
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: read
     steps:
       - uses: actions/checkout@v4
         with:
@@ -134,6 +137,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           mkdir evidence
           python -m pytest tests/team/unit tests/team/api -q --tb=short --cov=backend --cov-branch --cov-report=xml:coverage.xml
@@ -167,7 +171,11 @@ jobs:
           else
             scanner=$?
           fi
-          # Export the project-wide checks even when the native gate failed.
+          if [ "$scanner" -eq 0 ]; then
+            python tests/team/tools/sonar_reviewed_issue.py "$project" \
+              tests/team/data/sonar-reviewed-decision.json evidence/reviewed-disposition.json
+          fi
+          # The measured project-wide limits stay mandatory after issue disposition.
           overall=0
           if python tests/team/tools/sonar_gate.py "$project" evidence/sonar-measures.json \
             --baseline "$BASE_SHA" --revision "$revision"; then
