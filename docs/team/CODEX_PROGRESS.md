@@ -1,5 +1,15 @@
 ﻿# MediHub SQE progress checkpoint
 
+## 25 November 2026 (PKT)
+
+Release **HOLD**. Shaheer and Momin independently supported the S4502 false-positive assessment and formally approved `fde115c`. S4502 remains **Open** at the owner's direction. GitHub requires six checks and one approval. [Live review evidence](../../tests/team/evidence/phase2/independent-closure/github-before.json) | [Dashboard procedure](../../tests/team/evidence/phase2/independent-closure/s4502-disposition.md)
+
+- The candidate scan analyzes its actual base `adf2871`, then the PR merge revision. Sonar verified all 30 production files and measured native new-code coverage of 88.9% against 80%. The overall check failed at security D on S4502. The previous local project measured 81.4% against its separate saved period. [Baseline, scope and gate](../../tests/team/evidence/phase2/independent-closure/ci/sonar/evidence/sonar-measures.json)
+- Patient cancellation and both staff update paths returned three HTTP 500s above the SQLite integer limit before the fix. The focused regression passed all 53 checks after the fix. A later targeted regression killed the previously surviving cancellation range mutant in an isolated copy. [Before](../../tests/team/evidence/phase2/independent-closure/appointment-id-before.xml) | [After](../../tests/team/evidence/phase2/independent-closure/candidate-regression.xml) | [Exact mutant](../../tests/team/evidence/phase2/independent-closure/overflow-observation-mutated.txt)
+- GitHub reports no deployment environments or deployment history. Team dates, human hours and individual use-case authorship require confirmation. PR #11 remains open and blocked. PR #4 remains open as superseded discovery evidence. [Run on the boundary fix](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316)
+
+## Previous verified checkpoint
+
 **24 November 2026 (PKT). Phase 2 verification update. Release HOLD.**
 
 - Tested candidate `ed84dd3cc0b2be87a931222ad210ce38648d1080`, team branch `phase2-verification`. The full applicable suite ran 723 distinct passes, zero failures and zero skips. Unit 369, API 324, and Chromium 30. The 215 active OpenAPI cases passed, with 212 JSON schema validations and three HTML media-type checks. Four proposed-contract diagnostic cases failed separately.
