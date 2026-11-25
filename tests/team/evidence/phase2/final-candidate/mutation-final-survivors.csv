@@ -1,0 +1,3 @@
+mutant,operator,changed_lines,assessment
+021bc6c175b54c94bc1f9e0ced9a52fa,core/ReplaceComparisonOperator_Eq_LtE,-    if apt_date == today: | +    if apt_date <= today:,Equivalent within the earlier past-date guard.
+f5bcef7ad0c34986b8e1d5f4634bb177,core/NumberReplacer,"-        start = time_str.split('-', 1)[0].strip() if '-' in time_str else time_str | +        start = time_str.split('-', 2)[0].strip() if '-' in time_str else time_str",Equivalent: both split limits leave the first segment unchanged.

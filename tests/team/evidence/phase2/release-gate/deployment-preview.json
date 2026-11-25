@@ -1,0 +1,10 @@
+{
+  "revision": "30a918b00b7cd29696a94f37539b42e60778d0d1",
+  "environment": "phase2-loopback-preview",
+  "bind": "127.0.0.1",
+  "frontend_http": 200,
+  "unauthenticated_api_http": 401,
+  "appointment_rows": 0,
+  "user_rows": 0,
+  "disposable_data_removed": true
+}

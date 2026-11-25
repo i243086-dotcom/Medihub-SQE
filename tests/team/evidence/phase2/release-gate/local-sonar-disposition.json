@@ -1,0 +1,165 @@
+{
+  "issue": {
+    "key": "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
+    "rule": "python:S4502",
+    "hash": "fded8a50fabf9ea4bae0fadb55cbff78",
+    "line": 15,
+    "component": "medihub-phase2-candidate:backend/app.py",
+    "issueStatus": "FALSE_POSITIVE",
+    "resolution": "FALSE-POSITIVE",
+    "status": "RESOLVED",
+    "updateDate": "2026-11-25T17:27:23+0000",
+    "comments": [
+      {
+        "key": "db88914e-ff42-476f-9f6c-205e7da119d1",
+        "login": "admin",
+        "htmlText": "Phase 2 SQE verification note. S4502 is a false positive for the reviewed header-only JWT configuration. Each of the 14 protected write routes rejected a valid cookie-only JWT with 401 and a wrong-role Authorization bearer plus cookie with 403, without changing stored records. Login returns the token in JSON, registration starts no authenticated session, and logout sets no authenticated cookie. Five preflights returned neither an allowed origin nor credential-sharing headers. Shaheer and Momin recorded independent technical reviews on PR #11 at fde115c. Reassess if a proxy or application change adds ambient authentication or changes CORS. Evidence: <a href=\"https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7165956390\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7165956390</a> and <a href=\"https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7166317600\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7166317600</a>",
+        "markdown": "Phase 2 SQE verification note. S4502 is a false positive for the reviewed header-only JWT configuration. Each of the 14 protected write routes rejected a valid cookie-only JWT with 401 and a wrong-role Authorization bearer plus cookie with 403, without changing stored records. Login returns the token in JSON, registration starts no authenticated session, and logout sets no authenticated cookie. Five preflights returned neither an allowed origin nor credential-sharing headers. Shaheer and Momin recorded independent technical reviews on PR #11 at fde115c. Reassess if a proxy or application change adds ambient authentication or changes CORS. Evidence: https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7165956390 and https://github.com/i243086-dotcom/Medihub-SQE/pull/11#issuecomment-7166317600",
+        "updatable": true,
+        "createdAt": "2026-11-25T17:27:23+0000"
+      }
+    ]
+  },
+  "history": [
+    {
+      "creationDate": "2026-11-24T16:54:50+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "newValue": "FIXED"
+        },
+        {
+          "key": "line",
+          "oldValue": "15"
+        },
+        {
+          "key": "status",
+          "newValue": "CLOSED",
+          "oldValue": "OPEN"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "FIXED",
+          "oldValue": "OPEN"
+        }
+      ]
+    },
+    {
+      "creationDate": "2026-11-24T17:04:31+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "oldValue": "FIXED"
+        },
+        {
+          "key": "status",
+          "newValue": "OPEN",
+          "oldValue": "CLOSED"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "OPEN",
+          "oldValue": "FIXED"
+        }
+      ]
+    },
+    {
+      "user": "admin",
+      "userName": "Administrator",
+      "creationDate": "2026-11-25T17:00:15+0000",
+      "diffs": [
+        {
+          "key": "resolution",
+          "newValue": "FALSE-POSITIVE"
+        },
+        {
+          "key": "status",
+          "newValue": "RESOLVED",
+          "oldValue": "OPEN"
+        },
+        {
+          "key": "issueStatus",
+          "newValue": "FALSE_POSITIVE",
+          "oldValue": "OPEN"
+        }
+      ],
+      "isUserActive": true
+    }
+  ],
+  "measures": {
+    "key": "medihub-phase2-candidate",
+    "name": "MediHub Phase 2 Candidate",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "coverage",
+        "value": "44.6",
+        "bestValue": false
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "security_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "7308"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "sqale_rating",
+        "value": "1.0",
+        "bestValue": true
+      }
+    ]
+  },
+  "native": {
+    "status": "OK",
+    "conditions": [
+      {
+        "status": "OK",
+        "metricKey": "new_coverage",
+        "comparator": "LT",
+        "errorThreshold": "80",
+        "actualValue": "81.4"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_duplicated_lines_density",
+        "comparator": "GT",
+        "errorThreshold": "3",
+        "actualValue": "0.0"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_security_hotspots_reviewed",
+        "comparator": "LT",
+        "errorThreshold": "100"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_violations",
+        "comparator": "GT",
+        "errorThreshold": "0",
+        "actualValue": "0"
+      }
+    ],
+    "ignoredConditions": false,
+    "period": {
+      "mode": "PREVIOUS_VERSION",
+      "date": "2026-11-24T16:48:35+0000"
+    },
+    "caycStatus": "compliant"
+  },
+  "capture": "Authenticated SonarQube JSON viewed in existing local Chrome session",
+  "goal_note": "The owner performed the status transition. The evidence note was attached later through the local issue Activity UI."
+}

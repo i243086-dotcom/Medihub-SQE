@@ -628,7 +628,10 @@ const PatientComponent = {
             this.availableSlots = []
             this.bookingForm.appointment_time = ''
             if (this.bookingForm.appointment_date) {
-                this.loadAvailableSlots()
+                this.loadAvailableSlots().catch(() => {
+                    this.availableSlots = []
+                    this.error = 'Failed to load available slots'
+                })
             }
         },
 

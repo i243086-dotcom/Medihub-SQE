@@ -1,0 +1,9 @@
+{
+  "statements_covered": 970,
+  "statements_total": 1170,
+  "branches_covered": 260,
+  "branches_total": 372,
+  "statement_pct": 82.90598290598291,
+  "branch_pct": 69.89247311827957,
+  "coverage_tool_version": "7.17.4"
+}

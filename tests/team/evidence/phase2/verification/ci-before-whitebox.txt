@@ -1,0 +1,33 @@
+White-box coverage	Run mkdir evidence	﻿2026-11-23T16:33:12.3093186Z ##[group]Run mkdir evidence
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3093549Z ^[[36;1mmkdir evidence^[[0m
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3094428Z ^[[36;1mpython -m pytest tests/team/unit -q -s --tb=short --junitxml=evidence/unit.xml --cov=backend --cov-branch --cov-report=json:evidence/coverage.json --cov-report=html:evidence/htmlcov --cov-report=xml:evidence/coverage.xml^[[0m
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3095502Z ^[[36;1mpython tests/team/tools/phase2_metrics.py mcc evidence/unit.xml evidence^[[0m
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3096160Z ^[[36;1mpython tests/team/tools/phase2_metrics.py coverage evidence/coverage.json evidence/scoped.json --enforce^[[0m
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3132028Z shell: /usr/bin/bash -e {0}
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3132294Z env:
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3133213Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3133675Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3134120Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3134511Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3134951Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3135358Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:12.3135689Z ##[endgroup]
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:14.0331944Z Protected development DB SHA-256 before: absent
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8098891Z ...............................................................................................Protected development DB SHA-256 after: absent
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8099761Z 
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8100010Z =============================== warnings summary ===============================
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8100659Z tests/team/unit/test_appointment_rules.py: 49 warnings
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8103254Z   /home/runner/work/Medihub-SQE/Medihub-SQE/backend/routes/patient.py:231: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8105449Z     doctor = Doctor.query.get(data['doctor_id'])
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8105785Z 
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8106090Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8106828Z ================================ tests coverage ================================
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8108070Z _______________ coverage: platform linux, python 3.11.18-final-0 _______________
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8108570Z 
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8108759Z Coverage HTML written to dir evidence/htmlcov
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8109283Z Coverage XML written to file evidence/coverage.xml
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8109855Z Coverage JSON written to file evidence/coverage.json
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:16.8110367Z 95 passed, 49 warnings in 2.83s
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:17.0119584Z MCC executions: 64/64 passed
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:17.0668152Z {'statements': [260, 662], 'branches': [37, 200]}
+White-box coverage	Run mkdir evidence	2026-11-23T16:33:17.0757084Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Booking input regression",
+    "id": 137847005597,
+    "head_sha": "815b11f9c6ad9bfffca37362a866db6352bb1689",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/job/137847005597"
+  },
+  {
+    "name": "Mutation score",
+    "id": 137847006045,
+    "head_sha": "815b11f9c6ad9bfffca37362a866db6352bb1689",
+    "status": "completed",
+    "conclusion": "failure",
+    "html_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/job/137847006045"
+  },
+  {
+    "name": "White-box coverage",
+    "id": 137847006093,
+    "head_sha": "815b11f9c6ad9bfffca37362a866db6352bb1689",
+    "status": "completed",
+    "conclusion": "failure",
+    "html_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/job/137847006093"
+  },
+  {
+    "name": "Chromium use cases",
+    "id": 137847006106,
+    "head_sha": "815b11f9c6ad9bfffca37362a866db6352bb1689",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/job/137847006106"
+  },
+  {
+    "name": "API and integration",
+    "id": 137847006236,
+    "head_sha": "815b11f9c6ad9bfffca37362a866db6352bb1689",
+    "status": "completed",
+    "conclusion": "failure",
+    "html_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/job/137847006236"
+  },
+  {
+    "name": "SonarQube full scan",
+    "id": 137847006434,
+    "head_sha": "815b11f9c6ad9bfffca37362a866db6352bb1689",
+    "status": "completed",
+    "conclusion": "failure",
+    "html_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/job/137847006434"
+  }
+]

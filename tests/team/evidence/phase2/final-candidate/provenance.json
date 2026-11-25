@@ -1,0 +1,8 @@
+{
+  "candidate": "ff805560bb6fba0758796341c06c9858e5ffc2f4",
+  "stage_d_ancestor": "256efcb",
+  "stage_d_raw_evidence_unchanged": true,
+  "application_source_hashes_matching": 22,
+  "linux_ci_mutation_source_sha256": "b7d1943e86c430ef7f768cebdacc8c6d4463a6382d7ba149713ffab8785f393e",
+  "development_database_sha256": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5"
+}

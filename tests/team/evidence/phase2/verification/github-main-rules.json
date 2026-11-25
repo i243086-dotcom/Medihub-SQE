@@ -1,0 +1,38 @@
+[
+  {
+    "type": "required_status_checks",
+    "parameters": {
+      "strict_required_status_checks_policy": true,
+      "do_not_enforce_on_create": false,
+      "required_status_checks": [
+        {
+          "context": "Mutation score",
+          "integration_id": 15368
+        },
+        {
+          "context": "Booking input regression",
+          "integration_id": 15368
+        },
+        {
+          "context": "Chromium use cases",
+          "integration_id": 15368
+        },
+        {
+          "context": "White-box coverage",
+          "integration_id": 15368
+        },
+        {
+          "context": "API and integration",
+          "integration_id": 15368
+        },
+        {
+          "context": "SonarQube full scan",
+          "integration_id": 15368
+        }
+      ]
+    },
+    "ruleset_source_type": "Repository",
+    "ruleset_source": "i243086-dotcom/Medihub-SQE",
+    "ruleset_id": 27917826
+  }
+]

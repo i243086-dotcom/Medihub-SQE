@@ -1,0 +1,5 @@
+﻿Stage D database safety check (2026-11-22 22:25)
+Database: backend\instance\medihub-database.db
+Hash before test run: 27BE0512BD93CFADB49D7819CFF68FE6088334B50B1D2F5A9489D488DF6554F5
+Hash after test run:  27BE0512BD93CFADB49D7819CFF68FE6088334B50B1D2F5A9489D488DF6554F5
+Result: identical (dev database untouched)

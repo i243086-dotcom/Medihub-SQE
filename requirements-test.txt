@@ -8,3 +8,4 @@ pytest-playwright==0.10.0
 pytest-html==4.2.0
 freezegun==1.5.5
 pysonar==1.11.0.6012
+cosmic-ray==8.9.0

@@ -1,0 +1,105 @@
+{
+  "total": 751,
+  "runtime_counts": {
+    "unit": 385,
+    "api": 336,
+    "chromium": 30
+  },
+  "generated_validations": {
+    "json-schema": 221,
+    "html-media-type": 6
+  },
+  "scoped": {
+    "statements": [
+      720,
+      720
+    ],
+    "branches": [
+      234,
+      234
+    ]
+  },
+  "coverage": {
+    "statements": [
+      970,
+      1170
+    ],
+    "branches": [
+      260,
+      372
+    ]
+  },
+  "mcc": 64,
+  "mcdc": 6,
+  "mutation": {
+    "selected_ranges": [
+      "261-292",
+      "304-339",
+      "344-367"
+    ],
+    "outcomes": {
+      "null": 391,
+      "killed": 144,
+      "survived": 2
+    },
+    "workers": {
+      "skipped": 391,
+      "normal": 146
+    },
+    "score": 0.9863013698630136,
+    "killed": 144,
+    "survived": 2
+  },
+  "checked_source_revision": "30a918b00b7cd29696a94f37539b42e60778d0d1",
+  "candidate_pr_head": "1c6fb69926b4e19fb4451178c5a29fd12855aa13",
+  "github_actions": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45663975402",
+  "suite_artifact_sha256": {
+    "unit": "ec62fb2032d7abc59bf4e606eb917aad6420537237220d4071658f86fcca4598",
+    "api": "c8e6bab1b4f4b8d0c40ec77a8aa4d989ec34f0868cbb5cda3f58b94cd4fb2797",
+    "chromium": "bed2236ceead8cf3febd2fddd58ae9af4b5ae09119dde9cbacedc65ae3839203"
+  },
+  "six_use_case_flow_matrix": {
+    "UC01": [
+      "A1",
+      "A2",
+      "E1",
+      "E2",
+      "N"
+    ],
+    "UC02": [
+      "A1",
+      "A2",
+      "E1",
+      "E2",
+      "N"
+    ],
+    "UC03": [
+      "A1",
+      "A2",
+      "E1",
+      "E2",
+      "N"
+    ],
+    "UC04": [
+      "A1",
+      "A2",
+      "E1",
+      "E2",
+      "N"
+    ],
+    "UC05": [
+      "A1",
+      "A2",
+      "E1",
+      "E2",
+      "N"
+    ],
+    "UC06": [
+      "A1",
+      "A2",
+      "E1",
+      "E2",
+      "N"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Flask": "2.3.3",
+  "Flask-SQLAlchemy": "3.0.5",
+  "pytest": "9.2.0",
+  "pytest-cov": "7.1.0",
+  "coverage": "7.17.4",
+  "playwright": "1.65.2",
+  "openapi-spec-validator": "0.9.0",
+  "cosmic-ray": "8.9.0",
+  "pysonar": "1.11.0.6012",
+  "Chromium": "159.0.8154.6",
+  "SQLite": "3.45.1",
+  "Windows": "Windows-10-10.0.22000-SP0",
+  "SonarQube": "26.11.0.134175",
+  "Microsoft Word": "16.0.20625.20108"
+}

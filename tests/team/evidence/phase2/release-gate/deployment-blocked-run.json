@@ -1,0 +1,52 @@
+﻿{
+    "conclusion":  "failure",
+    "databaseId":  45662563964,
+    "event":  "pull_request",
+    "headSha":  "1ba21e8b1fdfd3c64a4bc3ec7dd6f8332fe177a8",
+    "jobs":  [
+                 {
+                     "name":  "Mutation score",
+                     "conclusion":  "success",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139376008821"
+                 },
+                 {
+                     "name":  "API and integration",
+                     "conclusion":  "success",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139376009146"
+                 },
+                 {
+                     "name":  "SonarQube full scan",
+                     "conclusion":  "failure",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139376009316"
+                 },
+                 {
+                     "name":  "Chromium use cases",
+                     "conclusion":  "success",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139376009443"
+                 },
+                 {
+                     "name":  "Booking input regression",
+                     "conclusion":  "success",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139376009481"
+                 },
+                 {
+                     "name":  "White-box coverage",
+                     "conclusion":  "success",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139376009714"
+                 },
+                 {
+                     "name":  "Loopback deployment demonstration",
+                     "conclusion":  "skipped",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964/job/139379551126"
+                 }
+             ],
+    "status":  "completed",
+    "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45662563964"
+}

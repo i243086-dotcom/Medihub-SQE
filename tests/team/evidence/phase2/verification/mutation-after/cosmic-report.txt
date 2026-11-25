@@ -1,0 +1,1461 @@
+[job-id] ccd18460f68b45dc93b699712306cbde
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Sub 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 09ca9959bad64fb8a831ee4777b882f8
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Sub 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4ccf6e864e1a44cbb550f644c661285c
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Sub 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a6546c71bb73481796f704326dbd70f6
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Sub 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b3674c0fa58f48028a7a2be76b103707
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mul 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 62a7ba1523e24a57b97b6dba8504dab4
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mul 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5d06882811cd46fda24a79d94656fd36
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mul 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] eb18f23c258d49c0b52e3e6431285610
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mul 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4d8c486b0052448da0d53c8b7d6e3b40
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Div 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7ffabe1955684cf290b193c04784a346
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Div 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1c5f8177c90944298d8e8446a2e5fef7
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Div 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c4d37b6b1abd43719ad345bf122231ee
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Div 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] aab647c1e1f34809a079054b1a277ffd
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_FloorDiv 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6825bd70521a4ac2a1f011622b0bb5e3
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_FloorDiv 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] cc9898e26ac54a888cc60e2ea266958e
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_FloorDiv 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fc0dbf8bb5b14e2ab278082ca57c3370
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_FloorDiv 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2c114040bfd9494a83bef10df86ff126
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mod 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6e55fefb0c76444c84d7f907f56d7823
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mod 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] adadb98db18646e782b11fe9c9e839a3
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mod 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1faa25a2a4274ddba9a5e4be64cb2e6e
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Mod 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a4f7a6f70425422c95c610565a47c834
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Pow 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 245b4eef667341498dd23f32ae6f9a09
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Pow 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9f717d1ef1d84e69a489d9bffd3f47d2
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Pow 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3c7376723b8d407982ec3a8262b6be7e
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_Pow 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5590f322fc6249d09880ee2692fc8764
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_RShift 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4d4386f70c114cada73b82463391e1b9
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_RShift 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7a9d2941eb304ad5b7422644400e4659
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_RShift 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2987cd3435644307bb8e8c95913920d3
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_RShift 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c239aa11399e47f6bc1ccf304cb74052
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_LShift 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 34b393c7178441048238dd272697e6ce
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_LShift 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 90fda33b1c974e1d9bd8c75aab9fe5a6
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_LShift 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d71ccc0526c94356838dbeed74acb8c5
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_LShift 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 58a6d79f6cc94cbda20da55f070e4045
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitOr 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ffb4002a978d4292bf2d61d4b63c86ad
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitOr 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a8bdae1049d7477dab12b6febf5b6183
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitOr 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 458081b8a74247c68e2a1a874e8f250c
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitOr 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2b343c86f23e4485a559f7e642785a58
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitAnd 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b1d391f84e9b4052894005d16d5f2eda
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitAnd 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] be250661c43e4f17a80df54d158d27e7
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitAnd 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1ce469aad1a046418d253dca1f03e2f5
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitAnd 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 41312337da5649afbeab819cadaedfee
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitXor 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c25491093a074b86b4aa7b72604faded
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitXor 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 49f4536f904446b09e939708e01e99e7
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitXor 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ef057c50288d49809c1ff99f64e81b75
+backend\routes\patient.py core/ReplaceBinaryOperator_Add_BitXor 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 50719ac429a14a0e8def38cb922dafcb
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Add 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fc28710fedf6409280481d929a65b94e
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Add 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7fe7645e5c1645a8a8f15858bb934aed
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Sub 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1525a70282344d028411a41ead2ea4b2
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Sub 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a9c5a24b439b41488dc2af20c805550a
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Mul 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ac0f81ef53b4443e870b958d929d5c64
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Mul 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 242b5198a74f4d2fb6dff472a55f97cc
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Div 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5f4268d6db6d4854ae9399d8378b5c5a
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Div 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 21d79c4d159d4e4083b3194dc37900d4
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_FloorDiv 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a48625bc72be49dfa772a5ee703ff6e2
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_FloorDiv 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] aa7293cdc1514fe08614279fa4815bc4
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Mod 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5a5bd2a863914dab8b5defdf8b223e2c
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_Mod 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8678258bba9e4d22ad2bf060040245c3
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_RShift 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 894c3b12754549adb095e5204c5cd4db
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_RShift 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 611ebd38c71246f29207b9d6f468afdf
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_LShift 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b43c66d276a04ab5878223c518d50b27
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_LShift 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 23f01ba7906d4861a2efac9cd72b08c0
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_BitOr 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 700ce8f3d13a4cb2af23aa2e5454c392
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_BitOr 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1299aba3fa994beaad7358333e55088a
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_BitAnd 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 063c2c9aed9241bcb0dcc2868acf6901
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_BitAnd 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 53d8dc19138f40faa2a8977801bac273
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_BitXor 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1d1581d510cb44e492d997ea626038bf
+backend\routes\patient.py core/ReplaceBinaryOperator_Pow_BitXor 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 74bcf8dc362d49abababb4dc78a20cdc
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_NotEq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9f9f1437c3b94218b9bd9b9c08213152
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_NotEq 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 89746d08091e4732947a080a9e3c6708
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_NotEq 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5acb5ab2cea847a0811afc28954461a7
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_NotEq 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 14cdd6cf80c34fd0a49721bf234d6b87
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_NotEq 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 9b0261a844b14b0ea9e763dde928064b
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_NotEq 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ca98d84f45aa4603a34888feaf1cbb18
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Lt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8a59cb7124ef4de5b46436f1e991542a
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Lt 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 392eda42c96f4021a960352b4e1ada68
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Lt 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ca8daf2d6a9a4bcf838a42456fb2e2f0
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Lt 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7a608be680a642dd94054d0d7ce4dd22
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Lt 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 339a91cc38cc4e84ba86a485ae4e3a61
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Lt 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 468972f602c5462d97684da8ad40a177
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_LtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 896261ef887c494c912d67ca30880032
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_LtE 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a775273b4add47af9785898e589ba85b
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_LtE 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a160baef5c5843c2b3c856ad3efc3082
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_LtE 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7b92fd844490404c98286d401ca6db7c
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_LtE 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 32fcf0ff833e44c2aa1be22d1e369994
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_LtE 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1e5d99c4ec384860939a47c63a7332ae
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Gt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fc8c4e31fa5141dea8317e9b7adf8c7a
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Gt 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3a396061f75d4ed1a205fa22b69722ee
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Gt 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e2fd1b5841bd41248879d722c4f6e13b
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Gt 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b86f71a1007745b9a688c36366bf96c9
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Gt 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8cb39446b0214a12939fa54098dd1bb3
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Gt 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] cabc3e79c0904aeb9730a26c074243fc
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_GtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7481a04a0ce74f718116c85ec42189c5
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_GtE 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6cc7d2de3ca0402ea5cf63ce844ae52b
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_GtE 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] aa4b09f29ce942f6bb4c78906d5f40a1
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_GtE 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b0cc52e26b614bd9aeaae113c9606fcf
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_GtE 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 488bbc0edf4045eb92c065034a21e4b2
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_GtE 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a749c2347d5c44d7bf547faf5be7ed9c
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Is 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 59956ef3403849f2b3d39bd9994945ec
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Is 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 33f5451305494ddeaf436209e53945c7
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Is 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3ae0264aaa414126939477668ed0dbc6
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Is 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0ec14c68190440a5ab4b15f38d15405f
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Is 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] db75c11232ee43c6aa198b0c61076b90
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_Is 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 941b61aa69bc48c8b88068b80e177944
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_IsNot 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 470178314d074e1c8d784ce945480bbc
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_IsNot 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 598c8958e4454916add28d12fd84ace4
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_IsNot 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 732f625ef3834250946d3fefbcbbb489
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_IsNot 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fa3262578c894b41a600f48172103203
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_IsNot 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] d32d86ca67d346498483f8687fd70b90
+backend\routes\patient.py core/ReplaceComparisonOperator_Eq_IsNot 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9d1aba059bb44b34ba9e33ba09854d4d
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_Eq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] d2739d2abe37413f9f069cf50c146708
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_Lt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] aca51498b7d9477a8f9e5945fcb63067
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 33e69698fbcb472093f54fc3851f4ffa
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 5d948eddebc34f7d8a681bf68b9aea2b
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0cf7264b1aac49b8b804bdad3c10713e
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6544d1ce8833414cb379d22789472f45
+backend\routes\patient.py core/ReplaceComparisonOperator_NotEq_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7252a82daa9c4641bf1f6bb6d907cc6e
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Eq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fc9ddc976a484547b2bd17aa7ff7197b
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Eq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6fc11ec7eca0499ca60f0f8b88596b9d
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Eq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c46b5e86460d4a07a6b0cc4071e44d1d
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Eq 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 39a6a980ccd3439099dc767b1a27c9f6
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_NotEq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 06fecdfe4ff44709951b88a31dc0abca
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_NotEq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8669fb9178814978954746092a0d2360
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_NotEq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1aa32afa544047e8b48e78af3c1728af
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_NotEq 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6247f081dc23408ea16204eaee0604c8
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_LtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] bfe125c29dde42feb348d3225918c184
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_LtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 105a9b26b3c248c5b402b3653fcdf054
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_LtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 6ba45582244845bcbfff873c1ec6085a
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_LtE 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ac0a029da8a44c92960d8105e3237c13
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Gt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fab7c34ad09b4da98f95e27cf5b31eae
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Gt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 5b6ef97be10347b1bdceadfb79d7a471
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Gt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a612908e9ec342b4a3599f06c591d967
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Gt 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 9ee875e6e76d4cf5a17a90d040e57a15
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_GtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b6356795ce69445190f4a37f145532e9
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_GtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e479e977e32c4f38aaadb1702582e4aa
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_GtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4e4ceb3fca9244e6bf0fa8cb5ebcca79
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_GtE 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8ac722aa8a4f4abe8e36f4cf77779d77
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Is 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 28edfe932ed9481b94f1967fec0924ec
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_Is 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] b7a8b544c6df4fae833ae9e49b7ca9b1
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_IsNot 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5d189ca4ca054c1a86811810d9e1f42b
+backend\routes\patient.py core/ReplaceComparisonOperator_Lt_IsNot 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 47876eec989f43e6bf2576a399c1ed13
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Eq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2ef05f43d970432a966a8ab3d1c530a1
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Eq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f8d3c4ecad9d47cf91da65c195d434c6
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Eq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a79cc10126eb40c0a9adc636f4f4133f
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_NotEq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 51ce58ae3603403085aa578ef53bc346
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_NotEq 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] bae9d316e40d4439aaf013a3dd47dab6
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_NotEq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0c2fd202b85643f8826d1cfd1cbcd96c
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Lt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 91001d70612b455b82b41ec618097bea
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Lt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] db263342cf3941d78ae86ac832caf43c
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Lt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8ebee84cbf6144cbbf581a77a6c400b0
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Gt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ed9d914459e4443b9216fa291ddf4ab9
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Gt 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 17cf53861b1443dc88894d301d441b85
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Gt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 92c0830b7bf544f3a99d2f6f9a883867
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_GtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f73d84ce1da5479ea41e6055b71fb57b
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_GtE 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c639da1273b84b3a8e7266635da083fd
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_GtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] bcb5bfecb2ab443685a9c63373079ea4
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Is 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 75d718e63984444cb3ae4f12a1425c9e
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Is 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 952a4c6c833042928e560ba0c27e3257
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_Is 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] bcff58ce4aa44b7e95810e2720a84be0
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_IsNot 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9ea77fadf9b54663ad58dbe23a40b359
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_IsNot 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f7c5ca8dedc146c792e70e96a0178a08
+backend\routes\patient.py core/ReplaceComparisonOperator_LtE_IsNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7fb446a38555460f862c34436a7d11d5
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Eq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6ea3cad10d464be1833a3c52d6930c24
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Eq 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] cb5281c284d74b2f9d58cf6cafebbd5a
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Eq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7bc69c7bfdda4925bdf33f11d7d1a51d
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_NotEq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9010ad199a724816a111de9082596e92
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_NotEq 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 77e14ed5bf374cd3a0653abf45d0a732
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_NotEq 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] d7cf7245370b4bf082b7ba58399074c0
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Lt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] aaf4df400513444dae3514926c85687f
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Lt 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4708c83b741a45e4bd45b57b93ddfe33
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Lt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4cfbb34fc8954f5b88f762230c13c77c
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_LtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 406d8a8009d345258f0afb78e4027ed6
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_LtE 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b8d9b87204204bf580ae16c13e7c4969
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_LtE 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8ae84119e0ec490b85627a777f535641
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Gt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 24db6d07780e49f7a5f4f4c2bf90dd8e
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Gt 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b9ba152f18b0434dafea7002772a7989
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Gt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a5649cf93b8741c5913a78d89de5478a
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Is 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 64b6c9edaab0441e9d579da807b372d3
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Is 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6f26427701b44c0195b61949e90bbe41
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_Is 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1308e946392e45e3a33238a59cc69160
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_IsNot 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a3487f1288514d8ca8e87ed4824f97a5
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_IsNot 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ecf3af09e6f244aba2042c6374e081ad
+backend\routes\patient.py core/ReplaceComparisonOperator_GtE_IsNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a5ea7076b6e14f86b2cd37d944428924
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7fb9ac472be1491fa07ba4d0688b904a
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 670def43ca9e407cb0b6a79a82b7d9e1
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 411eae4153784f7d90923f6102ac2fc3
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f6ca7f06599a4b95bd7a8629ca562380
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 865279340e6944c596ffba302d30dd31
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4c9eb16d45bf4015996253c8afc359d0
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2eb39953946f4c8489fbf31b900d47a9
+backend\routes\patient.py core/ReplaceComparisonOperator_Is_IsNot 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8d279bab40bb45f799a5766c44eec4b9
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_Eq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 80eff90ae3674f6789ac9bfbca3dd134
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_NotEq 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b024d6c7073045eab742f8a8ed3d73b1
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_Lt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9f9ce3274b5f4028a410669195d1925e
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_LtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0ede5217425046cb96677b249a1cea7f
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_Gt 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6b57fdd2025f41b98d894f8d8bfa2a8d
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_GtE 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f0b0a98fa4c343d88abeee05ca8e5e3e
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_Is 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7ba8fd48acca4195a0b58ce8e9ad533c
+backend\routes\patient.py core/ReplaceComparisonOperator_IsNot_Is 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 430543ba3a37490386803e328f46fea5
+backend\routes\patient.py core/ReplaceUnaryOperator_USub_UAdd 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9abc41cd8e7e4c0bb5b7eefc49cab4d9
+backend\routes\patient.py core/ReplaceUnaryOperator_USub_Invert 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] db1a9cdf445b429fac9fed9e544b16f5
+backend\routes\patient.py core/ReplaceUnaryOperator_USub_Not 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 562c2670485c41758f2c1d034e9d8ac9
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_USub 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 32523abb69624a988f6b6f0b34e2ce80
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1dd7d6f36c1847139731ba32090f9817
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0b7ca758ddff4b8a9e9914db4ffd70f4
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 96d32ddf33774351b4b4b7a6281b4ef0
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4723972a12dd4c719dcf59f9326fe423
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 80d39bb1456d498da68b95b9ee5c4a37
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7c38ce490da04456a86439a5451c818d
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 63038ebfaa3e48cc904c4ec17988f85d
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8dc3724d5570404c8de07e67f078e573
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1ea981eaaee646e68ed2ff98cd8eb5c7
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 9
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c46a8b0b217c42a5a4af47f899ec9c29
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 10
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a00520c249be4b838a9b18ae6c933183
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 11
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e4f0623031b44ca1b9cb42c705051c0f
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 12
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e00de04a64534b36a3552b526bb05b64
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 13
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 15dd7571aacc41dc8a35a8f7b56163ae
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 14
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8253aa7a4a5f476aaca3f5a66c972ebb
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 15
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 38203c426e5b4ed2bcce1228107efbbb
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 16
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0f066f1f24ff45ec9f6ad3ba342767a5
+backend\routes\patient.py core/ReplaceUnaryOperator_Delete_Not 17
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b5f2052076144c4abffbf29a6a20039f
+backend\routes\patient.py core/AddNot 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1157fe9ad1694a369232aeb412a2f0f2
+backend\routes\patient.py core/AddNot 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1880971ab7224664827937dd13c861dc
+backend\routes\patient.py core/AddNot 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 57703e3e068a44b1afc2c56363703d5c
+backend\routes\patient.py core/AddNot 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9ea304a6d7b0494398cecd51511d872a
+backend\routes\patient.py core/AddNot 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f41bfd4f9f384399b8218a0e0c41c481
+backend\routes\patient.py core/AddNot 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] eb13fc51925e463d855df6a573cd3266
+backend\routes\patient.py core/AddNot 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a761df3b9e8f4954ab1b31518cd75df4
+backend\routes\patient.py core/AddNot 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1b6bfe52fefa4936a282ebf54268cf41
+backend\routes\patient.py core/AddNot 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7f5419086d4c4edd8b244095a5be8684
+backend\routes\patient.py core/AddNot 9
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3c3893dc30e5464e992ad014f6a5f77a
+backend\routes\patient.py core/AddNot 10
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 89b7d23ffba143a48dc0eed48f341232
+backend\routes\patient.py core/AddNot 11
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 87ee9a0c1e584177b1d96a09e08f8645
+backend\routes\patient.py core/AddNot 12
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9ee7aa9194224f84ba3f63976dde75c9
+backend\routes\patient.py core/AddNot 13
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 39c8cb11c4b94232b94f5f6dfa0f4041
+backend\routes\patient.py core/AddNot 14
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d082ad5eb7b2407cb33e3e8fdfcae6a8
+backend\routes\patient.py core/AddNot 15
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 96cd636670c94061857f710d2d061d8d
+backend\routes\patient.py core/AddNot 16
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3ed61c84124e4c29b5ae3c96ea2e0250
+backend\routes\patient.py core/AddNot 17
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 46364f3f41894729b27436520b6e919c
+backend\routes\patient.py core/AddNot 18
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0936e6e3267f473c80f9a63690a25454
+backend\routes\patient.py core/AddNot 19
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8a153094af3144a9ba5c530b30bf70df
+backend\routes\patient.py core/AddNot 20
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 74d6102dca514133abddb43fcf272e7d
+backend\routes\patient.py core/AddNot 21
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f44b4778dc9846a483a7d1656d519cd1
+backend\routes\patient.py core/AddNot 22
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4f591b534e334a2280f7ef336453e84d
+backend\routes\patient.py core/AddNot 23
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] cf3a0f8a0417447f827afd9f7d7b7333
+backend\routes\patient.py core/AddNot 24
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 368f16a2efb749468c4351a2d5e677a1
+backend\routes\patient.py core/AddNot 25
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 56734c31739346729d8f91fc25adeef1
+backend\routes\patient.py core/AddNot 26
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 0595256f15c24efb855976ed6ffe2cfc
+backend\routes\patient.py core/AddNot 27
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4d1cc11add8a4009a345f0787f07d70d
+backend\routes\patient.py core/AddNot 28
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c5495b6d836e45d7b2fdb6df954b25cc
+backend\routes\patient.py core/AddNot 29
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a988beb3f2f64c7bb431a535588627db
+backend\routes\patient.py core/AddNot 30
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a44b0b70bbfd48109b455ac0a401a285
+backend\routes\patient.py core/AddNot 31
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 76b5a37fb3df4c29b774afa2f4cdf6be
+backend\routes\patient.py core/AddNot 32
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] c0aedd7e7bc04a1a90e8fe16dc59d104
+backend\routes\patient.py core/AddNot 33
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] fa4d33fb429249199fced02cfd68b29e
+backend\routes\patient.py core/AddNot 34
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 62f7024905dc49109f021de733eb15fd
+backend\routes\patient.py core/AddNot 35
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8922b3d5801f475194e8f1504f084230
+backend\routes\patient.py core/AddNot 36
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3b88645c67d54b36b5c73c46c3b27850
+backend\routes\patient.py core/AddNot 37
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e1af929a221e4ae2b95e98c0d1bc4b20
+backend\routes\patient.py core/AddNot 38
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d912fcdd0d664b55858c3c143e6fccb3
+backend\routes\patient.py core/AddNot 39
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e0aed180dc08476dbac59334bb85a4ee
+backend\routes\patient.py core/AddNot 40
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 32c79040af86474f91619d4c0fe6bbfc
+backend\routes\patient.py core/AddNot 41
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 68c2d0b6bbbb401daaab8c4a2c3d3e09
+backend\routes\patient.py core/AddNot 42
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a4e57bf2fd744f4ea5196f130c10f823
+backend\routes\patient.py core/AddNot 43
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 64b9fb62898f4b29a4dc45892e67162d
+backend\routes\patient.py core/AddNot 44
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7cf44f3a119c4b6e90017979fdf803bb
+backend\routes\patient.py core/AddNot 45
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 13b62978ef824548bcfbbd9170c14c49
+backend\routes\patient.py core/AddNot 46
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d5cf29e29bb3407c8d0d38b6e5c767d0
+backend\routes\patient.py core/AddNot 47
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 822628a8bd15437ca6a3c9db6e226c4b
+backend\routes\patient.py core/AddNot 48
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4f966cea9bc8449b85393675eb33cdd5
+backend\routes\patient.py core/AddNot 49
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 791f9c0940d040a9b1b7a6919f68ce57
+backend\routes\patient.py core/AddNot 50
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6e8ef5fc2f83401cb157a31537e7ea43
+backend\routes\patient.py core/AddNot 51
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] aa3fcbc3d6944ca9824086d39d84721c
+backend\routes\patient.py core/AddNot 52
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 35bad882b9c644dfa05458ce4da67b8d
+backend\routes\patient.py core/ReplaceTrueWithFalse 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fb2374bc0f36425c9669bfe53f6e1ed9
+backend\routes\patient.py core/ReplaceTrueWithFalse 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ae247b5b6a864fb7862a722d3ada74ab
+backend\routes\patient.py core/ReplaceTrueWithFalse 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b283fa2b96814681b6a406f4af0a2f9c
+backend\routes\patient.py core/ReplaceTrueWithFalse 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0651a4e5320144e99511f2080300ffb7
+backend\routes\patient.py core/ReplaceTrueWithFalse 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c345b842a5c245edac56d24ac67d5afa
+backend\routes\patient.py core/ReplaceTrueWithFalse 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f9a3aed53dc54634aeb42819556ae1c7
+backend\routes\patient.py core/ReplaceTrueWithFalse 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] cc39f49e058f49a098e59f80a13f4d3a
+backend\routes\patient.py core/ReplaceTrueWithFalse 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 47b438e65b89475881de9eb5da118b76
+backend\routes\patient.py core/ReplaceTrueWithFalse 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 56406b58a35b4908b2230abec26c4f85
+backend\routes\patient.py core/ReplaceTrueWithFalse 9
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d4ddc05db17147e9a4696c418ccf084e
+backend\routes\patient.py core/ReplaceTrueWithFalse 10
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 82d272fb4bd4436e8d38ddacf81df8db
+backend\routes\patient.py core/ReplaceTrueWithFalse 11
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 89ae691fca694a52941eab674787c4c3
+backend\routes\patient.py core/ReplaceTrueWithFalse 12
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 590304eb11294500858fde2dbba2410a
+backend\routes\patient.py core/ReplaceTrueWithFalse 13
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] dffc4df4003d45deab275f1ea9f9e2d4
+backend\routes\patient.py core/ReplaceTrueWithFalse 14
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5386a94bf0ff4c2196f061b3373472b3
+backend\routes\patient.py core/ReplaceTrueWithFalse 15
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0d9eafb611f74afa9881ad7dc36da060
+backend\routes\patient.py core/ReplaceTrueWithFalse 16
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9dde32c0843b4b55826208ff2ffd4402
+backend\routes\patient.py core/ReplaceTrueWithFalse 17
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8d8a08508be54a23946625e81d18166f
+backend\routes\patient.py core/ReplaceTrueWithFalse 18
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2d90f4f230f24fcf8103cca787aa0ee5
+backend\routes\patient.py core/ReplaceFalseWithTrue 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] df73830156864fd4be63a6bd451a83cd
+backend\routes\patient.py core/ReplaceFalseWithTrue 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2960078cba2141c28981da12be113f62
+backend\routes\patient.py core/ReplaceFalseWithTrue 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] bfa1ee9660a14faebfa0a16bbdb99111
+backend\routes\patient.py core/ReplaceFalseWithTrue 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b546d20f33af4defa4b0970daf16cfd0
+backend\routes\patient.py core/ReplaceFalseWithTrue 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] dd42940cbc9c46e6ab10a194419bc80d
+backend\routes\patient.py core/ReplaceFalseWithTrue 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d12a59afd2b743439965ddea414fa3e1
+backend\routes\patient.py core/ReplaceFalseWithTrue 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1a53f236b78f4d48a29f069e16489abd
+backend\routes\patient.py core/ReplaceFalseWithTrue 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ad94681773d140299a6d1ced2c46dd03
+backend\routes\patient.py core/ReplaceFalseWithTrue 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2f8c5fc5fc954c44b55961f45f46e67f
+backend\routes\patient.py core/ReplaceFalseWithTrue 9
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 73e0b401edb042be9482066a03fd2c99
+backend\routes\patient.py core/ReplaceFalseWithTrue 10
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e2538a96b5fd4a03b04fd914d9b4e838
+backend\routes\patient.py core/ReplaceFalseWithTrue 11
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 33c156ecff9d436c91211a23fd5b33a1
+backend\routes\patient.py core/ReplaceFalseWithTrue 12
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 110686a3a34649c0bd0150f7d84f18e5
+backend\routes\patient.py core/ReplaceFalseWithTrue 13
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 67be10f09cec495bb1886fecb660a2d5
+backend\routes\patient.py core/ReplaceFalseWithTrue 14
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f5c07ab3fee7431fa2966d1ca545322d
+backend\routes\patient.py core/ReplaceFalseWithTrue 15
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 443de961357c4e8c9591ffcca79fd176
+backend\routes\patient.py core/ReplaceFalseWithTrue 16
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 660e5b5392ad4160b6414accfa05b28e
+backend\routes\patient.py core/ReplaceFalseWithTrue 17
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8f14c8f02f9c4cb8a7311fa845b8a61d
+backend\routes\patient.py core/ReplaceFalseWithTrue 18
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 60ff8c7ac7734e0ba94e255b65eddb70
+backend\routes\patient.py core/ReplaceFalseWithTrue 19
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] e52826291f2c4a3e8254736256222cc5
+backend\routes\patient.py core/ReplaceFalseWithTrue 20
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 104cc39a459e4a5fba943c966a573c56
+backend\routes\patient.py core/ReplaceFalseWithTrue 21
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e2a0839e86f44956bc7617f88d732f8b
+backend\routes\patient.py core/ReplaceFalseWithTrue 22
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 620d1a86a2cc463eb42ca280f61ab91c
+backend\routes\patient.py core/ReplaceFalseWithTrue 23
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ead3b4d1163b4c8d98119957f31f6beb
+backend\routes\patient.py core/ReplaceFalseWithTrue 24
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 93c693dc76354ce494cdc196430ff5a5
+backend\routes\patient.py core/ReplaceFalseWithTrue 25
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8a750d7211b04a4d8a92f6d793be068d
+backend\routes\patient.py core/ReplaceFalseWithTrue 26
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 2f53b034be004e4886dcc74442c09e28
+backend\routes\patient.py core/ReplaceFalseWithTrue 27
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 03e67b7004b242d5b230df7501cdd4c8
+backend\routes\patient.py core/ReplaceFalseWithTrue 28
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 3eb264167d854019b1aff28fb2ca580d
+backend\routes\patient.py core/ReplaceFalseWithTrue 29
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1f73d75e042144d2865b808377b0b276
+backend\routes\patient.py core/ReplaceFalseWithTrue 30
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ea5c6c4d7260455b9b579d1e030effbd
+backend\routes\patient.py core/ReplaceFalseWithTrue 31
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2af12eed0896428b82ac2a760ea8de99
+backend\routes\patient.py core/ReplaceFalseWithTrue 32
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 212832fdb7bf40b4a277e2df63486a81
+backend\routes\patient.py core/ReplaceFalseWithTrue 33
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b9472ff41f0640b0acfdc6371a49539a
+backend\routes\patient.py core/ReplaceFalseWithTrue 34
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d400f0f3341c4837bbf2a463ab456476
+backend\routes\patient.py core/ReplaceFalseWithTrue 35
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d03a004155804ba48a483db31c957199
+backend\routes\patient.py core/ReplaceAndWithOr 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 677cf307c1574c939cf259e78b8403be
+backend\routes\patient.py core/ReplaceAndWithOr 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 27c0372a87764f30bf902ec43d31a035
+backend\routes\patient.py core/ReplaceAndWithOr 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b5983950ce57481a928a5d34e1e4938f
+backend\routes\patient.py core/ReplaceAndWithOr 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e6fee4b77990498d9a53be10dec76cb5
+backend\routes\patient.py core/ReplaceAndWithOr 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] beb4236d46214fa5ae426ab2cd63e5c0
+backend\routes\patient.py core/ReplaceAndWithOr 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 05f3145fd2bf45cb9976eccc49f87727
+backend\routes\patient.py core/ReplaceOrWithAnd 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 044f1eefe9cf4b54a7c8ea612e068667
+backend\routes\patient.py core/ReplaceOrWithAnd 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] bc4bb24502164002907c25f921eac231
+backend\routes\patient.py core/ReplaceOrWithAnd 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ae010b1ae0294876b2a416dae0bd0231
+backend\routes\patient.py core/ReplaceOrWithAnd 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 21ed706d7f984f5bb6866f5d949e0c0a
+backend\routes\patient.py core/ExceptionReplacer 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6a4a6c1cba6646dea53a595af5b39c5e
+backend\routes\patient.py core/ExceptionReplacer 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] de56d7938d694de1a8e89b4812b65f25
+backend\routes\patient.py core/ExceptionReplacer 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6ab3964d925149d38e7c7fac716d26e3
+backend\routes\patient.py core/ExceptionReplacer 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] cd8234e4f536429b838cdff76af61191
+backend\routes\patient.py core/ExceptionReplacer 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 711dc736336c4bd3a75b56e1f7a95ba7
+backend\routes\patient.py core/ExceptionReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 66502d1479a54ec9af1d6fc395b6b72f
+backend\routes\patient.py core/ExceptionReplacer 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6d018e183b2f43ebac8d58953e0d738c
+backend\routes\patient.py core/ExceptionReplacer 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4e172ba20b2843aa9f11bd3cb2af8829
+backend\routes\patient.py core/ExceptionReplacer 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6b14f713d4bc4201b23387007b331aba
+backend\routes\patient.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a5b3c95cd76b40d08ac7afa6a033c026
+backend\routes\patient.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c439f9a5e8e94974a2f434d87055c634
+backend\routes\patient.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d491e6165b264f3e9aba0810e2662968
+backend\routes\patient.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c8c4044352b1478b8801d661f607d22b
+backend\routes\patient.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 25202da4e45345c283718513ed8d6a23
+backend\routes\patient.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1e4c7eb32d7349a69bd8d7b1d617e806
+backend\routes\patient.py core/NumberReplacer 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2d25fabe142a4a28b22955e80240a0e0
+backend\routes\patient.py core/NumberReplacer 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 5948f600eff249158688d510fd17d046
+backend\routes\patient.py core/NumberReplacer 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b5236c74f94a4c038f392f74a87bdb6b
+backend\routes\patient.py core/NumberReplacer 9
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e8e741fcd71440a5aed588b9604660f3
+backend\routes\patient.py core/NumberReplacer 10
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 34f332c48577432eb2f827a0ed6dd57f
+backend\routes\patient.py core/NumberReplacer 11
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7d1d1dc4b57a4ccd83b21c5e0a8ab648
+backend\routes\patient.py core/NumberReplacer 12
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 181cdea7bf7a45fdafb69cbfd159f712
+backend\routes\patient.py core/NumberReplacer 13
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b8bbe603c4e4479fb587169634a8d29a
+backend\routes\patient.py core/NumberReplacer 14
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1a0cbe3f1e214924a385f52d1095e570
+backend\routes\patient.py core/NumberReplacer 15
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 75208635819447659cd691bad9774901
+backend\routes\patient.py core/NumberReplacer 16
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 70fb6a3d11b24e1aa290338f3c271f75
+backend\routes\patient.py core/NumberReplacer 17
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b802b3414e9f41f6976e537f7f117a4a
+backend\routes\patient.py core/NumberReplacer 18
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8c41ab33f7db4e90a06a53a7cd05c370
+backend\routes\patient.py core/NumberReplacer 19
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 90dfe154921744788d745f830a34cee5
+backend\routes\patient.py core/NumberReplacer 20
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6347269c75b7455f8cf0f8830fd00e26
+backend\routes\patient.py core/NumberReplacer 21
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e1a2dcb867a44a28997ddef6c21deb20
+backend\routes\patient.py core/NumberReplacer 22
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 608ee17d1bd64d71b28e6abe8c01f149
+backend\routes\patient.py core/NumberReplacer 23
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b52f1ed093ee41b8b8ec7c37a2945359
+backend\routes\patient.py core/NumberReplacer 24
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 65eb346bb8494d14bdc0fdd7e604becc
+backend\routes\patient.py core/NumberReplacer 25
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c7280670148b4784bf6e9b7ab669f866
+backend\routes\patient.py core/NumberReplacer 26
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] dc86d71e06aa4806b7a6c2adba0a1d0f
+backend\routes\patient.py core/NumberReplacer 27
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ed3f9c783517490f9641322aaf38df16
+backend\routes\patient.py core/NumberReplacer 28
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f0b64123ff3a4fa18ae7b6e5f60e61e7
+backend\routes\patient.py core/NumberReplacer 29
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 09b6993475c54022aa562d44b552d1d5
+backend\routes\patient.py core/NumberReplacer 30
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d69f887a295b4b03b320c0b118d9b4b5
+backend\routes\patient.py core/NumberReplacer 31
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 68448e9511ce47e2a4daea71f2f74c3c
+backend\routes\patient.py core/NumberReplacer 32
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a541f814b2ac4829a9fcb9389eaa0702
+backend\routes\patient.py core/NumberReplacer 33
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3ee621dfd9bf4ff8bfad886b526f89cb
+backend\routes\patient.py core/NumberReplacer 34
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 898f09b0e3b84c2fb3b5ab15a8c8b58d
+backend\routes\patient.py core/NumberReplacer 35
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d375f4da94d6456d9697b4bf70b776b7
+backend\routes\patient.py core/NumberReplacer 36
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b5f6e51fc88a49bf97dd6e2c4c96dd1b
+backend\routes\patient.py core/NumberReplacer 37
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 644a707a8fd84a7689ff9580a6b0d3c8
+backend\routes\patient.py core/NumberReplacer 38
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a766bb5d80b941a98f9935074cbb38a5
+backend\routes\patient.py core/NumberReplacer 39
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fe98afd2e02d4f30984d00290ac19e53
+backend\routes\patient.py core/NumberReplacer 40
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 7b6475d671914fcb957b9e4f219ee104
+backend\routes\patient.py core/NumberReplacer 41
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] bb786af42d0e4dde8ccd90e9e5488d13
+backend\routes\patient.py core/NumberReplacer 42
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1d2c0af5b37d491bb36b62b3fc1cc6e2
+backend\routes\patient.py core/NumberReplacer 43
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 538dd8c5511c48d7bd532d609de7b054
+backend\routes\patient.py core/NumberReplacer 44
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c83db95dd10547df89ba5958be78ac57
+backend\routes\patient.py core/NumberReplacer 45
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b01087a456de4ed09d20bbe8b27d3c60
+backend\routes\patient.py core/NumberReplacer 46
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3b0129fafa0d4e30a8b35c0ae78068d2
+backend\routes\patient.py core/NumberReplacer 47
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3010384005d14602b908dcddd854aeed
+backend\routes\patient.py core/NumberReplacer 48
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f2f17f3840d1474e89b0d97f05b676ad
+backend\routes\patient.py core/NumberReplacer 49
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] eb520a6c80314e1f9228669dd173fe8a
+backend\routes\patient.py core/NumberReplacer 50
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 35616823046a435f8dacbc6c0490f9f2
+backend\routes\patient.py core/NumberReplacer 51
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a9c9f0ae536e471e8e6546b03fbc24bb
+backend\routes\patient.py core/NumberReplacer 52
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6ffa1d7ad85d4aacbfdf321a9b6b58f3
+backend\routes\patient.py core/NumberReplacer 53
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] be2a1b0d6f1e43d5926454883ce17d41
+backend\routes\patient.py core/NumberReplacer 54
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8eeb2d2a6c6b4b58bbe631f4c4970b5d
+backend\routes\patient.py core/NumberReplacer 55
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] be03afa597db402b992bfcb75457848f
+backend\routes\patient.py core/NumberReplacer 56
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 58ba0f0ecaf0473a942990cf2db64bed
+backend\routes\patient.py core/NumberReplacer 57
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3e3618af3bb3464d8c99f960ec2fcb98
+backend\routes\patient.py core/NumberReplacer 58
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2c8d70d86a5f45b0865fca1e6b8caf78
+backend\routes\patient.py core/NumberReplacer 59
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e4955a9d853d4896a5306d47df141746
+backend\routes\patient.py core/NumberReplacer 60
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ed7191d410a44b1b975cbba3cae908d3
+backend\routes\patient.py core/NumberReplacer 61
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 18ff2f6e778a407c8fc503003549e345
+backend\routes\patient.py core/NumberReplacer 62
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 821bc67c78214ca09e65b5a1b21b9ec4
+backend\routes\patient.py core/NumberReplacer 63
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ad1c25274ec7416c814a4c7c429d2f20
+backend\routes\patient.py core/NumberReplacer 64
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 4c31f7082bc5404d995a040caf3c6efa
+backend\routes\patient.py core/NumberReplacer 65
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 576c4b32d41f4d35ba43309a08c05b92
+backend\routes\patient.py core/NumberReplacer 66
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] d9739ed527944233ae4b7aaac3892b14
+backend\routes\patient.py core/NumberReplacer 67
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] ed21d226e48c4bd6a3fd89133daa56b2
+backend\routes\patient.py core/NumberReplacer 68
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 534fa9780ee5485fb6d9b0aa2a8af0d3
+backend\routes\patient.py core/NumberReplacer 69
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 720ea8c903a14cd2bf131ba8daa99a9e
+backend\routes\patient.py core/NumberReplacer 70
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 3107c3b83a1c4d06bcd1fdec15bbc857
+backend\routes\patient.py core/NumberReplacer 71
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 46d82b879fdc4dc2a6033bc01fe72de7
+backend\routes\patient.py core/NumberReplacer 72
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] bd987cfc92db4c01b546b05d558ed5bf
+backend\routes\patient.py core/NumberReplacer 73
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] a665cc3c85164492be46c1d6fe37731f
+backend\routes\patient.py core/NumberReplacer 74
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 6f6e23a75cc64a16aa6e14494752ea3e
+backend\routes\patient.py core/NumberReplacer 75
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+[job-id] 07e03976445c4ff296df14a4b0faa8c6
+backend\routes\patient.py core/NumberReplacer 76
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a4b117a533be4bf18b3e04750e59fb45
+backend\routes\patient.py core/NumberReplacer 77
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 5a8e717635114b2790621b05013fef35
+backend\routes\patient.py core/NumberReplacer 78
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 9f2e5865e1e14c18bdc14b6ab34bf569
+backend\routes\patient.py core/NumberReplacer 79
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 05e6caf3ce00482a873535a53bd15052
+backend\routes\patient.py core/NumberReplacer 80
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 20470a88a855497ea2ef3ef18797120b
+backend\routes\patient.py core/NumberReplacer 81
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] a7a60d6f08df4d22a9f9aede850e1e31
+backend\routes\patient.py core/NumberReplacer 82
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] d0e2d3c34eaa470b97ec088ac2e5d38c
+backend\routes\patient.py core/NumberReplacer 83
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ec33c3730b9d4ec0a5128a9f649f92a8
+backend\routes\patient.py core/NumberReplacer 84
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] f046690a7e984bf8a1b3b7f7b2d97af5
+backend\routes\patient.py core/NumberReplacer 85
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7851a26e9152444193c14d27a34d5585
+backend\routes\patient.py core/NumberReplacer 86
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 49e1671385544020b23f905a70b05684
+backend\routes\patient.py core/NumberReplacer 87
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] e87427f2a92c462e8476d7cfa7bfdffb
+backend\routes\patient.py core/NumberReplacer 88
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 864c0c8104644865af9555bf9895ba86
+backend\routes\patient.py core/NumberReplacer 89
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c54e10df01be4b76a4f7027ff0efc7e7
+backend\routes\patient.py core/NumberReplacer 90
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] fcf54bfa91604220bf38da812ab7af88
+backend\routes\patient.py core/NumberReplacer 91
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 8cb9ea55cf5f49a79d0b16b7986d1c40
+backend\routes\patient.py core/NumberReplacer 92
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 7cf190bb1ed44c1e8f281b42a118a448
+backend\routes\patient.py core/NumberReplacer 93
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 765fb2c9004a48ba880ca056f2cbe2a3
+backend\routes\patient.py core/NumberReplacer 94
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 1728292740c04772837e11ff27b2b81f
+backend\routes\patient.py core/NumberReplacer 95
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 52bad1783cad4d67976bb9902a7dc514
+backend\routes\patient.py core/NumberReplacer 96
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] ae3514ed0ea54a7ba96f4409bc5857c4
+backend\routes\patient.py core/NumberReplacer 97
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 62f50741f4ad445494aab7f1bfad39b9
+backend\routes\patient.py core/NumberReplacer 98
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 9cada5959f704d319b2037f90ded7903
+backend\routes\patient.py core/NumberReplacer 99
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 69d1a5a6ab4d47c28ff1dcac4b99b25c
+backend\routes\patient.py core/NumberReplacer 100
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 82435dfa35d64bb9a0e7754872a25854
+backend\routes\patient.py core/NumberReplacer 101
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 32465570e13e49ad958a9984221c2836
+backend\routes\patient.py core/NumberReplacer 102
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 09b0e6370f1343a59ec324608ec8946c
+backend\routes\patient.py core/NumberReplacer 103
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 8ca289cd5baf492e8492e9aa0e06837f
+backend\routes\patient.py core/NumberReplacer 104
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 67b3dcb729d14021a93b80b139ab1549
+backend\routes\patient.py core/NumberReplacer 105
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c0726b3552e045b68aa1bf6897763b9e
+backend\routes\patient.py core/NumberReplacer 106
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 383e01c84efc49658642ba75569a4747
+backend\routes\patient.py core/NumberReplacer 107
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 922d907c3702446aaa7090e7f78243f5
+backend\routes\patient.py core/NumberReplacer 108
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] ef18761714be4e3e80dd70a045e39a18
+backend\routes\patient.py core/NumberReplacer 109
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 622ea84258af46bc87d3103130f17a3e
+backend\routes\patient.py core/NumberReplacer 110
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] e7c33799ecc546e9a1853151a5de5139
+backend\routes\patient.py core/NumberReplacer 111
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2c431238ae0b4abdae644ae80164c58f
+backend\routes\patient.py core/NumberReplacer 112
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0dc3c37608f44fd1a8015710d7d6e1ad
+backend\routes\patient.py core/NumberReplacer 113
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9ca636416a134332b46fb1b99f15c09e
+backend\routes\patient.py core/RemoveDecorator 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 4bcb28825af4498a80345e524cc8ff40
+backend\routes\patient.py core/RemoveDecorator 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 47d788047fcc49f2b4d40ea17ce6fa3c
+backend\routes\patient.py core/RemoveDecorator 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] cdb53b6d91f14944bba833e31af05251
+backend\routes\patient.py core/RemoveDecorator 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f1f4360f61e7423093e05e414b729165
+backend\routes\patient.py core/RemoveDecorator 4
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6668be35f6c34a48aee6f2c0879af6c6
+backend\routes\patient.py core/RemoveDecorator 5
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] c168aefee93149ff8487e80f39a9547b
+backend\routes\patient.py core/RemoveDecorator 6
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] dee36254f3c94efb8d0802fa627f93e3
+backend\routes\patient.py core/RemoveDecorator 7
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 095cd2fb0ce74f8d9e6c7f648785fb91
+backend\routes\patient.py core/RemoveDecorator 8
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 1d5b8b99331c4c9faf38f1342a2e8e1d
+backend\routes\patient.py core/RemoveDecorator 9
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f6a5b0b0543b4679a14b8ec835486f74
+backend\routes\patient.py core/RemoveDecorator 10
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2021f2060bbc41fe856fbca8e5d53497
+backend\routes\patient.py core/RemoveDecorator 11
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 0810aedeaeae4c3280fa1a2919d25300
+backend\routes\patient.py core/RemoveDecorator 12
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 9bd0cb46229849c9bd5c766aedc43756
+backend\routes\patient.py core/RemoveDecorator 13
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+[job-id] 3ab6faf9007544da9e4d5cdb5de30a6c
+backend\routes\patient.py core/RemoveDecorator 14
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] f15038a4bb4e46499ead0dbb08617598
+backend\routes\patient.py core/RemoveDecorator 15
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] d2db90e2f6fd40dc98d06f3db4e01da8
+backend\routes\patient.py core/RemoveDecorator 16
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] fc0cf27db827464eb6afe28577c0ee4a
+backend\routes\patient.py core/RemoveDecorator 17
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] b249a636d865459eaaf6c4ac0a510ff0
+backend\routes\patient.py core/RemoveDecorator 18
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 883ed9b6ebb04cfead3dbb835d26895b
+backend\routes\patient.py core/RemoveDecorator 19
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3103a514808a48a38d18c28bfa93c3a1
+backend\routes\patient.py core/RemoveDecorator 20
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 2c40585cbed44ead93f79516b7bdaba4
+backend\routes\patient.py core/RemoveDecorator 21
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 3b01b25974ac44048541e43bb192e197
+backend\routes\patient.py core/ZeroIterationForLoop 0
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 6d8d68ff342d46079710cc582e9bfb1a
+backend\routes\patient.py core/ZeroIterationForLoop 1
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] a82ba2c4c93a4f468459183718e35c4c
+backend\routes\patient.py core/ZeroIterationForLoop 2
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+[job-id] 92d7c13a75294a9f96aafb266eb19cb7
+backend\routes\patient.py core/ZeroIterationForLoop 3
+worker outcome: WorkerOutcome.SKIPPED, test outcome: None
+total jobs: 486
+complete: 486 (100.00%)
+surviving mutants: 14 (2.88%)

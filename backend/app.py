@@ -1,9 +1,9 @@
-from flask import Flask, send_from_directory, request, jsonify
-from flask_cors import CORS
+from flask import Flask, abort, send_from_directory, request, jsonify
 from flask_mail import Mail
 from flask_jwt_extended import JWTManager
 from werkzeug.security import generate_password_hash
 from celery import Celery
+from secrets import token_hex
 from database import db
 from dotenv import load_dotenv
 import time
@@ -15,14 +15,14 @@ load_dotenv()
 app = Flask(__name__, static_folder='../frontend', static_url_path='/static')
 
 # flask config
-app.config['SECRET_KEY'] = 'this-is-hms-web-app-123'
+app.config['SECRET_KEY'] = os.getenv('MEDIHUB_SECRET_KEY') or token_hex(32)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
     'MEDIHUB_DATABASE_URI', 'sqlite:///medihub-database.db'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # jwt config
-app.config['JWT_SECRET_KEY'] = 'jwt-secret-key-456'
+app.config['JWT_SECRET_KEY'] = os.getenv('MEDIHUB_JWT_SECRET_KEY') or token_hex(32)
 app.config['JWT_TOKEN_LOCATION'] = ['headers']
 app.config['JWT_HEADER_NAME'] = 'Authorization'
 app.config['JWT_HEADER_TYPE'] = 'Bearer'
@@ -42,11 +42,9 @@ app.config['CELERY_RESULT_BACKEND'] = os.getenv('CELERY_RESULT_BACKEND', 'redis:
 app.config['CELERY_TASK_SERIALIZER'] = 'json'
 app.config['CELERY_ACCEPT_CONTENT'] = ['json']
 app.config['RESULT_SERIALIZER'] = 'json'
-app.config['DEBUG'] = True
 
 # initialize extensions
 db.init_app(app)
-CORS(app)
 mail = Mail(app)
 jwt = JWTManager(app)
 
@@ -109,6 +107,8 @@ def home():
 # catch-all route for frontend routing (must be last)
 @app.route('/<path:path>')
 def serve_frontend(path):
+    if path.startswith('api/'):
+        abort(404)
     # serve static files if they exist
     frontend_path = os.path.join('../frontend', path)
     if os.path.exists(frontend_path) and os.path.isfile(frontend_path):
@@ -123,18 +123,19 @@ def setup_db():
         
         # create admin if not exists
         admin = User.query.filter_by(role='admin').first()
-        if not admin:
+        initial_password = os.getenv('MEDIHUB_INITIAL_ADMIN_PASSWORD')
+        if not admin and initial_password:
             admin = User(
                 username='admin',
                 email='admin@medihub.com',
-                password_hash=generate_password_hash('admin'),
+                password_hash=generate_password_hash(initial_password),
                 role='admin'
             )
             db.session.add(admin)
             db.session.commit()
-            print("Admin created: admin/admin")
+            print("Initial admin account created")
 
 # application entry point
 if __name__ == '__main__':
     setup_db()
-    app.run(debug=True, port=5000)
+    app.run(port=5000)

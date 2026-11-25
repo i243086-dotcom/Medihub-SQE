@@ -1,0 +1,68 @@
+Protected development DB SHA-256 before: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+...................................................................................................................................................................................................................................................................................................................................................................Protected development DB SHA-256 after: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+
+============================== warnings summary ===============================
+tests/team/unit/test_appointment_dependencies.py::test_inactive_doctor_is_absent[/api/patient/doctor/availability/1]
+tests/team/unit/test_direct_route_decisions.py::test_direct_handler_decision[WBU-GEN-doctorAvailability-valid]
+tests/team/unit/test_direct_route_decisions.py::test_direct_handler_decision[WBU-GEN-doctorAvailability-path-doctor_id-0]
+tests/team/unit/test_direct_route_decisions.py::test_direct_handler_decision[WBU-GEN-doctorAvailability-path-doctor_id-2]
+tests/team/unit/test_direct_route_decisions.py::test_direct_handler_decision[WBU-GEN-doctorAvailability-path-doctor_id-3]
+  D:\SQE_Project\Medihub\backend\routes\patient.py:459: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/unit/test_appointment_dependencies.py::test_admin_blacklist_toggle_round_trip
+tests/team/unit/test_appointment_dependencies.py::test_admin_blacklist_toggle_round_trip
+tests/team/unit/test_appointment_dependencies.py::test_admin_blacklist_toggle_round_trip
+  D:\SQE_Project\Medihub\backend\routes\admin.py:310: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    patient = Patient.query.get(patient_id)
+
+tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+  D:\SQE_Project\Medihub\backend\routes\admin.py:114: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+tests/team/unit/test_appointment_dependencies.py::test_admin_doctor_edits_and_deactivation
+  D:\SQE_Project\Medihub\backend\routes\admin.py:148: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/unit/test_appointment_dependencies.py::test_assigned_doctor_treatment_and_patient_history
+tests/team/unit/test_appointment_dependencies.py::test_history_of_legacy_record_without_doctor
+  D:\SQE_Project\Medihub\backend\routes\patient.py:431: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    appointment = Appointment.query.get(treatment.appointment_id)
+
+tests/team/unit/test_appointment_dependencies.py::test_assigned_doctor_treatment_and_patient_history
+tests/team/unit/test_appointment_dependencies.py::test_assigned_doctor_treatment_and_patient_history
+tests/team/unit/test_appointment_dependencies.py::test_doctor_history_without_treatment
+  D:\SQE_Project\Medihub\backend\routes\doctor.py:47: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    patient = Patient.query.get(patient_id)
+
+tests/team/unit/test_appointment_dependencies.py: 2 warnings
+tests/team/unit/test_appointment_rules.py: 75 warnings
+tests/team/unit/test_appointment_slot_transactions.py: 1 warning
+tests/team/unit/test_direct_route_decisions.py: 33 warnings
+  D:\SQE_Project\Medihub\backend\routes\patient.py:245: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/unit/test_appointment_dependencies.py::test_auth_current_user_profile_mapping[arjun-Arjun Patel]
+tests/team/unit/test_appointment_dependencies.py::test_auth_current_user_profile_mapping[ajay-Ajay Kumar]
+tests/team/unit/test_appointment_dependencies.py::test_auth_current_user_profile_mapping[admin-Administrator]
+tests/team/unit/test_appointment_dependencies.py::test_auth_current_user_profile_mapping[orphan-arjun]
+tests/team/unit/test_appointment_dependencies.py::test_auth_current_user_profile_mapping[missing-None]
+  D:\SQE_Project\Medihub\backend\routes\auth.py:99: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    user = User.query.get(user_id)
+
+tests/team/unit/test_appointment_slot_transactions.py: 1 warning
+tests/team/unit/test_direct_route_decisions.py: 40 warnings
+  D:\SQE_Project\Medihub\backend\routes\admin.py:187: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    appointment = Appointment.query.get(appointment_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.11.9-final-0 _______________
+
+Coverage HTML written to dir D:\SQE_Project\Medihub\tests\team\evidence\phase2\final-candidate\final\unit\htmlcov
+Coverage XML written to file D:\SQE_Project\Medihub\tests\team\evidence\phase2\final-candidate\final\unit\coverage.xml
+Coverage JSON written to file D:\SQE_Project\Medihub\tests\team\evidence\phase2\final-candidate\final\unit\coverage.json
+355 passed, 175 warnings in 26.96s

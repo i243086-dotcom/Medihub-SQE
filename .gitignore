@@ -76,6 +76,9 @@ node_modules/
 
 # test outputs
 .coverage
+*.coverage
 coverage.xml
 htmlcov/
+unit-htmlcov/
 .pytest_cache/
+.scannerwork/

@@ -1,0 +1,88 @@
+﻿{
+    "total":  1,
+    "p":  1,
+    "ps":  100,
+    "paging":  {
+                   "pageIndex":  1,
+                   "pageSize":  100,
+                   "total":  1
+               },
+    "effortTotal":  5,
+    "issues":  [
+                   {
+                       "key":  "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
+                       "rule":  "python:S4502",
+                       "severity":  "CRITICAL",
+                       "component":  "medihub-phase2-candidate:backend/app.py",
+                       "project":  "medihub-phase2-candidate",
+                       "line":  15,
+                       "hash":  "fded8a50fabf9ea4bae0fadb55cbff78",
+                       "textRange":  {
+                                         "startLine":  15,
+                                         "endLine":  15,
+                                         "startOffset":  6,
+                                         "endOffset":  77
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "status":  "OPEN",
+                       "message":  "Make sure disabling CSRF protection is safe here.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "142301030+aloktripathi1@users.noreply.github.com",
+                       "tags":  [
+                                    "cwe",
+                                    "django",
+                                    "flask",
+                                    "former-hotspot"
+                                ],
+                       "creationDate":  "2025-11-27T12:34:58+0000",
+                       "updateDate":  "2026-11-24T17:04:31+0000",
+                       "type":  "VULNERABILITY",
+                       "scope":  "MAIN",
+                       "quickFixAvailable":  false,
+                       "messageFormattings":  [
+
+                                              ],
+                       "codeVariants":  [
+
+                                        ],
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "HIGH"
+                                       }
+                                   ],
+                       "issueStatus":  "OPEN",
+                       "prioritizedRule":  false,
+                       "fromSonarQubeUpdate":  false,
+                       "internalTags":  [
+
+                                        ],
+                       "linkedTicketStatus":  "NOT_LINKED"
+                   }
+               ],
+    "components":  [
+                       {
+                           "key":  "medihub-phase2-candidate:backend/app.py",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "app.py",
+                           "longName":  "backend/app.py",
+                           "path":  "backend/app.py"
+                       },
+                       {
+                           "key":  "medihub-phase2-candidate",
+                           "enabled":  true,
+                           "qualifier":  "TRK",
+                           "name":  "MediHub Phase 2 Candidate",
+                           "longName":  "MediHub Phase 2 Candidate"
+                       }
+                   ],
+    "facets":  [
+
+               ]
+}

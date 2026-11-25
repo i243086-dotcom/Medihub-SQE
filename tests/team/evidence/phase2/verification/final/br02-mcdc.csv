@@ -1,0 +1,7 @@
+predicate,all_true,one_false,expected_http_pair,executed_pair
+patient_not_blacklisted,MCC-111111,MCC-011111,200 / 403,PASS / PASS
+doctor_active,MCC-111111,MCC-101111,200 / 404,PASS / PASS
+date_not_past,MCC-111111,MCC-110111,200 / 400,PASS / PASS
+period_available,MCC-111111,MCC-111011,200 / 400,PASS / PASS
+doctor_slot_free,MCC-111111,MCC-111101,200 / 400,PASS / PASS
+patient_time_free,MCC-111111,MCC-111110,200 / 400,PASS / PASS

@@ -110,10 +110,14 @@ python app.py
 # Visit http://localhost:5000
 ```
 
-**Default Login:**
-- Admin: `admin` / `admin`
-- Doctor: `ajay` / `ajay.kumar123`
-- Patient: `rahul` / `rahul123`
+The demo seed prompts for passwords without echoing input. Use the usernames
+`admin`, `ajay`, or `arjun` and the passwords you entered. For an existing
+installation, provisioning and credential rotation are separate from demo seeding.
+
+For persistent sessions or multiple workers, set `MEDIHUB_SECRET_KEY` and
+`MEDIHUB_JWT_SECRET_KEY` to separate strong secrets through the environment.
+New databases can provision a first admin using `MEDIHUB_INITIAL_ADMIN_PASSWORD`
+through the same protected environment.
 
 ## Database Tables
 

@@ -1,0 +1,19 @@
+{
+  "function": "book_appointment",
+  "booking_ast_unchanged_since": "fde115c32e10703ad48219ae0882f172afc45a17",
+  "booking_sha256": "fae1f385c6ec9945f588fc6430570fc66eb1c43e0e97f66aec2f49c4907e08bc",
+  "function_lines": [
+    213,
+    339
+  ],
+  "manual_graph": {
+    "nodes": 69,
+    "edges": 91,
+    "components": 1,
+    "cyclomatic": 24
+  },
+  "additional_short_circuit_decisions": 5,
+  "conditional_expression_line": 269,
+  "normalized_manual": 30,
+  "radon_6_0_1": 30
+}

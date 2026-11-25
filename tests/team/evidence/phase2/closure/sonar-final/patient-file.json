@@ -1,0 +1,24 @@
+﻿{
+    "component":  {
+                      "key":  "medihub-phase2-candidate:backend/routes/patient.py",
+                      "name":  "patient.py",
+                      "qualifier":  "FIL",
+                      "path":  "backend/routes/patient.py",
+                      "language":  "py",
+                      "measures":  [
+                                       {
+                                           "metric":  "complexity",
+                                           "value":  "81"
+                                       },
+                                       {
+                                           "metric":  "cognitive_complexity",
+                                           "value":  "97",
+                                           "bestValue":  false
+                                       },
+                                       {
+                                           "metric":  "ncloc",
+                                           "value":  "384"
+                                       }
+                                   ]
+                  }
+}

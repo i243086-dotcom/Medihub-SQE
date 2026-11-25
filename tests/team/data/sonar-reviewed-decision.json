@@ -1,0 +1,28 @@
+{
+  "repository": "i243086-dotcom/Medihub-SQE",
+  "pull_request": 11,
+  "reviewed_revision": "fde115c32e10703ad48219ae0882f172afc45a17",
+  "candidate_revision": "8699eb0ee8e1dc53039b56528374cd9ab9013b50",
+  "local_issue_key": "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
+  "local_evidence": "tests/team/evidence/phase2/release-gate/local-sonar-disposition.json",
+  "finding": {
+    "rule": "python:S4502",
+    "file": "backend/app.py",
+    "line": 15,
+    "hash": "fded8a50fabf9ea4bae0fadb55cbff78"
+  },
+  "reviews": [
+    {
+      "author": "mominkhawaja-codes",
+      "approval_id": 6060172704,
+      "comment_id": 7166317600,
+      "body_sha256": "6bf91a9ac362e44d38e8d771f1851cf22352096c64aa7aafa0a07c942e035578"
+    },
+    {
+      "author": "m-shaheer-shoaib",
+      "approval_id": 6060195702,
+      "comment_id": 7165956390,
+      "body_sha256": "cfc0523cce6f9ee3d3b6b720b6710a2a2248ae75683268e42d5b8326f6d18113"
+    }
+  ]
+}

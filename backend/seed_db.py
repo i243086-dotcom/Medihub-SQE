@@ -3,15 +3,23 @@ from database import db
 from models import User, Doctor, Patient, DoctorAvailability, Appointment, Treatment
 from werkzeug.security import generate_password_hash
 from datetime import date, timedelta, time as datetime_time, datetime
+from getpass import getpass
+
+
+def seed_credential(username, passwords):
+    value = passwords[username] if passwords is not None else getpass(f'New demo password for {username}: ')
+    if not value:
+        raise ValueError('Demo passwords must not be empty')
+    return value
 
 # create admin user
-def create_admin_user():
+def create_admin_user(passwords=None):
     existing_admin = User.query.filter_by(username='admin').first()
     if existing_admin is None:
         admin_user = User(
             username='admin',
             email='admin@medihub.in',
-            password_hash=generate_password_hash('admin'),
+            password_hash=generate_password_hash(seed_credential('admin', passwords)),
             role='admin'
         )
         db.session.add(admin_user)
@@ -19,14 +27,13 @@ def create_admin_user():
         print("✓ Admin user created")
 
 # create sample doctors account
-def create_sample_doctors():
+def create_sample_doctors(passwords=None):
     existing_doctors = Doctor.query.first()
     if existing_doctors is None:
         sample_doctors_list = [
             {
                 'username': 'ajay',
                 'email': 'ajay.kumar@medihub.in',
-                'password': 'ajay.kumar123',
                 'name': 'Ajay Kumar',
                 'specialization': 'Cardiology',
                 'experience': 14,
@@ -37,7 +44,6 @@ def create_sample_doctors():
             {
                 'username': 'rajesh',
                 'email': 'rajesh.verma@medihub.in',
-                'password': 'rajesh',
                 'name': 'Rajesh Verma',
                 'specialization': 'Neurology',
                 'experience': 12,
@@ -51,7 +57,7 @@ def create_sample_doctors():
             user = User(
                 username=d['username'],
                 email=d['email'],
-                password_hash=generate_password_hash(d['password']),
+                password_hash=generate_password_hash(seed_credential(d['username'], passwords)),
                 role='doctor',
                 is_active=True
             )
@@ -107,14 +113,13 @@ def create_sample_availability():
     print("✓ 7-day availability created (8 slots/day)")
 
 # create sample patients
-def create_sample_patients():
+def create_sample_patients(passwords=None):
     existing_patients = Patient.query.first()
     if existing_patients is None:
         sample_patients_list = [
             {
                 'username': 'arjun',
                 'email': 'arjun.patel@gmail.com',
-                'password': 'arjun',
                 'name': 'Arjun Patel',
                 'phone': '+91-9100001001',
                 'address': 'Flat 201, Andheri East, Mumbai',
@@ -125,7 +130,6 @@ def create_sample_patients():
             {
                 'username': 'vikram',
                 'email': 'vikram.singh@gmail.com',
-                'password': 'vikram',
                 'name': 'Vikram Singh',
                 'phone': '+91-9100001003',
                 'address': '12, MG Road, Bengaluru',
@@ -139,7 +143,7 @@ def create_sample_patients():
             user = User(
                 username=p['username'],
                 email=p['email'],
-                password_hash=generate_password_hash(p['password']),
+                password_hash=generate_password_hash(seed_credential(p['username'], passwords)),
                 role='patient',
                 is_active=True
             )

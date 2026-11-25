@@ -1,0 +1,29 @@
+{
+  "branch": "phase2-phase1-reaudit",
+  "baseline_commit": "e58ce855f5fb0c725ece13fa0a44d25486078465",
+  "current_commit": "256efcb6e85feb9c16692b490a68fc8979674888",
+  "started_pkt": "2026-11-23T20:03:18.816442+05:00",
+  "finished_pkt": "2026-11-23T20:04:47.988097+05:00",
+  "python": "3.11.9",
+  "os": "Windows-10-10.0.22000-SP0",
+  "versions": {
+    "Flask": "2.3.3",
+    "Flask-SQLAlchemy": "3.0.5",
+    "Flask-Mail": "0.9.1",
+    "playwright": "1.65.2",
+    "requests": "2.34.2",
+    "SQLAlchemy": "2.1.9"
+  },
+  "browser_asset_sha256": {
+    "vue.global.js": "0f9a092ad87f4e7a2b37c3fb5aa425b34dcd6ceef24070baf0d05e54353e980c",
+    "bootstrap.bundle.min.js": "aa53d582f97eb594c2a5cc5824574707f9ba9837bce3046bfa5f3556860f4e04",
+    "bootstrap.min.css": "7f1d37f0d90b6385354c2ac10e2bb91563c46bd7a266ed351222ebcac8496c2a"
+  },
+  "dev_db_before_sha256": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5",
+  "dev_db_after_sha256": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5",
+  "api_only": false,
+  "exit_codes": [
+    1,
+    1
+  ]
+}

@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from database import db
+from appointment_slots import SLOT_CONFLICT, commit_appointment
 from models import User, Doctor, Patient, Appointment, Treatment, DoctorAvailability
 from datetime import datetime, date, time, timedelta
 from decorators import doctor_required, get_current_user_id
@@ -130,7 +131,10 @@ def get_appointments():
         query = query.filter(Appointment.appointment_date >= thirty_days_ago)
     
     if date_filter:
-        filter_date = datetime.strptime(date_filter, '%Y-%m-%d').date()
+        try:
+            filter_date = datetime.strptime(date_filter, '%Y-%m-%d').date()
+        except ValueError:
+            return jsonify({'success': False, 'message': 'Invalid date format. Use YYYY-MM-DD'}), 400
         query = query.filter_by(appointment_date=filter_date)
     
     if status_filter:
@@ -177,25 +181,34 @@ def update_appointment_status(appointment_id):
     if doctor is None:
         return jsonify({'success': False, 'message': 'Doctor profile not found', 'errors': ['Profile not found']}), 404
     
-    appointment = Appointment.query.filter_by(id=appointment_id, doctor_id=doctor.id).first()
+    appointment = (
+        Appointment.query.filter_by(id=appointment_id, doctor_id=doctor.id).first()
+        if appointment_id < 2 ** 63 else None
+    )
     
     if appointment is None:
         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404
     
-    data = request.get_json()
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return jsonify({'success': False, 'message': 'Status update requires a JSON object'}), 400
     status = data.get('status')
     
     valid = ['completed', 'cancelled', 'booked']
     if status not in valid:
         return jsonify({'success': False, 'message': 'Invalid status', 'errors': ['Status must be completed, cancelled, or booked']}), 400
+    notes = data.get('notes')
+    if notes is not None and not isinstance(notes, str):
+        return jsonify({'success': False, 'message': 'Notes must be text'}), 400
     
     appointment.status = status
     appointment.updated_at = datetime.utcnow()
 
     if 'notes' in data:
-        appointment.notes = data['notes']
+        appointment.notes = notes
 
-    db.session.commit()
+    if not commit_appointment():
+        return jsonify({'success': False, 'message': SLOT_CONFLICT}), 400
 
     # Send cancellation emails when doctor cancels
     if status == 'cancelled':

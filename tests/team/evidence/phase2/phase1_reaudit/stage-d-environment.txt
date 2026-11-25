@@ -1,0 +1,14 @@
+Build 256efcb6e85feb9c16692b490a68fc8979674888
+Started 2026-11-23T19:52:03.683634+05:00
+Windows-10-10.0.22000-SP0
+3.11.9
+Flask 2.3.3
+Flask-SQLAlchemy 3.0.5
+Flask-Mail 0.9.1
+pytest 9.2.0
+playwright 1.65.2
+-B -X utf8 -m pytest -p no:cacheprovider -q -s tests/team: exit 1
+-B -X utf8 -m pytest -p no:cacheprovider -q -s tests/team/api/test_smoke_high_risk.py: exit 1
+Finished 2026-11-23T19:54:30.394967+05:00
+Dev db SHA-256 before: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+Dev db SHA-256 after: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5

@@ -1,0 +1,126 @@
+{
+  "raw": {
+    "component": {
+      "key": "medihub-phase2-candidate",
+      "name": "MediHub Phase 2 Candidate",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "42.6",
+          "bestValue": false
+        },
+        {
+          "metric": "complexity",
+          "value": "919"
+        },
+        {
+          "metric": "reliability_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "15",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "1.1",
+          "bestValue": false
+        },
+        {
+          "metric": "security_rating",
+          "value": "4.0",
+          "bestValue": false
+        },
+        {
+          "metric": "sqale_index",
+          "value": "48",
+          "bestValue": false
+        },
+        {
+          "metric": "sqale_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "branch_coverage",
+          "value": "66.1",
+          "bestValue": false
+        },
+        {
+          "metric": "cognitive_complexity",
+          "value": "706",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "7308"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "line_coverage",
+          "value": "39.0",
+          "bestValue": false
+        }
+      ]
+    }
+  },
+  "limits": {
+    "security_rating": 1.0,
+    "reliability_rating": 2.0,
+    "duplicated_lines_density": 3.0
+  },
+  "passed": {
+    "security_rating": false,
+    "reliability_rating": true,
+    "duplicated_lines_density": true
+  },
+  "scope_checks": {
+    "production_files_present": true,
+    "test_files_absent_from_production": true,
+    "coverage_imported": true
+  },
+  "source_paths": [
+    "backend/app.py",
+    "backend/appointment_slots.py",
+    "backend/celery_tasks/email.py",
+    "backend/celery_tasks/email_template.py",
+    "backend/celery_tasks/imports.py",
+    "backend/celery_tasks/reminders.py",
+    "backend/celery_tasks/reports.py",
+    "backend/database.py",
+    "backend/decorators.py",
+    "backend/migrate_appointment_slots.py",
+    "backend/models/__init__.py",
+    "backend/models/appointment.py",
+    "backend/models/doctor.py",
+    "backend/models/patient.py",
+    "backend/models/treatment.py",
+    "backend/models/user.py",
+    "backend/routes/__init__.py",
+    "backend/routes/admin.py",
+    "backend/routes/auth.py",
+    "backend/routes/doctor.py",
+    "backend/routes/patient.py",
+    "backend/seed_db.py",
+    "frontend/custom.css",
+    "frontend/index.html",
+    "frontend/js/admin.js",
+    "frontend/js/api.js",
+    "frontend/js/app.js",
+    "frontend/js/doctor.js",
+    "frontend/js/patient.js",
+    "frontend/js/utils.js"
+  ]
+}

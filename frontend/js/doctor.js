@@ -751,7 +751,9 @@ const DoctorComponent = {
                 prescription: '',
                 treatment_notes: ''
             }
-            this.loadAppointments()
+            this.loadAppointments().catch(() => {
+                this.error = 'Failed to load appointments'
+            })
         },
 
         async viewPatientTreatmentHistory(patient) {

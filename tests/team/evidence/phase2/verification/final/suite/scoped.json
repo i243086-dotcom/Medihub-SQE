@@ -1,0 +1,255 @@
+{
+  "scope_totals": {
+    "statements": [
+      703,
+      703
+    ],
+    "branches": [
+      226,
+      226
+    ]
+  },
+  "repository_totals": {
+    "covered_lines": 879,
+    "num_statements": 1103,
+    "percent_covered": 76.43004824259131,
+    "percent_covered_display": "76",
+    "missing_lines": 224,
+    "excluded_lines": 0,
+    "percent_statements_covered": 79.69174977334542,
+    "percent_statements_covered_display": "80",
+    "num_branches": 348,
+    "num_partial_branches": 4,
+    "covered_branches": 230,
+    "missing_branches": 118,
+    "percent_branches_covered": 66.0919540229885,
+    "percent_branches_covered_display": "66"
+  },
+  "files": {
+    "backend/routes/patient.py": {
+      "function_ranges": {
+        "get_dashboard": [
+          10,
+          31
+        ],
+        "get_departments": [
+          34,
+          77
+        ],
+        "get_available_slots": [
+          80,
+          163
+        ],
+        "get_doctors": [
+          166,
+          183
+        ],
+        "get_appointments": [
+          186,
+          207
+        ],
+        "book_appointment": [
+          210,
+          337
+        ],
+        "cancel_appointment": [
+          340,
+          407
+        ],
+        "get_history": [
+          410,
+          451
+        ],
+        "get_doctor_availability": [
+          454,
+          467
+        ]
+      },
+      "statements": [
+        223,
+        223
+      ],
+      "branches": [
+        84,
+        84
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/routes/doctor.py": {
+      "function_ranges": {
+        "get_dashboard": [
+          10,
+          34
+        ],
+        "get_patient_history_details": [
+          37,
+          101
+        ],
+        "get_appointments": [
+          104,
+          151
+        ],
+        "get_patients": [
+          154,
+          171
+        ],
+        "update_appointment_status": [
+          174,
+          236
+        ],
+        "add_patient_history": [
+          239,
+          278
+        ],
+        "get_availability": [
+          281,
+          320
+        ],
+        "set_availability_slots": [
+          323,
+          378
+        ],
+        "get_available_slots": [
+          422,
+          453
+        ]
+      },
+      "statements": [
+        212,
+        212
+      ],
+      "branches": [
+        66,
+        66
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/routes/admin.py": {
+      "function_ranges": {
+        "get_appointments": [
+          170,
+          179
+        ],
+        "update_appointment": [
+          182,
+          239
+        ],
+        "toggle_patient_blacklist": [
+          301,
+          318
+        ],
+        "update_doctor": [
+          109,
+          140
+        ],
+        "delete_doctor": [
+          143,
+          155
+        ]
+      },
+      "statements": [
+        91,
+        91
+      ],
+      "branches": [
+        42,
+        42
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/routes/auth.py": {
+      "function_ranges": {
+        "login": [
+          10,
+          37
+        ],
+        "get_current_user": [
+          93,
+          115
+        ],
+        "logout": [
+          118,
+          121
+        ]
+      },
+      "statements": [
+        40,
+        40
+      ],
+      "branches": [
+        20,
+        20
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/decorators.py": {
+      "function_ranges": null,
+      "statements": [
+        50,
+        50
+      ],
+      "branches": [
+        8,
+        8
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/models/appointment.py": {
+      "function_ranges": null,
+      "statements": [
+        32,
+        32
+      ],
+      "branches": [
+        6,
+        6
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/models/doctor.py": {
+      "function_ranges": null,
+      "statements": [
+        33,
+        33
+      ],
+      "branches": [
+        0,
+        0
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/models/patient.py": {
+      "function_ranges": null,
+      "statements": [
+        20,
+        20
+      ],
+      "branches": [
+        0,
+        0
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    },
+    "backend/celery_tasks/email_template.py": {
+      "function_ranges": null,
+      "statements": [
+        2,
+        2
+      ],
+      "branches": [
+        0,
+        0
+      ],
+      "missing_lines": [],
+      "missing_branches": []
+    }
+  }
+}

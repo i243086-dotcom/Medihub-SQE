@@ -9,12 +9,16 @@ auth_bp = Blueprint('auth', __name__)
 # login with username and password
 @auth_bp.route('/login', methods=['POST'])
 def login():
-    data = request.get_json()
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return jsonify({'success': False, 'message': 'Login requires a JSON object'}), 400
     username = data.get('username')
     password = data.get('password')
 
     if not username or not password:
         return jsonify({'success': False, 'message': 'Username and password are required', 'errors': ['Missing credentials']}), 400
+    if not isinstance(username, str) or not isinstance(password, str):
+        return jsonify({'success': False, 'message': 'Username and password must be text'}), 400
 
     user = User.query.filter_by(username=username).first()
 

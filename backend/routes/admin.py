@@ -1,5 +1,7 @@
 from flask import Blueprint, request, jsonify, current_app
+from secrets import token_urlsafe
 from database import db
+from appointment_slots import SLOT_CONFLICT, commit_appointment
 from models import User, Patient, Doctor, Appointment, Treatment
 from werkzeug.security import generate_password_hash
 from datetime import datetime, date
@@ -79,7 +81,7 @@ def add_doctor():
         username = f"{base}{counter}"
         counter += 1
     
-    password = f"{username}123"
+    password = token_urlsafe(24)
     
     user = User(
         username=username,
@@ -182,24 +184,31 @@ def get_appointments():
 @admin_bp.route('/appointments/<int:appointment_id>', methods=['PUT'])
 @admin_required
 def update_appointment(appointment_id):
-    appointment = Appointment.query.get(appointment_id)
+    appointment = db.session.get(Appointment, appointment_id) if appointment_id < 2 ** 63 else None
     
     if appointment is None:
         return jsonify({'success': False, 'message': 'Appointment not found', 'errors': ['Appointment not found']}), 404
     
-    data = request.get_json()
-    
-    if 'status' in data:
-        appointment.status = data['status']
-    if 'notes' in data:
-        appointment.notes = data['notes']
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return jsonify({'success': False, 'message': 'Appointment update requires a JSON object'}), 400
+    # Preserve statuses used by the app and its historical records.
+    status = data.get('status')
+    if 'status' in data and status not in ('booked', 'completed', 'cancelled', 'canceled', 'available'):
+        return jsonify({'success': False, 'message': 'Invalid appointment status'}), 400
+    notes = data.get('notes')
+    if notes is not None and not isinstance(notes, str):
+        return jsonify({'success': False, 'message': 'Notes must be text'}), 400
         
     # Handle rescheduling
     if 'appointment_date' in data and 'appointment_time' in data:
+        date_str = data['appointment_date']
+        time_str = data['appointment_time']
+        if not isinstance(date_str, str) or not isinstance(time_str, str):
+            return jsonify({'success': False, 'message': 'Appointment date and time must be text'}), 400
         try:
-            new_date = datetime.strptime(data['appointment_date'], '%Y-%m-%d').date()
+            new_date = datetime.strptime(date_str, '%Y-%m-%d').date()
             # Handle time format HH:MM or HH:MM:SS
-            time_str = data['appointment_time']
             if len(time_str.split(':')) == 2:
                 new_time = datetime.strptime(time_str, '%H:%M').time()
             else:
@@ -210,9 +219,12 @@ def update_appointment(appointment_id):
                 doctor_id=appointment.doctor_id,
                 appointment_date=new_date,
                 appointment_time=new_time
+            ).filter(
+                Appointment.id != appointment.id,
+                Appointment.status.notin_(('cancelled', 'canceled')),
             ).first()
             
-            if existing and existing.id != appointment.id and existing.status != 'cancelled':
+            if existing:
                  return jsonify({'success': False, 'message': 'Slot already booked', 'errors': ['Slot unavailable']}), 400
                  
             appointment.appointment_date = new_date
@@ -220,10 +232,15 @@ def update_appointment(appointment_id):
             
         except ValueError as e:
             return jsonify({'success': False, 'message': f'Invalid date/time format: {str(e)}', 'errors': ['Invalid format']}), 400
-    
+
+    if 'status' in data:
+        appointment.status = status
+    if 'notes' in data:
+        appointment.notes = notes
     appointment.updated_at = datetime.utcnow()
     
-    db.session.commit()
+    if not commit_appointment():
+        return jsonify({'success': False, 'message': SLOT_CONFLICT}), 400
     
     return jsonify({'success': True, 'message': 'Appointment updated successfully', 'data': {'appointment': appointment.to_dict()}})
 

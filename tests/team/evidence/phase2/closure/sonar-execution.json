@@ -1,0 +1,7 @@
+﻿{
+    "overall_exit":  1,
+    "revision":  "a7c2d00fc79247b3e3c3067b59e93fc9d7f91975",
+    "server":  "26.11.0.134175",
+    "scanner_exit":  1,
+    "coverage_input":  "tests/team/evidence/phase2/closure/verified/backend/coverage.xml"
+}

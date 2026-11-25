@@ -1,0 +1,320 @@
+openapi: 3.0.3
+info:
+  title: MediHub appointment workflow test contract
+  version: 1.4.0
+  description: Current role and scheduling rules plus controlled client errors for invalid input.
+servers:
+  - url: http://127.0.0.1:5001
+security: [{bearer: []}]
+paths:
+  /api/auth/login:
+    post:
+      operationId: login
+      security: []
+      x-test: {actor: anonymous, roles: [anonymous, patient, doctor, admin]}
+      requestBody: {$ref: '#/components/requestBodies/Login'}
+      responses:
+        '200': {$ref: '#/components/responses/Envelope'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+  /api/patient/departments:
+    get:
+      operationId: departments
+      x-test: {actor: patient, roles: [patient, admin]}
+      responses:
+        '200': {$ref: '#/components/responses/Envelope'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+  /api/patient/doctors:
+    get:
+      operationId: doctors
+      x-test: {actor: patient, roles: [patient]}
+      parameters:
+        - {name: department, in: query, schema: {type: string, example: Cardiology, x-values: [Neurology, unknown, '']}}
+      responses:
+        '200': {$ref: '#/components/responses/Envelope'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+  /api/patient/available-slots:
+    get:
+      operationId: slots
+      x-test: {actor: patient, roles: [patient, admin]}
+      parameters:
+        - {name: doctor_id, in: query, required: true, schema: {type: integer, example: 1, x-values: [0, 2, 3, abc]}}
+        - {name: date, in: query, required: true, schema: {type: string, format: date, example: '2030-01-16', x-days: [-1, 0, 1, 5, 6, 7], x-values: ['2030-02-30', abc]}}
+      responses:
+        '200': {$ref: '#/components/responses/Slots'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+  /api/patient/doctor/availability/{doctor_id}:
+    get:
+      operationId: doctorAvailability
+      x-test: {actor: patient, roles: [patient]}
+      parameters:
+        - name: doctor_id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+            minimum: 0
+            maximum: 9223372036854775807
+            example: 1
+            x-values: [0, 2, 3, abc]
+          x-invalid: 404
+          x-status: {'0': 404, '3': 404, '9223372036854775806': 404, '9223372036854775807': 404}
+      responses:
+        '200': {$ref: '#/components/responses/Envelope'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+  /api/patient/appointments:
+    get:
+      operationId: patientList
+      x-test: {actor: patient, roles: [patient], fixture: appointment}
+      parameters:
+        - {name: status, in: query, schema: {type: string, example: booked, x-values: [cancelled, completed, unknown, '']}}
+      responses:
+        '200': {$ref: '#/components/responses/AppointmentList'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+    post:
+      operationId: book
+      x-test: {actor: patient, roles: [patient]}
+      requestBody: {$ref: '#/components/requestBodies/Booking'}
+      responses:
+        '200': {$ref: '#/components/responses/AppointmentResult'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+  /api/patient/appointments/{appointment_id}:
+    delete:
+      operationId: cancel
+      x-test: {actor: patient, roles: [patient], fixture: appointment}
+      parameters: [{$ref: '#/components/parameters/AppointmentId'}]
+      responses:
+        '200': {$ref: '#/components/responses/Envelope'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+        '405': {$ref: '#/components/responses/Error'}
+  /api/doctor/appointments:
+    get:
+      operationId: doctorList
+      x-test: {actor: doctor, roles: [doctor], fixture: appointment}
+      parameters:
+        - {name: status, in: query, schema: {type: string, example: booked, x-values: [cancelled, completed, unknown, '']}}
+        - {name: date, in: query, schema: {type: string, format: date, example: '2030-01-16', x-days: [-1, 0, 1], x-values: ['2030-02-30', abc]}}
+        - {name: time_filter, in: query, schema: {type: string, example: upcoming, x-values: [today, completed, unknown, '']}}
+      responses:
+        '200': {$ref: '#/components/responses/AppointmentList'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+  /api/doctor/appointments/{appointment_id}/status:
+    put:
+      operationId: doctorStatus
+      x-test: {actor: doctor, roles: [doctor], fixture: appointment}
+      parameters: [{$ref: '#/components/parameters/AppointmentId'}]
+      requestBody: {$ref: '#/components/requestBodies/DoctorStatus'}
+      responses:
+        '200': {$ref: '#/components/responses/AppointmentResult'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+        '405': {$ref: '#/components/responses/Error'}
+  /api/admin/appointments:
+    get:
+      operationId: adminList
+      x-test: {actor: admin, roles: [admin], fixture: appointment}
+      responses:
+        '200': {$ref: '#/components/responses/AppointmentList'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+  /api/admin/appointments/{appointment_id}:
+    put:
+      operationId: adminStatus
+      x-test: {actor: admin, roles: [admin], fixture: appointment}
+      parameters: [{$ref: '#/components/parameters/AppointmentId'}]
+      requestBody: {$ref: '#/components/requestBodies/AdminUpdate'}
+      responses:
+        '200': {$ref: '#/components/responses/AppointmentResult'}
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '403': {$ref: '#/components/responses/Error'}
+        '404': {$ref: '#/components/responses/Error'}
+        '405': {$ref: '#/components/responses/Error'}
+components:
+  securitySchemes:
+    bearer: {type: http, scheme: bearer, bearerFormat: JWT}
+  parameters:
+    AppointmentId:
+      name: appointment_id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+        maximum: 9223372036854775807
+        example: 1
+        x-values: [2, abc]
+      x-invalid: 405
+      x-status:
+        '0': 404
+        '2': 404
+        '9223372036854775806': 404
+        '9223372036854775807': 404
+        '9223372036854775808': 404
+  requestBodies:
+    Login:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [username, password]
+            properties:
+              username: {type: string, example: arjun, x-values: [unknown, ''], x-status: {unknown: 401, '': 400}}
+              password: {type: string, example: synthetic-phase2, x-values: [wrong, ''], x-status: {wrong: 401, '': 400}}
+    Booking:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [doctor_id, appointment_date, appointment_time]
+            properties:
+              doctor_id:
+                type: integer
+                format: int64
+                minimum: -9223372036854775808
+                maximum: 9223372036854775807
+                example: 1
+                x-values: [0, 2, 3]
+                x-status:
+                  '0': 400
+                  '3': 404
+                  '-9223372036854775808': 404
+                  '-9223372036854775807': 404
+                  '9223372036854775806': 404
+                  '9223372036854775807': 404
+              appointment_date:
+                type: string
+                format: date
+                example: '2030-01-16'
+                x-days: [-1, 0, 1, 5, 6, 7]
+                x-status: {'2030-01-14': 400, '2030-01-22': 400}
+                x-values: ['2030-02-30', abc]
+              appointment_time:
+                type: string
+                pattern: '^([01][0-9]|2[0-3]):[0-5][0-9](-([01][0-9]|2[0-3]):[0-5][0-9])?$'
+                example: '10:00'
+                x-hour-boundaries: [9, 13, 15, 19]
+                x-open-ranges: [[9, 13], [15, 19]]
+                x-values: ['09:30', '12:59', '10:00-11:00', '24:00', 'abc']
+              notes: {type: string, example: Synthetic notes, x-values: ['', 'a'], nullable: true}
+    DoctorStatus:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [status]
+            properties:
+              status: {type: string, enum: [booked, completed, cancelled], example: completed, x-values: [booked, banana]}
+              notes: {type: string, example: Synthetic notes, nullable: true, x-values: ['']}
+    AdminUpdate:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            description: Rescheduling applies only when both date and time are supplied.
+            properties:
+              status: {type: string, enum: [booked, completed, cancelled, canceled, available], example: completed, x-values: [banana]}
+              notes: {type: string, example: Synthetic notes, nullable: true, x-values: ['']}
+              appointment_date:
+                type: string
+                format: date
+                example: '2030-01-17'
+                x-values: ['2030-02-30', abc]
+                x-boundary-values: ['2032-02-28', '2032-02-29', '2032-02-30']
+              appointment_time:
+                type: string
+                example: '11:00'
+                pattern: '^([01][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$'
+                x-values: ['12:00:00', '24:00', abc]
+                x-boundary-values: ['-00:00:01', '00:00:00', '00:00:01', '23:59:58', '23:59:59', '24:00:00']
+  responses:
+    Error:
+      description: A validation, authentication or role denial response.
+      content:
+        application/json:
+          schema:
+            type: object
+            anyOf:
+              - {required: [message], properties: {message: {type: string}}}
+              - {required: [msg], properties: {msg: {type: string}}}
+        text/html:
+          schema: {type: string}
+    Envelope:
+      description: Successful operation.
+      content:
+        application/json: {schema: {$ref: '#/components/schemas/Envelope'}}
+    AppointmentResult:
+      description: Saved appointment returned by the booking or status operation.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - {$ref: '#/components/schemas/Envelope'}
+              - {type: object, properties: {data: {type: object, required: [appointment], properties: {appointment: {$ref: '#/components/schemas/Appointment'}}}}}
+    AppointmentList:
+      description: Role-scoped appointments.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - {$ref: '#/components/schemas/Envelope'}
+              - {type: object, properties: {data: {type: object, required: [appointments], properties: {appointments: {type: array, items: {$ref: '#/components/schemas/Appointment'}}}}}}
+    Slots:
+      description: Configured hourly slot starts and their current booking state.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - {$ref: '#/components/schemas/Envelope'}
+              - {type: object, properties: {data: {type: object, required: [slots], properties: {slots: {type: array, items: {$ref: '#/components/schemas/Slot'}}}}}}
+  schemas:
+    Envelope:
+      type: object
+      required: [success, message, data]
+      properties:
+        success: {type: boolean, enum: [true]}
+        message: {type: string}
+        data: {type: object}
+    Appointment:
+      type: object
+      required: [id, doctor_id, patient_id, appointment_date, appointment_time, status]
+      properties:
+        id: {type: integer}
+        doctor_id: {type: integer}
+        patient_id: {type: integer}
+        appointment_date: {type: string, format: date}
+        appointment_time: {type: string}
+        status: {type: string}
+    Slot:
+      type: object
+      required: [slot_type, appointment_time, status, display]
+      properties:
+        slot_type: {type: string, enum: [morning, evening]}
+        appointment_time: {type: string}
+        status: {type: string, enum: [available, booked]}
+        display: {type: string}

@@ -1,0 +1,196 @@
+{
+  "raw": {
+    "component": {
+      "key": "medihub-phase2-candidate",
+      "name": "MediHub Phase 2 Candidate",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "44.6",
+          "bestValue": false
+        },
+        {
+          "metric": "complexity",
+          "value": "920"
+        },
+        {
+          "metric": "reliability_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "15",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "1.1",
+          "bestValue": false
+        },
+        {
+          "metric": "security_rating",
+          "value": "4.0",
+          "bestValue": false
+        },
+        {
+          "metric": "new_coverage",
+          "period": {
+            "index": 1,
+            "value": "81.4",
+            "bestValue": false
+          }
+        },
+        {
+          "metric": "sqale_index",
+          "value": "48",
+          "bestValue": false
+        },
+        {
+          "metric": "sqale_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "branch_coverage",
+          "value": "69.9",
+          "bestValue": false
+        },
+        {
+          "metric": "cognitive_complexity",
+          "value": "707",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "7308"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "line_coverage",
+          "value": "40.7",
+          "bestValue": false
+        }
+      ]
+    }
+  },
+  "limits": {
+    "security_rating": 1.0,
+    "reliability_rating": 2.0,
+    "duplicated_lines_density": 3.0
+  },
+  "passed": {
+    "security_rating": false,
+    "reliability_rating": true,
+    "duplicated_lines_density": true
+  },
+  "scope_checks": {
+    "production_files_present": true,
+    "test_files_absent_from_production": true,
+    "coverage_imported": true
+  },
+  "source_paths": [
+    "backend/app.py",
+    "backend/appointment_slots.py",
+    "backend/celery_tasks/email.py",
+    "backend/celery_tasks/email_template.py",
+    "backend/celery_tasks/imports.py",
+    "backend/celery_tasks/reminders.py",
+    "backend/celery_tasks/reports.py",
+    "backend/database.py",
+    "backend/decorators.py",
+    "backend/migrate_appointment_slots.py",
+    "backend/models/__init__.py",
+    "backend/models/appointment.py",
+    "backend/models/doctor.py",
+    "backend/models/patient.py",
+    "backend/models/treatment.py",
+    "backend/models/user.py",
+    "backend/routes/__init__.py",
+    "backend/routes/admin.py",
+    "backend/routes/auth.py",
+    "backend/routes/doctor.py",
+    "backend/routes/patient.py",
+    "backend/seed_db.py",
+    "frontend/custom.css",
+    "frontend/index.html",
+    "frontend/js/admin.js",
+    "frontend/js/api.js",
+    "frontend/js/app.js",
+    "frontend/js/doctor.js",
+    "frontend/js/patient.js",
+    "frontend/js/utils.js"
+  ],
+  "native_gate": {
+    "status": "OK",
+    "conditions": [
+      {
+        "status": "OK",
+        "metricKey": "new_coverage",
+        "comparator": "LT",
+        "errorThreshold": "80",
+        "actualValue": "81.4"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_duplicated_lines_density",
+        "comparator": "GT",
+        "errorThreshold": "3",
+        "actualValue": "0.0"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_violations",
+        "comparator": "GT",
+        "errorThreshold": "0",
+        "actualValue": "0"
+      }
+    ],
+    "ignoredConditions": false,
+    "period": {
+      "mode": "PREVIOUS_VERSION",
+      "date": "2026-11-24T16:48:35+0000"
+    },
+    "caycStatus": "compliant"
+  },
+  "analysis_history": {
+    "paging": {
+      "pageIndex": 1,
+      "pageSize": 1,
+      "total": 7
+    },
+    "analyses": [
+      {
+        "key": "3b709cec-3de4-44fd-a51f-fb71ad83113b",
+        "date": "2026-11-24T18:23:02+0000",
+        "events": [
+          {
+            "key": "938bf529-bd3c-4ed3-8881-bd5381269a47",
+            "category": "QUALITY_GATE",
+            "name": "Passed",
+            "description": ""
+          },
+          {
+            "key": "dd9ff3f5-0da1-42a1-9110-796072208f5c",
+            "category": "VERSION",
+            "name": "not provided"
+          }
+        ],
+        "projectVersion": "not provided",
+        "manualNewCodePeriodBaseline": false,
+        "revision": "ed84dd3cc0b2be87a931222ad210ce38648d1080",
+        "detectedCI": "undetected"
+      }
+    ]
+  }
+}

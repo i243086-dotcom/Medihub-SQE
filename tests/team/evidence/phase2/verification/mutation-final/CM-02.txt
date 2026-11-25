@@ -1,0 +1,22 @@
+.FFF...                                                                  [100%]
+================================== FAILURES ===================================
+______________ test_br03_cancel_transition[arjun-cancelled-400] _______________
+tests\team\unit\test_appointment_rules.py:114: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 87 bytes [200 OK]>.status_code
+______________ test_br03_cancel_transition[arjun-completed-400] _______________
+tests\team\unit\test_appointment_rules.py:114: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 87 bytes [200 OK]>.status_code
+______________ test_br03_cancel_transition[arjun-available-400] _______________
+tests\team\unit\test_appointment_rules.py:114: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 87 bytes [200 OK]>.status_code
+=========================== short test summary info ===========================
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-cancelled-400]
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-completed-400]
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-available-400]
+3 failed, 4 passed, 95 deselected in 0.62s

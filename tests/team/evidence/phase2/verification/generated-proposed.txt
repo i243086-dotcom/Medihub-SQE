@@ -1,0 +1,43 @@
+Protected development DB SHA-256 before: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+.....................................................................................FFF..........................................................F.................................................Protected development DB SHA-256 after: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+
+================================== FAILURES ===================================
+________ test_generated_contract[GEN-book-body-appointment_time-09-30] ________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [] -> [(1, 1, 1, '2030-01-16', '09:30', 'booked', 'Synthetic notes')]
+________ test_generated_contract[GEN-book-body-appointment_time-12-59] ________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [] -> [(1, 1, 1, '2030-01-16', '12:59', 'booked', 'Synthetic notes')]
+_____ test_generated_contract[GEN-book-body-appointment_time-10-00-11-00] _____
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', 'Synthetic notes')]
+________ test_generated_contract[GEN-doctorStatus-body-status-booked] _________
+tests\team\api\test_generated_appointments.py:47: in test_generated_contract
+    pytest.fail(f"Expected {case['expected_status']}, got {response.status_code}. DB {before} -> {after}")
+E   Failed: Expected 400, got 200. DB [(1, 1, 1, '2030-01-16', '10:00', 'booked', None)] -> [(1, 1, 1, '2030-01-16', '10:00', 'booked', 'Synthetic notes')]
+============================== warnings summary ===============================
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-valid]
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-0]
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-2]
+tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorAvailability-path-doctor_id-3]
+  D:\SQE_Project\Medihub\backend\routes\patient.py:457: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/api/test_generated_appointments.py: 33 warnings
+  D:\SQE_Project\Medihub\backend\routes\patient.py:244: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/api/test_generated_appointments.py: 30 warnings
+  D:\SQE_Project\Medihub\backend\routes\admin.py:185: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    appointment = Appointment.query.get(appointment_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_time-09-30]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_time-12-59]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-book-body-appointment_time-10-00-11-00]
+FAILED tests/team/api/test_generated_appointments.py::test_generated_contract[GEN-doctorStatus-body-status-booked]
+4 failed, 192 passed, 67 warnings in 5.51s

@@ -1,0 +1,12 @@
+{
+  "pages": 24,
+  "docx_sha256": "539469f280f8eb1d6e0437c9119eaf05f818b5305c77dd93074dd63bcb0693da",
+  "renderer": "Microsoft Word 16.0",
+  "tables": 26,
+  "formatted_nonempty_table_runs": 766,
+  "cover_preserved": true,
+  "table_points": 12,
+  "line_spacing": 1.5,
+  "body_justified": true,
+  "visual_review": "All section render contact sheets inspected using Aspose.Words 26.11 and PDFium after native Word PDF export stalled. Changed sections were rendered again. Office page count is native Word."
+}

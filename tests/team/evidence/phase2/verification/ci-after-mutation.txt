@@ -1,0 +1,563 @@
+Mutation score	Set up job	﻿2026-11-23T16:38:28.7171982Z Current runner version: '2.338.2'
+Mutation score	Set up job	2026-11-23T16:38:28.7200415Z ##[group]Runner Image Provisioner
+Mutation score	Set up job	2026-11-23T16:38:28.7201395Z Hosted Compute Agent
+Mutation score	Set up job	2026-11-23T16:38:28.7202005Z Version: 20261111.635
+Mutation score	Set up job	2026-11-23T16:38:28.7202653Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Mutation score	Set up job	2026-11-23T16:38:28.7203412Z Build Date: 2026-11-11T01:49:01Z
+Mutation score	Set up job	2026-11-23T16:38:28.7204063Z Worker ID: {0cc344eb-4268-41e9-a284-cf2ec9a9ed2f}
+Mutation score	Set up job	2026-11-23T16:38:28.7204713Z Region: us-east-1
+Mutation score	Set up job	2026-11-23T16:38:28.7205313Z Cloud: AWS
+Mutation score	Set up job	2026-11-23T16:38:28.7205817Z ##[endgroup]
+Mutation score	Set up job	2026-11-23T16:38:28.7207432Z ##[group]Operating System
+Mutation score	Set up job	2026-11-23T16:38:28.7208117Z Ubuntu
+Mutation score	Set up job	2026-11-23T16:38:28.7208632Z 26.04.1
+Mutation score	Set up job	2026-11-23T16:38:28.7209187Z LTS
+Mutation score	Set up job	2026-11-23T16:38:28.7209677Z ##[endgroup]
+Mutation score	Set up job	2026-11-23T16:38:28.7210214Z ##[group]Runner Image
+Mutation score	Set up job	2026-11-23T16:38:28.7210807Z Image: ubuntu-26.04
+Mutation score	Set up job	2026-11-23T16:38:28.7211360Z Version: 20261116.88.1
+Mutation score	Set up job	2026-11-23T16:38:28.7212469Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+Mutation score	Set up job	2026-11-23T16:38:28.7214262Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+Mutation score	Set up job	2026-11-23T16:38:28.7215259Z ##[endgroup]
+Mutation score	Set up job	2026-11-23T16:38:28.7216468Z ##[group]GITHUB_TOKEN Permissions
+Mutation score	Set up job	2026-11-23T16:38:28.7219133Z Contents: read
+Mutation score	Set up job	2026-11-23T16:38:28.7219700Z Metadata: read
+Mutation score	Set up job	2026-11-23T16:38:28.7220276Z ##[endgroup]
+Mutation score	Set up job	2026-11-23T16:38:28.7222099Z Secret source: Actions
+Mutation score	Set up job	2026-11-23T16:38:28.7223079Z Cache mode: write
+Mutation score	Set up job	2026-11-23T16:38:28.7223843Z Prepare workflow directory
+Mutation score	Set up job	2026-11-23T16:38:28.7573505Z Prepare all required actions
+Mutation score	Set up job	2026-11-23T16:38:28.7628536Z Getting action download info
+Mutation score	Set up job	2026-11-23T16:38:28.9052241Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Mutation score	Set up job	2026-11-23T16:38:30.1494845Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Mutation score	Set up job	2026-11-23T16:38:30.3135087Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Mutation score	Set up job	2026-11-23T16:38:30.5865020Z Complete job name: Mutation score
+Mutation score	Run actions/checkout@v4	﻿2026-11-23T16:38:30.6492597Z ##[group]Run actions/checkout@v4
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6493176Z with:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6493461Z   repository: i243086-dotcom/Medihub-SQE
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6495701Z   token: ***
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6496035Z   ssh-strict: true
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6496318Z   ssh-user: git
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6496601Z   persist-credentials: true
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6496875Z   clean: true
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6497393Z   sparse-checkout-cone-mode: true
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6497737Z   fetch-depth: 1
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6497994Z   fetch-tags: false
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6498253Z   show-progress: true
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6498530Z   lfs: false
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6498791Z   submodules: false
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6499090Z   set-safe-directory: true
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6499379Z   allow-unsafe-pr-checkout: false
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:30.6499815Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6072197Z Syncing repository: i243086-dotcom/Medihub-SQE
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6073934Z ##[group]Getting Git version info
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6074431Z Working directory is '/home/runner/work/Medihub-SQE/Medihub-SQE'
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6075197Z [command]/usr/bin/git version
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6086434Z git version 2.56.1
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6101079Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6110448Z Temporarily overriding HOME='/home/runner/work/_temp/9e851a59-acc8-475f-a400-6a0998ed2479' before making global git config changes
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6111398Z Adding repository directory to the temporary git global config as a safe directory
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6113976Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6508016Z Deleting the contents of '/home/runner/work/Medihub-SQE/Medihub-SQE'
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6516201Z ##[group]Initializing the repository
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.6516802Z [command]/usr/bin/git init /home/runner/work/Medihub-SQE/Medihub-SQE
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7269301Z hint: Using 'master' as the name for the initial branch. This default branch name
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7270561Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7271220Z hint: to use in all of your new repositories, which will suppress this warning,
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7271641Z hint: call:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7271907Z hint:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7272283Z hint: 	git config --global init.defaultBranch <name>
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7272680Z hint:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7273051Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7273635Z hint: 'development'. The just-created branch can be renamed via this command:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7274045Z hint:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7274314Z hint: 	git branch -m <name>
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7274584Z hint:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7274945Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7286251Z Initialized empty Git repository in /home/runner/work/Medihub-SQE/Medihub-SQE/.git/
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7296475Z [command]/usr/bin/git remote add origin https://github.com/i243086-dotcom/Medihub-SQE
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7352530Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7353488Z ##[group]Disabling automatic garbage collection
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7355764Z [command]/usr/bin/git config --local gc.auto 0
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7378608Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7379244Z ##[group]Setting up auth
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7384314Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:33.7406351Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1083416Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1108101Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1294898Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1317858Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1500656Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1527885Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1528642Z ##[group]Fetching the repository
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.1534195Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935:refs/remotes/pull/11/merge
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5237649Z From https://github.com/i243086-dotcom/Medihub-SQE
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5238742Z  * [new ref]         bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935 -> pull/11/merge
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5242087Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5242706Z ##[group]Determining the checkout info
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5244746Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5250778Z [command]/usr/bin/git sparse-checkout disable
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5300321Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5321358Z ##[group]Checking out the ref
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5322795Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/11/merge
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5557727Z Note: switching to 'refs/remotes/pull/11/merge'.
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5558058Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5558262Z You are in 'detached HEAD' state. You can look around, make experimental
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5558684Z changes and commit them, and you can discard any commits you make in this
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5559101Z state without impacting any branches by switching back to a branch.
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5559343Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5559495Z If you want to create a new branch to retain commits you create, you may
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5559887Z do so (now or later) by using -c with the switch command. Example:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5560542Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5560725Z   git switch -c <new-branch-name>
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5560935Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5561105Z Or undo this operation with:
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5561331Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5561536Z   git switch -
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5561674Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5567523Z Turn off this advice by setting config variable advice.detachedHead to false
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5567989Z 
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5568494Z HEAD is now at bd0e1ee Merge 815b11f9c6ad9bfffca37362a866db6352bb1689 into adf2871f9fe5c57e61218eecd5f90fc955e00ee4
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5569983Z ##[endgroup]
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5614794Z [command]/usr/bin/git log -1 --format=%H
+Mutation score	Run actions/checkout@v4	2026-11-23T16:38:34.5630613Z bd0e1eea1adbf2dd8ef28e548d47812e5d2fb935
+Mutation score	Run actions/setup-python@v5	﻿2026-11-23T16:38:34.5858926Z ##[group]Run actions/setup-python@v5
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5859232Z with:
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5859452Z   python-version: 3.11
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5859707Z   check-latest: false
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5861632Z   token: ***
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5861910Z   update-environment: true
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5862191Z   allow-prereleases: false
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5862436Z   freethreaded: false
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.5862664Z ##[endgroup]
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:34.6882742Z ##[group]Installed versions
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:35.1366221Z (node:2347) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:35.1367197Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:35.1367668Z Successfully set up CPython (3.11.18)
+Mutation score	Run actions/setup-python@v5	2026-11-23T16:38:35.1368293Z ##[endgroup]
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	﻿2026-11-23T16:38:35.1483119Z ##[group]Run python -m pip install -r backend/requirements.txt -r requirements-test.txt
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1484109Z ^[[36;1mpython -m pip install -r backend/requirements.txt -r requirements-test.txt^[[0m
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1519872Z shell: /usr/bin/bash -e {0}
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1520261Z env:
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1520562Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1521005Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1521389Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1521741Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1522093Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1522452Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:35.1522733Z ##[endgroup]
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.6636287Z Collecting Flask==2.3.3 (from -r backend/requirements.txt (line 2))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7053544Z   Downloading flask-2.3.3-py3-none-any.whl.metadata (3.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7223532Z Collecting Flask-SQLAlchemy==3.0.5 (from -r backend/requirements.txt (line 3))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7332069Z   Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl.metadata (3.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7517363Z Collecting Flask-CORS==4.0.0 (from -r backend/requirements.txt (line 4))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7616923Z   Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata (5.4 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7800468Z Collecting Flask-JWT-Extended==4.5.3 (from -r backend/requirements.txt (line 5))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.7910489Z   Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl.metadata (3.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.8069147Z Collecting Flask-Mail==0.9.1 (from -r backend/requirements.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.8177991Z   Downloading Flask-Mail-0.9.1.tar.gz (45 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:39.8336261Z   Installing build dependencies: started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2444042Z   Installing build dependencies: finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.2445941Z   Getting requirements to build wheel: started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.6656702Z   Getting requirements to build wheel: finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.6667038Z   Preparing metadata (pyproject.toml): started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8211388Z   Preparing metadata (pyproject.toml): finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8417729Z Collecting Werkzeug==2.3.7 (from -r backend/requirements.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8529703Z   Downloading werkzeug-2.3.7-py3-none-any.whl.metadata (4.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8886619Z Collecting celery==5.3.4 (from -r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.8995093Z   Downloading celery-5.3.4-py3-none-any.whl.metadata (21 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.9258084Z Collecting redis==5.0.1 (from -r backend/requirements.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.9352804Z   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.9520276Z Collecting python-dotenv==1.0.0 (from -r backend/requirements.txt (line 14))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:41.9619350Z   Downloading python_dotenv-1.0.0-py3-none-any.whl.metadata (21 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.0756996Z Collecting Pillow==10.1.0 (from -r backend/requirements.txt (line 15))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.0878127Z   Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.1108229Z Collecting pytest==9.2.0 (from -r requirements-test.txt (line 1))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.1210613Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.1469852Z Collecting pytest-cov==7.1.0 (from -r requirements-test.txt (line 2))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.1574531Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.4198901Z Collecting coverage==7.17.4 (from -r requirements-test.txt (line 3))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.4315709Z   Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.4513312Z Collecting requests==2.34.2 (from -r requirements-test.txt (line 4))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.4615664Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.4912692Z Collecting PyYAML==6.0.4 (from -r requirements-test.txt (line 5))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5014133Z   Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5179795Z Collecting openapi-spec-validator==0.9.0 (from -r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5280433Z   Downloading openapi_spec_validator-0.9.0-py3-none-any.whl.metadata (6.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5442151Z Collecting pytest-playwright==0.10.0 (from -r requirements-test.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5542301Z   Downloading pytest_playwright-0.10.0-py3-none-any.whl.metadata (14 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5716665Z Collecting pytest-html==4.2.0 (from -r requirements-test.txt (line 8))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5816162Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.5979770Z Collecting freezegun==1.5.5 (from -r requirements-test.txt (line 9))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6078996Z   Downloading freezegun-1.5.5-py3-none-any.whl.metadata (13 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6231071Z Collecting pysonar==1.11.0.6012 (from -r requirements-test.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6336894Z   Downloading pysonar-1.11.0.6012-py3-none-any.whl.metadata (8.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6516898Z Collecting cosmic-ray==8.9.0 (from -r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6628711Z   Downloading cosmic_ray-8.9.0-py3-none-any.whl.metadata (4.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6796737Z Collecting Jinja2>=3.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.6896086Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7045434Z Collecting itsdangerous>=2.1.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7145298Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7334905Z Collecting click>=8.1.3 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7435607Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7575746Z Collecting blinker>=1.6.2 (from Flask==2.3.3->-r backend/requirements.txt (line 2))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.7677871Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.9673678Z Collecting sqlalchemy>=1.4.18 (from Flask-SQLAlchemy==3.0.5->-r backend/requirements.txt (line 3))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:42.9785442Z   Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.0002725Z Collecting PyJWT<3.0,>=2.0 (from Flask-JWT-Extended==4.5.3->-r backend/requirements.txt (line 5))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.0100296Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.0495021Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.3.7->-r backend/requirements.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.0597734Z   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.0772778Z Collecting billiard<5.0,>=4.1.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.0867570Z   Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1080049Z Collecting kombu<6.0,>=5.3.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1179684Z   Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1398425Z Collecting vine<6.0,>=5.0.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1497585Z   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1646601Z Collecting click-didyoumean>=0.3.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1746616Z   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1887792Z Collecting click-repl>=0.2.0 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.1989467Z   Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2135816Z Collecting click-plugins>=1.1.1 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2240065Z   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2396537Z Collecting tzdata>=2022.7 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2494808Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2642051Z Collecting python-dateutil>=2.8.2 (from celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2740238Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.2903142Z Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3001208Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3163082Z Collecting packaging>=24 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3262317Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3405694Z Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3505344Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3682618Z Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements-test.txt (line 1))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.3781235Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.4846164Z Collecting charset_normalizer<4,>=2 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.4953393Z   Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (43 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5143070Z Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5255863Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5668919Z Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5766586Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.5945689Z Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements-test.txt (line 4))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6056000Z   Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6258776Z Collecting jsonschema<5.0.0,>=4.26.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6359197Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6525039Z Collecting jsonschema-path<0.6.0,>=0.5.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6622796Z   Downloading jsonschema_path-0.5.0-py3-none-any.whl.metadata (8.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.6906138Z Collecting lazy-object-proxy<2.0,>=1.7.1 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7007518Z   Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7162267Z Collecting openapi-schema-validator<0.10.0,>=0.9.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7263628Z   Downloading openapi_schema_validator-0.9.0-py3-none-any.whl.metadata (10 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.7978178Z Collecting pydantic<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8079858Z   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8370960Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8471447Z   Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8774381Z Collecting playwright>=1.18 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.8873128Z   Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9039140Z Collecting python-slugify<10.0.0,>=6.0.0 (from pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9142132Z   Downloading python_slugify-9.2.0-py3-none-any.whl.metadata (13 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9306887Z Collecting pytest-metadata>=2 (from pytest-html==4.2.0->-r requirements-test.txt (line 8))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9406749Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9569867Z Collecting jproperties<3,>=2.1 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9669198Z   Downloading jproperties-2.1.2-py2.py3-none-any.whl.metadata (8.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:43.9922426Z Collecting tomli<3,>=2.0 (from pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.0031957Z   Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3212442Z Collecting aiohttp (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3319973Z   Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3509208Z Collecting anybadge (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3611394Z   Downloading anybadge-1.18.0-py3-none-any.whl.metadata (41 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3784379Z Collecting attrs (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.3892650Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4063550Z Collecting decorator (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4162910Z   Downloading decorator-5.3.2-py3-none-any.whl.metadata (4.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4311763Z Collecting exit-codes (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4418055Z   Downloading exit_codes-1.3.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4626821Z Collecting gitpython (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4724295Z   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4887418Z Collecting parso (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.4990402Z   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.5574530Z Collecting rich (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.5722486Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.5932967Z Collecting stevedore (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.6039712Z   Downloading stevedore-5.10.0-py3-none-any.whl.metadata (2.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.6181506Z Collecting toml (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.6281415Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.6448398Z Collecting yattag (from cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.6549809Z   Downloading yattag-1.16.1.tar.gz (29 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:44.6609215Z   Installing build dependencies: started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5080858Z   Installing build dependencies: finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.5085890Z   Getting requirements to build wheel: started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.7279372Z   Getting requirements to build wheel: finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.7287033Z   Preparing metadata (pyproject.toml): started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8415860Z   Preparing metadata (pyproject.toml): finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8588200Z Collecting six~=1.13 (from jproperties<3,>=2.1->pysonar==1.11.0.6012->-r requirements-test.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8692085Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8862600Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.8968438Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9165021Z Collecting referencing>=0.28.4 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:45.9265053Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0769561Z Collecting rpds-py>=0.25.0 (from jsonschema<5.0.0,>=4.26.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.0874478Z   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1040704Z Collecting pathable<0.7.0,>=0.6.0 (from jsonschema-path<0.6.0,>=0.5.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1144028Z   Downloading pathable-0.6.0-py3-none-any.whl.metadata (7.2 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1331633Z Collecting amqp>=5.4.2 (from kombu<6.0,>=5.3.2->celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1444304Z   Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1620750Z Collecting rfc3339-validator (from openapi-schema-validator<0.10.0,>=0.9.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1727457Z   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1884579Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.1984410Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6631282Z Collecting pydantic-core==2.50.5 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6734999Z   Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.6909411Z Collecting typing-extensions>=4.16.0 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7028390Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7171850Z Collecting typing-inspection>=0.4.4 (from pydantic<3.0.0,>=2.0.0->openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7271132Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7328343Z Collecting pydantic-settings<3.0.0,>=2.0.0 (from openapi-spec-validator==0.9.0->-r requirements-test.txt (line 6))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7428546Z   Downloading pydantic_settings-2.16.2-py3-none-any.whl.metadata (4.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7453573Z INFO: pip is looking at multiple versions of pydantic-settings to determine which version is compatible with other requirements. This could take a while.
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7556003Z   Downloading pydantic_settings-2.16.1-py3-none-any.whl.metadata (4.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7679731Z   Downloading pydantic_settings-2.16.0-py3-none-any.whl.metadata (4.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7806932Z   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.7964011Z Collecting text-unidecode>=1.3 (from python-slugify<10.0.0,>=6.0.0->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8062788Z   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8345696Z Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.8449894Z   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9365020Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright>=1.18->pytest-playwright==0.10.0->-r requirements-test.txt (line 7))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9469660Z   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9694921Z Collecting wcwidth>=0.1.4 (from prompt_toolkit>=3.0.36->click-repl>=0.2.0->celery==5.3.4->-r backend/requirements.txt (line 10))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:46.9799812Z   Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (26 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0032234Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0128134Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0275633Z Collecting aiosignal>=1.4.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.0377619Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1267705Z Collecting frozenlist>=1.1.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.1372466Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.2960713Z Collecting multidict<8.0,>=4.5 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3064781Z   Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3540479Z Collecting propcache>=0.2.0 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.3640692Z   Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.5620512Z Collecting yarl<2.0,>=1.25.1 (from aiohttp->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.5725704Z   Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6020062Z Collecting gitdb<5,>=4.0.1 (from gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6122359Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6275553Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6372797Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6560370Z Collecting markdown-it-py>=2.2.0 (from rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6658473Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6820864Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->cosmic-ray==8.9.0->-r requirements-test.txt (line 11))
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.6919373Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7062081Z Downloading flask-2.3.3-py3-none-any.whl (96 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7187391Z Downloading flask_sqlalchemy-3.0.5-py3-none-any.whl (24 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7294129Z Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7415666Z Downloading Flask_JWT_Extended-4.5.3-py2.py3-none-any.whl (22 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7527764Z Downloading werkzeug-2.3.7-py3-none-any.whl (242 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7676984Z Downloading celery-5.3.4-py3-none-any.whl (421 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.7890223Z Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8008137Z Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8140218Z Downloading Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.6 MB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8409036Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 146.9 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8506444Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8627964Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8744320Z Downloading coverage-7.17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8858802Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.8974258Z Downloading pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (828 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9013677Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 828.0/828.0 kB 242.6 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9112897Z Downloading openapi_spec_validator-0.9.0-py3-none-any.whl (50 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9225955Z Downloading pytest_playwright-0.10.0-py3-none-any.whl (22 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9336174Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9450209Z Downloading freezegun-1.5.5-py3-none-any.whl (19 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9564543Z Downloading pysonar-1.11.0.6012-py3-none-any.whl (51 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9698208Z Downloading cosmic_ray-8.9.0-py3-none-any.whl (62 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9817250Z Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:47.9933749Z Downloading charset_normalizer-3.5.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0068829Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0186423Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0293662Z Downloading jproperties-2.1.2-py2.py3-none-any.whl (17 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0405876Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0518949Z Downloading jsonschema_path-0.5.0-py3-none-any.whl (24 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0655057Z Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0806185Z Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.0952585Z Downloading lazy_object_proxy-1.13.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (68 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1085277Z Downloading openapi_schema_validator-0.9.0-py3-none-any.whl (19 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1193998Z Downloading pathable-0.6.0-py3-none-any.whl (18 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1305834Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1416327Z Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1539532Z Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1616047Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 354.5 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1713251Z Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1823464Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.1933065Z Downloading python_slugify-9.2.0-py3-none-any.whl (17 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2046117Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2158795Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2278638Z Downloading tomli-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (276 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2446828Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2558663Z Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2665407Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2776616Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2886305Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.2993927Z Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3107951Z Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3220159Z Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3332466Z Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3448081Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3555512Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3665368Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3778624Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3891435Z Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.3998948Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.4112649Z Downloading playwright-1.65.2-py3-none-manylinux1_x86_64.whl (53.5 MB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5592191Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 MB 364.9 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5696522Z Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5734441Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 174.4 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5836005Z Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.5955374Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6004584Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 296.4 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6105682Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6219384Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6331983Z Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6452659Z Downloading sqlalchemy-2.1.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6607731Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 312.8 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6703583Z Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6814332Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.6929248Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7045462Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7158805Z Downloading wcwidth-0.9.5-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (822 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7200527Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 822.7/822.7 kB 231.9 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7304584Z Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7373532Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 313.7 MB/s  0:00:00
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7472019Z Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (510 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7598366Z Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7711207Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7822452Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.7935715Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8052180Z Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8167654Z Downloading anybadge-1.18.0-py3-none-any.whl (56 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8278565Z Downloading decorator-5.3.2-py3-none-any.whl (11 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8394302Z Downloading exit_codes-1.3.0-py2.py3-none-any.whl (4.7 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8508144Z Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8624110Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8738988Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8849897Z Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.8962753Z Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.9072670Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.9198547Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.9312361Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.9422490Z Downloading stevedore-5.10.0-py3-none-any.whl (56 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:48.9531669Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1290091Z Building wheels for collected packages: Flask-Mail, yattag
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.1296035Z   Building wheel for Flask-Mail (pyproject.toml): started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2711967Z   Building wheel for Flask-Mail (pyproject.toml): finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2716053Z   Created wheel for Flask-Mail: filename=flask_mail-0.9.1-py3-none-any.whl size=7667 sha256=97a0b730ca53423dc80a6dd21e3423f5d1f0f12e59cb192aab0273539b6188b6
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2717050Z   Stored in directory: /home/runner/.cache/pip/wheels/f6/38/ab/b955b60e85ca451344be85d42bd267ef32311bd61cb21e5a1c
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.2732391Z   Building wheel for yattag (pyproject.toml): started
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4108665Z   Building wheel for yattag (pyproject.toml): finished with status 'done'
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4112839Z   Created wheel for yattag: filename=yattag-1.16.1-py3-none-any.whl size=15931 sha256=fb163e9352e268057e825188bab6dabebf1df7352f1ba1ad1731a17e66271bc7
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4114208Z   Stored in directory: /home/runner/.cache/pip/wheels/7d/cd/81/74d0b2cf3c26cb69e13e8c01becb277c0777ed3b88cc4cc901
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.4126684Z Successfully built Flask-Mail yattag
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:49.5029358Z Installing collected packages: yattag, text-unidecode, exit-codes, wcwidth, vine, urllib3, tzdata, typing-extensions, tomli, toml, stevedore, smmap, six, rpds-py, redis, PyYAML, python-slugify, python-dotenv, PyJWT, pygments, propcache, pluggy, Pillow, pathable, parso, packaging, multidict, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, iniconfig, idna, greenlet, frozenlist, decorator, coverage, click, charset_normalizer, certifi, blinker, billiard, attrs, annotated-types, aiohappyeyeballs, yarl, Werkzeug, typing-inspection, sqlalchemy, rfc3339-validator, requests, referencing, python-dateutil, pytest, pydantic-core, prompt_toolkit, playwright, markdown-it-py, jproperties, Jinja2, gitdb, click-plugins, click-didyoumean, anybadge, amqp, aiosignal, rich, pytest-playwright, pytest-metadata, pytest-cov, pysonar, pydantic, kombu, jsonschema-specifications, jsonschema-path, gitpython, freezegun, Flask, click-repl, aiohttp, pytest-html, pydantic-settings, jsonschema, Flask-SQLAlchemy, Flask-Mail, Flask-JWT-Extended, Flask-CORS, cosmic-ray, celery, openapi-schema-validator, openapi-spec-validator
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:54.2349101Z 
+Mutation score	Run python -m pip install -r backend/requirements.txt -r requirements-test.txt	2026-11-23T16:38:54.2376661Z Successfully installed Flask-2.3.3 Flask-CORS-4.0.0 Flask-JWT-Extended-4.5.3 Flask-Mail-0.9.1 Flask-SQLAlchemy-3.0.5 Jinja2-3.1.6 MarkupSafe-3.0.4 Pillow-10.1.0 PyJWT-2.15.1 PyYAML-6.0.4 Werkzeug-2.3.7 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 amqp-5.4.2 annotated-types-0.8.0 anybadge-1.18.0 attrs-26.1.0 billiard-4.3.2 blinker-1.9.0 celery-5.3.4 certifi-2026.11.20 charset_normalizer-3.5.3 click-8.5.1 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 cosmic-ray-8.9.0 coverage-7.17.4 decorator-5.3.2 exit-codes-1.3.0 freezegun-1.5.5 frozenlist-1.8.0 gitdb-4.0.12 gitpython-3.2.1 greenlet-3.5.6 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jproperties-2.1.2 jsonschema-4.26.0 jsonschema-path-0.5.0 jsonschema-specifications-2025.9.1 kombu-5.7.0 lazy-object-proxy-1.13.0 markdown-it-py-4.3.0 mdurl-0.1.2 multidict-7.2.1 openapi-schema-validator-0.9.0 openapi-spec-validator-0.9.0 packaging-26.3 parso-0.8.7 pathable-0.6.0 playwright-1.65.2 pluggy-1.7.0 prompt_toolkit-3.0.53 propcache-0.5.4 pydantic-2.14.4 pydantic-core-2.50.5 pydantic-settings-2.15.0 pygments-2.21.0 pysonar-1.11.0.6012 pytest-9.2.0 pytest-cov-7.1.0 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-playwright-0.10.0 python-dateutil-4.0.0 python-dotenv-1.0.0 python-slugify-9.2.0 redis-5.0.1 referencing-0.37.0 requests-2.34.2 rfc3339-validator-0.1.4 rich-15.0.0 rpds-py-2026.9.1 six-1.17.0 smmap-5.0.3 sqlalchemy-2.1.9 stevedore-5.10.0 text-unidecode-1.3 toml-0.10.2 tomli-2.5.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 vine-5.1.0 wcwidth-0.9.5 yarl-1.25.1 yattag-1.16.1
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	﻿2026-11-23T16:38:54.4555778Z ##[group]Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4556364Z ^[[36;1mpython tests/team/tools/phase2_mutation.py mutation-evidence --enforce^[[0m
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4575676Z shell: /usr/bin/bash -e {0}
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4576392Z env:
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4576732Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4577299Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4577709Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4578057Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4578391Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4578821Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:54.4579128Z ##[endgroup]
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:58.8604805Z Cosmic Ray init
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:38:59.8697943Z Cosmic Ray filter
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:39:00.2804786Z Cosmic Ray baseline
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:39:01.6177958Z Cosmic Ray exec
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:40:59.4723230Z Cosmic Ray report
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:40:59.8230468Z Cosmic Ray dump
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2850601Z {
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2851293Z   "production_sha256": "1b3287c6e10ee3dbfbede2d759041c66acbcf4ccc70d0d4778391762101d3ef6",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2851888Z   "custom": [
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2852108Z     {
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2852377Z       "id": "CM-01",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2852686Z       "target": "book_appointment",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2852953Z       "line": 310,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2853198Z       "assertions": "MCC-111101",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2853485Z       "exit": 1,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2853693Z       "status": "killed"
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2853966Z     },
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2854168Z     {
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2854375Z       "id": "CM-02",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2854617Z       "target": "cancel_appointment",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2854874Z       "line": 357,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2855144Z       "assertions": "test_br03_cancel_transition",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2855426Z       "exit": 1,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2855629Z       "status": "killed"
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2855903Z     }
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2856097Z   ],
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2856325Z   "cosmic": {
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2856538Z     "selected_ranges": [
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2856757Z       "260-291",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2856994Z       "303-337",
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2857378Z       "342-365"
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2857864Z     ],
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2858085Z     "outcomes": {
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2858300Z       "null": 368,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2858532Z       "survived": 48,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2858795Z       "killed": 70
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2859006Z     },
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2859211Z     "workers": {
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2859428Z       "skipped": 368,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2859663Z       "normal": 118
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2859895Z     },
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2860092Z     "score": 0.5932203389830508,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2860354Z     "killed": 70,
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2860564Z     "survived": 48
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2860774Z   }
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2861026Z }
+Mutation score	Run python tests/team/tools/phase2_mutation.py mutation-evidence --enforce	2026-11-23T16:41:00.2925115Z ##[error]Process completed with exit code 1.
+Mutation score	Run actions/upload-artifact@v4	﻿2026-11-23T16:41:00.2995094Z ##[group]Run actions/upload-artifact@v4
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2995386Z with:
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2995733Z   name: mutation-analysis
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2996076Z   path: mutation-evidence/
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2996352Z   if-no-files-found: warn
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2996644Z   compression-level: 6
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2996892Z   overwrite: false
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2997472Z   include-hidden-files: false
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2997823Z env:
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2998153Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2998561Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2998936Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2999270Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2999650Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.2999994Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.3000301Z ##[endgroup]
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.4235826Z (node:2806) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.4236694Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.4298177Z With the provided path, there will be 13 files uploaded
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.4298903Z Artifact name is valid!
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.4299332Z Root directory input is valid!
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.6328944Z Beginning upload of artifact content to blob storage
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.7188804Z (node:2806) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.7777661Z Uploaded bytes 49531
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.7966579Z Finished uploading artifact content to blob storage!
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.7967541Z SHA256 digest of uploaded artifact zip is c69a607b7ef2cb3bf348dbbaaca0c684dd50a4c756039caae0f7e54514a55810
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:00.7968139Z Finalizing artifact upload
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:01.1664438Z Artifact mutation-analysis.zip successfully finalized. Artifact ID 14839392674
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:01.1665342Z Artifact mutation-analysis has been successfully uploaded! Final size is 49531 bytes. Artifact ID is 14839392674
+Mutation score	Run actions/upload-artifact@v4	2026-11-23T16:41:01.1671761Z Artifact download URL: https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45218777165/artifacts/14839392674
+Mutation score	Post Run actions/checkout@v4	﻿2026-11-23T16:41:01.1834599Z Post job cleanup.
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2527980Z [command]/usr/bin/git version
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2559074Z git version 2.56.1
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2583061Z Temporarily overriding HOME='/home/runner/work/_temp/9d2fbbf7-f792-4eea-a748-5d14b98b08df' before making global git config changes
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2585960Z Adding repository directory to the temporary git global config as a safe directory
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2587013Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Medihub-SQE/Medihub-SQE
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2614733Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2638893Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2845590Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2863236Z http.https://github.com/.extraheader
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2871656Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.2896798Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.3099499Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Mutation score	Post Run actions/checkout@v4	2026-11-23T16:41:01.3130872Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Mutation score	Complete job	﻿2026-11-23T16:41:01.3422465Z Cleaning up orphan processes
+Mutation score	Complete job	2026-11-23T16:41:01.3699473Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

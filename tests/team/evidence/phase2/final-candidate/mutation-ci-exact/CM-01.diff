@@ -1,0 +1,11 @@
+--- backend/routes/patient.py
++++ backend/routes/patient.py
+@@ -308,7 +308,7 @@
+         status='booked'
+     ).first()
+     
+-    if existing_booking:
++    if False:
+         return jsonify({'success': False, 'message': 'This slot is already booked'}), 400
+     
+     # check if patient already has appointment at this time
