@@ -1,0 +1,11 @@
+........................................................................ [ 48%]
+........................................................................ [ 97%]
+....                                                                     [100%]
+=============================== warnings summary ===============================
+tests/team/unit/test_appointment_rules.py: 75 warnings
+tests/team/unit/test_appointment_slot_transactions.py: 1 warning
+  /tmp/medihub-mutation-1dh93xfa/backend/routes/patient.py:245: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+148 passed, 76 warnings in 1.41s

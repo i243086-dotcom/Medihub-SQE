@@ -1,0 +1,32 @@
+.FFFF.......                                                             [100%]
+=================================== FAILURES ===================================
+_______________ test_br03_cancel_transition[arjun-cancelled-400] _______________
+tests/team/unit/test_appointment_rules.py:133: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 74 bytes [200 OK]>.status_code
+_______________ test_br03_cancel_transition[arjun-canceled-400] ________________
+tests/team/unit/test_appointment_rules.py:133: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 74 bytes [200 OK]>.status_code
+_______________ test_br03_cancel_transition[arjun-completed-400] _______________
+tests/team/unit/test_appointment_rules.py:133: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 74 bytes [200 OK]>.status_code
+_______________ test_br03_cancel_transition[arjun-available-400] _______________
+tests/team/unit/test_appointment_rules.py:133: in test_br03_cancel_transition
+    assert result.status_code == status
+E   assert 200 == 400
+E    +  where 200 = <Response 74 bytes [200 OK]>.status_code
+=========================== short test summary info ============================
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-cancelled-400] - assert 200 == 400
+ +  where 200 = <Response 74 bytes [200 OK]>.status_code
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-canceled-400] - assert 200 == 400
+ +  where 200 = <Response 74 bytes [200 OK]>.status_code
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-completed-400] - assert 200 == 400
+ +  where 200 = <Response 74 bytes [200 OK]>.status_code
+FAILED tests/team/unit/test_appointment_rules.py::test_br03_cancel_transition[arjun-available-400] - assert 200 == 400
+ +  where 200 = <Response 74 bytes [200 OK]>.status_code
+4 failed, 8 passed, 136 deselected in 0.20s

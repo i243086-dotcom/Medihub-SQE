@@ -1,58 +1,58 @@
 ﻿{
     "conclusion":  "failure",
-    "databaseId":  45651014316,
+    "databaseId":  45653206386,
     "event":  "pull_request",
-    "headSha":  "7a124bce8b14f6264917323ce3bfad233cb060ec",
+    "headSha":  "0d175f4323af54e95d99e48178719775f2f5394a",
     "jobs":  [
                  {
-                     "name":  "SonarQube full scan",
-                     "conclusion":  "failure",
+                     "name":  "API and integration",
+                     "conclusion":  "success",
                      "status":  "completed",
-                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316/job/139335189037",
-                     "startedAt":  "2026-11-25T16:06:02Z",
-                     "completedAt":  "2026-11-25T16:09:08Z"
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386/job/139342896160",
+                     "startedAt":  "2026-11-25T16:22:52Z",
+                     "completedAt":  "2026-11-25T16:23:30Z"
                  },
                  {
                      "name":  "Chromium use cases",
                      "conclusion":  "success",
                      "status":  "completed",
-                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316/job/139335189138",
-                     "startedAt":  "2026-11-25T16:06:01Z",
-                     "completedAt":  "2026-11-25T16:07:51Z"
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386/job/139342896376",
+                     "startedAt":  "2026-11-25T16:22:53Z",
+                     "completedAt":  "2026-11-25T16:25:07Z"
                  },
                  {
-                     "name":  "Mutation score",
-                     "conclusion":  "success",
+                     "name":  "SonarQube full scan",
+                     "conclusion":  "failure",
                      "status":  "completed",
-                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316/job/139335189167",
-                     "startedAt":  "2026-11-25T16:06:01Z",
-                     "completedAt":  "2026-11-25T16:11:33Z"
-                 },
-                 {
-                     "name":  "API and integration",
-                     "conclusion":  "success",
-                     "status":  "completed",
-                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316/job/139335189202",
-                     "startedAt":  "2026-11-25T16:06:01Z",
-                     "completedAt":  "2026-11-25T16:06:43Z"
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386/job/139342896459",
+                     "startedAt":  "2026-11-25T16:22:53Z",
+                     "completedAt":  "2026-11-25T16:25:33Z"
                  },
                  {
                      "name":  "Booking input regression",
                      "conclusion":  "success",
                      "status":  "completed",
-                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316/job/139335189218",
-                     "startedAt":  "2026-11-25T16:06:01Z",
-                     "completedAt":  "2026-11-25T16:06:28Z"
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386/job/139342896560",
+                     "startedAt":  "2026-11-25T16:22:53Z",
+                     "completedAt":  "2026-11-25T16:23:23Z"
+                 },
+                 {
+                     "name":  "Mutation score",
+                     "conclusion":  "success",
+                     "status":  "completed",
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386/job/139342896769",
+                     "startedAt":  "2026-11-25T16:22:53Z",
+                     "completedAt":  "2026-11-25T16:27:11Z"
                  },
                  {
                      "name":  "White-box coverage",
                      "conclusion":  "success",
                      "status":  "completed",
-                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316/job/139335189432",
-                     "startedAt":  "2026-11-25T16:06:02Z",
-                     "completedAt":  "2026-11-25T16:06:41Z"
+                     "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386/job/139342896858",
+                     "startedAt":  "2026-11-25T16:22:53Z",
+                     "completedAt":  "2026-11-25T16:23:34Z"
                  }
              ],
     "status":  "completed",
-    "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316"
+    "url":  "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386"
 }

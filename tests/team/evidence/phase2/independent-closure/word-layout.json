@@ -1,0 +1,11 @@
+{
+  "pages": 26,
+  "renderer": "Microsoft Word 16.0",
+  "document_sha256": "3933591b0d74fa98e688767d3a6c996970e72e4b1591ca7f1efcc53473dc6d17",
+  "styles": "Times New Roman 12 pt black justified and 1.5 spacing. Headings bold at 14 and 16 pt.",
+  "tables": 26,
+  "editable_schedule_tasks": 7,
+  "cached_pages": 26,
+  "phase1_xml_unchanged": true,
+  "preview_method": "Inspected Aspose.Words 26.11 and PDFium section previews for Phase 2 and the unchanged cover. Removed a duplicate old schedule row and verified the final table header. Evaluation marks were limited to temporary preview files."
+}

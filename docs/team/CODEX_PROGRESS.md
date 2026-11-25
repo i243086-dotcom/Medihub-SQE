@@ -8,6 +8,10 @@ Release **HOLD**. Shaheer and Momin independently supported the S4502 false-posi
 - Patient cancellation and both staff update paths returned three HTTP 500s above the SQLite integer limit before the fix. The focused regression passed all 53 checks after the fix. A later targeted regression killed the previously surviving cancellation range mutant in an isolated copy. [Before](../../tests/team/evidence/phase2/independent-closure/appointment-id-before.xml) | [After](../../tests/team/evidence/phase2/independent-closure/candidate-regression.xml) | [Exact mutant](../../tests/team/evidence/phase2/independent-closure/overflow-observation-mutated.txt)
 - GitHub reports no deployment environments or deployment history. Team dates, human hours and individual use-case authorship require confirmation. PR #11 remains open and blocked. PR #4 remains open as superseded discovery evidence. [Run on the boundary fix](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45651014316)
 
+Final executed source candidate `0d175f4` passed **751 distinct cases**. The counts were 385 unit, 336 API (227 generated), and 30 Chromium. The scoped gate passed 720/720 statements, 234/234 branch arcs, 64 MCC and six MC/DC pairs. Mutation killed 144/146 built-in mutants (98.63%) and both custom operators. The new targeted case killed the former cancellation limit survivor. [Source workflow](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386)
+
+The edited continuous Word report in this directory has 26 pages and retains Phase 1. Section 11 has 130 PROVISIONAL planned hours distributed as Syed 48, Shaheer 39 and Momin 43. Only Syed's 1.5 setup hours are recorded as actual. The Section 2 audit has **34 PASS, 1 PARTIAL, 1 FAIL and 3 BLOCKED**. [Complete audit with Word and evidence references](phase2-compliance.md)
+
 ## Previous verified checkpoint
 
 **24 November 2026 (PKT). Phase 2 verification update. Release HOLD.**
@@ -23,7 +27,7 @@ Release **HOLD**. Shaheer and Momin independently supported the S4502 false-posi
 
 The [compliance matrix](phase2-compliance.md), [test plan](phase2-test-design.md), [defect record](phase2-defect-and-risk-report.md) and [cumulative report](MediHub_SQE_Continuous_Report_Verified.docx) point to reproducible evidence. The [November 23 audit](progress/2026-11-23-phase1-runtime-and-stage-d.md), baseline tag `e58ce85` and original Stage D evidence are preserved.
 
-## Outstanding before release
+## Outstanding at the previous checkpoint
 
 1. Obtain independent technical disposition of S4502, carry the approved disposition into the required CI scanner and rerun the unchanged overall gate.
 2. Supply the original planned dates and actual human time by work area. Each teammate must confirm use-case authorship and review the PR under their own account. The [test design](phase2-test-design.md) lists the exact records.

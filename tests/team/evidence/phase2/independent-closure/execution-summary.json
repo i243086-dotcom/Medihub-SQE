@@ -1,0 +1,14 @@
+{
+  "candidate": "0d175f4323af54e95d99e48178719775f2f5394a",
+  "run_url": "https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45653206386",
+  "total": 751,
+  "unit": 385,
+  "api": 336,
+  "chromium": 30,
+  "failed": 0,
+  "skipped": 0,
+  "generated": 227,
+  "json_schema": 221,
+  "html_media": 6,
+  "scoped_kloc": 1.042
+}
