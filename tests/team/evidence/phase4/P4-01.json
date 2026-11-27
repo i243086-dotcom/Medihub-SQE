@@ -1,0 +1,24 @@
+{
+  "test": "P4-01",
+  "account": "arjun",
+  "expected_status": 200,
+  "http_status": 200,
+  "method": "POST",
+  "url": "http://127.0.0.1:5001/api/patient/appointments",
+  "browser_observation": "Booking confirmation visible",
+  "response_message": "Appointment booked successfully",
+  "bearer_present": true,
+  "response_set_cookie": false,
+  "before": [],
+  "after": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "booked",
+      ""
+    ]
+  ]
+}

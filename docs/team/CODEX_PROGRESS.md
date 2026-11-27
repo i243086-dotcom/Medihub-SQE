@@ -1,5 +1,19 @@
 ﻿# MediHub SQE progress checkpoint
 
+## Native evidence and CI integration
+
+The Phase 3 correction is on PR #17 at 45d070a. All six required jobs and the loopback preview passed. CI analyzed merge preview fad8d74 with native gate OK and Security A. The correction waits for a genuine teammate approval before merging. [PR](https://github.com/i243086-dotcom/Medihub-SQE/pull/17) · [Actions](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/46017518084)
+
+The Phase 4 native rerun is prepared locally on the existing branch. The verified run passed all eight Chromium cases and exported official ZAP HTML and JSON. The observed 142 messages, 61 alert API records and 23 JSON report instances are reconciled in the evidence. The pip-audit results match the historical advisory inventory. The continuous report has 45 rendered pages with 16 original screenshots across Phases 3 and 4. Phase 4 integration follows PR #17 approval and merge. [Phase 4 evidence](../../tests/team/evidence/phase4/native/README.md)
+
+## Phase 4 defensive security — 27 November 2026 (PKT)
+
+Phase 4 used the integrated Phase 3 merge at `436c9ff`. Eight Chromium tests passed through the localhost ZAP proxy, including seven role and ownership decisions plus a transport check. The development SQLite hash and baseline-v0 were preserved. [Evidence index](../../tests/team/evidence/phase4/README.md)
+
+- ZAP 2.17.0 observed 141 messages from the real booking and cancellation workflows. The passive queue drained before 61 alert instances across ten rule IDs were collected. [Session evidence](../../tests/team/evidence/phase4/zap-run.json)
+- pip-audit 2.10.1 assessed 99 installed packages and found 103 records across five packages, resolving to 71 advisory groups after alias grouping. [Dependency report](../../tests/team/evidence/phase4/dependency-advisories.html)
+- Phase 4 assessment complete. Public release remains on HOLD pending open browser and dependency remediation. [Issue #14](https://github.com/i243086-dotcom/Medihub-SQE/issues/14) · [Issue #15](https://github.com/i243086-dotcom/Medihub-SQE/issues/15) · [Compliance](phase4-compliance.md) · [Word report](MediHub_SQE_Continuous_Report_Verified.docx)
+
 ## Phase 3 usability and accessibility — 27 November 2026 (PKT)
 
 Phase 3 branched from the verified application tree on `0b15192` after PR #11 merged. Both required Chromium tests passed before and after the booking-screen correction. All 30 existing Chromium flows passed in the targeted regression suite. The development database digest and original upstream baseline tag were preserved. [Execution and environment](../../tests/team/evidence/phase3/README.md)

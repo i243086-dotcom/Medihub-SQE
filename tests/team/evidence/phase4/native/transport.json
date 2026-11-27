@@ -1,0 +1,9 @@
+{
+  "login_http": 200,
+  "login_set_cookie": false,
+  "browser_cookie_count": 0,
+  "local_storage_token_present": true,
+  "preflight_http": 200,
+  "origin_test_value": "https://untrusted.example.test",
+  "cors_allow_headers": []
+}

@@ -1,0 +1,52 @@
+{
+  "test": "P4-07",
+  "account": "ajay",
+  "expected_status": 200,
+  "http_status": 200,
+  "method": "GET",
+  "url": "http://127.0.0.1:5001/api/doctor/appointments",
+  "browser_observation": "Only assigned appointment returned, Cancelled visible",
+  "response_message": "Appointments retrieved successfully",
+  "bearer_present": true,
+  "response_set_cookie": false,
+  "before": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "cancelled",
+      null
+    ],
+    [
+      2,
+      1,
+      2,
+      "2030-01-16",
+      "10:00",
+      "booked",
+      null
+    ]
+  ],
+  "after": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "cancelled",
+      null
+    ],
+    [
+      2,
+      1,
+      2,
+      "2030-01-16",
+      "10:00",
+      "booked",
+      null
+    ]
+  ]
+}

@@ -1,0 +1,56 @@
+Protected development DB SHA-256 before: absent
+......F.Protected development DB SHA-256 after: absent
+
+================================== FAILURES ===================================
+________________ test_p4_07_assigned_doctor_readback[chromium] ________________
+tests\team\phase4\test_security_decisions.py:111: in test_p4_07_assigned_doctor_readback
+    with page.expect_response(lambda r: "/api/doctor/appointments" in r.url and r.request.method == "GET") as r:
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:89: in __exit__
+    self._event.value
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:54: in value
+    raise exception
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\page.py:817: in result
+    result = await wait
+             ^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\waiter.py:201: in wait_for_promise
+    raise rewrite_error_message(
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\waiter.py:184: in wait_for_promise
+    result = await race([promise, *self._failures])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\utils\tasks.py:131: in race
+    return winner.result()
+           ^^^^^^^^^^^^^^^
+E   playwright._impl._errors.TimeoutError: Page.expect_response: Timeout 30000ms exceeded while waiting for event "response"
+------------------------------ Captured log call ------------------------------
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET / HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/custom.css?v=5 HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/js/api.js HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/js/utils.js HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/js/admin.js HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/js/doctor.js HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/js/patient.js HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "GET /static/js/app.js HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:41] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:42] "POST /api/auth/login HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:42] "GET /api/doctor/dashboard HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:43] "GET /api/doctor/appointments HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:43] "GET /api/doctor/patients HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:187 127.0.0.1 - - [27/Nov/2026 19:31:43] "GET /api/doctor/availability HTTP/1.1" 200 -
+============================== warnings summary ===============================
+tests/team/phase4/test_security_decisions.py::test_p4_01_patient_booking[chromium]
+  C:\Users\Silicon\AppData\Local\Temp\medihub-p4-native-430b4423f9204be29c045086c240bdf2\source\backend\routes\patient.py:245: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///C:/Users/Silicon/AppData/Local/Temp/medihub-p4-native-430b4423f9204be29c045086c240bdf2/native/playwright.html -
+=========================== short test summary info ===========================
+FAILED tests/team/phase4/test_security_decisions.py::test_p4_07_assigned_doctor_readback[chromium]
+1 failed, 7 passed, 1 warning in 49.59s

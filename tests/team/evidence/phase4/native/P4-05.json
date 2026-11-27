@@ -1,0 +1,34 @@
+{
+  "test": "P4-05",
+  "account": "vikram",
+  "expected_status": 404,
+  "http_status": 404,
+  "method": "DELETE",
+  "url": "http://127.0.0.1:5001/api/patient/appointments/1",
+  "browser_observation": "Browser API response asserted. Screenshot shows the actual account screen.",
+  "response_message": "Appointment not found",
+  "bearer_present": true,
+  "response_set_cookie": false,
+  "before": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "booked",
+      null
+    ]
+  ],
+  "after": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "booked",
+      null
+    ]
+  ]
+}

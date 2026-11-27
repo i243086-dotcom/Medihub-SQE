@@ -1,0 +1,16 @@
+{
+  "sites": [
+    "http://127.0.0.1:5001"
+  ],
+  "messages": 142,
+  "queue_observations": [
+    0
+  ],
+  "pytest_exit": 0,
+  "alert_count": 61,
+  "alerts_by_risk": {
+    "Low": 46,
+    "Informational": 10,
+    "Medium": 5
+  }
+}

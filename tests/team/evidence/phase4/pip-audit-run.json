@@ -1,0 +1,5 @@
+﻿{
+    "tool":  "pip-audit 2.10.1",
+    "command":  "python -m pip_audit --path .venv/Lib/site-packages --format json --desc off --progress-spinner off --vulnerability-service pypi --output tests/team/evidence/phase4/pip-audit.json",
+    "exit":  1
+}

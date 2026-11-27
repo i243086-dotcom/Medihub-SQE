@@ -1,0 +1,14 @@
+{
+  "test": "P4-06",
+  "account": "anonymous",
+  "expected_status": 401,
+  "http_status": 401,
+  "method": "POST",
+  "url": "http://127.0.0.1:5001/api/patient/appointments",
+  "browser_observation": "Browser API response asserted. Screenshot shows the actual account screen.",
+  "response_message": "Missing Authorization Header",
+  "bearer_present": false,
+  "response_set_cookie": false,
+  "before": [],
+  "after": []
+}

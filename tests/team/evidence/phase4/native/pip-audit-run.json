@@ -1,0 +1,21 @@
+{
+  "tool": "pip-audit 2.10.1",
+  "arguments": [
+    "-m",
+    "pip_audit",
+    "--path",
+    "D:\\SQE_Project\\Medihub\\.venv\\Lib\\site-packages",
+    "--format",
+    "json",
+    "--desc",
+    "off",
+    "--progress-spinner",
+    "off",
+    "--vulnerability-service",
+    "pypi",
+    "--output",
+    "C:\\Users\\Silicon\\AppData\\Local\\Temp\\medihub-p4-native-430b4423f9204be29c045086c240bdf2\\native\\pip-audit.json"
+  ],
+  "exit": 1,
+  "tested_application": "66d5a05116250b93cb37d012edcc8782faf18d86"
+}
