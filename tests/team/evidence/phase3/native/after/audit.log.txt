@@ -1,0 +1,59 @@
+Audit app ready at http://127.0.0.1:5001
+python.exe : 127.0.0.1 - - [27/Nov/2026 19:29:38] "GET / HTTP/1.1" 200 -
+At line:23 char:2
++  & $python -B -X utf8 tests/team/tools/phase3_audit_server.py $node t ...
++  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (127.0.0.1 - - [...HTTP/1.1" 200 -:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/custom.css?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/js/api.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/js/admin.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/js/doctor.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/js/patient.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:38] "GET /static/js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:39] "GET /api/auth/me HTTP/1.1" 401 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/patient/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/patient/history HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/prescription/prescriptions HTTP/1.1" 404 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/medical/records HTTP/1.1" 404 -
+127.0.0.1 - - [27/Nov/2026 19:29:40] "GET /api/patient/available-slots?doctor_id=1&date=2030-01-16 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:44] "GET /static/custom.css?v=5 HTTP/1.1" 304 -
+127.0.0.1 - - [27/Nov/2026 19:29:45] "GET /robots.txt HTTP/1.1" 200 -
+booking { accessibility: 0.91, 'best-practices': 1, seo: 0.6 } [
+  'button-name',
+  'color-contrast',
+  'landmark-one-main',
+  'page-has-heading-one',
+  'region'
+]
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/custom.css?v=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/js/api.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/js/utils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/js/admin.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/js/doctor.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/js/patient.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /static/js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:46] "GET /api/auth/me HTTP/1.1" 401 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "GET /api/patient/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "GET /api/patient/departments HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "GET /api/patient/appointments HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "GET /api/patient/history HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "GET /api/prescription/prescriptions HTTP/1.1" 404 -
+127.0.0.1 - - [27/Nov/2026 19:29:48] "GET /api/medical/records HTTP/1.1" 404 -
+127.0.0.1 - - [27/Nov/2026 19:29:50] "GET /static/custom.css?v=5 HTTP/1.1" 304 -
+127.0.0.1 - - [27/Nov/2026 19:29:51] "GET /robots.txt HTTP/1.1" 200 -
+cancellation { accessibility: 0.89, 'best-practices': 1, seo: 0.6 } [
+  'button-name',
+  'color-contrast',
+  'heading-order',
+  'landmark-one-main',
+  'page-has-heading-one',
+  'region'
+]

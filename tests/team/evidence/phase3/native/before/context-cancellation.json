@@ -1,0 +1,16 @@
+{
+  "screen": "cancellation",
+  "stage": "before",
+  "testedCommit": "0b15192775519ff7f7d605560bfeb1677eac471a",
+  "url": "http://127.0.0.1:5001/",
+  "authenticated": true,
+  "panel": "patient-appointments",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "chromeVersion": "Chrome/158.0.8127.88",
+  "lighthouseVersion": "12.8.2",
+  "auditMode": "snapshot",
+  "axeVersion": "4.11.4"
+}
