@@ -62,6 +62,12 @@ def main():
         issues.raise_for_status()
         s4502 = [{key: item.get(key) for key in ("key", "rule", "status", "issueStatus", "component", "line", "hash")}
                  for item in issues.json()["issues"]]
+        new_issues = client.get(host + "/api/issues/search", params={
+            "componentKeys": args.project, "inNewCodePeriod": "true", "resolved": "false",
+        }, timeout=25)
+        new_issues.raise_for_status()
+        new_findings = [{key: item.get(key) for key in ("rule", "component", "line", "message")}
+                        for item in new_issues.json()["issues"]]
         route = client.get(host + "/api/measures/component", params={
             "component": f"{args.project}:backend/routes/patient.py",
             "metricKeys": "complexity,cognitive_complexity,ncloc",
@@ -90,12 +96,14 @@ def main():
     args.output.write_text(json.dumps({"raw": report, "limits": LIMITS, "passed": assertions,
                                       "scope_checks": checks, "source_paths": sorted(source_paths),
                                       "missing_sources": sorted(required - source_paths), "s4502": s4502,
+                                      "open_new_issues": new_findings,
                                       "patient_route": patient_route,
                                       "native_gate": native_gate, "analysis_history": analyses},
                                       indent=2) + "\n", encoding="utf-8")
     print("Overall Sonar gate:", assertions)
     print("Sonar source and coverage checks:", checks)
     print("Native gate and evaluated conditions:", native_gate["status"], native_gate["conditions"])
+    print("Open new Sonar issues:", new_findings)
     return int(not (all(assertions.values()) and all(checks.values()) and native_gate["status"] == "OK"))
 
 
