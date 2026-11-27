@@ -38,10 +38,14 @@ def main():
     parser.add_argument("java", type=Path)
     parser.add_argument("zap", type=Path)
     parser.add_argument("evidence", type=Path)
+    parser.add_argument("--tested-commit", required=True)
+    parser.add_argument("--protected-db", type=Path, default=Path("backend/instance/medihub-database.db"))
     args = parser.parse_args()
+    if not re.fullmatch(r"[a-f0-9]{40}", args.tested_commit):
+        parser.error("--tested-commit must be a full Git SHA")
     root = args.evidence.resolve()
     (root / "screenshots").mkdir(parents=True, exist_ok=True)
-    protected = Path("backend/instance/medihub-database.db")
+    protected = args.protected_db.resolve(strict=True)
     digest = sha256(protected.read_bytes()).hexdigest()
     write_json(root / "integrity.json", {"development_db_before": digest})
     key = secrets.token_hex(24)
@@ -131,6 +135,26 @@ def main():
                 safe_alerts = [{k: alert[k] for k in fields if k in alert} for alert in findings]
                 write_json(root / "zap-alerts.json", {"version": config["version"], "site": SITE,
                            "passive_remaining": queue[-1], "alerts": safe_alerts})
+                export_dir = root / "zap-official"
+                export_dir.mkdir(exist_ok=True)
+                templates = query("reports/view/templates")
+                exports = []
+                for template, filename in (("risk-confidence-html", "zap-report.html"),
+                                           ("traditional-json", "zap-report.json")):
+                    params = {"title": "MediHub Phase 4 Passive Assessment", "template": template,
+                              "sites": SITE, "contexts": "MediHub loopback", "reportFileName": filename,
+                              "reportDir": str(export_dir), "display": "false"}
+                    if template == "risk-confidence-html":
+                        params["sections"] = ("contents|aboutThisReport|reportDescription|reportParameters|"
+                                              "summaries|riskConfidenceCounts|siteRiskCounts|alertTypeCounts|"
+                                              "alerts|appendix|alertTypes")
+                    generated = query("reports/action/generate", **params)
+                    path = export_dir / filename
+                    assert path.is_file(), (template, generated)
+                    exports.append({"template": template, "filename": filename, "api": "reports/action/generate",
+                                    "sections": params.get("sections"), "sha256": sha256(path.read_bytes()).hexdigest()})
+                write_json(root / "zap-report-export.json", {"tested_commit": args.tested_commit,
+                           "templates": templates, "exports": exports})
                 write_json(root / "zap-run.json", {"sites": sites, "messages": len(observed),
                            "queue_observations": queue, "pytest_exit": result.returncode,
                            "alert_count": total, "alerts_by_risk": Counter(a["risk"] for a in safe_alerts)})

@@ -1,0 +1,14 @@
+{
+  "test": "P4-02",
+  "account": "ajay",
+  "expected_status": 403,
+  "http_status": 403,
+  "method": "POST",
+  "url": "http://127.0.0.1:5001/api/patient/appointments",
+  "browser_observation": "Browser API response asserted. Screenshot shows the actual account screen.",
+  "response_message": "Patient access only",
+  "bearer_present": true,
+  "response_set_cookie": false,
+  "before": [],
+  "after": []
+}

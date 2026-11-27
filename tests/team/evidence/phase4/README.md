@@ -1,5 +1,7 @@
 # Phase 4 defensive security evidence
 
+Use the [native rerun evidence](native/README.md) for submission. The original ZAP HTML and dependency HTML below are historical derived summaries. ZAP generated the new HTML and JSON. The new pip-audit JSON comes directly from the tool.
+
 Phase 4 evaluated the local Flask/Vue appointment workflows with Chromium and ZAP 2.17.0. The run passed eight browser tests. The passive scan observed 141 messages and reported 61 instances across ten rule IDs. pip-audit recorded 103 records across five of 99 installed packages. Aliases reduce the records to 71 advisory groups.
 
 | Evidence | Files |

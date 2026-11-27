@@ -1,0 +1,34 @@
+{
+  "test": "P4-03",
+  "account": "arjun",
+  "expected_status": 200,
+  "http_status": 200,
+  "method": "DELETE",
+  "url": "http://127.0.0.1:5001/api/patient/appointments/1",
+  "browser_observation": "Cancellation confirmation and Cancelled row visible",
+  "response_message": "Appointment cancelled successfully",
+  "bearer_present": true,
+  "response_set_cookie": false,
+  "before": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "booked",
+      null
+    ]
+  ],
+  "after": [
+    [
+      1,
+      1,
+      1,
+      "2030-01-16",
+      "10:00",
+      "cancelled",
+      null
+    ]
+  ]
+}

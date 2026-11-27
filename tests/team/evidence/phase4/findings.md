@@ -1,5 +1,7 @@
 # Phase 4 consolidated findings and residual risk
 
+The [native rerun](native/README.md) reproduced the same 61 alert API records and 10 rule IDs. Its official JSON exported 23 representative instances. The one extra observed history GET had no effect on alert records. The severity and raw-instance column values below describe the alert API inventory. Official reports and counting comparison are in the native index.
+
 ZAP observed 141 HTTP messages from the sole scoped loopback site, including POST booking and DELETE cancellation with HTTP 200. The passive queue drained to 0. ZAP reported 61 instances across ten rule IDs. Repeated URL instances and confidence variants are grouped below. The local test exercised ordinary requests. Application-level exploitability and production infrastructure are unassessed.
 
 | ID and scope | Actual evidence | Severity and confidence | Impact and proposed correction | Status and residual risk |

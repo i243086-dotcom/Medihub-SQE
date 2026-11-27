@@ -1,5 +1,7 @@
 # Phase 4 compliance
 
+The [native rerun](../../tests/team/evidence/phase4/native/README.md) contains the primary official ZAP HTML and JSON exports, native pip-audit output and the verified eight-test result. The original artifact links below document the historical run.
+
 This checklist covers Section 4, page 4 of the official SQE assignment and the corresponding six-mark rubric. The [full evidence index](../../tests/team/evidence/phase4/README.md) lists the reports and source, while the [continuous Word report](MediHub_SQE_Continuous_Report_Verified.docx) carries the measured conclusions and original figures.
 
 | Requirement | Status | Executed evidence |

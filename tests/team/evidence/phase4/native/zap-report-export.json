@@ -1,0 +1,36 @@
+{
+  "tested_commit": "66d5a05116250b93cb37d012edcc8782faf18d86",
+  "templates": {
+    "templates": [
+      "traditional-json",
+      "sarif-json",
+      "modern",
+      "auth-report-json",
+      "traditional-md",
+      "traditional-pdf",
+      "traditional-xml",
+      "traditional-html",
+      "high-level-report",
+      "traditional-xml-plus",
+      "risk-confidence-html",
+      "traditional-html-plus",
+      "traditional-json-plus"
+    ]
+  },
+  "exports": [
+    {
+      "template": "risk-confidence-html",
+      "filename": "zap-report.html",
+      "api": "reports/action/generate",
+      "sections": "contents|aboutThisReport|reportDescription|reportParameters|summaries|riskConfidenceCounts|siteRiskCounts|alertTypeCounts|alerts|appendix|alertTypes",
+      "sha256": "a0b06063af9f27d1d2cab7a10a03b8926f6f2440221da3cb6134bc2865779729"
+    },
+    {
+      "template": "traditional-json",
+      "filename": "zap-report.json",
+      "api": "reports/action/generate",
+      "sections": null,
+      "sha256": "7144d0c1a9c25130d1cdd85930011ceb1a723f6d181cbf07b0985271a9b7c3d8"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="8" time="49.597" timestamp="2026-11-27T19:31:27.652652+05:00" hostname="M3"><testcase classname="tests.team.phase4.test_security_decisions" name="test_p4_01_patient_booking[chromium]" time="3.027" /><testcase classname="tests.team.phase4.test_security_decisions" name="test_p4_03_patient_cancellation[chromium]" time="2.826" /><testcase classname="tests.team.phase4.test_security_decisions" name="test_denied_access[chromium-doctor-book]" time="2.225" /><testcase classname="tests.team.phase4.test_security_decisions" name="test_denied_access[chromium-doctor-cancel]" time="2.248" /><testcase classname="tests.team.phase4.test_security_decisions" name="test_denied_access[chromium-other-patient-cancel]" time="2.222" /><testcase classname="tests.team.phase4.test_security_decisions" name="test_denied_access[chromium-anonymous-book]" time="1.084" /><testcase classname="tests.team.phase4.test_security_decisions" name="test_p4_07_assigned_doctor_readback[chromium]" time="32.221"><failure message="playwright._impl._errors.TimeoutError: Page.expect_response: Timeout 30000ms exceeded while waiting for event &quot;response&quot;">tests\team\phase4\test_security_decisions.py:111: in test_p4_07_assigned_doctor_readback
+    with page.expect_response(lambda r: "/api/doctor/appointments" in r.url and r.request.method == "GET") as r:
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:89: in __exit__
+    self._event.value
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:54: in value
+    raise exception
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\page.py:817: in result
+    result = await wait
+             ^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\waiter.py:201: in wait_for_promise
+    raise rewrite_error_message(
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\waiter.py:184: in wait_for_promise
+    result = await race([promise, *self._failures])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\SQE_Project\Medihub\.venv\Lib\site-packages\playwright\_impl\utils\tasks.py:131: in race
+    return winner.result()
+           ^^^^^^^^^^^^^^^
+E   playwright._impl._errors.TimeoutError: Page.expect_response: Timeout 30000ms exceeded while waiting for event "response"</failure></testcase><testcase classname="tests.team.phase4.test_security_decisions" name="test_p4_transport_headers[chromium]" time="3.167" /></testsuite></testsuites>

@@ -107,9 +107,9 @@ def test_p4_07_assigned_doctor_readback(browser_app, page):
     appointment(doctor=2)
     db.session.commit()
     before = snapshots()
-    login(page, browser_app, user="ajay")
     with page.expect_response(lambda r: "/api/doctor/appointments" in r.url and r.request.method == "GET") as r:
-        rows = doctor_list(page)
+        login(page, browser_app, user="ajay")
+    rows = doctor_list(page)
     response = r.value
     expect(rows.filter(has_text="Arjun Patel").get_by_text("Cancelled", exact=True)).to_be_visible()
     after = snapshots()
