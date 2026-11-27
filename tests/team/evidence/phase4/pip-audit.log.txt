@@ -1,0 +1,7 @@
+python.exe : Found 103 known vulnerabilities in 5 packages
+At line:7 char:1
++ & $tool -m pip_audit --path $installed --format json --desc off --pro ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Found 103 known...s in 5 packages:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
