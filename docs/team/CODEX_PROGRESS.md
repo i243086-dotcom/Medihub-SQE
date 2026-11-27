@@ -1,5 +1,13 @@
 ﻿# MediHub SQE progress checkpoint
 
+## Phase 5 performance and recovery - 27 November 2026 (PKT)
+
+The Phase 5 experiment used integrated main commit `305918fd` after PR #16 merged. The official Grafana k6 Windows MSI installed OSS version 2.4.0. All four matched availability trials met both predetermined limits. k6 counted 2,680 measured requests, all HTTP 200, with zero unexpected failures and zero failed response checks. The 1-VU p95 was 44.67 to 55.04 ms and the 5-VU p95 was 100.50 to 118.38 ms. [Results](../../tests/team/evidence/phase5/results.md) | [Original output index](../../tests/team/evidence/phase5/README.md)
+
+The recovery integration test passed. The injected pre-commit fault followed a flushed INSERT and returned HTTP 500. SQLite held zero rows after the failed transaction. Retrying the same booking returned HTTP 200 with one persisted row. A subsequent duplicate returned HTTP 400 and left one row. The development database SHA-256 and original baseline-v0 tag were verified. [Recovery state](../../tests/team/evidence/phase5/recovery/state.json) | [Native JUnit](../../tests/team/evidence/phase5/recovery/junit.xml)
+
+The continuous Word report has 52 pages and embeds two native k6 dashboard views, the k6 terminal summary and the pytest-html result. Phase 5 is a localhost assessment. Issues #14 and #15 remain open. The branch is `phase5-performance-recovery`. Integration requires genuine review and owner approval. [Checklist](../../tests/team/evidence/phase5/compliance.md) | [Word report](MediHub_SQE_Continuous_Report_Verified.docx) | [Branch CI](https://github.com/i243086-dotcom/Medihub-SQE/actions?query=branch%3Aphase5-performance-recovery)
+
 ## Native evidence and CI integration
 
 The Phase 3 correction is on PR #17 at 45d070a. All six required jobs and the loopback preview passed. CI analyzed merge preview fad8d74 with native gate OK and Security A. The correction waits for a genuine teammate approval before merging. [PR](https://github.com/i243086-dotcom/Medihub-SQE/pull/17) · [Actions](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/46017518084)

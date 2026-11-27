@@ -1,0 +1,6 @@
+# Preserve generated evidence bytes when committing from Windows or checking out on Linux.
+*.jsonl -text
+*.log -text
+*.html -text
+*.json -text
+*.xml -text

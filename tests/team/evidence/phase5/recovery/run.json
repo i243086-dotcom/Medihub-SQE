@@ -1,0 +1,21 @@
+{
+  "command": [
+    "D:\\SQE_Project\\Medihub\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-v",
+    "-s",
+    "tests/team/api/test_phase5_booking_recovery.py",
+    "--junitxml",
+    "tests\\team\\evidence\\phase5\\recovery\\junit.xml",
+    "--html",
+    "tests\\team\\evidence\\phase5\\recovery\\pytest.html",
+    "--self-contained-html"
+  ],
+  "application_commit": "305918fd27941004bf59766e559937a009ca8eda",
+  "test_commit": "3636785f37fe64636dbb4c0c524b2b3bf12f167d",
+  "start_utc": "2026-11-27T16:16:21.252133+00:00",
+  "state_output": "tests\\team\\evidence\\phase5\\recovery\\state.json",
+  "exit_code": 0,
+  "end_utc": "2026-11-27T16:16:24.344428+00:00"
+}

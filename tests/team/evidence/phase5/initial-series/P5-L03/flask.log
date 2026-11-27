@@ -1,0 +1,8 @@
+{"engine_path": "C:/Users/Silicon/AppData/Local/Temp/medihub-phase5-_w8br4zn/P5-L03.sqlite", "busy_timeout_ms": 5000, "sqlite_version": "3.45.1"}
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5001
+Press CTRL+C to quit
+127.0.0.1 - - [27/Nov/2026 21:08:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2026 21:08:08] "POST /api/auth/login HTTP/1.1" 200 -

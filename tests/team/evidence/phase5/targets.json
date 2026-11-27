@@ -1,0 +1,22 @@
+{
+  "application_commit": "305918fd27941004bf59766e559937a009ca8eda",
+  "origin": "http://127.0.0.1:5001",
+  "operation": "/api/patient/available-slots",
+  "doctor_id": "1",
+  "date": "2030-01-16",
+  "warmup_seconds": 10,
+  "steady_seconds": 65,
+  "tail_seconds": 5,
+  "think_time_seconds": 0.25,
+  "http_timeout": "2s",
+  "profiles": {
+    "one": {"vus": 1, "p95_max_ms": 250, "unexpected_max_exclusive_fraction": 0.01},
+    "five": {"vus": 5, "p95_max_ms": 500, "unexpected_max_exclusive_fraction": 0.01}
+  },
+  "run_order": [
+    {"id": "P5-L01", "profile": "one"},
+    {"id": "P5-L02", "profile": "one"},
+    {"id": "P5-L03", "profile": "five"},
+    {"id": "P5-L04", "profile": "five"}
+  ]
+}

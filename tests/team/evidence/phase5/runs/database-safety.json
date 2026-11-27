@@ -1,0 +1,16 @@
+{
+  "development_before": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5",
+  "development_after": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5",
+  "fixture": {
+    "sha256": "6dbc0f583dd3b37bd44f03ad181370ba4950bb7f5f9c93b6be81263546d2db37",
+    "counts": {
+      "users": 10,
+      "patients": 7,
+      "doctors": 2,
+      "doctor_availability": 28,
+      "appointments": 0,
+      "treatments": 0
+    },
+    "journal_mode": "delete"
+  }
+}

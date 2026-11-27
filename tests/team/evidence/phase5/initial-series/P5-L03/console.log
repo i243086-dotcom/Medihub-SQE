@@ -1,0 +1,68 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: D:\SQE_Project\Medihub\tests\team\phase5\availability.js
+ web dashboard: http://127.0.0.1:5665
+        output: json (D:\SQE_Project\Medihub\tests\team\evidence\phase5\runs\P5-L03\metrics.jsonl)
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 1m23s max duration (incl. graceful stop):
+              * availability: 5 looping VUs for 1m20s (gracefulStop: 3s)
+
+
+Run            [ 100% ] setup()
+availability   [   0% ]
+
+Run            [ 100% ] setup()
+availability   [   0% ]
+
+Run            [ 100% ] setup()
+availability   [   0% ]
+time="2026-11-27T21:08:10+05:00" level=warning msg="Request Failed" error="Post \"http://127.0.0.1:5001/api/auth/login\": request timeout"
+time="2026-11-27T21:08:10+05:00" level=warning msg="The test run was short, report generation was skipped (not enough data)"
+
+Run            [ 100% ] setup()
+availability   [   0% ]
+
+
+  █ THRESHOLDS 
+
+    http_req_duration{phase:steady}
+    ✓ 'p(95)<=500' p(95)=0s
+
+    phase5_unexpected{phase:steady}
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    phase5_unexpected..............: 0.00%  0 out of 0
+      { phase:steady }.............: 0.00%  0 out of 0
+
+    HTTP
+    http_req_duration..............: avg=1.85s min=1.7s med=1.85s p(90)=1.97s p(95)=1.98s p(99)=1.99s max=2s   count=2
+      { expected_response:true }...: avg=1.7s  min=1.7s med=1.7s  p(90)=1.7s  p(95)=1.7s  p(99)=1.7s  max=1.7s count=1
+      { phase:steady }.............: avg=0s    min=0s   med=0s    p(90)=0s    p(95)=0s    p(99)=0s    max=0s   count=0
+    http_req_failed................: 50.00% 1 out of 2
+    http_reqs......................: 2      0.537819/s
+
+    EXECUTION
+    vus............................: 0      min=0      max=0
+    vus_max........................: 5      min=5      max=5
+
+    NETWORK
+    data_received..................: 723 B  194 B/s
+    data_sent......................: 428 B  115 B/s
+
+
+
+
+Run            [ 100% ] setup()
+availability   [   0% ]
+time="2026-11-27T21:08:11+05:00" level=error msg="Error: Synthetic login failed with HTTP 0\n\tat setup (file:///D:/SQE_Project/Medihub/tests/team/phase5/availability.js:53:13(70))\n" hint="script exception" source=stacktrace

@@ -1,0 +1,184 @@
+{
+  "root_group": {
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": {},
+    "checks": {
+      "availability returned HTTP 200": {
+        "passes": 1298,
+        "fails": 0,
+        "name": "availability returned HTTP 200",
+        "path": "::availability returned HTTP 200",
+        "id": "f08e79e3f5c07aa897157fe259b26435"
+      },
+      "availability matched its fixture contract": {
+        "name": "availability matched its fixture contract",
+        "path": "::availability matched its fixture contract",
+        "id": "6c96c0a485de81d81127a271ad19c41d",
+        "passes": 1298,
+        "fails": 0
+      }
+    },
+    "name": "",
+    "path": ""
+  },
+  "metrics": {
+    "phase5_unexpected{phase:steady}": {
+      "passes": 0,
+      "fails": 1123,
+      "thresholds": {
+        "rate<0.01": false
+      },
+      "value": 0
+    },
+    "data_received": {
+      "count": 1678035,
+      "rate": 19844.663190250638
+    },
+    "http_reqs": {
+      "count": 1303,
+      "rate": 15.409449824882424
+    },
+    "http_req_blocked": {
+      "count": 1303,
+      "avg": 1.1971184957789727,
+      "min": 0,
+      "med": 0.9681,
+      "p(90)": 2.055939999999999,
+      "p(95)": 2.4158799999999996,
+      "p(99)": 6.252966000000003,
+      "max": 29.4668
+    },
+    "http_req_receiving": {
+      "med": 0.8352,
+      "p(90)": 3.9865399999999998,
+      "p(95)": 6.20698,
+      "p(99)": 10.247934,
+      "max": 13.4102,
+      "count": 1303,
+      "avg": 1.5422608595548735,
+      "min": 0
+    },
+    "phase5_boundary_ms": {
+      "value": 1795796047110,
+      "min": 1795795981902,
+      "max": 1795796047110
+    },
+    "http_req_duration{phase:steady}": {
+      "count": 1123,
+      "avg": 36.28868628673194,
+      "min": 0.541,
+      "med": 26.2246,
+      "p(90)": 75.36498000000002,
+      "p(95)": 100.49900999999998,
+      "p(99)": 147.01286399999998,
+      "max": 178.5415,
+      "thresholds": {
+        "p(95)<=500": false
+      }
+    },
+    "http_req_connecting": {
+      "med": 0.8911,
+      "p(90)": 1.88056,
+      "p(95)": 2.2376199999999993,
+      "p(99)": 6.083078000000006,
+      "max": 29.4668,
+      "count": 1303,
+      "avg": 1.1036537989255566,
+      "min": 0
+    },
+    "vus_max": {
+      "value": 5,
+      "min": 5,
+      "max": 5
+    },
+    "http_req_duration": {
+      "count": 1303,
+      "avg": 39.447995778971595,
+      "min": 0.541,
+      "med": 26.1424,
+      "p(90)": 76.99884,
+      "p(95)": 101.00308999999993,
+      "p(99)": 151.05901200000005,
+      "max": 1021.7949
+    },
+    "http_req_duration{expected_response:true}": {
+      "min": 0.541,
+      "med": 26.1424,
+      "p(90)": 76.99884,
+      "p(95)": 101.00308999999993,
+      "p(99)": 151.05901200000005,
+      "max": 1021.7949,
+      "count": 1303,
+      "avg": 39.447995778971595
+    },
+    "vus": {
+      "value": 5,
+      "min": 0,
+      "max": 5
+    },
+    "http_req_waiting": {
+      "avg": 37.82304244052182,
+      "min": 0.1134,
+      "med": 24.573,
+      "p(90)": 73.61568,
+      "p(95)": 100.05995999999999,
+      "p(99)": 147.954932,
+      "max": 1018.9663,
+      "count": 1303
+    },
+    "http_req_tls_handshaking": {
+      "min": 0,
+      "med": 0,
+      "p(90)": 0,
+      "p(95)": 0,
+      "p(99)": 0,
+      "max": 0,
+      "count": 1303,
+      "avg": 0
+    },
+    "iterations": {
+      "count": 1395,
+      "rate": 16.497453956800445
+    },
+    "http_req_sending": {
+      "p(90)": 0.24843999999999994,
+      "p(95)": 0.5338199999999996,
+      "p(99)": 0.9664,
+      "max": 13.0002,
+      "count": 1303,
+      "avg": 0.08269247889485802,
+      "min": 0,
+      "med": 0
+    },
+    "data_sent": {
+      "count": 620216,
+      "rate": 7334.75620306161
+    },
+    "http_req_failed": {
+      "fails": 1303,
+      "passes": 0,
+      "value": 0
+    },
+    "checks": {
+      "passes": 2596,
+      "fails": 0,
+      "value": 1
+    },
+    "iteration_duration": {
+      "max": 437.9645,
+      "count": 1395,
+      "avg": 287.09483899641594,
+      "min": 250.0917,
+      "med": 277.0939,
+      "p(90)": 329.9330000000001,
+      "p(95)": 355.12844,
+      "p(99)": 399.6871699999999
+    },
+    "phase5_unexpected": {
+      "passes": 0,
+      "fails": 1298,
+      "value": 0
+    }
+  },
+  "setup_data": "[REDACTED: disposable session credentials]"
+}

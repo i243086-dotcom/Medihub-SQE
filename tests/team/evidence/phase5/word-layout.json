@@ -1,0 +1,41 @@
+{
+    "original_pages":  45,
+    "current_pages":  52,
+    "original_images_verified":  16,
+    "new_images":  [
+                       {
+                           "figure":  1,
+                           "page":  49,
+                           "caption_page":  49,
+                           "width_points":  435.6,
+                           "height_points":  384.75,
+                           "crop_points":  0
+                       },
+                       {
+                           "figure":  2,
+                           "page":  50,
+                           "caption_page":  50,
+                           "width_points":  435.6,
+                           "height_points":  384.75,
+                           "crop_points":  0
+                       },
+                       {
+                           "figure":  3,
+                           "page":  51,
+                           "caption_page":  51,
+                           "width_points":  435.6,
+                           "height_points":  312.15,
+                           "crop_points":  0
+                       },
+                       {
+                           "figure":  4,
+                           "page":  52,
+                           "caption_page":  52,
+                           "width_points":  435.6,
+                           "height_points":  312.15,
+                           "crop_points":  0
+                       }
+                   ],
+    "renderer":  "Microsoft Word 16.0 native print layout and Page.EnhMetaFileBits for every page",
+    "prior_checks":  "Phases 1–4 retain their original XML body blocks, styles and embedded images. Phase 5 begins on page 46."
+}
