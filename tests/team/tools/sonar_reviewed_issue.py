@@ -64,6 +64,13 @@ def eligible_findings(issues, project, fingerprint):
     )]
 
 
+def approved_source(ref, decision):
+    """Match the exact reviewed tree or its already accepted presentation update."""
+    return next((anchor for anchor in (decision["candidate_revision"], decision["phase3_presentation_revision"])
+                 if git_check("merge-base", "--is-ancestor", anchor, ref)
+                 and git_check("diff", "--quiet", anchor, ref, "--", *SCOPED_PATHS)), None)
+
+
 def replay(project, decision, baseline):
     repo = os.environ.get("GITHUB_REPOSITORY")
     pr = os.environ.get("PR_NUMBER", "")
@@ -75,18 +82,17 @@ def replay(project, decision, baseline):
     ):
         return {"result": "skipped", "reason": "Not the authorized disposable PR scanner"}
     source = decision["candidate_revision"]
-    if not (git_check("merge-base", "--is-ancestor", source, baseline) and
-            git_check("merge-base", "--is-ancestor", baseline, "HEAD") and
-            git_check("diff", "--quiet", source, baseline, "--", *SCOPED_PATHS)):
-        return {"result": "skipped", "reason": "Base application differs from the originally reviewed source"}
-    # Require byte-for-byte equality with the specific Phase 3 application and
-    # verify that the only differences from the reviewed base are its UI files.
     presentation = decision["phase3_presentation_revision"]
-    if not (git_check("merge-base", "--is-ancestor", presentation, "HEAD") and
-            git_check("diff", "--quiet", presentation, "HEAD", "--", *SCOPED_PATHS) and
-            git_check("diff", "--quiet", baseline, "HEAD", "--", *SCOPED_PATHS,
+    if not (git_check("merge-base", "--is-ancestor", source, presentation) and
+            git_check("diff", "--quiet", source, presentation, "--", *SCOPED_PATHS,
                       ":(exclude)frontend/custom.css", ":(exclude)frontend/js/patient.js")):
-        return {"result": "skipped", "reason": "Candidate differs from the verified Phase 3 presentation revision"}
+        return {"result": "skipped", "reason": "Approved presentation anchor changes the reviewed security scope"}
+    if not git_check("merge-base", "--is-ancestor", baseline, "HEAD"):
+        return {"result": "skipped", "reason": "Candidate does not contain the scanned base"}
+    base_anchor = approved_source(baseline, decision)
+    head_anchor = approved_source("HEAD", decision)
+    if not base_anchor or not head_anchor:
+        return {"result": "skipped", "reason": "Base or candidate application differs from both approved source trees"}
 
     proof = read_json(decision["local_evidence"])
     local = proof["issue"]
@@ -135,6 +141,7 @@ def replay(project, decision, baseline):
         history = request(sonar, "GET", CI_SONAR + "/api/issues/changelog", params={"issue": key}).json()
     return {"result": "applied", "reviewed_revision": decision["reviewed_revision"],
             "reviewed_candidate_revision": source, "baseline_revision": baseline,
+            "baseline_source_anchor": base_anchor, "candidate_source_anchor": head_anchor,
             "local_issue_key": local["key"], "reviews": decision["reviews"],
             "before": finding, "after": resolved[0], "history": history["changelog"]}
 

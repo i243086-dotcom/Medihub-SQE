@@ -1,5 +1,7 @@
 # Phase 3 compliance
 
+The [source-native rerun](../../tests/team/evidence/phase3/native/README.md) reverified all measurement and workflow results below. The original artifact links remain available for historical comparison.
+
 Evidence for Section 3, page 4 of the official SQE assignment, and the corresponding five-mark rubric on page 6. The [evidence index](../../tests/team/evidence/phase3/README.md) links both report formats and all matching screenshots. The Word sections refer to the [continuous report](MediHub_SQE_Continuous_Report_Verified.docx).
 
 | Requirement | Status | Executed evidence | Word |

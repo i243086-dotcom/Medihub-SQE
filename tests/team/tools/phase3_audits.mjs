@@ -23,7 +23,8 @@ const assets = new Map([
   ['https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css', ['bootstrap.min.css', 'text/css']],
   ['https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css', ['bootstrap-icons.css', 'text/css']],
 ]);
-const escape = value => String(value ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[s]));
+const testedCommit = process.env.MEDIHUB_TESTED_COMMIT;
+if (!/^[0-9a-f]{40}$/.test(testedCommit ?? '')) throw Error('Set MEDIHUB_TESTED_COMMIT to the tested source revision');
 const browser = await puppeteer.launch({executablePath: process.env.MEDIHUB_CHROME, headless: true,
   defaultViewport: viewport, args: ['--no-first-run', '--disable-background-networking']});
 const cdp = await chromium.connectOverCDP(browser.wsEndpoint());
@@ -67,35 +68,24 @@ try {
       settings:{onlyCategories:['accessibility','best-practices','seo'], formFactor:'desktop',
         screenEmulation:{...viewport, deviceScaleFactor:1, mobile:false, disabled:false}}}});
     await flow.snapshot({stepName:`Authenticated ${screen} ${stage}`});
-    const {steps:[{lhr}]} = await flow.createFlowResult();
+    const flowResult = await flow.createFlowResult();
+    const {steps:[{lhr}]} = flowResult;
     if (lhr.finalDisplayedUrl !== page.url() || !await task.isVisible() || !await page.getByRole('button', {name:'Logout'}).isVisible()) {
       throw Error(`Authenticated screen evidence failed for ${screen}`);
     }
-    const scores = Object.values(lhr.categories).map(category =>
-      `${escape(category.title)} ${Math.round(category.score * 100)}/100`).join(' | ');
-    const heading = `<header style="padding:12px 24px;background:#fff;color:#111;font:16px system-ui;border-bottom:1px solid #777"><strong>MediHub ${screen} ${stage}</strong><br>Authenticated Lighthouse snapshot | ${scores}</header>`;
-    const lhHtml = generateReport(lhr, 'html').replace('</body>', `${heading}</body>`);
-    const rows = axe.violations.flatMap(v => v.nodes.map(n => `<tr><td>${escape(v.id)}</td><td>${escape(v.impact)}</td><td><code>${escape(n.target.join(' '))}</code></td><td>${escape(n.failureSummary)}</td></tr>`)).join('');
-    const axeHtml = `<!doctype html><html lang="en"><meta charset="utf-8"><title>MediHub ${screen} axe-core ${stage}</title><style>body{font:18px system-ui;margin:3rem}table{border-collapse:collapse;width:100%}td,th{padding:.75rem;text-align:left;border:1px solid #555}code{overflow-wrap:anywhere}</style><h1>MediHub ${screen} · axe-core ${stage}</h1><p>Authenticated full-page scan · ${escape(axe.url)} · ${escape(axe.testEngine.version)} · ${axe.violations.length} violated rules, ${axe.violations.reduce((a,v)=>a+v.nodes.length,0)} affected nodes</p><table><thead><tr><th>Rule</th><th>Impact</th><th>Selector</th><th>Failure details</th></tr></thead><tbody>${rows}</tbody></table></html>`;
-    const targets = {lighthouse:lhHtml, axe:axeHtml};
-    for (const [tool, report] of Object.entries(targets)) {
-      const filename = path.join(out, `${tool}-${screen}.html`);
-      await writeFile(filename, report);
-      const reportPage = await cdp.contexts()[0].newPage({viewport});
-      await reportPage.setViewportSize(viewport);
-      await reportPage.goto(pathToFileURL(filename).href);
-      if (tool === 'lighthouse') {
-        await reportPage.locator('.lh-category-header').first().waitFor();
-        await reportPage.locator('header').filter({hasText:'Authenticated Lighthouse snapshot'})
-          .evaluate(element => document.body.prepend(element));
-      }
-      else await reportPage.getByRole('heading', {name:/MediHub/}).waitFor();
-      await reportPage.screenshot({path:path.join(shots, `${tool}-${screen}.png`), animations:'disabled'});
-      await reportPage.close();
-    }
+    await writeFile(path.join(out, `lighthouse-flow-${screen}.html`), await flow.generateReport());
+    await writeFile(path.join(out, `lighthouse-flow-${screen}.json`), JSON.stringify(flowResult, null, 2));
+    const filename = path.join(out, `lighthouse-${screen}.html`);
+    await writeFile(filename, generateReport(lhr, 'html'));
+    const reportPage = await cdp.contexts()[0].newPage({viewport});
+    await reportPage.setViewportSize(viewport);
+    await reportPage.goto(pathToFileURL(filename).href);
+    await reportPage.locator('.lh-category-header').first().waitFor();
+    await reportPage.screenshot({path:path.join(shots, `lighthouse-${screen}.png`), animations:'disabled'});
+    await reportPage.close();
     await writeFile(path.join(out, `axe-${screen}.json`), JSON.stringify(axe, null, 2));
     await writeFile(path.join(out, `lighthouse-${screen}.json`), JSON.stringify(lhr, null, 2));
-    await writeFile(path.join(out, `context-${screen}.json`), JSON.stringify({screen, stage, url:page.url(),
+    await writeFile(path.join(out, `context-${screen}.json`), JSON.stringify({screen, stage, testedCommit, url:page.url(),
       authenticated:true, panel:await task.getAttribute('id'), viewport, chromeVersion:await browser.version(),
       lighthouseVersion:lhr.lighthouseVersion, auditMode:lhr.gatherMode, axeVersion:axe.testEngine.version}, null, 2));
     console.log(screen, Object.fromEntries(Object.entries(lhr.categories).map(([k,v])=>[k,v.score])), axe.violations.map(v=>v.id));

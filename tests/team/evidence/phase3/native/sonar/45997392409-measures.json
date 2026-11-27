@@ -1,0 +1,270 @@
+{
+  "raw": {
+    "component": {
+      "key": "medihub-pr-16",
+      "name": "MediHub Team SQE",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "44.5",
+          "bestValue": false
+        },
+        {
+          "metric": "complexity",
+          "value": "928"
+        },
+        {
+          "metric": "reliability_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "15",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "1.1",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc_language_distribution",
+          "value": "css=964;js=3765;py=2001;web=596"
+        },
+        {
+          "metric": "security_rating",
+          "value": "4.0",
+          "bestValue": false
+        },
+        {
+          "metric": "new_coverage",
+          "period": {
+            "index": 1,
+            "value": "0.0",
+            "bestValue": false
+          }
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "sqale_index",
+          "value": "48",
+          "bestValue": false
+        },
+        {
+          "metric": "sqale_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "branch_coverage",
+          "value": "69.9",
+          "bestValue": false
+        },
+        {
+          "metric": "cognitive_complexity",
+          "value": "717",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "7326"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "line_coverage",
+          "value": "40.6",
+          "bestValue": false
+        },
+        {
+          "metric": "new_lines_to_cover",
+          "period": {
+            "index": 1,
+            "value": "9"
+          }
+        }
+      ]
+    }
+  },
+  "limits": {
+    "security_rating": 1.0,
+    "reliability_rating": 2.0,
+    "duplicated_lines_density": 3.0
+  },
+  "passed": {
+    "security_rating": false,
+    "reliability_rating": true,
+    "duplicated_lines_density": true
+  },
+  "scope_checks": {
+    "production_files_present": true,
+    "source_inventory_complete": true,
+    "test_files_absent_from_production": true,
+    "coverage_imported": true,
+    "candidate_and_baseline_revisions": true,
+    "native_new_coverage_evaluated": true
+  },
+  "source_paths": [
+    "backend/app.py",
+    "backend/appointment_slots.py",
+    "backend/celery_tasks/email.py",
+    "backend/celery_tasks/email_template.py",
+    "backend/celery_tasks/imports.py",
+    "backend/celery_tasks/reminders.py",
+    "backend/celery_tasks/reports.py",
+    "backend/database.py",
+    "backend/decorators.py",
+    "backend/migrate_appointment_slots.py",
+    "backend/models/__init__.py",
+    "backend/models/appointment.py",
+    "backend/models/doctor.py",
+    "backend/models/patient.py",
+    "backend/models/treatment.py",
+    "backend/models/user.py",
+    "backend/routes/__init__.py",
+    "backend/routes/admin.py",
+    "backend/routes/auth.py",
+    "backend/routes/doctor.py",
+    "backend/routes/patient.py",
+    "backend/seed_db.py",
+    "frontend/custom.css",
+    "frontend/index.html",
+    "frontend/js/admin.js",
+    "frontend/js/api.js",
+    "frontend/js/app.js",
+    "frontend/js/doctor.js",
+    "frontend/js/patient.js",
+    "frontend/js/utils.js"
+  ],
+  "missing_sources": [],
+  "s4502": [
+    {
+      "key": "fe34aa77-0011-4f21-a065-0574224a924d",
+      "rule": "python:S4502",
+      "status": "OPEN",
+      "issueStatus": "OPEN",
+      "component": "medihub-pr-16:backend/app.py",
+      "line": 15,
+      "hash": "fded8a50fabf9ea4bae0fadb55cbff78"
+    }
+  ],
+  "open_new_issues": [],
+  "patient_route": {
+    "key": "medihub-pr-16:backend/routes/patient.py",
+    "name": "patient.py",
+    "qualifier": "FIL",
+    "path": "backend/routes/patient.py",
+    "language": "py",
+    "measures": [
+      {
+        "metric": "complexity",
+        "value": "82"
+      },
+      {
+        "metric": "cognitive_complexity",
+        "value": "98",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "384"
+      }
+    ]
+  },
+  "native_gate": {
+    "status": "OK",
+    "conditions": [
+      {
+        "status": "OK",
+        "metricKey": "new_coverage",
+        "comparator": "LT",
+        "errorThreshold": "80",
+        "actualValue": "0.0"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_duplicated_lines_density",
+        "comparator": "GT",
+        "errorThreshold": "3",
+        "actualValue": "0.0"
+      },
+      {
+        "status": "OK",
+        "metricKey": "new_violations",
+        "comparator": "GT",
+        "errorThreshold": "0",
+        "actualValue": "0"
+      }
+    ],
+    "ignoredConditions": true,
+    "period": {
+      "mode": "PREVIOUS_VERSION",
+      "date": "2026-11-27T00:00:00+0000",
+      "parameter": "base-436c9ff1b6d9fd29c717be719ec187ce0b93f37d"
+    },
+    "caycStatus": "compliant"
+  },
+  "analysis_history": {
+    "paging": {
+      "pageIndex": 1,
+      "pageSize": 2,
+      "total": 2
+    },
+    "analyses": [
+      {
+        "key": "8835f4b9-04fa-4503-84b9-2be2553abf25",
+        "date": "2026-11-27T12:20:09+0000",
+        "events": [
+          {
+            "key": "00e98aeb-5e92-4524-af20-50b5711677fe",
+            "category": "ISSUE_DETECTION",
+            "name": "Capabilities have been updated (web)"
+          },
+          {
+            "key": "64e368f8-8331-478f-ae81-38e11f17f090",
+            "category": "VERSION",
+            "name": "candidate-65830cdd02f0906138847b9396fa4e51ae03a0b8"
+          }
+        ],
+        "projectVersion": "candidate-65830cdd02f0906138847b9396fa4e51ae03a0b8",
+        "manualNewCodePeriodBaseline": false,
+        "revision": "65830cdd02f0906138847b9396fa4e51ae03a0b8",
+        "detectedCI": "Github Actions"
+      },
+      {
+        "key": "40cd4063-9759-42f0-b92e-ae510461a817",
+        "date": "2026-11-27T00:00:00+0000",
+        "events": [
+          {
+            "key": "f7557750-7e0a-4dc9-a301-8d1a2475204f",
+            "category": "SQ_UPGRADE",
+            "name": "26.11.0.134175"
+          },
+          {
+            "key": "a5ee3884-700b-4087-ae35-646b9f3cb06f",
+            "category": "VERSION",
+            "name": "base-436c9ff1b6d9fd29c717be719ec187ce0b93f37d"
+          }
+        ],
+        "projectVersion": "base-436c9ff1b6d9fd29c717be719ec187ce0b93f37d",
+        "manualNewCodePeriodBaseline": false,
+        "revision": "436c9ff1b6d9fd29c717be719ec187ce0b93f37d",
+        "detectedCI": "Github Actions"
+      }
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 # Phase 3 usability and accessibility evidence
 
+The [native rerun index](native/README.md) is the primary submission evidence. The original folders below are preserved as historical evidence. Their axe-core HTML was a derived summary, and their Lighthouse HTML added a custom heading to the tool export. The new exports come directly from Lighthouse and the AxeBuilder JSON is attached to the pytest-html report.
+
 The two cases exercise the real Vue patient dashboard served by Flask at `http://127.0.0.1:5001/`. The SPA uses the same URL for both authenticated panels. `context-*.json` records the selected panel, visible login-state check, viewport and tool versions for each audit.
 
 ## Executed evidence
