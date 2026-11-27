@@ -1,0 +1,114 @@
+{
+  "run": {
+    "id": "P5-L03",
+    "profile": "five"
+  },
+  "profile": {
+    "vus": 5,
+    "p95_max_ms": 500,
+    "unexpected_max_exclusive_fraction": 0.01
+  },
+  "targets": {
+    "application_commit": "305918fd27941004bf59766e559937a009ca8eda",
+    "origin": "http://127.0.0.1:5001",
+    "operation": "/api/patient/available-slots",
+    "doctor_id": "1",
+    "date": "2030-01-16",
+    "warmup_seconds": 10,
+    "steady_seconds": 65,
+    "tail_seconds": 5,
+    "think_time_seconds": 0.25,
+    "http_timeout": "2s",
+    "profiles": {
+      "one": {
+        "vus": 1,
+        "p95_max_ms": 250,
+        "unexpected_max_exclusive_fraction": 0.01
+      },
+      "five": {
+        "vus": 5,
+        "p95_max_ms": 500,
+        "unexpected_max_exclusive_fraction": 0.01
+      }
+    },
+    "run_order": [
+      {
+        "id": "P5-L01",
+        "profile": "one"
+      },
+      {
+        "id": "P5-L02",
+        "profile": "one"
+      },
+      {
+        "id": "P5-L03",
+        "profile": "five"
+      },
+      {
+        "id": "P5-L04",
+        "profile": "five"
+      }
+    ]
+  },
+  "targets_commit": "fc61465aebac79dc43b24690d5a8211d01a6e804",
+  "targets_sha256": "873b6f138b34e077afe227cc11c61b81df01e97b38ba8fd5acdf179b7ee525fb",
+  "executed_head": "7e0824a4e1f5eee21de999a297c3cb92c6f52b95",
+  "command": [
+    "C:\\Program Files\\k6\\k6.exe",
+    "run",
+    "--no-color",
+    "--out",
+    "json=D:\\SQE_Project\\Medihub\\tests\\team\\evidence\\phase5\\runs\\P5-L03\\metrics.jsonl",
+    "--summary-export",
+    "C:\\Users\\Silicon\\AppData\\Local\\Temp\\medihub-phase5-native-private-t20q2exm\\P5-L03-summary.json",
+    "D:\\SQE_Project\\Medihub\\tests\\team\\phase5\\availability.js"
+  ],
+  "environment": {
+    "MEDIHUB_P5_RUN": "P5-L03",
+    "K6_NO_USAGE_REPORT": "true",
+    "K6_WEB_DASHBOARD": "true",
+    "K6_WEB_DASHBOARD_HOST": "127.0.0.1",
+    "K6_WEB_DASHBOARD_PORT": "5665",
+    "K6_WEB_DASHBOARD_PERIOD": "5s",
+    "K6_WEB_DASHBOARD_EXPORT": "D:\\SQE_Project\\Medihub\\tests\\team\\evidence\\phase5\\runs\\P5-L03\\dashboard.html"
+  },
+  "database_path": "C:\\Users\\Silicon\\AppData\\Local\\Temp\\medihub-phase5-tmqwhetp\\P5-L03.sqlite",
+  "k6_version": "k6.exe v2.4.0 (commit/dd9395906d, go1.26.11, windows/amd64)",
+  "before": {
+    "sha256": "6dbc0f583dd3b37bd44f03ad181370ba4950bb7f5f9c93b6be81263546d2db37",
+    "counts": {
+      "users": 10,
+      "patients": 7,
+      "doctors": 2,
+      "doctor_availability": 28,
+      "appointments": 0,
+      "treatments": 0
+    },
+    "journal_mode": "delete"
+  },
+  "health": {
+    "url": "http://127.0.0.1:5001/",
+    "status": 200,
+    "observed_utc": "2026-11-27T16:12:47.380+00:00"
+  },
+  "k6_started_utc": "2026-11-27T16:12:47.380+00:00",
+  "dashboard_http": {
+    "url": "http://127.0.0.1:5665",
+    "status": 200,
+    "observed_utc": "2026-11-27T16:12:48.003+00:00"
+  },
+  "exit_code": 0,
+  "k6_ended_utc": "2026-11-27T16:14:12.076+00:00",
+  "after": {
+    "sha256": "6dbc0f583dd3b37bd44f03ad181370ba4950bb7f5f9c93b6be81263546d2db37",
+    "counts": {
+      "users": 10,
+      "patients": 7,
+      "doctors": 2,
+      "doctor_availability": 28,
+      "appointments": 0,
+      "treatments": 0
+    },
+    "journal_mode": "delete"
+  }
+}

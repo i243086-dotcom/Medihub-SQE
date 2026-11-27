@@ -1,0 +1,20 @@
+{
+    "captured_at":  "2026-11-27T21:06:29.7652582+05:00",
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz",
+                "NumberOfCores":  4,
+                "NumberOfLogicalProcessors":  8
+            },
+    "windows":  {
+                    "Caption":  "Microsoft Windows 11 Pro",
+                    "Version":  "10.0.22000",
+                    "BuildNumber":  "22000",
+                    "FreePhysicalMemory":  6578012
+                },
+    "computer":  {
+                     "Manufacturer":  "Dell Inc.",
+                     "Model":  "Latitude 7410",
+                     "TotalPhysicalMemory":  16830660608
+                 },
+    "timezone":  "Pakistan Standard Time"
+}

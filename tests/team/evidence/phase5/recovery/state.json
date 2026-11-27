@@ -1,0 +1,66 @@
+{
+  "operation": "POST /api/patient/appointments",
+  "payload": {
+    "doctor_id": 1,
+    "appointment_date": "2030-01-16",
+    "appointment_time": "10:00"
+  },
+  "engine": "sqlite://",
+  "sqlite_version": "3.45.1",
+  "before": [],
+  "uncommitted": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 1,
+      "appointment_date": "2030-01-16",
+      "appointment_time": "10:00:00.000000",
+      "status": "booked"
+    }
+  ],
+  "failure_response": {
+    "status": 500,
+    "body": {
+      "message": "Internal server error",
+      "success": false
+    }
+  },
+  "after_failure": [],
+  "retry_response": {
+    "status": 200,
+    "message": "Appointment booked successfully"
+  },
+  "after_retry": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 1,
+      "appointment_date": "2030-01-16",
+      "appointment_time": "10:00:00.000000",
+      "status": "booked"
+    }
+  ],
+  "duplicate_response": {
+    "status": 400,
+    "body": {
+      "message": "This slot is already booked",
+      "success": false
+    }
+  },
+  "readback": {
+    "status": 200,
+    "appointment_ids": [
+      1
+    ]
+  },
+  "after_duplicate": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 1,
+      "appointment_date": "2030-01-16",
+      "appointment_time": "10:00:00.000000",
+      "status": "booked"
+    }
+  ]
+}

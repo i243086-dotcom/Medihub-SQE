@@ -1,0 +1,184 @@
+{
+  "metrics": {
+    "phase5_unexpected": {
+      "passes": 0,
+      "fails": 270,
+      "value": 0
+    },
+    "vus_max": {
+      "value": 1,
+      "min": 1,
+      "max": 1
+    },
+    "http_req_sending": {
+      "count": 275,
+      "avg": 0.08492218181818183,
+      "min": 0,
+      "med": 0,
+      "p(90)": 0.22389999999999996,
+      "p(95)": 0.5177300000000001,
+      "p(99)": 0.7000259999999987,
+      "max": 4.2176
+    },
+    "phase5_unexpected{phase:steady}": {
+      "passes": 0,
+      "fails": 234,
+      "thresholds": {
+        "rate<0.01": false
+      },
+      "value": 0
+    },
+    "http_req_duration{expected_response:true}": {
+      "min": 8.4405,
+      "med": 22.9349,
+      "p(90)": 40.44652,
+      "p(95)": 48.77988000000001,
+      "p(99)": 825.4244859999998,
+      "max": 1156.3708,
+      "count": 275,
+      "avg": 41.46909418181818
+    },
+    "http_req_blocked": {
+      "min": 0,
+      "med": 1.1496,
+      "p(90)": 2.29926,
+      "p(95)": 2.64051,
+      "p(99)": 5.0927879999999766,
+      "max": 16.0686,
+      "count": 275,
+      "avg": 1.3841570909090906
+    },
+    "data_received": {
+      "rate": 4152.435216556284,
+      "count": 351915
+    },
+    "iterations": {
+      "count": 290,
+      "rate": 3.4218666803100817
+    },
+    "http_req_connecting": {
+      "count": 275,
+      "avg": 1.2380149090909083,
+      "min": 0,
+      "med": 1.0614,
+      "p(90)": 2.0722199999999997,
+      "p(95)": 2.45996,
+      "p(99)": 5.015753999999975,
+      "max": 16.0686
+    },
+    "data_sent": {
+      "count": 129860,
+      "rate": 1532.2883003623008
+    },
+    "http_req_duration": {
+      "p(99)": 825.4244859999998,
+      "max": 1156.3708,
+      "count": 275,
+      "avg": 41.46909418181818,
+      "min": 8.4405,
+      "med": 22.9349,
+      "p(90)": 40.44652,
+      "p(95)": 48.77988000000001
+    },
+    "http_req_failed": {
+      "fails": 275,
+      "passes": 0,
+      "value": 0
+    },
+    "iteration_duration": {
+      "p(90)": 291.50893,
+      "p(95)": 299.703995,
+      "p(99)": 315.62782200000004,
+      "max": 344.8973,
+      "count": 290,
+      "avg": 276.44255999999984,
+      "min": 250.2733,
+      "med": 274.08235
+    },
+    "http_req_duration{phase:steady}": {
+      "max": 66.5022,
+      "count": 234,
+      "avg": 25.575382478632488,
+      "min": 8.4405,
+      "med": 23.12095,
+      "p(90)": 37.355520000000006,
+      "p(95)": 44.67281,
+      "p(99)": 59.44424099999996,
+      "thresholds": {
+        "p(95)<=250": false
+      }
+    },
+    "checks": {
+      "passes": 540,
+      "fails": 0,
+      "value": 1
+    },
+    "http_reqs": {
+      "count": 275,
+      "rate": 3.244873576156112
+    },
+    "vus": {
+      "max": 1,
+      "value": 1,
+      "min": 0
+    },
+    "http_req_tls_handshaking": {
+      "min": 0,
+      "med": 0,
+      "p(90)": 0,
+      "p(95)": 0,
+      "p(99)": 0,
+      "max": 0,
+      "count": 275,
+      "avg": 0
+    },
+    "phase5_boundary_ms": {
+      "value": 1795795869736,
+      "min": 1795795804593,
+      "max": 1795795869736
+    },
+    "http_req_waiting": {
+      "p(99)": 825.4244859999998,
+      "max": 1155.5449,
+      "count": 275,
+      "avg": 39.872442181818194,
+      "min": 0.5109,
+      "med": 21.2654,
+      "p(90)": 40.01302,
+      "p(95)": 48.15426
+    },
+    "http_req_receiving": {
+      "min": 0,
+      "med": 0.7206,
+      "p(90)": 4.45148,
+      "p(95)": 6.974440000000001,
+      "p(99)": 9.642681999999994,
+      "max": 12.1963,
+      "count": 275,
+      "avg": 1.5117298181818182
+    }
+  },
+  "setup_data": "[REDACTED: disposable session credentials]",
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": {},
+    "checks": {
+      "availability returned HTTP 200": {
+        "name": "availability returned HTTP 200",
+        "path": "::availability returned HTTP 200",
+        "id": "f08e79e3f5c07aa897157fe259b26435",
+        "passes": 270,
+        "fails": 0
+      },
+      "availability matched its fixture contract": {
+        "id": "6c96c0a485de81d81127a271ad19c41d",
+        "passes": 270,
+        "fails": 0,
+        "name": "availability matched its fixture contract",
+        "path": "::availability matched its fixture contract"
+      }
+    }
+  }
+}

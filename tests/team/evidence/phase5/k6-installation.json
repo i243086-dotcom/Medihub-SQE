@@ -1,0 +1,24 @@
+{
+    "release":  "v2.4.0",
+    "release_url":  "https://github.com/grafana/k6/releases/tag/v2.4.0",
+    "installer":  "C:\\Users\\Silicon\\Downloads\\k6-v2.4.0-windows-amd64.msi",
+    "download_url":  "https://github.com/grafana/k6/releases/download/v2.4.0/k6-v2.4.0-windows-amd64.msi",
+    "installer_sha256":  "E707C21CF6ACC35D40413CE82F9A75D375164929600897DB7DE3907C07E8BA8E",
+    "official_asset_sha256":  "e707c21cf6acc35d40413ce82f9a75d375164929600897db7de3907c07e8ba8e",
+    "authenticode":  "Valid",
+    "signer":  "CN=Grafana Labs, O=Grafana Labs, L=New York City, S=New York, C=US",
+    "initial_exit":  1603,
+    "initial_error":  "1303: insufficient privileges to write C:\\Program Files\\k6",
+    "elevated_exit":  0,
+    "executable":  "C:\\Program Files\\k6\\k6.exe",
+    "executable_sha256":  "6B68DBAE8DE12AE761DA8722F1A182EE3FF47FE68E829B89E74A2796DED83FCB",
+    "version":  "k6.exe v2.4.0 (commit/dd9395906d, go1.26.11, windows/amd64)",
+    "elevated_command":  "Start-Process msiexec.exe -Verb RunAs -WindowStyle Hidden -ArgumentList /i,\u003cverified MSI\u003e,/quiet,/norestart,/l*v,\u003clocal log\u003e -Wait -PassThru",
+    "portable_initial_series":  {
+                                    "official_verified_zip_sha256":  "AAA90B3AFC336FAF90172C7ADDF45C4F41305F6F188E3D564F79466E80AC68E3",
+                                    "url":  "https://github.com/grafana/k6/releases/download/v2.4.0/k6-v2.4.0-windows-amd64.zip",
+                                    "executable_sha256":  "6B68DBAE8DE12AE761DA8722F1A182EE3FF47FE68E829B89E74A2796DED83FCB",
+                                    "version":  "k6.exe v2.4.0 (commit/dd9395906d, go1.26.11, windows/amd64)"
+                                },
+    "dashboard":  "http://127.0.0.1:5665"
+}

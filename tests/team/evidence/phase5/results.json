@@ -1,0 +1,174 @@
+[
+  {
+    "id": "P5-L01",
+    "vus": 1,
+    "configured_seconds": 65,
+    "observed_common_vu_seconds": 65.143,
+    "start_utc": "2026-11-27T16:09:49.915+00:00",
+    "end_utc": "2026-11-27T16:11:14.815+00:00",
+    "first_steady_marker_unix_ms": 1795795804593,
+    "last_steady_marker_unix_ms": 1795795869736,
+    "completed": 234,
+    "requests_per_second": 3.6,
+    "duration_ms": {
+      "max": 66.5022,
+      "count": 234,
+      "avg": 25.575382478632488,
+      "min": 8.4405,
+      "med": 23.12095,
+      "p(90)": 37.355520000000006,
+      "p(95)": 44.67281,
+      "p(99)": 59.44424099999996
+    },
+    "status_counts": {
+      "200": 234
+    },
+    "http_errors": 0,
+    "checks": 468,
+    "failed_checks": 0,
+    "operation_samples": 234,
+    "unexpected": 0,
+    "unexpected_pct": 0.0,
+    "latency_thresholds": {
+      "p(95)<=250": true
+    },
+    "failure_thresholds": {
+      "rate<0.01": true
+    },
+    "exit_code": 0,
+    "dashboard_http": {
+      "url": "http://127.0.0.1:5665",
+      "status": 200,
+      "observed_utc": "2026-11-27T16:09:50.532+00:00"
+    }
+  },
+  {
+    "id": "P5-L02",
+    "vus": 1,
+    "configured_seconds": 65,
+    "observed_common_vu_seconds": 65.057,
+    "start_utc": "2026-11-27T16:11:18.646+00:00",
+    "end_utc": "2026-11-27T16:12:43.012+00:00",
+    "first_steady_marker_unix_ms": 1795795892820,
+    "last_steady_marker_unix_ms": 1795795957877,
+    "completed": 230,
+    "requests_per_second": 3.5384615384615383,
+    "duration_ms": {
+      "avg": 29.632826086956506,
+      "min": 8.4803,
+      "med": 25.5533,
+      "p(90)": 49.75218999999999,
+      "p(95)": 55.04030999999999,
+      "p(99)": 85.20180100000007,
+      "max": 109.0089,
+      "count": 230
+    },
+    "status_counts": {
+      "200": 230
+    },
+    "http_errors": 0,
+    "checks": 460,
+    "failed_checks": 0,
+    "operation_samples": 230,
+    "unexpected": 0,
+    "unexpected_pct": 0.0,
+    "latency_thresholds": {
+      "p(95)<=250": true
+    },
+    "failure_thresholds": {
+      "rate<0.01": true
+    },
+    "exit_code": 0,
+    "dashboard_http": {
+      "url": "http://127.0.0.1:5665",
+      "status": 200,
+      "observed_utc": "2026-11-27T16:11:19.241+00:00"
+    }
+  },
+  {
+    "id": "P5-L03",
+    "vus": 5,
+    "configured_seconds": 65,
+    "observed_common_vu_seconds": 64.798,
+    "start_utc": "2026-11-27T16:12:47.380+00:00",
+    "end_utc": "2026-11-27T16:14:12.076+00:00",
+    "first_steady_marker_unix_ms": 1795795981902,
+    "last_steady_marker_unix_ms": 1795796047110,
+    "completed": 1123,
+    "requests_per_second": 17.276923076923076,
+    "duration_ms": {
+      "count": 1123,
+      "avg": 36.28868628673194,
+      "min": 0.541,
+      "med": 26.2246,
+      "p(90)": 75.36498000000002,
+      "p(95)": 100.49900999999998,
+      "p(99)": 147.01286399999998,
+      "max": 178.5415
+    },
+    "status_counts": {
+      "200": 1123
+    },
+    "http_errors": 0,
+    "checks": 2246,
+    "failed_checks": 0,
+    "operation_samples": 1123,
+    "unexpected": 0,
+    "unexpected_pct": 0.0,
+    "latency_thresholds": {
+      "p(95)<=500": true
+    },
+    "failure_thresholds": {
+      "rate<0.01": true
+    },
+    "exit_code": 0,
+    "dashboard_http": {
+      "url": "http://127.0.0.1:5665",
+      "status": 200,
+      "observed_utc": "2026-11-27T16:12:48.003+00:00"
+    }
+  },
+  {
+    "id": "P5-L04",
+    "vus": 5,
+    "configured_seconds": 65,
+    "observed_common_vu_seconds": 64.836,
+    "start_utc": "2026-11-27T16:14:15.909+00:00",
+    "end_utc": "2026-11-27T16:15:40.051+00:00",
+    "first_steady_marker_unix_ms": 1795796070002,
+    "last_steady_marker_unix_ms": 1795796135209,
+    "completed": 1093,
+    "requests_per_second": 16.815384615384616,
+    "duration_ms": {
+      "min": 2.9814,
+      "med": 32.565,
+      "p(90)": 98.26012000000001,
+      "p(95)": 118.37843999999998,
+      "p(99)": 154.33343199999965,
+      "max": 199.913,
+      "count": 1093,
+      "avg": 44.03014611161938
+    },
+    "status_counts": {
+      "200": 1093
+    },
+    "http_errors": 0,
+    "checks": 2186,
+    "failed_checks": 0,
+    "operation_samples": 1093,
+    "unexpected": 0,
+    "unexpected_pct": 0.0,
+    "latency_thresholds": {
+      "p(95)<=500": true
+    },
+    "failure_thresholds": {
+      "rate<0.01": true
+    },
+    "exit_code": 0,
+    "dashboard_http": {
+      "url": "http://127.0.0.1:5665",
+      "status": 200,
+      "observed_utc": "2026-11-27T16:14:16.533+00:00"
+    }
+  }
+]
