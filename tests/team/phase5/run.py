@@ -18,6 +18,8 @@ import time
 from urllib.error import URLError
 from urllib.request import urlopen
 
+from protect_summary import publish_summary
+
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -108,12 +110,14 @@ def dump(path, data):
     path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
-def run_one(run, k6, output, template, environment):
+def run_one(run, k6, output, template, environment, private):
     output.mkdir()
     server_env = {**environment, "PYTHONIOENCODING": "utf-8", "PYTHONUNBUFFERED": "1"}
     for port in (5001, 5665):
         with socket.socket() as probe:
-            probe.bind(("127.0.0.1", port))
+            probe.settimeout(0.5)
+            if probe.connect_ex(("127.0.0.1", port)) == 0:
+                raise RuntimeError(f"A different process is listening on loopback port {port}")
     path = template.with_name(output.name + ".sqlite")
     shutil.copyfile(template, path)
     variables = {
@@ -122,8 +126,9 @@ def run_one(run, k6, output, template, environment):
         "K6_WEB_DASHBOARD_PORT": "5665", "K6_WEB_DASHBOARD_PERIOD": "5s",
         "K6_WEB_DASHBOARD_EXPORT": str(output / "dashboard.html")
     }
+    native_summary = private / (output.name + "-summary.json")
     command = [k6, "run", "--no-color", "--out", f"json={output / 'metrics.jsonl'}",
-               "--summary-export", str(output / "summary.json"), str(HERE / "availability.js")]
+               "--summary-export", str(native_summary), str(HERE / "availability.js")]
     data = {
         "run": run, "profile": CONFIG["profiles"][run["profile"]], "targets": CONFIG,
         "targets_commit": git("log", "-1", "--format=%H", "--", str(TARGETS)),
@@ -147,7 +152,7 @@ def run_one(run, k6, output, template, environment):
                                             stdout=console, stderr=subprocess.STDOUT)
                     try:
                         data["dashboard_http"] = wait_http(DASHBOARD, load)
-                        data["exit_code"] = load.wait(timeout=125)
+                        data["exit_code"] = load.wait(timeout=155)
                     finally:
                         if load.poll() is None:
                             load.kill()
@@ -157,6 +162,8 @@ def run_one(run, k6, output, template, environment):
                 server.terminate()
                 server.wait(timeout=10)
     finally:
+        if native_summary.exists():
+            publish_summary(native_summary, output / "summary.redacted.json")
         data["after"] = snapshot(path)
         dump(output / "run.json", data)
     print(f"{run['id']} exited {data['exit_code']} at {data['k6_ended_utc']}", flush=True)
@@ -184,6 +191,8 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     protected_before = digest(PROTECTED)
     environment = {**os.environ, "MEDIHUB_P5_PASSWORD": secrets.token_urlsafe(24)}
+    private = Path(tempfile.mkdtemp(prefix="medihub-phase5-native-private-"))
+    print(f"Unmodified summaries stay in the local private directory {private}", flush=True)
     with tempfile.TemporaryDirectory(prefix="medihub-phase5-") as tmp:
         template = Path(tmp) / "seed.sqlite"
         subprocess.run([sys.executable, __file__, "_seed", str(template)], env=environment, check=True)
@@ -191,7 +200,7 @@ def main():
             for run in CONFIG["run_order"]:
                 if not args.run or run["id"] == args.run:
                     name = run["id"] if args.attempt == 1 else f"{run['id']}-attempt-{args.attempt}"
-                    run_one(run, str(args.k6.resolve()), output / name, template, environment)
+                    run_one(run, str(args.k6.resolve()), output / name, template, environment, private)
         finally:
             protected_after = digest(PROTECTED)
             filename = "database-safety.json" if args.attempt == 1 else f"database-safety-{args.attempt}.json"

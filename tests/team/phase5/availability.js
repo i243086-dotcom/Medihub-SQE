@@ -25,6 +25,7 @@ let left = false;
 http.setResponseCallback(http.expectedStatuses(200));
 
 export const options = {
+  setupTimeout: '65s',
   scenarios: {
     availability: {
       executor: 'constant-vus',
@@ -48,7 +49,7 @@ export function setup() {
     const response = http.post(`${config.origin}/api/auth/login`, JSON.stringify({
       username: `phase5-patient-${n}`,
       password: __ENV.MEDIHUB_P5_PASSWORD,
-    }), {headers: {'Content-Type': 'application/json'}, tags: {phase: 'setup'}, timeout: config.http_timeout});
+    }), {headers: {'Content-Type': 'application/json'}, tags: {phase: 'setup'}, timeout: '10s'});
     if (response.status !== 200 || !response.json('data.token')) {
       throw new Error(`Synthetic login failed with HTTP ${response.status}`);
     }
