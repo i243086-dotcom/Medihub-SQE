@@ -677,9 +677,15 @@ const PatientComponent = {
                 await this.loadPatientData()
             } else {
                 const message = resp.message || 'Failed to book appointment'
-                this.error = /slot is already booked/i.test(message)
-                    ? message.replace(/[.!?]+$/, '') + '. Choose another available time.'
-                    : message
+                if (/slot is already booked/i.test(message)) {
+                    let end = message.length
+                    while (end > 0 && '.!?'.includes(message[end - 1])) {
+                        end--
+                    }
+                    this.error = message.slice(0, end) + '. Choose another available time.'
+                } else {
+                    this.error = message
+                }
             }
             this.loading = false
         },
