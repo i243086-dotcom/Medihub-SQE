@@ -1,0 +1,15 @@
+{
+  "screen": "booking",
+  "stage": "after",
+  "url": "http://127.0.0.1:5001/",
+  "authenticated": true,
+  "panel": "book",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "chromeVersion": "Chrome/158.0.8127.88",
+  "lighthouseVersion": "12.8.2",
+  "auditMode": "snapshot",
+  "axeVersion": "4.11.4"
+}

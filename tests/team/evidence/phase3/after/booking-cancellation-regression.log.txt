@@ -1,0 +1,21 @@
+Protected development DB SHA-256 before: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+..............................Protected development DB SHA-256 after: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+
+============================== warnings summary ===============================
+tests/team/e2e/test_appointment_flows.py::test_uc01_discover_doctor[chromium-UC01-N]
+  D:\SQE_Project\Medihub\.venv\Lib\site-packages\_pytest\fixtures.py:1392: PytestRemovedIn10Warning: Session-scoped fixtures defined as instance methods are deprecated.
+  Instance attributes set in the 'base_url' fixture will NOT be visible to test methods,
+  as each test gets a new instance while the fixture runs only once per class.
+  Use a @classmethod decorator below @pytest.fixture and set attributes on cls instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#class-scoped-fixture-as-instance-method
+    fixturefunc = resolve_fixture_function(fixturedef, request)
+
+tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-N]
+tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-A1]
+tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-A2]
+tests/team/e2e/test_appointment_flows.py::test_uc03_submit_booking[chromium-UC03-E2]
+  D:\SQE_Project\Medihub\backend\routes\patient.py:245: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+30 passed, 5 warnings in 93.39s (0:01:33)

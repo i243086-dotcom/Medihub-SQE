@@ -1,0 +1,893 @@
+{
+  "summary": {
+    "booking": {
+      "before": {
+        "scores": {
+          "accessibility": 85,
+          "best-practices": 100,
+          "seo": 60
+        },
+        "axe_rules": 7,
+        "axe_elements": 17,
+        "unique": 19,
+        "severity": {
+          "critical": 2,
+          "serious": 7,
+          "moderate": 8,
+          "SEO (unrated)": 2
+        }
+      }
+    },
+    "cancellation": {
+      "before": {
+        "scores": {
+          "accessibility": 89,
+          "best-practices": 100,
+          "seo": 60
+        },
+        "axe_rules": 6,
+        "axe_elements": 10,
+        "unique": 12,
+        "severity": {
+          "critical": 1,
+          "serious": 1,
+          "moderate": 8,
+          "SEO (unrated)": 2
+        }
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "P3-01",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Screen readers cannot identify the dismiss button.",
+      "root_cause": "The icon-only close button lacks an accessible name.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Give the dismiss button an accessible name.",
+      "evidence": {
+        "before": {
+          "rule": "button-name",
+          "element": ".alert-success > .btn-close[type=\"button\"]",
+          "impact": "critical",
+          "axe": [
+            ".alert-success > .btn-close[type=\"button\"]"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-0-BUTTON",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,2,DIV,1,BUTTON",
+            "selector": "div#app > div.container-fluid > div.alert > button.btn-close",
+            "boundingRect": {
+              "top": 922,
+              "bottom": 975,
+              "left": 1358,
+              "right": 1403,
+              "width": 45,
+              "height": 53
+            },
+            "snippet": "<button type=\"button\" class=\"btn-close\">",
+            "nodeLabel": "div#app > div.container-fluid > div.alert > button.btn-close",
+            "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-02",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".alert-success",
+          "impact": "serious",
+          "axe": [
+            ".alert-success"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-1-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,2,DIV",
+            "selector": "body > div#app > div.container-fluid > div.alert",
+            "boundingRect": {
+              "top": 921,
+              "bottom": 964,
+              "left": 1144,
+              "right": 1404,
+              "width": 260,
+              "height": 43
+            },
+            "snippet": "<div class=\"alert alert-success alert-dismissible fade show m-3 position-fixed z-3\" style=\"min-width: 300px;\">",
+            "nodeLabel": "Welcome back, arjun!",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3 (foreground color: #16a34a, background color: #dcfce7, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-03",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".btn-outline-secondary.btn-sm.btn:nth-child(3) > div:nth-child(2)",
+          "impact": "serious",
+          "axe": [
+            ".btn-outline-secondary.btn-sm.btn:nth-child(3) > div:nth-child(2)"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-2-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,9,DIV,1,DIV,2,BUTTON,1,DIV",
+            "selector": "div.mb-4 > div.d-flex > button.btn > div",
+            "boundingRect": {
+              "top": 759,
+              "bottom": 776,
+              "left": 741,
+              "right": 865,
+              "width": 124,
+              "height": 17
+            },
+            "snippet": "<div style=\"font-size: 11px; opacity: 0.7;\">",
+            "nodeLabel": "Morning",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #979ca6, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-04",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".btn-outline-secondary.btn-sm.btn:nth-child(4) > div:nth-child(2)",
+          "impact": "serious",
+          "axe": [
+            ".btn-outline-secondary.btn-sm.btn:nth-child(4) > div:nth-child(2)"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-4-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,9,DIV,1,DIV,3,BUTTON,1,DIV",
+            "selector": "div.mb-4 > div.d-flex > button.btn > div",
+            "boundingRect": {
+              "top": 759,
+              "bottom": 776,
+              "left": 907,
+              "right": 1031,
+              "width": 124,
+              "height": 17
+            },
+            "snippet": "<div style=\"font-size: 11px; opacity: 0.7;\">",
+            "nodeLabel": "Morning",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #979ca6, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-05",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".btn-outline-secondary.btn-sm.btn:nth-child(5) > div:nth-child(2)",
+          "impact": "serious",
+          "axe": [
+            ".btn-outline-secondary.btn-sm.btn:nth-child(5) > div:nth-child(2)"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-5-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,9,DIV,1,DIV,4,BUTTON,1,DIV",
+            "selector": "div.mb-4 > div.d-flex > button.btn > div",
+            "boundingRect": {
+              "top": 759,
+              "bottom": 776,
+              "left": 1073,
+              "right": 1197,
+              "width": 124,
+              "height": 17
+            },
+            "snippet": "<div style=\"font-size: 11px; opacity: 0.7;\">",
+            "nodeLabel": "Evening",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #979ca6, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-06",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".btn-outline-secondary.btn-sm.btn:nth-child(6) > div:nth-child(2)",
+          "impact": "serious",
+          "axe": [
+            ".btn-outline-secondary.btn-sm.btn:nth-child(6) > div:nth-child(2)"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-6-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,9,DIV,1,DIV,5,BUTTON,1,DIV",
+            "selector": "div.mb-4 > div.d-flex > button.btn > div",
+            "boundingRect": {
+              "top": 821,
+              "bottom": 838,
+              "left": 408,
+              "right": 532,
+              "width": 124,
+              "height": 17
+            },
+            "snippet": "<div style=\"font-size: 11px; opacity: 0.7;\">",
+            "nodeLabel": "Evening",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #979ca6, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-07",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".btn-outline-secondary.btn-sm.btn:nth-child(7) > div:nth-child(2)",
+          "impact": "serious",
+          "axe": [
+            ".btn-outline-secondary.btn-sm.btn:nth-child(7) > div:nth-child(2)"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-7-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,9,DIV,1,DIV,6,BUTTON,1,DIV",
+            "selector": "div.mb-4 > div.d-flex > button.btn > div",
+            "boundingRect": {
+              "top": 821,
+              "bottom": 838,
+              "left": 574,
+              "right": 699,
+              "width": 124,
+              "height": 17
+            },
+            "snippet": "<div style=\"font-size: 11px; opacity: 0.7;\">",
+            "nodeLabel": "Evening",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #979ca6, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-08",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".btn-outline-secondary.btn-sm.btn:nth-child(8) > div:nth-child(2)",
+          "impact": "serious",
+          "axe": [
+            ".btn-outline-secondary.btn-sm.btn:nth-child(8) > div:nth-child(2)"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-8-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,9,DIV,1,DIV,7,BUTTON,1,DIV",
+            "selector": "div.mb-4 > div.d-flex > button.btn > div",
+            "boundingRect": {
+              "top": 821,
+              "bottom": 838,
+              "left": 741,
+              "right": 865,
+              "width": 124,
+              "height": 17
+            },
+            "snippet": "<div style=\"font-size: 11px; opacity: 0.7;\">",
+            "nodeLabel": "Evening",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.75 (foreground color: #979ca6, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-09",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Heading navigation does not reflect the hierarchy.",
+      "root_cause": "A task heading skips a level in the dashboard hierarchy.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Use a task heading at the appropriate semantic level.",
+      "evidence": {
+        "before": {
+          "rule": "heading-order",
+          "element": "#book > .card.mb-4 > .card-header.justify-content-between.align-items-center > .mb-0",
+          "impact": "moderate",
+          "axe": [
+            "#book > .card.mb-4 > .card-header.justify-content-between.align-items-center > .mb-0"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-9-H5",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,0,DIV,0,H5",
+            "selector": "div#book > div.card > div.card-header > h5.mb-0",
+            "boundingRect": {
+              "top": 342,
+              "bottom": 360,
+              "left": 391,
+              "right": 548,
+              "width": 157,
+              "height": 18
+            },
+            "snippet": "<h5 class=\"mb-0\">",
+            "nodeLabel": "Book Appointment",
+            "explanation": "Fix any of the following:\n  Heading order invalid"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-10",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Screen readers cannot identify the purpose of the date input.",
+      "root_cause": "The visible Date label has no programmatic association with the date input.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Associate the visible Date label with its input.",
+      "evidence": {
+        "before": {
+          "rule": "label",
+          "element": "#book input[type=\"date\"]",
+          "impact": "critical",
+          "axe": [
+            "input[min=\"2026-11-27\"]"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-10-INPUT",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,1,DIV,0,DIV,1,DIV,0,FORM,7,DIV,1,INPUT",
+            "selector": "div.card-body > form > div.mb-4 > input.form-control",
+            "boundingRect": {
+              "top": 617,
+              "bottom": 657,
+              "left": 391,
+              "right": 651,
+              "width": 260,
+              "height": 40
+            },
+            "snippet": "<input type=\"date\" class=\"form-control\" min=\"2026-11-27\" required=\"\" style=\"max-width: 260px;\">",
+            "nodeLabel": "div.card-body > form > div.mb-4 > input.form-control",
+            "explanation": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-11",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation cannot jump to the primary content.",
+      "root_cause": "The dashboard markup lacks a main landmark.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Wrap the primary content in a main landmark.",
+      "evidence": {
+        "before": {
+          "rule": "landmark-one-main",
+          "element": "html",
+          "impact": "moderate",
+          "axe": [
+            "html"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-12",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Heading navigation offers no top-level page name.",
+      "root_cause": "The dashboard markup lacks an h1.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Identify the dashboard with an h1.",
+      "evidence": {
+        "before": {
+          "rule": "page-has-heading-one",
+          "element": "html",
+          "impact": "moderate",
+          "axe": [
+            "html"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-13",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": ".alert-success",
+          "impact": "moderate",
+          "axe": [
+            ".alert-success"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-14",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": ".container > .mb-4:nth-child(1)",
+          "impact": "moderate",
+          "axe": [
+            ".container > .mb-4:nth-child(1)"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-15",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": ".g-3",
+          "impact": "moderate",
+          "axe": [
+            ".g-3"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-16",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": "#patientTabs",
+          "impact": "moderate",
+          "axe": [
+            "#patientTabs"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-17",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": "#book",
+          "impact": "moderate",
+          "axe": [
+            "#book"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-18",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Indexable pages lack a summary for search engines.",
+      "root_cause": "The shared document has no meta description.",
+      "priority": "Low",
+      "risk": "P3-R03",
+      "proposed_fix": "Add a description to the public page when discoverability is intended.",
+      "evidence": {
+        "before": {
+          "rule": "meta-description",
+          "element": "document metadata",
+          "impact": "SEO (unrated)",
+          "axe": null,
+          "lighthouse": "Document does not have a meta description"
+        }
+      }
+    },
+    {
+      "id": "P3-19",
+      "screen": "booking",
+      "status": "Baseline",
+      "user_impact": "Crawlers receive invalid robots directives from this URL.",
+      "root_cause": "The SPA fallback serves HTML for /robots.txt.",
+      "priority": "Low",
+      "risk": "P3-R03",
+      "proposed_fix": "Serve a valid robots.txt for the public site and keep patient data private.",
+      "evidence": {
+        "before": {
+          "rule": "robots-txt",
+          "element": "/robots.txt",
+          "impact": "SEO (unrated)",
+          "axe": null,
+          "lighthouse": "robots.txt is not valid"
+        }
+      }
+    },
+    {
+      "id": "P3-20",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Screen readers cannot identify the dismiss button.",
+      "root_cause": "The icon-only close button lacks an accessible name.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Give the dismiss button an accessible name.",
+      "evidence": {
+        "before": {
+          "rule": "button-name",
+          "element": ".alert-success > .btn-close[type=\"button\"]",
+          "impact": "critical",
+          "axe": [
+            ".alert-success > .btn-close[type=\"button\"]"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-0-BUTTON",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,2,DIV,1,BUTTON",
+            "selector": "div#app > div.container-fluid > div.alert > button.btn-close",
+            "boundingRect": {
+              "top": 922,
+              "bottom": 975,
+              "left": 1358,
+              "right": 1403,
+              "width": 45,
+              "height": 53
+            },
+            "snippet": "<button type=\"button\" class=\"btn-close\">",
+            "nodeLabel": "div#app > div.container-fluid > div.alert > button.btn-close",
+            "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-21",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Text can be difficult to read for people with low vision.",
+      "root_cause": "The rendered text and background colors produce insufficient contrast.",
+      "priority": "High",
+      "risk": "P3-R01",
+      "proposed_fix": "Increase text contrast against its actual background.",
+      "evidence": {
+        "before": {
+          "rule": "color-contrast",
+          "element": ".alert-success",
+          "impact": "serious",
+          "axe": [
+            ".alert-success"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-1-DIV",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,2,DIV",
+            "selector": "body > div#app > div.container-fluid > div.alert",
+            "boundingRect": {
+              "top": 921,
+              "bottom": 964,
+              "left": 1144,
+              "right": 1404,
+              "width": 260,
+              "height": 43
+            },
+            "snippet": "<div class=\"alert alert-success alert-dismissible fade show m-3 position-fixed z-3\" style=\"min-width: 300px;\">",
+            "nodeLabel": "Welcome back, arjun!",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3 (foreground color: #16a34a, background color: #dcfce7, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-22",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Heading navigation does not reflect the hierarchy.",
+      "root_cause": "A task heading skips a level in the dashboard hierarchy.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Use a task heading at the appropriate semantic level.",
+      "evidence": {
+        "before": {
+          "rule": "heading-order",
+          "element": ".bg-white > .mb-0",
+          "impact": "moderate",
+          "axe": [
+            ".bg-white > .mb-0"
+          ],
+          "lighthouse": {
+            "type": "node",
+            "lhId": "1-2-H5",
+            "path": "1,HTML,1,BODY,0,DIV,3,DIV,14,DIV,3,DIV,0,DIV,6,DIV,3,DIV,0,DIV,0,DIV,0,H5",
+            "selector": "div#patient-appointments > div.card > div.card-header > h5.mb-0",
+            "boundingRect": {
+              "top": 342,
+              "bottom": 360,
+              "left": 391,
+              "right": 539,
+              "width": 148,
+              "height": 18
+            },
+            "snippet": "<h5 class=\"mb-0\">",
+            "nodeLabel": "My Appointments",
+            "explanation": "Fix any of the following:\n  Heading order invalid"
+          }
+        }
+      }
+    },
+    {
+      "id": "P3-23",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation cannot jump to the primary content.",
+      "root_cause": "The dashboard markup lacks a main landmark.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Wrap the primary content in a main landmark.",
+      "evidence": {
+        "before": {
+          "rule": "landmark-one-main",
+          "element": "html",
+          "impact": "moderate",
+          "axe": [
+            "html"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-24",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Heading navigation offers no top-level page name.",
+      "root_cause": "The dashboard markup lacks an h1.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Identify the dashboard with an h1.",
+      "evidence": {
+        "before": {
+          "rule": "page-has-heading-one",
+          "element": "html",
+          "impact": "moderate",
+          "axe": [
+            "html"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-25",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": ".alert-success",
+          "impact": "moderate",
+          "axe": [
+            ".alert-success"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-26",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": ".container > .mb-4:nth-child(1)",
+          "impact": "moderate",
+          "axe": [
+            ".container > .mb-4:nth-child(1)"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-27",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": ".row.g-3.mb-4",
+          "impact": "moderate",
+          "axe": [
+            ".row.g-3.mb-4"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-28",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": "#patientTabs",
+          "impact": "moderate",
+          "axe": [
+            "#patientTabs"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-29",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Landmark navigation can miss this part of the page.",
+      "root_cause": "The element sits outside recognised landmarks.",
+      "priority": "Medium",
+      "risk": "P3-R01",
+      "proposed_fix": "Place the element in an appropriate landmark.",
+      "evidence": {
+        "before": {
+          "rule": "region",
+          "element": "#patient-appointments",
+          "impact": "moderate",
+          "axe": [
+            "#patient-appointments"
+          ],
+          "lighthouse": null
+        }
+      }
+    },
+    {
+      "id": "P3-30",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Indexable pages lack a summary for search engines.",
+      "root_cause": "The shared document has no meta description.",
+      "priority": "Low",
+      "risk": "P3-R03",
+      "proposed_fix": "Add a description to the public page when discoverability is intended.",
+      "evidence": {
+        "before": {
+          "rule": "meta-description",
+          "element": "document metadata",
+          "impact": "SEO (unrated)",
+          "axe": null,
+          "lighthouse": "Document does not have a meta description"
+        }
+      }
+    },
+    {
+      "id": "P3-31",
+      "screen": "cancellation",
+      "status": "Baseline",
+      "user_impact": "Crawlers receive invalid robots directives from this URL.",
+      "root_cause": "The SPA fallback serves HTML for /robots.txt.",
+      "priority": "Low",
+      "risk": "P3-R03",
+      "proposed_fix": "Serve a valid robots.txt for the public site and keep patient data private.",
+      "evidence": {
+        "before": {
+          "rule": "robots-txt",
+          "element": "/robots.txt",
+          "impact": "SEO (unrated)",
+          "axe": null,
+          "lighthouse": "robots.txt is not valid"
+        }
+      }
+    }
+  ]
+}
