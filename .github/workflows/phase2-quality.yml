@@ -137,6 +137,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           mkdir evidence
@@ -164,6 +165,12 @@ jobs:
               "-Dsonar.scm.revision=$BASE_SHA"
           ) 2>&1 | tee evidence/sonar-baseline.txt
 
+          # Reconstruct the reviewed baseline issue history on this disposable
+          # scanner. The candidate still runs the native and overall gates.
+          python tests/team/tools/sonar_reviewed_issue.py "$project" \
+            tests/team/data/sonar-reviewed-decision.json evidence/reviewed-disposition.json \
+            --baseline "$BASE_SHA"
+
           revision=$(git rev-parse HEAD)
           scanner=0
           if scan "-Dsonar.projectVersion=candidate-$revision" "-Dsonar.scm.revision=$revision" 2>&1 | tee evidence/sonar.txt; then
@@ -171,11 +178,7 @@ jobs:
           else
             scanner=$?
           fi
-          if [ "$scanner" -eq 0 ]; then
-            python tests/team/tools/sonar_reviewed_issue.py "$project" \
-              tests/team/data/sonar-reviewed-decision.json evidence/reviewed-disposition.json
-          fi
-          # The measured project-wide limits stay mandatory after issue disposition.
+          # Independently verify the native gate and project-wide limits.
           overall=0
           if python tests/team/tools/sonar_gate.py "$project" evidence/sonar-measures.json \
             --baseline "$BASE_SHA" --revision "$revision"; then

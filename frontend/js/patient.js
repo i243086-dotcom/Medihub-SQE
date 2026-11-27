@@ -2,7 +2,7 @@
 const PatientTemplate = `
 <div class="patient-dashboard-wrapper">
     <!-- Messages -->
-    <div v-if="error" class="alert alert-danger alert-dismissible fade show m-3">
+    <div v-if="error" class="alert alert-danger alert-dismissible fade show m-3" role="alert">
         {{ error }}
         <button type="button" class="btn-close" @click="error = null"></button>
     </div>
@@ -70,7 +70,7 @@ const PatientTemplate = `
                 <div class="tab-pane fade show active" id="book" role="tabpanel">
                     <div class="card mb-4">
                         <div class="card-header d-flex align-items-center justify-content-between">
-                            <h5 class="mb-0"><i class="bi bi-calendar-plus me-2"></i>Book Appointment</h5>
+                            <h3 class="h5 mb-0"><i class="bi bi-calendar-plus me-2"></i>Book Appointment</h3>
                             <!-- Step indicator -->
                             <div class="d-flex align-items-center gap-2">
                                 <span class="badge" :class="selectedDepartment ? 'bg-dark' : 'bg-secondary bg-opacity-25 text-muted'">1 Specialization</span>
@@ -89,19 +89,16 @@ const PatientTemplate = `
                                     <p class="text-muted small mb-3">Choose a specialization to get started</p>
                                     <div class="row g-3">
                                         <div v-for="dept in departments" :key="dept.id" class="col-6 col-md-4 col-lg-3">
-                                            <div class="card h-100 cursor-pointer border"
-                                                 style="cursor:pointer; transition: border-color 0.15s ease;"
-                                                 @click="selectDepartment(dept)"
-                                                 @mouseenter="$event.currentTarget.style.borderColor='#111827'"
-                                                 @mouseleave="$event.currentTarget.style.borderColor='#E4E7EC'">
-                                                <div class="card-body text-center p-3">
-                                                    <div class="mb-2">
+                                            <button type="button" class="card h-100 w-100 booking-choice"
+                                                    @click="selectDepartment(dept)">
+                                                <span class="card-body w-100 text-center p-3">
+                                                    <span class="d-block mb-2">
                                                         <i class="bi fs-2 text-muted" :class="getSpecializationIcon(dept.name)"></i>
-                                                    </div>
-                                                    <h6 class="card-title fw-600 mb-1" style="font-size:13px; font-weight:600;">{{ dept.name }}</h6>
+                                                    </span>
+                                                    <span class="d-block mb-1" style="font-size:13px; font-weight:600;">{{ dept.name }}</span>
                                                     <small class="text-muted" style="font-size:12px;">{{ dept.doctor_count }} Doctor{{ dept.doctor_count !== 1 ? 's' : '' }}</small>
-                                                </div>
-                                            </div>
+                                                </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +113,7 @@ const PatientTemplate = `
                                                 <div style="font-size:12px; color:#6B7280;">Selected specialization</div>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" @click="selectedDepartment = null; selectedDoctor = null; bookingForm.appointment_date = ''; bookingForm.appointment_time = ''">Change</button>
+                                        <button ref="changeSpecialization" type="button" class="btn btn-sm btn-outline-secondary" @click="selectedDepartment = null; selectedDoctor = null; bookingForm.appointment_date = ''; bookingForm.appointment_time = ''">Change</button>
                                     </div>
                                 </div>
 
@@ -125,18 +122,18 @@ const PatientTemplate = `
                                     <p class="text-muted small mb-3">Select a doctor from the list</p>
                                     <div class="row g-2">
                                         <div v-for="doctor in selectedDepartment.doctors" :key="doctor.id" class="col-md-6">
-                                            <div class="d-flex align-items-center p-3 rounded-3 border" style="cursor:pointer; transition: border-color 0.15s ease;"
-                                                 @click="selectDoctor(doctor)"
-                                                 @mouseenter="$event.currentTarget.style.borderColor='#111827'"
-                                                 @mouseleave="$event.currentTarget.style.borderColor='#E4E7EC'">
-                                                <div class="d-flex align-items-center justify-content-center rounded-circle me-3 flex-shrink-0" style="width:40px;height:40px;background:#F3F4F6;">
-                                                    <i class="bi bi-person-badge text-muted"></i>
-                                                </div>
-                                                <div class="flex-grow-1 min-width-0">
-                                                    <div style="font-size:14px; font-weight:600; color:#111827;">Dr. {{ doctor.name }}</div>
-                                                    <div style="font-size:12px; color:#6B7280;">{{ doctor.qualification }} &bull; {{ doctor.experience }} yrs exp</div>
-                                                </div>
-                                                <button class="btn btn-link btn-sm p-0 ms-2 text-decoration-none flex-shrink-0" style="font-size:12px;" @click.stop="viewDoctorProfile(doctor)">Profile</button>
+                                            <div class="d-flex align-items-center p-3 rounded-3 border">
+                                                <button type="button" class="btn text-start p-0 d-flex align-items-center flex-grow-1 booking-choice"
+                                                        :aria-label="'Select Dr. ' + doctor.name" @click="selectDoctor(doctor)">
+                                                    <span class="d-flex align-items-center justify-content-center rounded-circle me-3 flex-shrink-0" style="width:40px;height:40px;background:#F3F4F6;">
+                                                        <i class="bi bi-person-badge text-muted"></i>
+                                                    </span>
+                                                    <span class="flex-grow-1 min-width-0">
+                                                        <span class="d-block" style="font-size:14px; font-weight:600; color:#111827;">Dr. {{ doctor.name }}</span>
+                                                        <span class="d-block" style="font-size:12px; color:#6B7280;">{{ doctor.qualification }} &bull; {{ doctor.experience }} yrs exp</span>
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn btn-link btn-sm p-0 ms-2 text-decoration-none flex-shrink-0" style="font-size:12px;" @click="viewDoctorProfile(doctor)">Profile</button>
                                             </div>
                                         </div>
                                     </div>
@@ -154,15 +151,15 @@ const PatientTemplate = `
                                                 <div style="font-size:12px; color:#6B7280;">{{ selectedDoctor.qualification }} &bull; {{ selectedDoctor.experience }} yrs exp</div>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" @click="selectedDoctor = null; bookingForm.appointment_date = ''; bookingForm.appointment_time = ''">Change</button>
+                                        <button ref="changeDoctor" type="button" class="btn btn-sm btn-outline-secondary" @click="selectedDoctor = null; bookingForm.appointment_date = ''; bookingForm.appointment_time = ''">Change</button>
                                     </div>
                                 </div>
 
                                 <!-- Step 3: Select Date -->
                                 <div v-if="selectedDoctor" class="mb-4">
-                                    <label class="form-label">Date</label>
-                                    <input type="date" class="form-control" v-model="bookingForm.appointment_date" @change="loadAvailableSlots" :min="minBookingDate" required style="max-width:260px;">
-                                    <small class="text-muted">Cannot book for past dates</small>
+                                    <label class="form-label" for="booking-date">Date</label>
+                                    <input id="booking-date" type="date" class="form-control" aria-describedby="booking-date-hint" v-model="bookingForm.appointment_date" @change="loadAvailableSlots" :min="minBookingDate" required style="max-width:260px;">
+                                    <small id="booking-date-hint" class="text-muted">Cannot book for past dates</small>
                                 </div>
 
                                 <!-- Step 4: Select Time Slot -->
@@ -180,7 +177,7 @@ const PatientTemplate = `
                                                 @click="bookingForm.appointment_time = slot.appointment_time"
                                                 style="min-width:130px; padding:8px 16px;">
                                             <div style="font-size:13px; font-weight:600;">{{ slot.display }}</div>
-                                            <div style="font-size:11px; opacity:0.7;">{{ slot.slot_type === 'morning' ? 'Morning' : 'Evening' }}</div>
+                                            <div style="font-size:11px;">{{ slot.slot_type === 'morning' ? 'Morning' : 'Evening' }}</div>
                                         </button>
                                     </div>
                                     <div v-else class="text-muted small">
@@ -190,8 +187,8 @@ const PatientTemplate = `
 
                                 <!-- Notes -->
                                 <div v-if="bookingForm.appointment_time" class="mb-4">
-                                    <label class="form-label">Notes <span class="text-muted fw-normal">(optional)</span></label>
-                                    <textarea class="form-control" v-model="bookingForm.notes" rows="2" placeholder="Any specific concerns or symptoms..."></textarea>
+                                    <label class="form-label" for="booking-notes">Notes <span class="text-muted fw-normal">(optional)</span></label>
+                                    <textarea id="booking-notes" class="form-control" v-model="bookingForm.notes" rows="2" placeholder="Any specific concerns or symptoms..."></textarea>
                                 </div>
 
                                 <!-- Summary row -->
@@ -620,6 +617,7 @@ const PatientComponent = {
             this.bookingForm.appointment_date = ''
             this.bookingForm.appointment_time = ''
             this.bookingForm.doctor_id = ''
+            this.$nextTick(() => this.$refs.changeSpecialization?.focus())
         },
 
         selectDoctor(doctor) {
@@ -627,6 +625,7 @@ const PatientComponent = {
             this.bookingForm.doctor_id = doctor.id
             this.availableSlots = []
             this.bookingForm.appointment_time = ''
+            this.$nextTick(() => this.$refs.changeDoctor?.focus())
             if (this.bookingForm.appointment_date) {
                 this.loadAvailableSlots().catch(() => {
                     this.availableSlots = []
@@ -676,8 +675,17 @@ const PatientComponent = {
                 this.selectedDoctor = null
                 this.availableSlots = []
                 await this.loadPatientData()
-            } else { 
-                this.error = resp.message || 'Failed to book appointment' 
+            } else {
+                const message = resp.message || 'Failed to book appointment'
+                if (/slot is already booked/i.test(message)) {
+                    let end = message.length
+                    while (end > 0 && '.!?'.includes(message[end - 1])) {
+                        end--
+                    }
+                    this.error = message.slice(0, end) + '. Choose another available time.'
+                } else {
+                    this.error = message
+                }
             }
             this.loading = false
         },

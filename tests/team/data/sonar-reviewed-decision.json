@@ -3,6 +3,7 @@
   "pull_request": 11,
   "reviewed_revision": "fde115c32e10703ad48219ae0882f172afc45a17",
   "candidate_revision": "8699eb0ee8e1dc53039b56528374cd9ab9013b50",
+  "phase3_presentation_revision": "b1a16c84f95b800dcc1579dd86ef69af1c01ab14",
   "local_issue_key": "3f8d4b8b-f2a2-4b4b-a5b2-a780bd30e5b2",
   "local_evidence": "tests/team/evidence/phase2/release-gate/local-sonar-disposition.json",
   "finding": {

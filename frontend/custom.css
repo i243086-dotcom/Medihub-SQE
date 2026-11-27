@@ -1339,3 +1339,12 @@ h3.admin-welcome-heading {
         margin-left: 0;
     }
 }
+
+#book .booking-choice:hover {
+    border-color: #111827;
+}
+
+#book :is(button, input, textarea):focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+}

@@ -1,0 +1,24 @@
+Protected development DB SHA-256 before: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+..Protected development DB SHA-256 after: 27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5
+
+============================== warnings summary ===============================
+tests/team/phase3/test_phase3_booking.py::test_phase3_booking_rejection_keyboard_submission_and_recovery[chromium]
+  D:\SQE_Project\Medihub\.venv\Lib\site-packages\_pytest\fixtures.py:1392: PytestRemovedIn10Warning: Session-scoped fixtures defined as instance methods are deprecated.
+  Instance attributes set in the 'base_url' fixture will NOT be visible to test methods,
+  as each test gets a new instance while the fixture runs only once per class.
+  Use a @classmethod decorator below @pytest.fixture and set attributes on cls instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#class-scoped-fixture-as-instance-method
+    fixturefunc = resolve_fixture_function(fixturedef, request)
+
+tests/team/phase3/test_phase3_booking.py::test_phase3_booking_rejection_keyboard_submission_and_recovery[chromium]
+tests/team/phase3/test_phase3_booking.py::test_phase3_booking_rejection_keyboard_submission_and_recovery[chromium]
+  D:\SQE_Project\Medihub\backend\routes\patient.py:245: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    doctor = Doctor.query.get(doctor_id)
+
+tests/team/phase3/test_phase3_cancellation.py::test_phase3_cancel_active_appointment_and_reload[chromium]
+  D:\SQE_Project\Medihub\backend\routes\auth.py:99: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    user = User.query.get(user_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- Generated html report: file:///D:/SQE_Project/Medihub/tests/team/evidence/phase3/after/playwright.html -
+2 passed, 4 warnings in 10.92s

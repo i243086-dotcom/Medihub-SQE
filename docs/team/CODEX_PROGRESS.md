@@ -1,5 +1,13 @@
 ﻿# MediHub SQE progress checkpoint
 
+## Phase 3 usability and accessibility — 27 November 2026 (PKT)
+
+Phase 3 branched from the verified application tree on `0b15192` after PR #11 merged. Both required Chromium tests passed before and after the booking-screen correction. All 30 existing Chromium flows passed in the targeted regression suite. The development database digest and original upstream baseline tag were preserved. [Execution and environment](../../tests/team/evidence/phase3/README.md)
+
+- Booking Lighthouse Accessibility improved from 85 to 91. Deduplicated tool findings fell from 19 to 11. Cancellation held at 89 Accessibility with 12 findings. Best Practices measured 100 and SEO 60 for both screens before and after. [Findings](../../tests/team/evidence/phase3/findings.md)
+- Real booking now exposes native selection buttons with visible focus, linked form labels and guidance when a slot is taken. The matched report snapshots and all raw outputs are archived. [Checklist](phase3-compliance.md) · [Continuous Word report](MediHub_SQE_Continuous_Report_Verified.docx)
+- Phase 3 work and evidence are on `phase3-usability-accessibility`. Phase 4 requires separate authorization.
+
 ## Phase 2 release-gate verification
 
 **Technical gates PASS. Production release HOLD.** 36 PASS, 2 PARTIAL and 1 BLOCKED. The 751 runtime passes, full scoped coverage, 64 MCC combinations, six MC/DC pairs and 98.63% mutation were preserved. [Passing workflow](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/45663975402)

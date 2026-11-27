@@ -64,16 +64,29 @@ def eligible_findings(issues, project, fingerprint):
     )]
 
 
-def replay(project, decision):
+def replay(project, decision, baseline):
     repo = os.environ.get("GITHUB_REPOSITORY")
-    if (os.environ.get("GITHUB_ACTIONS"), os.environ.get("SONAR_HOST_URL"), repo, project) != (
-        "true", CI_SONAR, decision["repository"], f"medihub-pr-{decision['pull_request']}"
+    pr = os.environ.get("PR_NUMBER", "")
+    if (not pr.isdecimal() or
+        (os.environ.get("GITHUB_ACTIONS"), os.environ.get("GITHUB_EVENT_NAME"),
+         os.environ.get("SONAR_HOST_URL"), repo, os.environ.get("HEAD_REPOSITORY"), project) != (
+            "true", "pull_request", CI_SONAR, decision["repository"], decision["repository"], f"medihub-pr-{pr}"
+        )
     ):
         return {"result": "skipped", "reason": "Not the authorized disposable PR scanner"}
     source = decision["candidate_revision"]
-    if not (git_check("merge-base", "--is-ancestor", source, "HEAD") and
-            git_check("diff", "--quiet", source, "HEAD", "--", *SCOPED_PATHS)):
-        return {"result": "skipped", "reason": "Candidate application or authentication test inputs changed"}
+    if not (git_check("merge-base", "--is-ancestor", source, baseline) and
+            git_check("merge-base", "--is-ancestor", baseline, "HEAD") and
+            git_check("diff", "--quiet", source, baseline, "--", *SCOPED_PATHS)):
+        return {"result": "skipped", "reason": "Base application differs from the originally reviewed source"}
+    # Require byte-for-byte equality with the specific Phase 3 application and
+    # verify that the only differences from the reviewed base are its UI files.
+    presentation = decision["phase3_presentation_revision"]
+    if not (git_check("merge-base", "--is-ancestor", presentation, "HEAD") and
+            git_check("diff", "--quiet", presentation, "HEAD", "--", *SCOPED_PATHS) and
+            git_check("diff", "--quiet", baseline, "HEAD", "--", *SCOPED_PATHS,
+                      ":(exclude)frontend/custom.css", ":(exclude)frontend/js/patient.js")):
+        return {"result": "skipped", "reason": "Candidate differs from the verified Phase 3 presentation revision"}
 
     proof = read_json(decision["local_evidence"])
     local = proof["issue"]
@@ -121,7 +134,8 @@ def replay(project, decision):
             raise RuntimeError("Sonar did not confirm the reviewed transition")
         history = request(sonar, "GET", CI_SONAR + "/api/issues/changelog", params={"issue": key}).json()
     return {"result": "applied", "reviewed_revision": decision["reviewed_revision"],
-            "candidate_revision": source, "local_issue_key": local["key"], "reviews": decision["reviews"],
+            "reviewed_candidate_revision": source, "baseline_revision": baseline,
+            "local_issue_key": local["key"], "reviews": decision["reviews"],
             "before": finding, "after": resolved[0], "history": history["changelog"]}
 
 
@@ -130,8 +144,9 @@ def main():
     parser.add_argument("project")
     parser.add_argument("decision", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--baseline", required=True)
     args = parser.parse_args()
-    result = replay(args.project, read_json(args.decision))
+    result = replay(args.project, read_json(args.decision), args.baseline)
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print("Reviewed Sonar disposition:", result["result"], result.get("reason", "confirmed by SonarQube API"))
 
