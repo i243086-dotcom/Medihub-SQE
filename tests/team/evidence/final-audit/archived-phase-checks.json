@@ -1,0 +1,106 @@
+{
+  "kind": "Derived verification of original Phase 3\u20135 artifacts, not a new browser, security or load execution",
+  "phase3": [
+    {
+      "stage": "before",
+      "view": "booking",
+      "commit": "0b15192775519ff7f7d605560bfeb1677eac471a",
+      "scores": {
+        "accessibility": 85,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "axe_rules": 7,
+      "axe_elements": 17,
+      "unique": 19,
+      "severity": {
+        "critical": 2,
+        "serious": 7,
+        "moderate": 8,
+        "SEO (unrated)": 2
+      }
+    },
+    {
+      "stage": "before",
+      "view": "cancellation",
+      "commit": "0b15192775519ff7f7d605560bfeb1677eac471a",
+      "scores": {
+        "accessibility": 89,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "axe_rules": 6,
+      "axe_elements": 10,
+      "unique": 12,
+      "severity": {
+        "critical": 1,
+        "serious": 1,
+        "moderate": 8,
+        "SEO (unrated)": 2
+      }
+    },
+    {
+      "stage": "after",
+      "view": "booking",
+      "commit": "436c9ff1b6d9fd29c717be719ec187ce0b93f37d",
+      "scores": {
+        "accessibility": 91,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "axe_rules": 5,
+      "axe_elements": 9,
+      "unique": 11,
+      "severity": {
+        "critical": 1,
+        "serious": 1,
+        "moderate": 7,
+        "SEO (unrated)": 2
+      }
+    },
+    {
+      "stage": "after",
+      "view": "cancellation",
+      "commit": "436c9ff1b6d9fd29c717be719ec187ce0b93f37d",
+      "scores": {
+        "accessibility": 89,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "axe_rules": 6,
+      "axe_elements": 10,
+      "unique": 12,
+      "severity": {
+        "critical": 1,
+        "serious": 1,
+        "moderate": 8,
+        "SEO (unrated)": 2
+      }
+    }
+  ],
+  "phase4": {
+    "cases": 8,
+    "role_http": {
+      "P4-01": 200,
+      "P4-02": 403,
+      "P4-03": 200,
+      "P4-04": 403,
+      "P4-05": 404,
+      "P4-06": 401,
+      "P4-07": 200
+    },
+    "observed_messages": 142,
+    "api_alerts": 61,
+    "native_alert_types": 10,
+    "native_grouped_instances": 23,
+    "audited_packages": 99,
+    "advisory_records": 103
+  },
+  "phase5": {
+    "target_commit": "fc61465aebac79dc43b24690d5a8211d01a6e804",
+    "common_fixture_hash": "6dbc0f583dd3b37bd44f03ad181370ba4950bb7f5f9c93b6be81263546d2db37",
+    "measured_requests": 2680,
+    "recovery_persisted_rows_after_fault": 0,
+    "recovery_persisted_rows_after_retry": 1
+  }
+}

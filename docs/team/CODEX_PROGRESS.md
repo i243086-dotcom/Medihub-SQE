@@ -1,5 +1,15 @@
 ﻿# MediHub SQE progress checkpoint
 
+## Final audit correction
+
+The correction branches from verified origin/main 50554b9aefbf514bc4998aed1bedd20441f793f3, where Phases 1?5 are integrated. The archived tool figures, original execution timestamps and production source are preserved. The effective schedule records approximately 144 reported hours through 28 November plus 6 planned on 29 November. Technical evidence includes seven new one-minute boundary cases and 729 passing unit/API cases on disposable SQLite. Issues retain their GitHub states. Manual Phase 2 shots await the author, and final PDF/ZIP packaging is outside this correction.
+
+[Approved effort](project-schedule-and-effort.md) ? [Phase 2 technical appendix](PHASE2_FINAL_TECHNICAL_AUDIT.md) ? [Full rubric and remaining limits](FINAL_RUBRIC_AUDIT.md) ? [Manual screenshot guide](PHASE2_MANUAL_SCREENSHOT_GUIDE.md)
+
+## Historical checkpoints
+
+The following records describe their original dates and may contain superseded planning, issues or PR states.
+
 ## Phase 5 performance and recovery - 27 November 2026 (PKT)
 
 The Phase 5 experiment used integrated main commit `305918fd` after PR #16 merged. The official Grafana k6 Windows MSI installed OSS version 2.4.0. All four matched availability trials met both predetermined limits. k6 counted 2,680 measured requests, all HTTP 200, with zero unexpected failures and zero failed response checks. The 1-VU p95 was 44.67 to 55.04 ms and the 5-VU p95 was 100.50 to 118.38 ms. [Results](../../tests/team/evidence/phase5/results.md) | [Original output index](../../tests/team/evidence/phase5/README.md)

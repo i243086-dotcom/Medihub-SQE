@@ -1,0 +1,65 @@
+Test ID,A,B,C,D,E,F,Expected decision,HTTP and first result,Observed assertion outcome,Verdict
+MCC-111111,T,T,T,T,T,T,accept,200 booked successfully,200 and state assertions matched,PASS
+MCC-111110,T,T,T,T,T,F,reject,400 appointment at this time,400 and state assertions matched,PASS
+MCC-111101,T,T,T,T,F,T,reject,400 slot is already booked,400 and state assertions matched,PASS
+MCC-111100,T,T,T,T,F,F,reject,400 slot is already booked,400 and state assertions matched,PASS
+MCC-111011,T,T,T,F,T,T,reject,400 not available,400 and state assertions matched,PASS
+MCC-111010,T,T,T,F,T,F,reject,400 not available,400 and state assertions matched,PASS
+MCC-111001,T,T,T,F,F,T,reject,400 not available,400 and state assertions matched,PASS
+MCC-111000,T,T,T,F,F,F,reject,400 not available,400 and state assertions matched,PASS
+MCC-110111,T,T,F,T,T,T,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110110,T,T,F,T,T,F,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110101,T,T,F,T,F,T,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110100,T,T,F,T,F,F,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110011,T,T,F,F,T,T,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110010,T,T,F,F,T,F,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110001,T,T,F,F,F,T,reject,400 past dates,400 and state assertions matched,PASS
+MCC-110000,T,T,F,F,F,F,reject,400 past dates,400 and state assertions matched,PASS
+MCC-101111,T,F,T,T,T,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101110,T,F,T,T,T,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101101,T,F,T,T,F,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101100,T,F,T,T,F,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101011,T,F,T,F,T,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101010,T,F,T,F,T,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101001,T,F,T,F,F,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-101000,T,F,T,F,F,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100111,T,F,F,T,T,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100110,T,F,F,T,T,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100101,T,F,F,T,F,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100100,T,F,F,T,F,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100011,T,F,F,F,T,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100010,T,F,F,F,T,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100001,T,F,F,F,F,T,reject,404 inactive,404 and state assertions matched,PASS
+MCC-100000,T,F,F,F,F,F,reject,404 inactive,404 and state assertions matched,PASS
+MCC-011111,F,T,T,T,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011110,F,T,T,T,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011101,F,T,T,T,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011100,F,T,T,T,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011011,F,T,T,F,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011010,F,T,T,F,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011001,F,T,T,F,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-011000,F,T,T,F,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010111,F,T,F,T,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010110,F,T,F,T,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010101,F,T,F,T,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010100,F,T,F,T,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010011,F,T,F,F,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010010,F,T,F,F,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010001,F,T,F,F,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-010000,F,T,F,F,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001111,F,F,T,T,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001110,F,F,T,T,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001101,F,F,T,T,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001100,F,F,T,T,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001011,F,F,T,F,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001010,F,F,T,F,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001001,F,F,T,F,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-001000,F,F,T,F,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000111,F,F,F,T,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000110,F,F,F,T,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000101,F,F,F,T,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000100,F,F,F,T,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000011,F,F,F,F,T,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000010,F,F,F,F,T,F,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000001,F,F,F,F,F,T,reject,403 blacklisted,403 and state assertions matched,PASS
+MCC-000000,F,F,F,F,F,F,reject,403 blacklisted,403 and state assertions matched,PASS
