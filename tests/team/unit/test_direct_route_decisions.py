@@ -11,7 +11,7 @@ from werkzeug.exceptions import MethodNotAllowed, NotFound
 
 from app import app
 from database import db
-from phase2_support import TOMORROW, appointment, snapshots
+from phase2_support import TOMORROW, appointment, setup_generated_case, snapshots
 
 
 ACTORS = {"anonymous": None, "patient": 4, "doctor": 2, "admin": 1}
@@ -35,9 +35,7 @@ def direct_cases():
 
 @pytest.mark.parametrize(("case", "endpoint", "parameters"), list(direct_cases()))
 def test_direct_handler_decision(phase2, monkeypatch, case, endpoint, parameters):
-    if case["fixture"] == "appointment":
-        appointment()
-        db.session.commit()
+    setup_generated_case(case, monkeypatch)
     before = snapshots()
     handler = unwrap(app.view_functions[endpoint])
     module = sys.modules[handler.__module__]

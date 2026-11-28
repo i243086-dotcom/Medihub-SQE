@@ -2,6 +2,12 @@
 
 Source review and native evidence use integrated main 50554b9aefbf514bc4998aed1bedd20441f793f3 and a correction with identical production source. The historical Phase 2 unit result has 385 cases; historical API has 336, including 227 generated. The correction rerun has 385 unit and 344 API cases (336 historical API + Phase 5 recovery + seven minute-edge cases). It records 729 passing cases, including the current recovery. [Correction native pytest JUnit](../../tests/team/evidence/final-audit/functional.xml). New Phase 2 image capture is reserved to the author.
 
+## Reconstruction checkpoint
+
+The current reconstruction preserves the selected production scope and records 430 unit + 372 API = 802 passing cases. The active generator rose from 227 to 262 cases. It now supplies all twelve minute-resolution triplet points, the same-day hour cutoff for a minute-valued booking, distinct ID wire types, maximum existing doctor readback, inactive login, and populated history/list semantics. The same seven previously handwritten API minute cases were removed from collection to avoid duplicate execution. The older measured runs below are retained as historical context. For current case IDs, expected/observed results and SQLite readback see the [native evidence index](../../tests/team/evidence/final-reconstruction/README.md) and [input and UI mapping](MEDIHUB_INPUT_INVENTORY.md).
+
+The treatment writer is a dependency with its own verified state behavior. All five modeled states were accepted by the assigned doctor and set completed; an unassigned doctor was denied from all five with no write. The source imposes no source-state guard. Availability configuration and treatment input administration fall outside the patient workflow generator inventory; their selected dependency tests remain in scope for white-box coverage. [Detailed trace](../../tests/team/evidence/final-reconstruction/requirements-trace.csv) · [Hand CFG guide](HAND_CALCULATED_CYCLOMATIC_COMPLEXITY_GUIDE.md).
+
 ## Coverage scope and original outputs
 
 Scoped counts are 720/720 statements and 234/234 branch arcs; full selected-file unit scope has zero misses. Whole-backend combined unit/API is 970/1170 statements (82.91%) and 260/372 arcs (69.89%) at the historical checkpoint. The correction combined rerun recorded 972/1170 statements (83.08%) and 261/372 branches (70.16%), with the Phase 5 recovery test included. [Correction native coverage JSON](../../tests/team/evidence/final-audit/functional-coverage.json). Whole-backend unit-only archive is 937/1170 and 250/372. Coverage.py counts Python executable statements and branch arcs. Sonar imports XML, reports executable line and condition metrics and includes frontend and other production sources in its project scope; its combined percentage is not coverage.py’s scoped percentage. [Native coverage.py JSON](../../tests/team/evidence/phase2/independent-closure/final-ci/unit/coverage.json) · [Native HTML index](../../tests/team/evidence/phase2/independent-closure/final-ci/unit/htmlcov/index.html) · [Scope extraction](../../tests/team/evidence/phase2/independent-closure/final-ci/unit/scoped.json) · [Whole-backend combined evidence](../../tests/team/evidence/phase2/independent-closure/combined-backend-ci.json).
@@ -20,6 +26,17 @@ Scoped counts are 720/720 statements and 234/234 branch arcs; full selected-file
 | backend/celery_tasks/email_template.py | Whole module | Appointment-notification payload consumed by tested paths. | 2/2 | N/A (0 arcs) | None | None |
 
 Exclusions checked against source: profile editing and registration manage demographic/accounts, not appointment authorization decisions already covered in auth/decorators. Generic admin discovery/search, administrator/patient history and export/report views do not allocate or change the selected appointment. Doctor history that completes an appointment stays included. Demo seed, mail delivery/background jobs, application bootstrap and offline migration are outside the selected runtime decision denominator; cancellation’s email template and database commit path stay in scope. Migration has its own rehearsed disposable-db tests. Dormant wording about an extracted business_rules module in the original scope memo is historical. [Actual executable scope](../../tests/team/tools/phase2_metrics.py).
+
+| Excluded routine | Scope defense |
+|---|---|
+| Patient `export_patient_history`, `update_patient_profile` | Optional export and profile maintenance do not decide booking or cancel a row. Selected history read and ownership remain tested. |
+| Doctor `update_doctor_profile` | Edits profile data that can appear in discovery; eligibility and availability writers have separate selected tests. Profile administration is not a booking or cancellation step. |
+| Admin `dashboard_stats`, `get_doctors`, `get_patients`, `search_doctors`, `search_patients` | Administrative browsing and reporting surfaces. The selected patient discovery and staff appointment list remain included. |
+| Admin `add_doctor`, `update_patient` | Provisioning and demographics are prerequisite data creation. Doctor activity changes and the separate patient blacklist have selected tests. |
+| Admin `get_patient_history`, `get_doctor_history` | Administrative historical exports and views are outside the shared selected patient/doctor appointment readback. |
+| Auth `register` | Account provisioning; login, current identity, logout and role decorators are in scope. Registration transport also has separate integration evidence. |
+| App `make_celery`, `not_found`, `internal_error`, `home`, `serve_frontend`, `setup_db` | Web application startup, response translation, static delivery and worker plumbing are outside the appointment decision denominator. Recovery uses the real 500 handler, and Windows smoke verifies the integrated app. |
+| Nonselected model serializers, offline migration, seed, and Celery mail/report/reminder jobs | Related data and asynchronous delivery are dependencies. Selected tests assert treatment, ownership, appointment state, slot persistence, and email suppression without requiring an external service. The standalone migration tests remain available. |
 
 ## BR-02 modeled decision, MCC and traditional MC/DC
 
@@ -75,7 +92,7 @@ Tables model observable partitions and ordered conditions. They do not assert a 
 
 Admin reschedule dispatch has four presence combinations. Neither field, date only and time only leave the stored appointment clock unchanged; both fields reach date/time parsing and conflict handling. Generated missing-field probes, valid and invalid body cases, and the explicit conflict case cover those partitions. The label matrix separately exercises all five stored source labels. Doctor authorization tests and assigned readback are kept distinct from patient ownership checks.
 
-## Complete per-input EP/BVA catalogue
+## Historical per-input EP/BVA catalogue
 
 The active scope is the 12 OpenAPI operations for login, discovery, booking, cancellation, readback and related doctor/admin status. Supporting dashboard, treatment, schedule mutation, profile, notification and migration behaviors are separately scoped; no generated contract is claimed for those routes. Types and constraints below come from [active YAML](../../tests/team/data/appointments.openapi.yaml), checked against [generator](../../tests/team/tools/generate_appointment_cases.py), route behavior and native [historical API JUnit](../../tests/team/evidence/phase2/independent-closure/final-ci/api/api.xml). Every executed case, including method, isolated varied input, exact ID, expected/actual HTTP, response check and before/after SQLite values, is in the [per-case CSV](../../tests/team/evidence/final-audit/api-per-case-audit.csv). PASS means the named probes matched the recorded contract. NOT APPLICABLE refers to numeric BVA for qualitative EP, not an absent execution. REQUIREMENT AMBIGUITY flags source/test-policy differences. GAP is used for an unsupported coverage claim.
 
@@ -131,7 +148,7 @@ The active scope is the 12 OpenAPI operations for login, discovery, booking, can
 
 **Interaction and limits.** Existing tests distinguish absent/inactive/existing doctors, anonymous vs admitted roles, wrong ownership, accepted/rejected staff state, notes with no enforced maximum, historical vs future slots, optional admin data and paired date/time rescheduling. Numeric ID min−1/min/min+1 and max−1/max/max+1 are generated for declared signed limits; the valid maximum row has a dedicated integration guard case. Fixtures do not establish a future date cap. Categorical enums and credentials have no numerical boundary; no invented string limits. Calendar range far from the supported workflow and unknown policy requests are not credited as fully covered. Potential alternate syntaxes (non-zero-padded time, arbitrary range suffix, string IDs) are not treated as an approved public contract. GAP: the generator applies one-input-at-a-time probes per declared field; it does not enumerate every possible query encoding, malformed JSON scalar or all combinations beyond named compound-rule tests.
 
-## Booking time minute-level triples
+## Historical handwritten booking time minute-level triples
 
 The app accepts minutes, so a one-hour probe is insufficient immediately beside a period edge. The seven missing adjacent minute values run in the isolated correction suite. The existing 12:59 case and four exact boundaries are reused at the API level. A normal accepted start persists the exact minute; rejection preserves SQLite. Triples are 08:59/09:00/09:01, 12:59/13:00/13:01, 14:59/15:00/15:01 and 18:59/19:00/19:01.
 
@@ -150,7 +167,7 @@ The app accepts minutes, so a one-hour probe is insufficient immediately beside 
 | 19:00 | GEN-book-body-appointment_time-19-00 | 400 | 400 | Unchanged | Historical native API JUnit |
 | 19:01 | test_booking_period_minute_edge[1901] | 400 | 400 | Unchanged | Correction native JUnit |
 
-## Generator, coverage criteria and reproducible change
+## Historical generator checkpoint and reproducible change
 
 All 227 generated case IDs appear once in the historical API JUnit and match expected/actual HTTP. 221 used JSON schema validation; six Flask 405 cases assert HTML media type. Negative writes and reads preserve rows. Accepted booking checks ID, doctor, patient, date/time, status and notes; cancellation checks same ID; updates check actual state/timestamp. Additional native integration tests cover authorization, invalid transitions, repeats, book→cancel→rebook and doctor readback after permitted and rejected actions, concurrency and rollout migration. The correction native artifact records the added minute cases; it does not replace the historical 336-case report.
 

@@ -1,6 +1,6 @@
 # Phase 2 formal use cases
 
-The 30 unique native result nodes below are from the historical passing Chromium run. Expectations describe the archived tested flows. The correction does not change application UI behavior. No new screenshots were generated. Primary technical ownership does not replace the agreed UC ownership.
+The 30 unique result nodes below passed in the archived Chromium run and in the reconstruction rerun. The correction preserves application UI behavior. Primary technical ownership and use-case ownership are separate. [Current native Chromium JUnit](../../tests/team/evidence/final-reconstruction/browser.xml).
 
 [Executable source](../../tests/team/e2e/test_appointment_flows.py) · [Native Playwright/pytest HTML](../../tests/team/evidence/phase2/independent-closure/final-ci/browser/browser.html) · [Native JUnit](../../tests/team/evidence/phase2/independent-closure/final-ci/browser/browser.xml)
 
@@ -44,7 +44,7 @@ Trigger and preconditions. Submit an available slot with a valid eligible patien
 | UC03-A1 | Choose 15:00 and confirm. | Appointment booked successfully! | One booked row at 15:00. | test_uc03_submit_booking[chromium-UC03-A1] · PASS |
 | UC03-A2 | Choose 10:00 and leave notes blank. | Appointment booked successfully! | One booked row with blank notes. | test_uc03_submit_booking[chromium-UC03-A2] · PASS |
 | UC03-E1 | Open date with another patient already booked at 09:00. | Occupied slot and Confirm disabled. | Existing other-patient row preserved. | test_uc03_submit_booking[chromium-UC03-E1] · PASS |
-| UC03-E2 | A second patient books after the first patient selects 09:00. | Submission displays slot is already booked. | Existing snapshot preserved. | test_uc03_submit_booking[chromium-UC03-E2] · PASS |
+| UC03-E2 | After the patient selects 09:00, the test inserts and commits a competing booking for another patient directly in the fixture. The first patient then submits. | Submission displays slot is already booked. | Competing row remains unchanged. | test_uc03_submit_booking[chromium-UC03-E2] · PASS |
 
 ## UC04 Read the patient appointment list
 

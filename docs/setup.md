@@ -1,5 +1,35 @@
 # Setup Guide - Hospital Management System
 
+## Windows SQE demo with isolated synthetic data
+
+The supported project Python is 3.11. Work from the repository root in PowerShell. Flask serves the integrated frontend and the API on the same origin. The steps below keep the database off the development path and suppress SMTP in the local demo.
+
+```powershell
+py -3.11 -m venv .venv
+$python = (Resolve-Path .\.venv\Scripts\python.exe).Path
+& $python -m pip install -r backend/requirements.txt -r requirements-test.txt
+$demo = Join-Path $env:TEMP ("medihub-demo-" + [Guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $demo | Out-Null
+$dbPath = Join-Path $demo "demo.db"
+$env:MEDIHUB_DATABASE_URI = "sqlite:///" + $dbPath.Replace('\', '/')
+Set-Location backend
+& $python -c "from app import app, db; from pathlib import Path; c=app.app_context(); c.push(); print(Path(db.engine.url.database).resolve()); c.pop()"
+& $python -X utf8 seed_db.py
+if ($LASTEXITCODE) { throw "Demo seed failed" }
+& $python -c "from app import app; app.config.update(MAIL_SUPPRESS_SEND=True); app.run(host='127.0.0.1', port=5001, debug=False, use_reloader=False)"
+```
+
+Confirm the printed engine path equals `$dbPath` before seeding. The demo seeder requests new passwords without echo. Open `http://127.0.0.1:5001/` and use the synthetic usernames printed by the seeder. For a reset, stop the server with Ctrl+C, return to the repository root, and repeat the unique temporary directory, seed and start steps. A reset switches to a fresh database and leaves `backend/instance/medihub-database.db` untouched. No Redis is required for the selected local booking/cancellation checks with outbound mail suppressed.
+
+From the repository root, use `& $python -m pytest tests/team/unit tests/team/api`. The team fixtures seed disposable databases automatically. For browser tests, install Chromium with `& $python -m playwright install chromium` and point `MEDIHUB_BROWSER_ASSETS` at the verified Vue and Bootstrap assets. [Pinned browser asset setup](../tests/team/evidence/phase3/environment.md)
+
+```powershell
+$env:MEDIHUB_BROWSER_ASSETS = Join-Path $env:TEMP 'medihub-phase1-browser-assets'
+& $python -m pytest tests/team/e2e --browser chromium
+```
+
+See the [evidence index](../tests/team/evidence/final-reconstruction/README.md) for generator commands, output paths and audit tool provenance. The remainder of this guide retains historical platform notes.
+
 This is a simple guide to get the project running on your machine.
 
 ## What You Need

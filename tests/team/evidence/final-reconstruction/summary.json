@@ -1,0 +1,38 @@
+{
+  "unit": 430,
+  "api": 372,
+  "total": 802,
+  "generated": 262,
+  "response_checks": {
+    "json-schema": 256,
+    "html-media-type": 6
+  },
+  "semantic_reads": 49,
+  "scoped": {
+    "statements": [
+      720,
+      720
+    ],
+    "branches": [
+      234,
+      234
+    ]
+  },
+  "combined": {
+    "covered_lines": 972,
+    "num_statements": 1170,
+    "covered_branches": 261,
+    "num_branches": 372
+  },
+  "overlay_mismatches": [
+    "GEN-book-body-appointment_time-09-30",
+    "GEN-book-body-appointment_time-12-59",
+    "GEN-book-body-appointment_time-10-00-11-00",
+    "GEN-book-body-appointment_time-09-01",
+    "GEN-book-body-appointment_time-15-01",
+    "GEN-book-body-appointment_time-18-59",
+    "GEN-book-same-day-cutoff-minus-second",
+    "GEN-doctorStatus-body-status-booked"
+  ],
+  "browser_passes": 30
+}

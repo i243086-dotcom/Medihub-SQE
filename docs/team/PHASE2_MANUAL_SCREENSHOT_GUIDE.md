@@ -1,6 +1,6 @@
 # Phase 2 manual screenshot guide
 
-Capture these images yourself on Windows. All entries below start **pending capture**. The continuous Word report already contains the textual result and evidence references. The figure index in §14.6 reserves caption numbers without inserting empty images.
+Capture these images yourself on Windows. All entries below start **pending capture**. The reconstructed Word report contains the textual result and evidence references. Capture from the current CI artifacts when useful, and keep historical snapshots distinctly labeled. The figure index in §14.6 reserves caption numbers without inserting empty images.
 
 ## Common Windows setup and capture
 
@@ -49,11 +49,11 @@ Capture these images yourself on Windows. All entries below start **pending capt
 ## P2-04 EP/BVA generation
 
 - **Tool and availability:** Python 3.11.9, OpenAPI generator and VS Code. Confirm **& $py --version** and **& $py tests/team/tools/generate_appointment_cases.py --help**.
-- **Launch and services:** Neither MediHub nor Sonar/Docker is needed. Open **tests/team/data/appointments.openapi.yaml**, **tests/team/data/appointment_cases.json** and **tests/team/evidence/final-audit/api-per-case-audit.csv**. Use **Ctrl+F** for **GEN-book-body-appointment_time-12-59** and then open the source overlay. Show terminal generation beside original data.
-- **Expected and command:** A fresh generator run is appropriate here. It is data-only and writes to temporary files. The active run prints **1.4.0: 227 generated cases**. Compare hashes and label the other output proposed.
+- **Launch and services:** Neither MediHub nor Sonar/Docker is needed. Open **tests/team/data/appointments.openapi.yaml**, **tests/team/data/appointment_cases.json** and **tests/team/evidence/final-reconstruction/ep-bva-matrix.csv**. Use **Ctrl+F** for **GEN-book-body-appointment_time-12-59** and then open the source overlay. Show terminal generation beside original data.
+- **Expected and command:** A fresh generator run is appropriate here. It is data-only and writes to temporary files. The active run prints **1.4.0: 262 generated cases**. Compare hashes and label the other output proposed.
 
-       $a = Join-Path $env:TEMP 'medihub-p2-active.json'
-       $b = Join-Path $env:TEMP 'medihub-p2-proposed.json'
+       $a = Join-Path $env:TEMP ('medihub-p2-active-' + [Guid]::NewGuid().ToString('N') + '.json')
+       $b = Join-Path $env:TEMP ('medihub-p2-proposed-' + [Guid]::NewGuid().ToString('N') + '.json')
        & $py tests/team/tools/generate_appointment_cases.py tests/team/data/appointments.openapi.yaml $a
        & $py tests/team/tools/generate_appointment_cases.py tests/team/data/appointments.openapi.yaml $b --overlay tests/team/data/appointments.proposed-v2.yaml
        Get-FileHash $a,tests/team/data/appointment_cases.json,$b,tests/team/data/appointment_cases_proposed.json
@@ -63,8 +63,8 @@ Capture these images yourself on Windows. All entries below start **pending capt
 ## P2-05 API/integration pytest report
 
 - **Tool and availability:** pytest 9.2.0 and VS Code. Confirm **& $py -m pytest --version**.
-- **Launch and services:** Neither service is needed. Open **$v/api/api.xml** in VS Code. Click the opening testsuite, then **Ctrl+F** for **test_concurrent_booking_integrity** or **rows_before**. Format XML for display only if needed without saving. For the correction, open **tests/team/evidence/final-audit/functional.xml** and search **test_booking_period_minute_edge**.
-- **Expected:** Historical **336 tests**, zero failures/errors/skips. The correction report combines **729 unit/API tests**, so label it separately, and show the actual HTTP and row properties. **Fresh run:** no.
+- **Launch and services:** Neither service is needed. Open **$v/api/api.xml** in VS Code. Click the opening testsuite, then **Ctrl+F** for **test_concurrent_booking_integrity** or **rows_before**. Format XML for display only if needed without saving. For the correction, open **tests/team/evidence/final-reconstruction/functional.xml** and search **GEN-book-body-appointment_time-09-01**.
+- **Expected:** Historical **336 tests**, zero failures/errors/skips. Later acceptance is 372 API plus 430 unit. The correction report combines **802 unit/API tests**, so label it separately, and show the actual HTTP and row properties. **Fresh run:** no.
 - **Save:** **P2-05-pytest-api.png**. Caption **Figure 2.5. Native API JUnit result with acceptance, rejection and persisted-state checks.** Insert in **§14.3**. Use two shots if the test identity and row status cannot fit in one.
 
 ## P2-06 Playwright browser flows

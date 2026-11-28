@@ -1,0 +1,15 @@
+{
+  "isolated_db": "demo.db",
+  "loopback_only": true,
+  "demo_seed_counts": {
+    "users": 5,
+    "doctors": 2,
+    "patients": 2
+  },
+  "initial_attempt": "Non-UTF-8 redirected console failed printing a seed progress glyph; documented command now enables UTF-8.",
+  "frontend_http": 200,
+  "patient_login_http": 200,
+  "protected_empty_list_http": 200,
+  "before": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5",
+  "after": "27be0512bd93cfadb49d7819cff68fe6088334b50b1d2f5a9489d488df6554f5"
+}

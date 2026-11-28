@@ -619,6 +619,51 @@
       "probe": "partition"
     },
     {
+      "id": "GEN-login-inactive-account",
+      "operation": "login",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "actor": "anonymous",
+      "fixture": "inactive-account",
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "username": "arjun",
+          "password": "synthetic-phase2"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 401,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "partition"
+    },
+    {
       "id": "GEN-login-json-null",
       "operation": "login",
       "method": "POST",
@@ -1299,10 +1344,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1392,10 +1437,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "anonymous",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1437,10 +1482,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "doctor",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1482,10 +1527,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "admin",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1575,7 +1620,7 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
           "date": "2030-01-16"
@@ -1619,10 +1664,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 0,
+          "doctor_id": "0",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1712,10 +1757,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 2,
+          "doctor_id": "2",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1805,10 +1850,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 3,
+          "doctor_id": "3",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1898,10 +1943,328 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
           "doctor_id": "abc",
+          "date": "2030-01-16"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-slots-query-doctor_id-empty",
+      "operation": "slots",
+      "method": "GET",
+      "path": "/api/patient/available-slots",
+      "actor": "patient",
+      "fixture": "slots",
+      "input": {
+        "query": {
+          "doctor_id": "",
+          "date": "2030-01-16"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-slots-query-doctor_id-leading-zero",
+      "operation": "slots",
+      "method": "GET",
+      "path": "/api/patient/available-slots",
+      "actor": "patient",
+      "fixture": "slots",
+      "input": {
+        "query": {
+          "doctor_id": "01",
+          "date": "2030-01-16"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "slots"
+                ],
+                "properties": {
+                  "slots": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "slot_type",
+                        "appointment_time",
+                        "status",
+                        "display"
+                      ],
+                      "properties": {
+                        "slot_type": {
+                          "type": "string",
+                          "enum": [
+                            "morning",
+                            "evening"
+                          ]
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "available",
+                            "booked"
+                          ]
+                        },
+                        "display": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-slots-query-doctor_id-negative-text",
+      "operation": "slots",
+      "method": "GET",
+      "path": "/api/patient/available-slots",
+      "actor": "patient",
+      "fixture": "slots",
+      "input": {
+        "query": {
+          "doctor_id": "-1",
+          "date": "2030-01-16"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-slots-query-doctor_id-signed-positive",
+      "operation": "slots",
+      "method": "GET",
+      "path": "/api/patient/available-slots",
+      "actor": "patient",
+      "fixture": "slots",
+      "input": {
+        "query": {
+          "doctor_id": "+1",
+          "date": "2030-01-16"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-slots-query-doctor_id-decimal-text",
+      "operation": "slots",
+      "method": "GET",
+      "path": "/api/patient/available-slots",
+      "actor": "patient",
+      "fixture": "slots",
+      "input": {
+        "query": {
+          "doctor_id": "1.0",
+          "date": "2030-01-16"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-slots-query-doctor_id-non-ascii-digit",
+      "operation": "slots",
+      "method": "GET",
+      "path": "/api/patient/available-slots",
+      "actor": "patient",
+      "fixture": "slots",
+      "input": {
+        "query": {
+          "doctor_id": "\uff11",
           "date": "2030-01-16"
         },
         "path": {},
@@ -1943,10 +2306,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1
+          "doctor_id": "1"
         },
         "path": {},
         "body": {}
@@ -1987,10 +2350,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-02-30"
         },
         "path": {},
@@ -2032,10 +2395,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "abc"
         },
         "path": {},
@@ -2077,10 +2440,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-14"
         },
         "path": {},
@@ -2170,10 +2533,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-15"
         },
         "path": {},
@@ -2263,10 +2626,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-20"
         },
         "path": {},
@@ -2356,10 +2719,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-21"
         },
         "path": {},
@@ -2449,10 +2812,10 @@
       "method": "GET",
       "path": "/api/patient/available-slots",
       "actor": "patient",
-      "fixture": null,
+      "fixture": "slots",
       "input": {
         "query": {
-          "doctor_id": 1,
+          "doctor_id": "1",
           "date": "2030-01-22"
         },
         "path": {},
@@ -3059,12 +3422,53 @@
       "probe": "boundary"
     },
     {
+      "id": "GEN-doctorAvailability-path-doctor_id-maximum-existing",
+      "operation": "doctorAvailability",
+      "method": "GET",
+      "path": "/api/patient/doctor/availability/{doctor_id}",
+      "actor": "patient",
+      "fixture": "maximum-doctor",
+      "input": {
+        "query": {},
+        "path": {
+          "doctor_id": 9223372036854775807
+        },
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "type": "object",
+        "required": [
+          "success",
+          "message",
+          "data"
+        ],
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      },
+      "field": null,
+      "probe": "boundary"
+    },
+    {
       "id": "GEN-patientList-valid",
       "operation": "patientList",
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "booked"
@@ -3157,7 +3561,7 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "anonymous",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "booked"
@@ -3201,7 +3605,7 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "booked"
@@ -3245,7 +3649,7 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "admin",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "booked"
@@ -3289,7 +3693,7 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {},
         "path": {},
@@ -3380,10 +3784,103 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "cancelled"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-status",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-patientList-query-status-canceled",
+      "operation": "patientList",
+      "method": "GET",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": "patient-list",
+      "input": {
+        "query": {
+          "status": "canceled"
         },
         "path": {},
         "body": {}
@@ -3473,10 +3970,103 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "completed"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-status",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-patientList-query-status-available",
+      "operation": "patientList",
+      "method": "GET",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": "patient-list",
+      "input": {
+        "query": {
+          "status": "available"
         },
         "path": {},
         "body": {}
@@ -3566,7 +4156,7 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": "unknown"
@@ -3659,7 +4249,7 @@
       "method": "GET",
       "path": "/api/patient/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "patient-list",
       "input": {
         "query": {
           "status": ""
@@ -4590,6 +5180,568 @@
       "probe": "partition"
     },
     {
+      "id": "GEN-book-body-doctor_id-ascii-digit-text",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "1",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-ascii-leading-zero",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "01",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-negative-text",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "-1",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-signed-positive",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "+1",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-decimal-text",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "1.0",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-non-ascii-digit",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "\uff11",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-boolean-true",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": true,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-boolean-false",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": false,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-numeric-float",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1.0,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-book-body-doctor_id-empty",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": "",
+          "appointment_date": "2030-01-16",
+          "appointment_time": "10:00",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-doctor_id",
+      "probe": "partition"
+    },
+    {
       "id": "GEN-book-body-appointment_date-missing",
       "operation": "book",
       "method": "POST",
@@ -5426,7 +6578,7 @@
         ]
       },
       "field": "body-appointment_time",
-      "probe": "partition"
+      "probe": "boundary"
     },
     {
       "id": "GEN-book-body-appointment_time-10-00-11-00",
@@ -6316,6 +7468,473 @@
       "probe": "boundary"
     },
     {
+      "id": "GEN-book-body-appointment_time-08-59",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "08:59",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-book-body-appointment_time-09-01",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "09:01",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-book-body-appointment_time-13-01",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "13:01",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-book-body-appointment_time-14-59",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "14:59",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-book-body-appointment_time-15-01",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "15:01",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-book-body-appointment_time-18-59",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "18:59",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-book-body-appointment_time-19-01",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-16",
+          "appointment_time": "19:01",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": "body-appointment_time",
+      "probe": "boundary"
+    },
+    {
       "id": "GEN-book-body-appointment_time-None",
       "operation": "book",
       "method": "POST",
@@ -6826,6 +8445,196 @@
       },
       "field": "body-notes",
       "probe": "partition"
+    },
+    {
+      "id": "GEN-book-same-day-cutoff-minus-second",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-15",
+          "appointment_time": "09:30",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointment"
+                ],
+                "properties": {
+                  "appointment": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "doctor_id",
+                      "patient_id",
+                      "appointment_date",
+                      "appointment_time",
+                      "status"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "doctor_id": {
+                        "type": "integer"
+                      },
+                      "patient_id": {
+                        "type": "integer"
+                      },
+                      "appointment_date": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "appointment_time": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "boundary",
+      "clock": "2030-01-15T03:29:59"
+    },
+    {
+      "id": "GEN-book-same-day-cutoff-at-hour",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-15",
+          "appointment_time": "09:30",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "boundary",
+      "clock": "2030-01-15T03:30:00"
+    },
+    {
+      "id": "GEN-book-same-day-cutoff-plus-second",
+      "operation": "book",
+      "method": "POST",
+      "path": "/api/patient/appointments",
+      "actor": "patient",
+      "fixture": null,
+      "input": {
+        "query": {},
+        "path": {},
+        "body": {
+          "doctor_id": 1,
+          "appointment_date": "2030-01-15",
+          "appointment_time": "09:30",
+          "notes": "Synthetic notes"
+        }
+      },
+      "raw_body": null,
+      "expected_status": 400,
+      "response_schema": {
+        "type": "object",
+        "anyOf": [
+          {
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "required": [
+              "msg"
+            ],
+            "properties": {
+              "msg": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "boundary",
+      "clock": "2030-01-15T03:30:01"
     },
     {
       "id": "GEN-book-json-null",
@@ -7549,7 +9358,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -7644,7 +9453,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "anonymous",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -7690,7 +9499,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "patient",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -7736,7 +9545,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "admin",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -7782,7 +9591,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "date": "2030-01-16",
@@ -7876,10 +9685,105 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "cancelled",
+          "date": "2030-01-16",
+          "time_filter": "upcoming"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-status",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-doctorList-query-status-canceled",
+      "operation": "doctorList",
+      "method": "GET",
+      "path": "/api/doctor/appointments",
+      "actor": "doctor",
+      "fixture": "doctor-list",
+      "input": {
+        "query": {
+          "status": "canceled",
           "date": "2030-01-16",
           "time_filter": "upcoming"
         },
@@ -7971,10 +9875,105 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "completed",
+          "date": "2030-01-16",
+          "time_filter": "upcoming"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": "query-status",
+      "probe": "partition"
+    },
+    {
+      "id": "GEN-doctorList-query-status-available",
+      "operation": "doctorList",
+      "method": "GET",
+      "path": "/api/doctor/appointments",
+      "actor": "doctor",
+      "fixture": "doctor-list",
+      "input": {
+        "query": {
+          "status": "available",
           "date": "2030-01-16",
           "time_filter": "upcoming"
         },
@@ -8066,7 +10065,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "unknown",
@@ -8161,7 +10160,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "",
@@ -8256,7 +10255,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8350,7 +10349,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8396,7 +10395,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8442,7 +10441,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8537,7 +10536,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8632,7 +10631,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8726,7 +10725,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8821,7 +10820,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -8916,7 +10915,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -9011,7 +11010,7 @@
       "method": "GET",
       "path": "/api/doctor/appointments",
       "actor": "doctor",
-      "fixture": "appointment",
+      "fixture": "doctor-list",
       "input": {
         "query": {
           "status": "booked",
@@ -9099,6 +11098,291 @@
       },
       "field": "query-time_filter",
       "probe": "partition"
+    },
+    {
+      "id": "GEN-doctorList-history-minus31",
+      "operation": "doctorList",
+      "method": "GET",
+      "path": "/api/doctor/appointments",
+      "actor": "doctor",
+      "fixture": "doctor-list",
+      "input": {
+        "query": {
+          "status": "booked",
+          "date": "2029-12-15",
+          "time_filter": "history"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-doctorList-history-minus30",
+      "operation": "doctorList",
+      "method": "GET",
+      "path": "/api/doctor/appointments",
+      "actor": "doctor",
+      "fixture": "doctor-list",
+      "input": {
+        "query": {
+          "status": "booked",
+          "date": "2029-12-16",
+          "time_filter": "history"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "boundary"
+    },
+    {
+      "id": "GEN-doctorList-history-minus29",
+      "operation": "doctorList",
+      "method": "GET",
+      "path": "/api/doctor/appointments",
+      "actor": "doctor",
+      "fixture": "doctor-list",
+      "input": {
+        "query": {
+          "status": "booked",
+          "date": "2029-12-17",
+          "time_filter": "history"
+        },
+        "path": {},
+        "body": {}
+      },
+      "raw_body": null,
+      "expected_status": 200,
+      "response_schema": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "success",
+              "message",
+              "data"
+            ],
+            "properties": {
+              "success": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "data": {
+                "type": "object"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "appointments"
+                ],
+                "properties": {
+                  "appointments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "doctor_id",
+                        "patient_id",
+                        "appointment_date",
+                        "appointment_time",
+                        "status"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "doctor_id": {
+                          "type": "integer"
+                        },
+                        "patient_id": {
+                          "type": "integer"
+                        },
+                        "appointment_date": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "appointment_time": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "field": null,
+      "probe": "boundary"
     },
     {
       "id": "GEN-doctorStatus-valid",

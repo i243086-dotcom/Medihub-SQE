@@ -1,6 +1,12 @@
-﻿# MediHub SQE progress checkpoint
+# MediHub SQE progress checkpoint
 
-## Final audit correction
+## Final evidence reconstruction
+
+Current correction on PR #19 is test and documentation only. Native local results are 802 passes, 262 generated cases, 49 semantic reads, and 720/720 statements plus 234/234 arcs in the unchanged scoped denominator. Eight proposed-policy diagnostic mismatches are documented separately. The approved effort allocation remains approximate and 29 November remains planned. Setup was verified with synthetic SQLite and a matching development database hash.
+
+[Native outputs and revisions](../../tests/team/evidence/final-reconstruction/README.md) · [PR #19 checks](https://github.com/i243086-dotcom/Medihub-SQE/pull/19/checks) · [Current rubric and unresolved requirements](FINAL_RUBRIC_AUDIT.md)
+
+## Prior final audit correction
 
 The correction branches from verified origin/main 50554b9aefbf514bc4998aed1bedd20441f793f3, where Phases 1?5 are integrated. The archived tool figures, original execution timestamps and production source are preserved. The effective schedule records approximately 144 reported hours through 28 November plus 6 planned on 29 November. Technical evidence includes seven new one-minute boundary cases and 729 passing unit/API cases on disposable SQLite. Issues retain their GitHub states. Manual Phase 2 shots await the author, and final PDF/ZIP packaging is outside this correction.
 
