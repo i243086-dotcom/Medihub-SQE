@@ -32,6 +32,8 @@ The active suite defaults to the committed generated file. Compare the fresh and
 
 The existing six quality jobs run on PR #19, including dependency-gated loopback. [PR and exact-revision checks](https://github.com/i243086-dotcom/Medihub-SQE/pull/19/checks). The live PR is the source of truth for analysis of the latest merge checkout. Original security/passive, accessibility and load workloads were not repeated for these test-only changes.
 
+The [first reconstruction CI run](https://github.com/i243086-dotcom/Medihub-SQE/actions/runs/46138086837) passed five gates. Its native Sonar gate passed, while the separate overall Security A criterion failed. The reviewed disposition guard correctly declined to replay the old finding after the shared pinned auth fixture changed. That fixture was restored byte-for-byte. Generated fixture setup now lives in `tests/team/generated_case_support.py`. The gate, application and disposition rules are unchanged. [Native before measures](sonar-fail-before-measures.json) · [Guard disposition](sonar-fail-before-disposition.json) · [Targeted pytest after helper isolation](generated-fixture-isolation.xml).
+
 ## Tool provenance
 
 [Current Windows executable paths and environment versions](windows-tools.json).

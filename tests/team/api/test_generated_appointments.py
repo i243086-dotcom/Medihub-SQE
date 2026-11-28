@@ -9,7 +9,8 @@ import pytest
 from openapi_schema_validator import OAS30Validator
 
 from database import db
-from phase2_support import TODAY, setup_generated_case, snapshots
+from generated_case_support import setup_generated_case
+from phase2_support import TODAY, snapshots
 
 
 PATH = Path(os.environ.get("MEDIHUB_GENERATED_CASES",

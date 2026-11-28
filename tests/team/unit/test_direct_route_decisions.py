@@ -11,7 +11,8 @@ from werkzeug.exceptions import MethodNotAllowed, NotFound
 
 from app import app
 from database import db
-from phase2_support import TOMORROW, appointment, setup_generated_case, snapshots
+from generated_case_support import setup_generated_case
+from phase2_support import TOMORROW, appointment, snapshots
 
 
 ACTORS = {"anonymous": None, "patient": 4, "doctor": 2, "admin": 1}
