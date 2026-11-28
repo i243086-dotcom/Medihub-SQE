@@ -1,7 +1,25 @@
-﻿date,member,area,task,hours
-2026-11-22,Syed Ayaan,Setup,Reviewed guide and created repository,1.5
-2026-11-24,Codex tool runtime,Unit and coverage,Final unit run elapsed time 26.96 seconds (automation only),0.0075
-2026-11-24,Codex tool runtime,Integrated verification,Final 673-case suite elapsed time 274.25 seconds (automation only),0.0762
-2026-11-24,Codex tool runtime,Unit and coverage,Actions run 45458723990 JUnit duration 8.645 seconds (automation only),0.0024
-2026-11-24,Codex tool runtime,API and integration,Actions run 45458723990 JUnit duration 17.301 seconds (automation only),0.0048
-2026-11-24,Codex tool runtime,Chromium use cases,Actions run 45458723990 JUnit duration 64.850 seconds (automation only),0.0180
+date,task,member,time_taken_hours
+2026-11-22,Repository selection and initial setup,Ayaan,2
+2026-11-22,Repository selection and initial setup,Shaheer,2
+2026-11-22,Repository selection and initial setup,Momin,2
+2026-11-23,Static analysis and CFG activities,Ayaan,5
+2026-11-23,API-related Phase 1 activities,Shaheer,5
+2026-11-23,Use-case and quality-related Phase 1 activities,Momin,5
+2026-11-24,Static analysis and white-box testing,Ayaan,8
+2026-11-24,API testing and test-data generation,Shaheer,7
+2026-11-24,Use-case development and testing,Momin,6
+2026-11-25,White-box testing and mutation testing,Ayaan,8
+2026-11-25,API testing and integration,Shaheer,8
+2026-11-25,Use-case and usability testing,Momin,6
+2026-11-26,Mutation testing and CI activities,Ayaan,7
+2026-11-26,API testing and Phase 2 verification,Shaheer,8
+2026-11-26,Use-case testing and Phase 2 verification,Momin,6
+2026-11-27,Mutation testing and CI configuration,Ayaan,8
+2026-11-27,API integration and testing,Shaheer,7
+2026-11-27,"Use-case, security and quality testing",Momin,9
+2026-11-28,"CI verification, static analysis review and audit support",Ayaan,10
+2026-11-28,"API verification, test-data review and documentation support",Shaheer,11
+2026-11-28,"Use-case review, usability, accessibility, security and performance audit",Momin,14
+2026-11-29,Final technical checks and submission readiness,Ayaan,2
+2026-11-29,Final API/documentation checks and submission readiness,Shaheer,2
+2026-11-29,Final use-case/documentation checks and submission readiness,Momin,2

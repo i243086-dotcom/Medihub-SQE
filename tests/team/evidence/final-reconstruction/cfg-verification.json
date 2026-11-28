@@ -1,0 +1,17 @@
+{
+  "source_lines": [
+    213,
+    339
+  ],
+  "function_sha256": "fae1f385c6ec9945f588fc6430570fc66eb1c43e0e97f66aec2f49c4907e08bc",
+  "nodes": 69,
+  "numbered_edges": 91,
+  "connected_components": 1,
+  "reachable_from_entry": 69,
+  "successor_counts": {
+    "sink": 1,
+    "one": 45,
+    "two": 23
+  },
+  "cyclomatic": 24
+}

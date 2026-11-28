@@ -1,5 +1,7 @@
 ﻿# Coverage scope: server-side business logic for booking and cancellation
 
+The [final executable inventory](PHASE2_FINAL_TECHNICAL_AUDIT.md#coverage-scope-and-original-outputs) supersedes this baseline scope memo. The historical notes below are retained, including proposed extraction and approval language.
+
 The 100% statement and branch target applies only to the functions below.
 Line ranges are from the baseline source, from the first decorator to the function's last line (measured with tests/team/tools/function_ranges.py). Re-check after the Stage F extraction.
 

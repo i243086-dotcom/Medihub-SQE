@@ -34,6 +34,11 @@ def boundary_values(schema):
     values += [(TEST_DATE + timedelta(days=delta)).isoformat() for delta in schema.get("x-days", [])]
     values += [f"{hour:02}:00" for limit in schema.get("x-hour-boundaries", [])
                for hour in (limit - 1, limit, limit + 1)]
+    for limit in schema.get("x-minute-boundaries", []):
+        hour, minute = map(int, limit.split(":"))
+        for delta in (-1, 0, 1):
+            h, m = divmod(hour * 60 + minute + delta, 60)
+            values.append(f"{h:02}:{m:02}")
     if schema["type"] == "integer":
         for field in ("minimum", "maximum"):
             if field in schema:
@@ -80,18 +85,20 @@ def generate(spec):
                 default[location][name] = rules["example"]
 
             def add(suffix, expected=200, *, actor=None, inputs=None, raw_body=None,
-                    field=None, probe="valid"):
+                    field=None, probe="valid", fixture=None, clock=None):
                 response = op["responses"].get(str(expected))
                 if response is None:
                     raise ValueError(f"{operation} has no declared response for {expected}")
                 body_schema = response.get("content", {}).get("application/json", {}).get("schema")
                 cases.append({
                     "id": f"GEN-{operation}-{suffix}", "operation": operation, "method": method.upper(),
-                    "path": path, "actor": actor or setup["actor"], "fixture": setup.get("fixture"),
+                    "path": path, "actor": actor or setup["actor"], "fixture": fixture or setup.get("fixture"),
                     "input": copy.deepcopy(inputs if inputs is not None else default),
                     "raw_body": raw_body, "expected_status": expected, "response_schema": body_schema,
                     "field": field, "probe": probe,
                 })
+                if clock is not None:
+                    cases[-1]["clock"] = clock
 
             add("valid")
             for actor in ROLES:
@@ -107,11 +114,13 @@ def generate(spec):
                     add(identifier + "-missing", 400 if required else 200, inputs=inputs,
                         field=identifier, probe="missing")
                 boundaries = boundary_values(rules)
+                boundary_keys = set(map(json.dumps, boundaries))
                 values = [*rules.get("enum", []), *rules.get("x-values", []), *boundaries]
                 if location == "body":
                     values += [None, WRONG_TYPES[rules["type"]]]
-                for value in dict.fromkeys(values):
-                    if value == rules["example"]:
+                for encoded in dict.fromkeys(map(json.dumps, values)):
+                    value = json.loads(encoded)
+                    if type(value) is type(rules["example"]) and value == rules["example"]:
                         continue
                     inputs = copy.deepcopy(default)
                     inputs[location][name] = value
@@ -122,7 +131,22 @@ def generate(spec):
                     if str(value).startswith("-"):
                         label = "negative-" + label
                     add(identifier + "-" + label, code, inputs=inputs, field=identifier,
-                        probe="boundary" if value in boundaries else "partition")
+                        probe="boundary" if encoded in boundary_keys else "partition")
+                for probe in rules.get("x-partitions", []):
+                    inputs = copy.deepcopy(default)
+                    inputs[location][name] = probe["value"]
+                    add(identifier + "-" + probe["id"], probe["status"], inputs=inputs,
+                        field=identifier, fixture=probe.get("fixture"), probe="partition")
+            for probe in op.get("x-cases", []):
+                inputs = copy.deepcopy(default)
+                for location, values in probe.get("input", {}).items():
+                    inputs[location].update(values)
+                status = probe["status"]
+                for location, name, rules, _, _ in fields:
+                    if probe.get("require_conforming") == f"{location}-{name}" and not accepted(rules, inputs[location][name]):
+                        status = 400
+                add(probe["id"], status, inputs=inputs, probe=probe["probe"],
+                    fixture=probe.get("fixture"), clock=probe.get("clock"))
             if "requestBody" in op:
                 for label, value in (("null", "null"), ("array", "[]"), ("malformed", "{")):
                     add("json-" + label, 400, raw_body=value, probe="invalid-document")

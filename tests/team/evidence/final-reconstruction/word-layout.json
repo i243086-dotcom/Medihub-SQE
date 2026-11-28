@@ -1,0 +1,300 @@
+{
+  "renderer": "Microsoft Word 16 native print layout/Page.EnhMetaFileBits",
+  "pages": 74,
+  "original_figures": 20,
+  "added_analytical_figures": 1,
+  "figures": [
+    {
+      "index": 1,
+      "page": 31,
+      "width_pt": 414,
+      "height_pt": 213.9,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "page": 38,
+      "width_pt": 440.6,
+      "height_pt": 247.85,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "page": 38,
+      "width_pt": 440.6,
+      "height_pt": 247.85,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "page": 39,
+      "width_pt": 440.6,
+      "height_pt": 247.85,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "page": 39,
+      "width_pt": 440.6,
+      "height_pt": 247.85,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "page": 40,
+      "width_pt": 440.6,
+      "height_pt": 306,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "page": 41,
+      "width_pt": 440.6,
+      "height_pt": 306,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "page": 42,
+      "width_pt": 440.6,
+      "height_pt": 306,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "page": 43,
+      "width_pt": 440.6,
+      "height_pt": 361.65,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "page": 44,
+      "width_pt": 440.6,
+      "height_pt": 363.5,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "page": 45,
+      "width_pt": 440.6,
+      "height_pt": 306,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "page": 50,
+      "width_pt": 435.6,
+      "height_pt": 302.5,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "page": 50,
+      "width_pt": 435.6,
+      "height_pt": 302.5,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "page": 51,
+      "width_pt": 435.6,
+      "height_pt": 302.5,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "page": 51,
+      "width_pt": 435.6,
+      "height_pt": 302.5,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "page": 52,
+      "width_pt": 435.6,
+      "height_pt": 323.25,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "page": 52,
+      "width_pt": 435.6,
+      "height_pt": 111.65,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "page": 56,
+      "width_pt": 435.6,
+      "height_pt": 384.75,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "page": 57,
+      "width_pt": 435.6,
+      "height_pt": 384.75,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "page": 58,
+      "width_pt": 435.6,
+      "height_pt": 312.15,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "page": 59,
+      "width_pt": 435.6,
+      "height_pt": 312.15,
+      "crop_pt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "left_margin_pt": 72,
+  "right_margin_pt": 72,
+  "page_width_pt": 595.3,
+  "sha256": "658072de362fc67c5edc94c857588943189d0da6550923803e175bc372d7696b",
+  "cover": [
+    "MediHub",
+    "Software Quality Engineering Final Project",
+    "FAST National University of Computer and Emerging Sciences, Islamabad Campus",
+    "Course: Software Quality Engineering",
+    "Section: SE-A",
+    "Instructor: Dr. Atif Jilani",
+    "Submitted by:",
+    "Syed Ayaan Haider — 24i-3086",
+    "Shaheer Shoaib — 24i-3064",
+    "Momin Shafique — 24i-3154"
+  ],
+  "phases_3_5_captions": [
+    "Figure 3.1. The original screen reports the occupied slot after the real HTTP 400 response.",
+    "Figure 3.2. Booking confirmation after the patient selected the valid 10:00 slot.",
+    "Figure 3.3. Tab reaches the Cardiology choice. The focus outline is visible.",
+    "Figure 3.4. Cancellation confirmation and the Cancelled row. Reload and SQLite assertions checked persistence.",
+    "Figure 3.5. Authenticated booking Lighthouse baseline, with scores from the generated snapshot.",
+    "Figure 3.6. Authenticated cancellation Lighthouse baseline for My Appointments.",
+    "Figure 3.7. Genuine pytest-html output with the original AxeBuilder JSON attachment.",
+    "Figure 3.8. Original booking form with the selected synthetic doctor, date and time.",
+    "Figure 3.9. Corrected booking form with the same patient task, test inputs and viewport.",
+    "Figure 3.10. Corrected booking Lighthouse snapshot measured 91 Accessibility, 100 Best Practices and 60 SEO.",
+    "Figure 4.1. The patient booking confirmation after the allowed POST.",
+    "Figure 4.2. The cancellation confirmation and Cancelled row after the allowed DELETE.",
+    "Figure 4.3. The actual pytest-html report shows all eight Chromium tests passing.",
+    "Figure 4.4. Recorded doctor cancellation denial with the HTTP status and unchanged SQLite rows.",
+    "Figure 4.5. Risk and confidence counts in the official OWASP ZAP HTML report.",
+    "Figure 4.6. Actual pip-audit terminal output recording the dependency findings.",
+    "Figure 5.1. The official k6 dashboard export for the first one-user trial. The display summarizes the complete scenario.",
+    "Figure 5.2. The official k6 dashboard export for the second five-user trial. The scenario overview shows five virtual users.",
+    "Figure 5.3. The original k6 console summary shows the evaluated steady-state p95 and unexpected-failure thresholds.",
+    "Figure 5.4. The pytest-html report confirms the automated booking failure-and-recovery result."
+  ],
+  "qa": "All 74 native Word pages checked. 61 page bodies are pixel-identical to the inspected full initial render; the 13 changed pages were inspected again. No clipped tables, cropped or lost figures, blank pages or empty figure placeholders. Existing analytical Pareto also preserved.",
+  "pending_phase2_images": "Manual captures. Separate insertion guide only."
+}

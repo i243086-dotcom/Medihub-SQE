@@ -138,6 +138,31 @@ def test_assigned_doctor_treatment_and_patient_history(phase2):
     assert client.get("/api/doctor/patients", headers=headers["ajay"]).json["data"]["patients"][0]["id"] == 1
 
 
+@pytest.mark.parametrize("source", ["booked", "cancelled", "canceled", "completed", "available"])
+@pytest.mark.parametrize("assigned", [True, False], ids=["assigned", "unassigned"])
+def test_treatment_completion_by_assignment_and_source(phase2, source, assigned, record_property):
+    client, headers = phase2
+    row = appointment(status=source)
+    db.session.commit()
+    before = snapshots()
+    actor = "ajay" if assigned else "rajesh"
+    response = client.post("/api/doctor/patient-history", headers=headers[actor],
+                           json={"appointment_id": row.id, "diagnosis": "Synthetic diagnosis"})
+    after = snapshots()
+    record_property("source_state", source)
+    record_property("actual_status", response.status_code)
+    record_property("rows_before", repr(before))
+    record_property("rows_after", repr(after))
+    if not assigned:
+        assert response.status_code == 404
+        assert after == before and Treatment.query.count() == 0
+        return
+    assert response.status_code == 200
+    assert response.json["data"]["appointment"]["status"] == "completed"
+    assert after == [(*before[0][:5], "completed", "")]
+    assert Treatment.query.one().appointment_id == row.id
+
+
 def test_cancellation_email_failure_preserves_commit(phase2, monkeypatch):
     client, headers = phase2
     appointment()

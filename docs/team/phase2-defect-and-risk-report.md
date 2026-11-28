@@ -1,5 +1,7 @@
 # Phase 2 defect, risk and completion review
 
+See [the final issue lifecycle and GQM](DEFECT_LIFECYCLE_AND_GQM.md) and [team-reported effort](project-schedule-and-effort.md) for the current review. The figures below are historical checkpoints, including their former status and effort snapshots.
+
 ## Historical defect discovery and original RCA
 
 | GitHub issue | Severity / priority | Phase 2 observations and disposition |
